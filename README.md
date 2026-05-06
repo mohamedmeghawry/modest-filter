@@ -53,3 +53,7 @@ Then open [http://localhost:3000](http://localhost:3000).
 ## Architectural decisions
 
 Design rationale lives as ADRs in [`docs/files/`](docs/files/). Read the relevant ADR before proposing changes to the stack, data flow, or security model.
+
+## Author
+
+Built by Mohamed Meghawry, Toronto.
