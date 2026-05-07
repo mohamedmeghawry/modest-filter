@@ -16,11 +16,17 @@ See `docs/files/project-brief.md` for full scope, target users, success criteria
 
 Architectural decisions live in `docs/files/`. Read the relevant ADR before proposing changes to the stack, data flow, or security model.
 
+**Accepted ADRs:**
+
 - `0001-use-nextjs.md` — Next.js (App Router) + React
 - `0002-use-typescript.md` — TypeScript everywhere
 - `0003-postgres-supabase-prisma.md` — Postgres on Supabase, Prisma ORM
 - `0004-api-first-architecture.md` — all dynamic data flows through API routes
 - `0005-claude-vision-tagging.md` — Claude Vision for product tagging
+
+**In-flight design drafts:**
+
+- `schema-v1-draft.md` — v1 database schema (3 entities, 14 product attributes). Pending wife review before being elevated to a proper schema ADR.
 
 ## Tech stack
 
@@ -68,6 +74,13 @@ Out of scope for v1: custom auth (no user accounts), CAPTCHAs, custom WAF, DDoS 
 - **API layer:** Never bypass it (ADR 0004). Page components must not query the database directly.
 - **Secrets:** Never commit `.env*` files.
 - **Definition of done:** Run `npm run lint` and `npm run build` and confirm both pass before declaring a task done.
+
+## Working principles
+
+- **Document decisions as they're made.** Every meaningful decision gets documented before or as it's made. Architectural decisions become ADRs in `docs/files/`. In-flight design work goes as draft documents in the same folder. Working notes go in commit messages. Nothing important should live only in chat.
+- **Repo over conversation.** Documents live in the repo, not in conversations. Chat sessions can be lost; the repo persists.
+- **End every session with a commit.** Each session ends with a commit, even mostly conversational ones. Anything we landed on goes into a doc and is committed before stopping.
+- **Keep this file current.** AGENTS.md is updated whenever a new doc category is added, so future sessions know it exists.
 
 ## Developer context
 
