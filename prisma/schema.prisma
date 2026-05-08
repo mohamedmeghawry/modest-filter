@@ -11,3 +11,224 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+// ============================================================
+// Enums
+// ============================================================
+
+// --- Coverage ---
+
+enum SleeveLength {
+  sleeveless
+  cap
+  short
+  elbow
+  three_quarter
+  long
+  extra_long
+}
+
+enum Neckline {
+  crew
+  v_neck
+  scoop
+  high_neck
+  turtleneck
+  off_shoulder
+  halter
+  square
+}
+
+enum BackStyle {
+  closed
+  scoop_back
+  v_back
+  low_back
+  open_back
+}
+
+enum HemLength {
+  mini
+  knee
+  midi
+  ankle
+  floor
+}
+
+enum TopLength {
+  cropped
+  waist
+  hip
+  tunic
+  longline
+}
+
+enum Slit {
+  none
+  low
+  mid
+  high
+}
+
+// --- Fit & material ---
+
+enum Fit {
+  fitted
+  semi_fitted
+  loose
+  oversized
+}
+
+enum Opacity {
+  sheer
+  semi_sheer
+  opaque
+}
+
+enum Lined {
+  lined
+  partially_lined
+  unlined
+}
+
+enum Cutouts {
+  none
+  present
+}
+
+enum Material {
+  cotton
+  linen
+  silk
+  polyester
+  viscose
+  modal
+  wool
+  denim
+  leather
+  knit
+  blend
+  other
+}
+
+// --- Visual ---
+
+enum PrimaryColor {
+  black
+  white
+  beige
+  brown
+  gray
+  navy
+  blue
+  green
+  yellow
+  orange
+  red
+  pink
+  purple
+  multicolor
+}
+
+enum Pattern {
+  solid
+  striped
+  floral
+  plaid
+  geometric
+  animal_print
+  polka_dot
+  abstract
+  other
+}
+
+// --- Tagging ---
+
+enum TagStatus {
+  pending
+  tagged
+  failed
+  needs_review
+}
+
+// ============================================================
+// Models
+// ============================================================
+
+model Brand {
+  id               String  @id @default(cuid())
+  name             String
+  slug             String  @unique
+  websiteUrl       String  @map("website_url")
+  affiliateProgram String  @map("affiliate_program")
+  logoUrl          String? @map("logo_url")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  products Product[]
+
+  @@map("brands")
+}
+
+model Category {
+  id   String @id @default(cuid())
+  name String
+  slug String @unique
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  products Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id             String   @id @default(cuid())
+  name           String
+  brandId        String   @map("brand_id")
+  categoryId     String   @map("category_id")
+  imageUrl       String   @map("image_url")
+  price          Decimal  @db.Decimal(10, 2)
+  currency       String   @default("USD")
+  affiliateUrl   String   @map("affiliate_url")
+  inStock        Boolean  @map("in_stock")
+  lastVerifiedAt DateTime @map("last_verified_at")
+
+  // Tagging metadata
+  tagStatus     TagStatus @default(pending) @map("tag_status")
+  tagConfidence Decimal?  @map("tag_confidence") @db.Decimal(3, 2)
+  taggedAt      DateTime? @map("tagged_at")
+
+  // Coverage attributes (7)
+  sleeveLength  SleeveLength? @map("sleeve_length")
+  sleeveOpacity Opacity?      @map("sleeve_opacity")
+  neckline      Neckline?
+  backStyle     BackStyle?    @map("back_style")
+  hemLength     HemLength?    @map("hem_length")
+  topLength     TopLength?    @map("top_length")
+  slit          Slit?
+
+  // Fit & material attributes (5)
+  fit      Fit?
+  opacity  Opacity?
+  lined    Lined?
+  cutouts  Cutouts?
+  material Material?
+
+  // Visual attributes (2)
+  primaryColor PrimaryColor? @map("primary_color")
+  pattern      Pattern?
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  brand    Brand    @relation(fields: [brandId], references: [id], onDelete: Restrict)
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  @@index([brandId])
+  @@index([categoryId])
+  @@index([tagStatus])
+  @@map("products")
+}
