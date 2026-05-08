@@ -23,6 +23,7 @@ Architectural decisions live in `docs/files/`. Read the relevant ADR before prop
 - `0003-postgres-supabase-prisma.md` — Postgres on Supabase, Prisma ORM
 - `0004-api-first-architecture.md` — all dynamic data flows through API routes
 - `0005-claude-vision-tagging.md` — Claude Vision for product tagging
+- `0006-prisma-7-connection-architecture.md` — Prisma 7 config model: URLs in prisma.config.ts and driver adapters
 
 **In-flight design drafts:**
 
