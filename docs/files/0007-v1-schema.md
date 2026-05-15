@@ -7,9 +7,9 @@
 
 ## Overview
 
-This document captures the database schema for modest-filter v1, designed in conversation with Claude on May 7, 2026. The schema covers three entities (Brand, Category, Product) and a set of 14 product attributes grouped by purpose (Coverage, Fit & material, Visual).
+This ADR documents the database schema for modest-filter v1, designed in conversation with Claude on May 7, 2026. The schema covers three entities (Brand, Category, Product) and a set of 14 product attributes grouped by purpose (Coverage, Fit & material, Visual).
 
-This file exists so the schema design survives chat history. Once reviewed and finalized, it will be translated into `prisma/schema.prisma` and applied as the first database migration.
+The design is implemented in `prisma/schema.prisma` and was applied to the database via the initial migration (see `Implements` and `Commit` in the header above). This ADR is the durable record of the v1 design and the rationale behind it; the code and migration are the source of truth for the schema's current shape.
 
 ## Entities
 
