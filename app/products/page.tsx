@@ -28,6 +28,10 @@ function humanize(value: string): string {
   return value.replace(/_/g, " ");
 }
 
+function notNull<T>(value: T): value is Exclude<T, null | undefined> {
+  return value !== null && value !== undefined;
+}
+
 export default async function ProductsPage() {
   const products = await listProducts();
 
@@ -45,7 +49,7 @@ export default async function ProductsPage() {
             product.sleeveLength,
             product.hemLength,
             product.material,
-          ].filter((v): v is string => Boolean(v));
+          ].filter(notNull);
 
           return (
             <article
