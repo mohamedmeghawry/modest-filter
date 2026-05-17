@@ -83,6 +83,7 @@ Out of scope for v1: custom auth (no user accounts), CAPTCHAs, custom WAF, DDoS 
 - **Repo over conversation.** Documents live in the repo, not in conversations. Chat sessions can be lost; the repo persists.
 - **End every session with a commit.** Each session ends with a commit, even mostly conversational ones. Anything we landed on goes into a doc and is committed before stopping.
 - **Keep this file current.** AGENTS.md is updated whenever a new doc category is added, so future sessions know it exists.
+- **Always run `npm run build` before pushing app code changes.** `npm run dev` uses lazy per-route transpilation that's more permissive than the production build's strict TypeScript check. A green dev doesn't guarantee a green Vercel deploy. (Lesson from commit 58d860c, May 17.)
 
 ## Developer context
 

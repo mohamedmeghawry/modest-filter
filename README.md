@@ -1,58 +1,56 @@
 # modest-filter
 
-> A mobile-first web app that helps Muslim women find modest dresses, abayas, and tops from mainstream brands by filtering on AI-extracted clothing attributes.
+> A mobile-first web app that helps Muslim women find modest clothing from mainstream brands (Aritzia, Everlane, and others) by filtering on objective, AI-extracted garment attributes — sleeve length, neckline, hem length, fit, opacity — against their own personal modesty thresholds.
 
-**Status:** in development.
+**Live demo → [modest-filter.vercel.app/products](https://modest-filter.vercel.app/products)**
 
-## The problem
+## Status
 
-Muslim women who want to dress modestly while shopping at mainstream clothing brands face a recurring frustration. Brands like Aritzia, Everlane, Anthropologie, Reformation, and Banana Republic carry a wide range of styles, but their sites have no filters for the attributes that determine modesty: sleeve length, neckline, hem length, fit, and opacity. The user has to scroll through hundreds of products and manually check each one — repetitive, exhausting, and often abandoned before finding something suitable.
+Backend is complete and deployed; the user-facing filtering experience is the active area of work.
 
-Modest-specific platforms exist, but they carry only modest-niche brands. They don't solve "I want a modest piece from Aritzia."
+- ✅ Backend & data layer complete
+- 🚧 UI and filtering in progress
 
-## The solution
+## What's built
 
-modest-filter ingests product catalogues from selected mainstream brands, uses AI vision models to extract objective clothing attributes for every item, and lets users filter the entire catalogue using their own modesty criteria. Users browse, filter, find pieces that meet their personal standards, and click through to the brand's site to purchase.
+- **Database schema** — Postgres on Supabase: 3 entities (Brand, Category, Product) with 14 modesty-relevant product attributes, modelled in Prisma 7 ([ADR-0007](docs/files/0007-v1-schema.md))
+- **Data layer** — shared, typed data-access helpers in `lib/data/`, called from both API routes and server components so business logic is written once ([ADR-0004](docs/files/0004-api-first-architecture.md))
+- **API** — `GET /api/products` returns the catalogue with brand and category relations
+- **Products page** — `/products`, a server component rendering the live catalogue as a responsive grid
+- **ADR-driven decisions** — every stack and architecture choice is an Accepted ADR in [`docs/files/`](docs/files/), written before it's built
 
-The core insight: the AI does not judge whether something is modest. It extracts objective attributes (sleeve length, neckline shape, hem length, fit, opacity), and the user defines what modesty means to them.
+## What's next
 
-## v1 scope
-
-- Mobile-first responsive web app
-- 3–5 hand-picked mainstream brands, sourced via affiliate networks
-- 3 product categories: dresses, abayas, tops
-- Women's clothing only
-- AI-extracted attributes per product: sleeve length, neckline shape, hem length, fit, opacity
-- Filter UI where the user sets their own thresholds for each attribute
-- Product listing with image, brand, name, and price
-- Click-through to the brand's site via affiliate link
+- **Filter UI** — let users set their own per-attribute modesty thresholds and filter the catalogue
+- **AI vision tagging** — Claude Vision pipeline to extract garment attributes from product images ([ADR-0005](docs/files/0005-claude-vision-tagging.md))
+- **Affiliate ingestion** — pull real product catalogues from mainstream brands via affiliate networks
 
 ## Tech stack
 
-- **Language:** TypeScript
-- **Framework:** Next.js (App Router) with React
-- **Styling:** Tailwind CSS, shadcn/ui
-- **Backend:** Next.js API routes
-- **Database:** PostgreSQL on Supabase
-- **ORM:** Prisma
-- **AI tagging:** Claude Vision API (Anthropic)
-- **Hosting:** Vercel
-- **CI:** GitHub Actions
+- **Next.js 16** (App Router) + React
+- **TypeScript** (strict)
+- **Tailwind CSS v4**
+- **Prisma 7** with the driver-adapter connection model ([ADR-0006](docs/files/0006-prisma-7-connection-architecture.md))
+- **Supabase** Postgres
+- **Vercel** hosting
 
-## Getting started
+## Local development
 
-Requires Node.js 20 or newer.
+Requires Node.js 20+.
 
 ```bash
+git clone git@github.com:mohamedmeghawry/modest-filter.git
+cd modest-filter
 npm install
+cp .env.local.example .env.local   # then fill in your Supabase connection strings
 npm run dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000/products](http://localhost:3000/products).
 
-## Architectural decisions
+## License
 
-Design rationale lives as ADRs in [`docs/files/`](docs/files/). Read the relevant ADR before proposing changes to the stack, data flow, or security model.
+MIT — see [LICENSE](LICENSE).
 
 ## Author
 
