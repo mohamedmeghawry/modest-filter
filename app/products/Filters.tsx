@@ -3,6 +3,12 @@
 import { useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   SleeveLength,
   HemLength,
   Opacity,
@@ -16,7 +22,7 @@ const CATEGORY_OPTIONS = ["dresses", "tops", "bottoms"];
 
 type FilterGroup = { key: string; label: string; options: string[] };
 
-const FILTER_GROUPS: FilterGroup[] = [
+export const FILTER_GROUPS: FilterGroup[] = [
   { key: "category", label: "Category", options: CATEGORY_OPTIONS },
   {
     key: "sleeveLength",
@@ -79,33 +85,37 @@ export default function Filters() {
   };
 
   return (
-    <div className={`flex flex-col gap-6 ${isPending ? "opacity-60" : ""}`}>
-      {FILTER_GROUPS.map((group) => {
-        const selected = selectedFor(group.key);
-        return (
-          <fieldset key={group.key} className="flex flex-col gap-2">
-            <legend className="text-sm font-semibold">{group.label}</legend>
-            <div className="flex flex-col gap-1.5">
-              {group.options.map((option) => (
-                <label
-                  key={option}
-                  className="flex items-center gap-2 text-sm capitalize opacity-80"
-                >
-                  <input
-                    type="checkbox"
-                    checked={selected.includes(option)}
-                    onChange={(e) =>
-                      toggle(group.key, option, e.target.checked)
-                    }
-                    className="h-4 w-4 rounded border-black/20"
-                  />
-                  {humanize(option)}
-                </label>
-              ))}
-            </div>
-          </fieldset>
-        );
-      })}
+    <div className={`flex flex-col gap-4 ${isPending ? "opacity-60" : ""}`}>
+      <Accordion type="multiple" defaultValue={["category"]}>
+        {FILTER_GROUPS.map((group) => {
+          const selected = selectedFor(group.key);
+          return (
+            <AccordionItem key={group.key} value={group.key}>
+              <AccordionTrigger>{group.label}</AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-1.5">
+                  {group.options.map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center gap-2 text-sm capitalize opacity-80"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selected.includes(option)}
+                        onChange={(e) =>
+                          toggle(group.key, option, e.target.checked)
+                        }
+                        className="h-4 w-4 rounded border-black/20"
+                      />
+                      {humanize(option)}
+                    </label>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          );
+        })}
+      </Accordion>
 
       {hasActiveFilters && (
         <button

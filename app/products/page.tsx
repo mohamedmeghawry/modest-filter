@@ -3,6 +3,7 @@ import { parseProductFilters } from "@/lib/data/parse-product-filters";
 import { Suspense } from "react";
 import Link from "next/link";
 import Filters from "@/app/products/Filters";
+import MobileFilters from "@/app/products/MobileFilters";
 import {
   formatPrice,
   getSwatch,
@@ -26,13 +27,19 @@ export default async function ProductsPage({
       <h1 className="mb-6 text-2xl font-semibold">Products</h1>
 
       <div className="flex flex-col gap-8 lg:flex-row">
-        <aside className="lg:w-64 lg:shrink-0">
+        <aside className="hidden lg:block lg:w-64 lg:shrink-0">
           <Suspense fallback={null}>
             <Filters />
           </Suspense>
         </aside>
 
         <div className="flex-1">
+          <div className="mb-4 lg:hidden">
+            <Suspense fallback={null}>
+              <MobileFilters />
+            </Suspense>
+          </div>
+
           {products.length === 0 ? (
             <p className="rounded-lg border border-black/10 p-8 text-center text-sm opacity-60">
               No products match your filters
