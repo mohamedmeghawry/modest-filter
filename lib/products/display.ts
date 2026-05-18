@@ -1,4 +1,8 @@
-export const COLOR_HEX: Record<string, string> = {
+import type { PrimaryColor } from "@/lib/generated/prisma/client";
+
+// `multicolor` is intentionally excluded: no single hex honestly represents a
+// multicolor garment, so it falls back to gray at the call site (see getSwatch).
+export const COLOR_HEX: Record<Exclude<PrimaryColor, "multicolor">, string> = {
   black: "#171717",
   white: "#f5f5f5",
   beige: "#e8dcc8",
@@ -13,6 +17,13 @@ export const COLOR_HEX: Record<string, string> = {
   pink: "#ec4899",
   purple: "#9333ea",
 };
+
+const GRAY_FALLBACK = "#9ca3af";
+
+export function getSwatch(color: PrimaryColor | null): string {
+  if (color === null || color === "multicolor") return GRAY_FALLBACK;
+  return COLOR_HEX[color];
+}
 
 export function formatPrice(price: unknown): string {
   return `$${Number(price).toLocaleString("en-US", {

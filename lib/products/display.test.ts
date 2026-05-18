@@ -1,5 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { COLOR_HEX, formatPrice, humanize, notNull } from "./display";
+import {
+  COLOR_HEX,
+  formatPrice,
+  getSwatch,
+  humanize,
+  notNull,
+} from "./display";
 import { PrimaryColor } from "@/lib/generated/prisma/enums";
 
 describe("formatPrice", () => {
@@ -101,8 +107,9 @@ describe("COLOR_HEX", () => {
   it("has a hex entry for every PrimaryColor except the intentional 'multicolor' fallback", () => {
     for (const color of primaryColors) {
       if (color === "multicolor") {
-        // Documented behavior: multicolor has no swatch and falls back to
-        // gray (#9ca3af) at the call site. See follow-up re: Record<PrimaryColor>.
+        // Now compile-time enforced via Record<Exclude<PrimaryColor,
+        // "multicolor">, string> in display.ts. This runtime check is kept
+        // as belt-and-suspenders documentation of the intentional exclusion.
         expect(COLOR_HEX).not.toHaveProperty(color);
       } else {
         expect(COLOR_HEX).toHaveProperty(color);
@@ -119,5 +126,25 @@ describe("COLOR_HEX", () => {
   it("has no duplicate hex values across keys", () => {
     const values = Object.values(COLOR_HEX);
     expect(new Set(values).size).toBe(values.length);
+  });
+});
+
+describe("getSwatch", () => {
+  // Dual fallback: getSwatch returns gray (#9ca3af) for BOTH a null color
+  // (attribute unset) and "multicolor" (no honest single hex). Every other
+  // PrimaryColor returns its mapped COLOR_HEX entry.
+  it("returns the mapped hex for every handled PrimaryColor", () => {
+    for (const color of Object.values(PrimaryColor)) {
+      if (color === "multicolor") continue;
+      expect(getSwatch(color)).toBe(COLOR_HEX[color]);
+    }
+  });
+
+  it("returns gray for null (color attribute unset)", () => {
+    expect(getSwatch(null)).toBe("#9ca3af");
+  });
+
+  it("returns gray for 'multicolor' (no honest single hex)", () => {
+    expect(getSwatch("multicolor")).toBe("#9ca3af");
   });
 });

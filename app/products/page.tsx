@@ -4,8 +4,8 @@ import { Suspense } from "react";
 import Link from "next/link";
 import Filters from "@/app/products/Filters";
 import {
-  COLOR_HEX,
   formatPrice,
+  getSwatch,
   humanize,
   notNull,
 } from "@/lib/products/display";
@@ -40,9 +40,7 @@ export default async function ProductsPage({
           ) : (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {products.map((product) => {
-                const swatch =
-                  (product.primaryColor && COLOR_HEX[product.primaryColor]) ||
-                  "#9ca3af";
+                const swatch = getSwatch(product.primaryColor);
 
                 const badges = [
                   product.sleeveLength,

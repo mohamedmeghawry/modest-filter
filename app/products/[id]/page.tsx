@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getProductById } from "@/lib/data/products";
-import { COLOR_HEX, formatPrice, humanize } from "@/lib/products/display";
+import { formatPrice, getSwatch, humanize } from "@/lib/products/display";
 
 export const dynamic = "force-dynamic";
 
@@ -14,8 +14,7 @@ export default async function ProductDetailPage({
 
   if (!product) notFound();
 
-  const swatch =
-    (product.primaryColor && COLOR_HEX[product.primaryColor]) || "#9ca3af";
+  const swatch = getSwatch(product.primaryColor);
 
   const groups: { heading: string; items: [string, string | null][] }[] = [
     {
