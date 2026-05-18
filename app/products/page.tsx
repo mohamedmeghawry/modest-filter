@@ -1,4 +1,5 @@
 import { listProducts } from "@/lib/data/products";
+import { parseProductFilters } from "@/lib/data/parse-product-filters";
 
 export const dynamic = "force-dynamic";
 
@@ -32,8 +33,14 @@ function notNull<T>(value: T): value is Exclude<T, null | undefined> {
   return value !== null && value !== undefined;
 }
 
-export default async function ProductsPage() {
-  const products = await listProducts();
+export default async function ProductsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const params = await searchParams;
+  const filters = parseProductFilters(params);
+  const products = await listProducts(filters);
 
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-8">
