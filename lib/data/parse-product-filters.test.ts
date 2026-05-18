@@ -172,4 +172,46 @@ describe("parseProductFilters", () => {
       expect(r).not.toHaveProperty("foo");
     });
   });
+
+  describe("additional filters (material, primaryColor, topLength)", () => {
+    it("parses a single valid value for each new key", () => {
+      expect(parseProductFilters({ material: "cotton" }).material).toEqual([
+        "cotton",
+      ]);
+      expect(
+        parseProductFilters({ primaryColor: "black" }).primaryColor,
+      ).toEqual(["black"]);
+      expect(parseProductFilters({ topLength: "hip" }).topLength).toEqual([
+        "hip",
+      ]);
+    });
+
+    it("drops an invalid value silently for each new key", () => {
+      expect(
+        parseProductFilters({ material: "plastic" }).material,
+      ).toBeUndefined();
+      expect(
+        parseProductFilters({ primaryColor: "chartreuse" }).primaryColor,
+      ).toBeUndefined();
+      // "midi" is a HemLength value, not a TopLength — cross-enum invalid
+      expect(
+        parseProductFilters({ topLength: "midi" }).topLength,
+      ).toBeUndefined();
+    });
+
+    it("parses the new keys alongside the original four", () => {
+      const sp = new URLSearchParams(
+        "category=dresses&sleeveLength=long&hemLength=midi&opacity=opaque&material=cotton&primaryColor=black&topLength=hip",
+      );
+      expect(parseProductFilters(sp)).toEqual({
+        category: ["dresses"],
+        sleeveLength: ["long"],
+        hemLength: ["midi"],
+        opacity: ["opaque"],
+        material: ["cotton"],
+        primaryColor: ["black"],
+        topLength: ["hip"],
+      });
+    });
+  });
 });

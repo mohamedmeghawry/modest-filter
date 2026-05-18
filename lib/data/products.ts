@@ -3,6 +3,9 @@ import type {
   SleeveLength,
   HemLength,
   Opacity,
+  Material,
+  PrimaryColor,
+  TopLength,
 } from "@/lib/generated/prisma/client";
 
 export type ProductFilters = {
@@ -10,6 +13,9 @@ export type ProductFilters = {
   sleeveLength?: SleeveLength[];
   hemLength?: HemLength[];
   opacity?: Opacity[];
+  material?: Material[];
+  primaryColor?: PrimaryColor[];
+  topLength?: TopLength[];
 };
 
 export async function listProducts(filters: ProductFilters = {}) {
@@ -18,6 +24,9 @@ export async function listProducts(filters: ProductFilters = {}) {
     sleeveLength?: { in: SleeveLength[] };
     hemLength?: { in: HemLength[] };
     opacity?: { in: Opacity[] };
+    material?: { in: Material[] };
+    primaryColor?: { in: PrimaryColor[] };
+    topLength?: { in: TopLength[] };
   } = {};
 
   if (filters.category?.length) {
@@ -31,6 +40,15 @@ export async function listProducts(filters: ProductFilters = {}) {
   }
   if (filters.opacity?.length) {
     where.opacity = { in: filters.opacity };
+  }
+  if (filters.material?.length) {
+    where.material = { in: filters.material };
+  }
+  if (filters.primaryColor?.length) {
+    where.primaryColor = { in: filters.primaryColor };
+  }
+  if (filters.topLength?.length) {
+    where.topLength = { in: filters.topLength };
   }
 
   return prisma.product.findMany({

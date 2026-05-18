@@ -1,5 +1,12 @@
 import type { ProductFilters } from "@/lib/data/products";
-import { SleeveLength, HemLength, Opacity } from "@/lib/generated/prisma/enums";
+import {
+  SleeveLength,
+  HemLength,
+  Opacity,
+  Material,
+  PrimaryColor,
+  TopLength,
+} from "@/lib/generated/prisma/enums";
 
 type ParamSource =
   | URLSearchParams
@@ -38,5 +45,11 @@ export function parseProductFilters(source: ParamSource): ProductFilters {
     ),
     hemLength: parseEnumValues(rawValues(source, "hemLength"), HemLength),
     opacity: parseEnumValues(rawValues(source, "opacity"), Opacity),
+    material: parseEnumValues(rawValues(source, "material"), Material),
+    primaryColor: parseEnumValues(
+      rawValues(source, "primaryColor"),
+      PrimaryColor,
+    ),
+    topLength: parseEnumValues(rawValues(source, "topLength"), TopLength),
   };
 }

@@ -2,7 +2,14 @@
 
 import { useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { SleeveLength, HemLength, Opacity } from "@/lib/generated/prisma/enums";
+import {
+  SleeveLength,
+  HemLength,
+  Opacity,
+  Material,
+  PrimaryColor,
+  TopLength,
+} from "@/lib/generated/prisma/enums";
 
 // TODO: fetch category options from the DB (Category table) instead of hardcoding
 const CATEGORY_OPTIONS = ["dresses", "tops", "bottoms"];
@@ -18,6 +25,13 @@ const FILTER_GROUPS: FilterGroup[] = [
   },
   { key: "hemLength", label: "Hem Length", options: Object.values(HemLength) },
   { key: "opacity", label: "Opacity", options: Object.values(Opacity) },
+  { key: "material", label: "Material", options: Object.values(Material) },
+  {
+    key: "primaryColor",
+    label: "Primary Color",
+    options: Object.values(PrimaryColor),
+  },
+  { key: "topLength", label: "Top Length", options: Object.values(TopLength) },
 ];
 
 function humanize(value: string): string {
