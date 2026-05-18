@@ -40,3 +40,7 @@ Concrete options to weigh, none preselected:
 ## Principle
 
 Powerful capabilities do not excuse hostile UX. A filter that respects how humans actually decide — scan first, choose few, iterate — is a stronger product than a filter that exposes every possible attribute at once. Exhaustive is not the same as usable; v2 should optimize for the decision the user is trying to make, not for the completeness of the attribute surface.
+
+## Status update
+
+v2 partially implemented in e85b3cb (2026-05-17): collapsible filter sections via Radix Accordion and a mobile drawer via Radix Sheet now shipped, per the structural redesign options in the original v2 plan (see ADR-0011 for the component-layer adoption). Design polish (restrained styling, substantial mobile button) and interactive browser verification of the redesign remain deferred. The structural debt this ADR documented is repaid; the aesthetic polish debt is now isolated and explicitly scoped for a fresh-eyes session.

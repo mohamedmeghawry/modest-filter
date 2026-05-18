@@ -13,7 +13,7 @@ _Last updated: 2026-05-17._
 
 ## Where we are (engineering state, May 2026)
 
-ADRs 0001–0010 accepted. The core vertical is complete: catalogue list → URL-based filtering → product detail, all through the `lib/data` seam (ADR-0004). 49 unit tests (filter parser + display helpers). Deployed at [modest-filter.vercel.app](https://modest-filter.vercel.app/products).
+ADRs 0001–0011 accepted. The core vertical is complete: catalogue list → URL-based filtering (collapsible Accordion sections on desktop, mobile Sheet drawer) → product detail, all through the `lib/data` seam (ADR-0004). 49 unit tests (filter parser + display helpers). Deployed at [modest-filter.vercel.app](https://modest-filter.vercel.app/products).
 
 See `AGENTS.md` for the authoritative, current ADR list.
 
@@ -48,8 +48,8 @@ Build the hand-tagged evaluation set **before** the first Vision pipeline prompt
 
 ## Prioritized session-by-session next steps
 
-- **Session N+1** — AI vision tagging spike: set up the Anthropic SDK, write a structured-output prompt with the 14-attribute schema, manually tag 3–5 product images, compare results, document findings as **ADR-0011 (vision implementation strategy)**.
+- **Session N+1** — AI vision tagging spike: set up the Anthropic SDK, write a structured-output prompt with the 14-attribute schema, manually tag 3–5 product images, compare results, document findings as a **new ADR (vision implementation strategy)**.
 - **Session N+2** — Build the evaluation harness: a script that takes a product image + expected attribute JSON, runs it through the prompt, and reports per-attribute accuracy. Hand-tag ~20 starter products.
-- **Session N+3** — Mobile-first filter redesign per ADR-0010: install shadcn/ui, refactor `Filters.tsx` with collapsible sections using Radix, add a mobile drawer.
+- **Session N+3** — Mobile-first filter redesign per ADR-0010: ✓ structural part shipped in e85b3cb (Accordion + Sheet + responsive, documented in ADR-0011). Polish + interactive browser verification deferred to a fresh-eyes session.
 - **Session N+4** — First user-research conversations (target: 3 modest-dressing women, 30 min each, open-ended).
 - **Beyond** — Rakuten API exploration, then auth, then SEO + image CDN.

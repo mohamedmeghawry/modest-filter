@@ -28,6 +28,7 @@ Architectural decisions live in `docs/files/`. Read the relevant ADR before prop
 - `0008-filter-null-semantics.md` — v1 filter NULL semantics (strict `in`; "select all ≠ no filter")
 - `0009-product-url-design.md` — product URLs use cuid id for v1; slugs deferred to v2
 - `0010-filter-ui-scaling.md` — v1 filter UI scales poorly past ~30 options; UX debt acknowledged, v2 mobile-first redesign planned
+- `0011-shadcn-ui-radix-adoption.md` — adopt shadcn/ui New York (Radix primitives) for component layer; owned source in components/ui/, dark mode preserved via media query (non-standard for shadcn ecosystem)
 
 **In-flight design drafts:**
 
