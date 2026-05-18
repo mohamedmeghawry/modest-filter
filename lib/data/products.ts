@@ -42,3 +42,13 @@ export async function listProducts(filters: ProductFilters = {}) {
     orderBy: { createdAt: "desc" },
   });
 }
+
+export async function getProductById(id: string) {
+  return prisma.product.findUnique({
+    where: { id },
+    include: {
+      brand: { select: { name: true, slug: true } },
+      category: { select: { name: true, slug: true } },
+    },
+  });
+}

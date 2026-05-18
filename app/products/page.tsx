@@ -1,39 +1,16 @@
 import { listProducts } from "@/lib/data/products";
 import { parseProductFilters } from "@/lib/data/parse-product-filters";
 import { Suspense } from "react";
+import Link from "next/link";
 import Filters from "@/app/products/Filters";
+import {
+  COLOR_HEX,
+  formatPrice,
+  humanize,
+  notNull,
+} from "@/lib/products/display";
 
 export const dynamic = "force-dynamic";
-
-const COLOR_HEX: Record<string, string> = {
-  black: "#171717",
-  white: "#f5f5f5",
-  beige: "#e8dcc8",
-  brown: "#8b5e3c",
-  gray: "#9ca3af",
-  navy: "#1e293b",
-  blue: "#3b82f6",
-  green: "#16a34a",
-  yellow: "#eab308",
-  orange: "#f97316",
-  red: "#dc2626",
-  pink: "#ec4899",
-  purple: "#9333ea",
-};
-
-function formatPrice(price: unknown): string {
-  return `$${Number(price).toLocaleString("en-US", {
-    maximumFractionDigits: 0,
-  })}`;
-}
-
-function humanize(value: string): string {
-  return value.replace(/_/g, " ");
-}
-
-function notNull<T>(value: T): value is Exclude<T, null | undefined> {
-  return value !== null && value !== undefined;
-}
 
 export default async function ProductsPage({
   searchParams,
@@ -74,9 +51,10 @@ export default async function ProductsPage({
                 ].filter(notNull);
 
                 return (
-                  <article
+                  <Link
                     key={product.id}
-                    className="flex flex-col overflow-hidden rounded-lg border border-black/10"
+                    href={`/products/${product.id}`}
+                    className="flex flex-col overflow-hidden rounded-lg border border-black/10 transition-opacity hover:opacity-90"
                   >
                     <div
                       className="h-44 w-full"
@@ -110,7 +88,7 @@ export default async function ProductsPage({
                         </ul>
                       )}
                     </div>
-                  </article>
+                  </Link>
                 );
               })}
             </div>
