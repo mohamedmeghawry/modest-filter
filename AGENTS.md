@@ -25,6 +25,7 @@ Architectural decisions live in `docs/files/`. Read the relevant ADR before prop
 - `0005-claude-vision-tagging.md` — Claude Vision for product tagging
 - `0006-prisma-7-connection-architecture.md` — Prisma 7 config model: URLs in prisma.config.ts and driver adapters
 - `0007-v1-schema.md` — v1 schema (3 entities, 14 product attributes)
+- `0008-filter-null-semantics.md` — v1 filter NULL semantics (strict `in`; "select all ≠ no filter")
 
 **In-flight design drafts:**
 
