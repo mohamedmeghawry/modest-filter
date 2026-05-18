@@ -1,0 +1,55 @@
+# modest-filter Roadmap
+
+This is the durable record of project direction, market context, and known-but-not-yet-decided next steps. It is updated as the project evolves. Unlike the ADRs (which document *decided* choices) or the README (public-facing demo), this document captures *where the project is going and why*.
+
+_Last updated: 2026-05-17._
+
+## Market context (why this project matters)
+
+- Modest apparel is a **~$96–140B market in 2025** depending on research firm, growing at a **5.5–5.7% CAGR** — outpacing mainstream apparel growth.
+- The broader "general modest wear" segment, including non-Muslim consumers, creates a **TAM exceeding $500B**.
+- Existing players are mostly retailers (Modanisa, Artizara, Louella). Our positioning as an **aggregator-and-curator over mainstream brands** — not a retailer — is structurally different from the incumbents.
+- These figures are based on industry research conducted **2026-05-17** and should be **re-verified before any pitch or launch claim**. Treat them as directional, not citable, until refreshed.
+
+## Where we are (engineering state, May 2026)
+
+ADRs 0001–0010 accepted. The core vertical is complete: catalogue list → URL-based filtering → product detail, all through the `lib/data` seam (ADR-0004). 49 unit tests (filter parser + display helpers). Deployed at [modest-filter.vercel.app](https://modest-filter.vercel.app/products).
+
+See `AGENTS.md` for the authoritative, current ADR list.
+
+## Skill roadmap (gaps mapped to phases)
+
+### Next (current backlog, weeks 1–4)
+
+- **AI prompt engineering for structured extraction** — needed for the ADR-0005 Vision tagging pipeline. Concrete guidance: use Anthropic's structured-output API with an explicit JSON schema (the 14 product attribute fields); downsample images to ~768px before sending (Opus 4.7 uses ~4,800 tokens per image at full resolution, ~60% reduction at 768px with no extraction-quality loss); build an evaluation set of ~50 hand-tagged products as ground truth **before** committing to a prompt. AI engineering is fundamentally evaluation engineering.
+- **Mobile-first UX patterns** — needed for the ADR-0010 v2 redesign. Specifically: Tailwind responsive patterns at scale, drawer/modal for filter UI on small viewports, shadcn/ui + Radix UI primitives (production-React standard), accessibility fundamentals (ARIA, keyboard navigation, focus management).
+
+### Mid-term (months 2–4)
+
+- **Affiliate API integration** — first target **Rakuten Advertising** (fashion-strong network including mainstream modest-friendly brands). Note the **Rakuten + impact.com alliance announced April 2026**: one integration increasingly accesses both ecosystems. Sub-skills: HTTP retry/backoff, cross-network data normalization, ingestion idempotency (the upsert pattern in `prisma/seed.ts` already demonstrates this principle).
+- **Authentication** — Supabase Auth is the lowest-friction path given the existing Supabase stack; alternatives are Auth.js (Next.js default) and Clerk.
+- **Image handling at scale** — CDN strategy (Vercel built-in or Cloudinary), Next.js Image component with responsive srcset, blur placeholders.
+
+### Launch readiness (months 4–6)
+
+- **SEO** — JSON-LD Product schema (required for Google rich results), `sitemap.xml` generation, canonical URLs (ties to ADR-0009's v2 slug plan), OpenGraph tags.
+- **Performance** — Lighthouse / Core Web Vitals monitoring. Next.js + server components gives a strong baseline; the work is regression prevention as real images and third-party scripts arrive.
+- **Legal/compliance** — Terms of Service, Privacy Policy, GDPR (EU) and PIPEDA (Canada) compliance.
+
+## Standing practices to start now (not deferred)
+
+### User research
+
+The highest-leverage skill not yet in active practice. Five 30-minute conversations with modest-dressing women about how they actually shop today will inform v2 more than any framework choice. The curation lead's domain expertise should be treated as **co-founder-level input on UX direction**, not consultant input. This practice should run in parallel with engineering, not after launch.
+
+### Evaluation discipline (for AI features)
+
+Build the hand-tagged evaluation set **before** the first Vision pipeline prompt. Without ground truth you cannot measure whether a prompt change improves or regresses accuracy — and AI development without measurement is guesswork dressed as engineering.
+
+## Prioritized session-by-session next steps
+
+- **Session N+1** — AI vision tagging spike: set up the Anthropic SDK, write a structured-output prompt with the 14-attribute schema, manually tag 3–5 product images, compare results, document findings as **ADR-0011 (vision implementation strategy)**.
+- **Session N+2** — Build the evaluation harness: a script that takes a product image + expected attribute JSON, runs it through the prompt, and reports per-attribute accuracy. Hand-tag ~20 starter products.
+- **Session N+3** — Mobile-first filter redesign per ADR-0010: install shadcn/ui, refactor `Filters.tsx` with collapsible sections using Radix, add a mobile drawer.
+- **Session N+4** — First user-research conversations (target: 3 modest-dressing women, 30 min each, open-ended).
+- **Beyond** — Rakuten API exploration, then auth, then SEO + image CDN.

@@ -33,6 +33,8 @@ Architectural decisions live in `docs/files/`. Read the relevant ADR before prop
 
 _(none currently)_
 
+**Project direction:** see [`docs/ROADMAP.md`](docs/ROADMAP.md) — the durable record of where the project is going (market context, skill-gap phases, prioritized session-by-session backlog). ADRs are *decided*; the roadmap is *intended*.
+
 ## Tech stack
 
 - **Language:** TypeScript (frontend, backend, scripts)
