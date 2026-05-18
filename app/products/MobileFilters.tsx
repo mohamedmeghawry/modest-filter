@@ -11,16 +11,14 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import Filters, { FILTER_GROUPS } from "@/app/products/Filters";
+import Filters from "@/app/products/Filters";
+import { countActiveFilters } from "@/lib/products/filter-state";
 
 export default function MobileFilters() {
   const [open, setOpen] = useState(false);
   const searchParams = useSearchParams();
 
-  const activeCount = FILTER_GROUPS.reduce((total, group) => {
-    const raw = searchParams.get(group.key);
-    return total + (raw ? raw.split(",").filter(Boolean).length : 0);
-  }, 0);
+  const activeCount = countActiveFilters(searchParams);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>

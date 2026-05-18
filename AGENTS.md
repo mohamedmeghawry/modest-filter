@@ -90,6 +90,7 @@ Out of scope for v1: custom auth (no user accounts), CAPTCHAs, custom WAF, DDoS 
 - **End every session with a commit.** Each session ends with a commit, even mostly conversational ones. Anything we landed on goes into a doc and is committed before stopping.
 - **Keep this file current.** AGENTS.md is updated whenever a new doc category is added, so future sessions know it exists.
 - **Always run `npm run build` before pushing app code changes.** `npm run dev` uses lazy per-route transpilation that's more permissive than the production build's strict TypeScript check. A green dev doesn't guarantee a green Vercel deploy. (Lesson from commit 58d860c, May 17.)
+- **Test new pure-function logic in the same commit, not a follow-up.** When adding or extending a parser, validator, display helper, or other pure function, write the tests alongside the implementation. UI components and server components remain out of scope for the current testing infrastructure (Tier 2 backlog per ROADMAP). The bar is: if it's pure logic and reachable via a unit test, it ships with one.
 
 ## Developer context
 
