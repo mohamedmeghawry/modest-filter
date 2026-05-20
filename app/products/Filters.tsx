@@ -22,7 +22,7 @@ const CATEGORY_OPTIONS = ["dresses", "tops", "bottoms"];
 
 type FilterGroup = { key: string; label: string; options: string[] };
 
-export const FILTER_GROUPS: FilterGroup[] = [
+const FILTER_GROUPS: FilterGroup[] = [
   { key: "category", label: "Category", options: CATEGORY_OPTIONS },
   {
     key: "sleeveLength",
