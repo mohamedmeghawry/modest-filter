@@ -33,6 +33,7 @@ enum Neckline {
   v_neck
   scoop
   high_neck
+  collar
   turtleneck
   off_shoulder
   halter

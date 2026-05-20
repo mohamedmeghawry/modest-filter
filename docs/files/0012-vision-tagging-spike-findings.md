@@ -112,7 +112,7 @@ The 10/14 accuracy figure is measured against ground truth that was itself deriv
 
 ## Recommended follow-up commits (priority order)
 
-1. **Add `collar` to the Prisma `Neckline` enum** + migration + Prisma client regen. The JSON schema regenerates from Prisma; the completeness test continues to pass after regeneration.
+1. **Add `collar` to the Prisma `Neckline` enum** + migration + Prisma client regen. The JSON schema regenerates from Prisma; the completeness test continues to pass after regeneration. **✓ shipped 2026-05-20** in commit `feat(schema): add \`collar\` to Neckline enum per ADR-0012 finding`.
 2. **Document tagging conventions** in `docs/tagging-conventions.md`: color granularity (prefer specific when applicable), hem ambiguity (operational definition of `floor` vs `ankle`), material attribution (always cross-check with brand description before tagging).
 3. **Production prompt and image-selection logic should prefer model-on photos.** Brand product pages typically include both; the ingestion pipeline should detect and prioritize model-on shots. Product-only shots become supplementary input for attributes that are scale-invariant (color, pattern, material, basic shape).
 4. **Expand sample manifest to N≥5 products** before Session N+2's eval harness build — manifest growth is operational; the harness is architectural. Ground-truth tagging must use model-on photos.
