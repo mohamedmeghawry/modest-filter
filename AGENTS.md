@@ -29,6 +29,7 @@ Architectural decisions live in `docs/files/`. Read the relevant ADR before prop
 - `0009-product-url-design.md` — product URLs use cuid id for v1; slugs deferred to v2
 - `0010-filter-ui-scaling.md` — v1 filter UI scales poorly past ~30 options; UX debt acknowledged, v2 mobile-first redesign planned
 - `0011-shadcn-ui-radix-adoption.md` — adopt shadcn/ui New York (Radix primitives) for component layer; owned source in components/ui/, dark mode preserved via media query (non-standard for shadcn ecosystem)
+- `0012-vision-tagging-spike-findings.md` — first-product spike validates Claude Opus 4.7 vision tagging at 10/14 accuracy; surfaces schema gap (collar missing from Neckline), image-only material extraction unreliable (production must include product description), 16-union strict-mode ceiling at 14/16 used; recommended follow-ups: add collar enum, document tagging conventions
 
 **In-flight design drafts:**
 

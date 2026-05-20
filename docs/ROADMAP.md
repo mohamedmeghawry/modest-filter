@@ -2,7 +2,7 @@
 
 This is the durable record of project direction, market context, and known-but-not-yet-decided next steps. It is updated as the project evolves. Unlike the ADRs (which document *decided* choices) or the README (public-facing demo), this document captures *where the project is going and why*.
 
-_Last updated: 2026-05-17._
+_Last updated: 2026-05-20._
 
 ## Market context (why this project matters)
 
@@ -13,7 +13,7 @@ _Last updated: 2026-05-17._
 
 ## Where we are (engineering state, May 2026)
 
-ADRs 0001–0011 accepted. The core vertical is complete: catalogue list → URL-based filtering (collapsible Accordion sections on desktop, mobile Sheet drawer) → product detail, all through the `lib/data` seam (ADR-0004). 49 unit tests (filter parser + display helpers). Deployed at [modest-filter.vercel.app](https://modest-filter.vercel.app/products).
+ADRs 0001–0012 accepted. The core vertical is complete: catalogue list → URL-based filtering (collapsible Accordion sections on desktop, mobile Sheet drawer) → product detail, all through the `lib/data` seam (ADR-0004). 74 unit tests (filter parser + display helpers + vision schema completeness). Vision tagging viability validated empirically against a first product (ADR-0012). Deployed at [modest-filter.vercel.app](https://modest-filter.vercel.app/products).
 
 See `AGENTS.md` for the authoritative, current ADR list.
 
@@ -48,8 +48,8 @@ Build the hand-tagged evaluation set **before** the first Vision pipeline prompt
 
 ## Prioritized session-by-session next steps
 
-- **Session N+1** — AI vision tagging spike: set up the Anthropic SDK, write a structured-output prompt with the 14-attribute schema, manually tag 3–5 product images, compare results, document findings as a **new ADR (vision implementation strategy)**.
-- **Session N+2** — Build the evaluation harness: a script that takes a product image + expected attribute JSON, runs it through the prompt, and reports per-attribute accuracy. Hand-tag ~20 starter products.
+- **Session N+1** — Vision tagging spike: ✓ shipped 2026-05-20 (commits f2b8524..22157c3); findings documented in ADR-0012; four follow-ups identified (`collar` enum, tagging conventions doc, manifest growth, prompt redesign w/ description).
+- **Session N+2** — Evaluation harness, framed by ADR-0012's open questions: image-only vs image+description A/B, 50-product ground truth (expand from manifest's current 1), per-attribute accuracy table, model-cost tradeoff measurement (Opus 4.7 vs Sonnet 4.6).
 - **Session N+3** — Mobile-first filter redesign per ADR-0010: ✓ structural part shipped in e85b3cb (Accordion + Sheet + responsive, documented in ADR-0011). Polish + interactive browser verification deferred to a fresh-eyes session.
 - **Session N+4** — First user-research conversations (target: 3 modest-dressing women, 30 min each, open-ended).
 - **Beyond** — Rakuten API exploration, then auth, then SEO + image CDN.
