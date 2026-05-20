@@ -42,3 +42,10 @@ yarn-error.log*
 next-env.d.ts
 
 /lib/generated/prisma
+
+# image fixtures (samples/manifest.json stays tracked; binaries do not)
+/samples/*.avif
+/samples/*.jpg
+/samples/*.jpeg
+/samples/*.png
+/samples/*.webp
