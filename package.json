@@ -11,7 +11,8 @@
     "postinstall": "prisma generate",
     "db:test": "tsx --env-file=.env.local scripts/test-db.ts",
     "db:seed": "tsx --env-file=.env.local prisma/seed.ts",
-    "test": "vitest run"
+    "test": "vitest run",
+    "vision:spike": "tsx --env-file=.env.local scripts/vision-spike.ts"
   },
   "prisma": {
     "seed": "tsx --env-file=.env.local prisma/seed.ts"
