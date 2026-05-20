@@ -48,7 +48,8 @@ Build the hand-tagged evaluation set **before** the first Vision pipeline prompt
 
 ## Prioritized session-by-session next steps
 
-- **Session N+1** — Vision tagging spike: ✓ shipped 2026-05-20 (commits f2b8524..22157c3); findings documented in ADR-0012; four follow-ups identified (`collar` enum, tagging conventions doc, manifest growth, prompt redesign w/ description).
+- **Session N+1** — Vision tagging spike: ✓ shipped 2026-05-20 (commits f2b8524..22157c3); findings documented in ADR-0012; five follow-ups identified (`collar` enum, tagging conventions doc, prefer model-on photos in ingestion, manifest growth, prompt redesign w/ description).
+- **Session N+1.5** — Tier 1 coverage audit on Rakuten / seed brands per ADR-0013, before sinking effort into eval harness against potentially-wrong assumptions about Tier 1 yields.
 - **Session N+2** — Evaluation harness, framed by ADR-0012's open questions: image-only vs image+description A/B, 50-product ground truth (expand from manifest's current 1), per-attribute accuracy table, model-cost tradeoff measurement (Opus 4.7 vs Sonnet 4.6).
 - **Session N+3** — Mobile-first filter redesign per ADR-0010: ✓ structural part shipped in e85b3cb (Accordion + Sheet + responsive, documented in ADR-0011). Polish + interactive browser verification deferred to a fresh-eyes session.
 - **Session N+4** — First user-research conversations (target: 3 modest-dressing women, 30 min each, open-ended).
