@@ -1,0 +1,79 @@
+# Tagging Conventions
+
+_Last updated: 2026-05-20._
+
+## Purpose & scope
+
+This document is the operational guide for hand-tagging products with the 14 modesty-relevant attributes defined in ADR-0007. It serves a dual audience:
+
+- **Human taggers** — the curation lead, contributors, and future contractors who hand-tag products for the ground-truth dataset that feeds Session N+2's evaluation harness.
+- **Prompt design reference** — these conventions inform iterations of the Claude Vision system prompt (`lib/vision/prompt.ts`). When the prompt is tightened, it should align with the conventions documented here, so the model and the human taggers are working from the same rule set.
+
+### Relationship to existing ADRs
+
+- **ADR-0008 (NULL semantics)** — referenced throughout, not re-explained here. The `null` vs `"none"` distinction is the foundation; this doc applies it per-attribute.
+- **ADR-0012 (vision tagging spike findings)** — most of the conventions below were surfaced by the spike's mismatch analysis. Every convention with an ADR-0012 reference traces back to a specific finding.
+- **ADR-0013 (three-tier image sourcing)** — determines which image source to tag from. Conventions below specify which attributes require model-on photos.
+
+## General principles
+
+**NULL vs "none" (per ADR-0008).** Use `null` when an attribute does not *apply* to the garment (e.g., `topLength` is `null` for a dress — tops have lengths, dresses don't). Use `"none"` when the attribute applies and the value is the absence of the feature (e.g., `slit: "none"` for a dress that could have had a slit but doesn't).
+
+**Honest uncertainty.** If the attribute is not clearly visible in the available images, return `null`. Tagging discipline mirrors what the AI system prompt instructs the model to do — both humans and Claude should be honest about uncertainty rather than guessing.
+
+**Image source priority (per ADR-0013).** Always prefer model-on photos when available. Product-only photos can be used for scale-invariant attributes (color, pattern, material, basic shape) but should not be used as primary source for length, slit, fit, neckline-on-body, or sleeve-fall. The per-attribute guides below name the cases where this matters.
+
+## Per-attribute conventions
+
+### Coverage attributes (7)
+
+**`sleeveLength`** — Use the enum value matching the visible sleeve length. `null` for bottoms or any item with no upper-body coverage.
+
+**`sleeveOpacity`** — Use the enum value matching how transparent the sleeves are specifically. `null` if there are no sleeves.
+
+**`neckline`** — Use the enum value matching the visible neckline. The `collar` value was added in commit `feat(schema): add \`collar\` to Neckline enum per ADR-0012 finding` for collared shapes (polo, button-up). `null` for bottoms or no-upper-body items.
+
+**`backStyle`** — Use the enum value matching the visible back. `null` if the back is not visible in the available images. Per ADR-0013, model-on photos are strongly preferred when back coverage is a meaningful filter dimension — product-only photos commonly omit back views.
+
+**`hemLength`** — operational definitions:
+
+- `mini`: above the knee
+- `knee`: at the knee
+- `midi`: mid-calf to just below the knee
+- `ankle`: covers the ankle bone, visible foot
+- `floor`: grazes the floor, foot barely or not visible
+
+Always tag from a model-on photo. Product-only photos lack scale reference (ADR-0012 finding — both the spike's ground truth and Claude's extraction were wrong because both worked from product-only photos).
+
+**`topLength`** — Use the enum value matching the visible top length. `null` for dresses and bottoms (per ADR-0008 NULL semantics).
+
+**`slit`** — Use the enum value matching the visible slit height. **Only reliably tagged from model-on photos** (ADR-0012 finding — slits manifest visually only when the garment is worn; product-only photos consistently hide them). If only product-only photos are available and the brand description doesn't confirm slit presence, prefer `null` over `"none"` — the spike's slit "none vs none" mismatch was a shared blind spot precisely because both ground-truth and model defaulted to "none" without on-body evidence.
+
+### Fit & material (5)
+
+**`fit`** — Use the enum value matching the overall fit (`fitted`, `semi_fitted`, `loose`, `oversized`). Prefer model-on photos per ADR-0013 — product-only photos can mislead because hanger drape differs from body drape.
+
+**`opacity`** — Use the enum value matching the overall opacity of the main fabric.
+
+**`lined`** — Use the enum value matching whether the garment is lined. Often determinable only from the inside of the garment or from the brand description; use `null` if not visible in available images and the description is silent.
+
+**`cutouts`** — Use the enum value matching cutout presence (`none` or `present`).
+
+**`material`** — **Always cross-check the brand product description before tagging.** Image-only material extraction is unreliable (ADR-0012 finding — Claude tagged `viscose` for an "Airplush Cotton™" dress because drapey cotton resembles viscose in product-only images). If the description names a material, tag it regardless of how the fabric appears in the image. If the description is silent on material, tag based on visual best-guess and note the uncertainty.
+
+### Visual (2)
+
+**`primaryColor`** — **Granularity convention: prefer the specific value when both general and specific exist.** A navy dress is tagged `navy`, not `blue`. Currently the only specific/general pair in the enum is `navy`/`blue`; the convention pattern applies to any future pairs added to `PrimaryColor`. Rationale: finer-grained filtering for users, denser data for future model training.
+
+**`pattern`** — Use the enum value matching the visible pattern. For complex multicolor patterns or prints that don't fit a specific category, prefer `other` over forcing an inexact match (`floral`, `geometric`, etc.).
+
+## Open conventions (TBD)
+
+Conventions that future tagging will surface, to be documented as they arise:
+
+- **Compound attributes** — how to handle a garment that is, e.g., `lined` and `unlined` in different regions (the bodice is lined, the skirt is not). Current default: tag the dominant region's state; flag for review in tagger notes if ambiguous.
+- _(Add as encountered.)_
+
+## Update process
+
+This document is intentionally mutable — conventions evolve as the catalogue grows. Each substantive convention change should be committed alongside the tagging work that surfaced it, following the same "test-as-we-go" discipline AGENTS.md applies to pure-function logic. When adding or amending a convention, reference the commit (by message, not SHA) that prompted it.

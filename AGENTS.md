@@ -38,6 +38,8 @@ _(none currently)_
 
 **Project direction:** see [`docs/ROADMAP.md`](docs/ROADMAP.md) — the durable record of where the project is going (market context, skill-gap phases, prioritized session-by-session backlog). ADRs are *decided*; the roadmap is *intended*.
 
+**Operational docs:** see [`docs/tagging-conventions.md`](docs/tagging-conventions.md) — hand-tagging guide for the 14 modesty-relevant product attributes (dual audience: human taggers and Claude Vision prompt design).
+
 ## Tech stack
 
 - **Language:** TypeScript (frontend, backend, scripts)
