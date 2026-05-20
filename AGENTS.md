@@ -72,6 +72,12 @@ Mandatory controls before production:
 - Billing alerts configured on Anthropic and Vercel
 - Bot protection enabled (Vercel built-in or Cloudflare)
 
+**Environment variables** (stored in Bitwarden and the project's local `.env.local`; template in `.env.local.example`):
+
+- `DATABASE_URL` — Supabase transaction pooler (port 6543); runtime queries via Prisma (ADR-0006)
+- `DIRECT_URL` — Supabase session pooler (port 5432); migrations (ADR-0006)
+- `ANTHROPIC_API_KEY` — Claude Vision API; used for product attribute extraction (ADR-0005; implementation strategy in forthcoming ADR-0012). Server-side only.
+
 Out of scope for v1: custom auth (no user accounts), CAPTCHAs, custom WAF, DDoS mitigation beyond hosting defaults.
 
 ## Conventions
