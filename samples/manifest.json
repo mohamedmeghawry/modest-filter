@@ -1,0 +1,27 @@
+[
+  {
+    "id": "aritzia-airplush-vestige-dress",
+    "images": [
+      "./s26_a08_130034_10230_off_a.jpg",
+      "./s26_a08_130034_10230_off_b.jpg"
+    ],
+    "sourceUrl": "https://www.aritzia.com/en/product/airplush-cotton%E2%84%A2-vestige-dress/130034.html?color=10230",
+    "notes": "Long-sleeve maxi dress, navy/dark blue, high-neck/collared, no visible slit, fully closed back",
+    "groundTruth": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "floor",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    }
+  }
+]

@@ -1,5 +1,5 @@
 import { readFileSync, existsSync } from "node:fs";
-import { resolve, basename } from "node:path";
+import { resolve, dirname } from "node:path";
 import { extractAttributes } from "../lib/vision/extract";
 
 // Opus 4.7 pricing per the Anthropic claude-api skill (cached 2026-04-29).
@@ -19,6 +19,14 @@ type Usage = {
   outputTokens: number;
 };
 
+// Only the fields this script consumes. Manifest may carry additional
+// fields (sourceUrl, notes, groundTruth) that Phase D's eval harness uses;
+// they're ignored here.
+type ManifestEntry = {
+  id: string;
+  images: string[];
+};
+
 function estimateCost(usage: Usage): number {
   return (
     (usage.inputTokens * PRICING.inputPerMTok +
@@ -30,11 +38,25 @@ function estimateCost(usage: Usage): number {
 }
 
 async function main() {
-  const paths = process.argv.slice(2);
-  if (paths.length === 0) {
-    console.error(
-      "Usage: npm run vision:spike -- <image-path> [<image-path> ...]",
-    );
+  const manifestArg = process.argv[2];
+  if (!manifestArg) {
+    console.error("Usage: npm run vision:spike -- <manifest.json>");
+    process.exit(1);
+  }
+
+  const manifestPath = resolve(manifestArg);
+  if (!existsSync(manifestPath)) {
+    console.error(`Manifest not found: ${manifestPath}`);
+    process.exit(1);
+  }
+
+  const manifestDir = dirname(manifestPath);
+  const manifest = JSON.parse(
+    readFileSync(manifestPath, "utf8"),
+  ) as ManifestEntry[];
+
+  if (!Array.isArray(manifest)) {
+    console.error("Manifest must be a JSON array of product entries");
     process.exit(1);
   }
 
@@ -46,16 +68,26 @@ async function main() {
     cost: 0,
   };
 
-  for (const path of paths) {
-    const absolute = resolve(path);
-    if (!existsSync(absolute)) {
-      console.error(`Skipping (not found): ${path}`);
+  for (const product of manifest) {
+    console.log(`\n=== ${product.id} (${product.images.length} image(s)) ===`);
+
+    const buffers: Buffer[] = [];
+    let missing = false;
+    for (const imagePath of product.images) {
+      const absoluteImage = resolve(manifestDir, imagePath);
+      if (!existsSync(absoluteImage)) {
+        console.error(`  missing image: ${imagePath}`);
+        missing = true;
+        continue;
+      }
+      buffers.push(readFileSync(absoluteImage));
+    }
+    if (missing || buffers.length === 0) {
+      console.error(`  skipping ${product.id} (missing images)`);
       continue;
     }
-    const buffer = readFileSync(absolute);
-    console.log(`\n=== ${basename(path)} ===`);
 
-    const { attributes, usage } = await extractAttributes(buffer, {
+    const { attributes, usage } = await extractAttributes(buffers, {
       vendor: "anthropic",
       model: "claude-opus-4-7",
     });
@@ -73,7 +105,7 @@ async function main() {
     totals.cost += cost;
   }
 
-  console.log(`\n=== TOTAL across ${paths.length} image(s) ===`);
+  console.log(`\n=== TOTAL across ${manifest.length} product(s) ===`);
   console.log(
     `tokens: input=${totals.inputTokens} cache_write=${totals.cacheCreationInputTokens} cache_read=${totals.cacheReadInputTokens} output=${totals.outputTokens}`,
   );

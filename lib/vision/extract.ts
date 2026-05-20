@@ -79,9 +79,12 @@ function buildImageBlock(image: ImageInput): Anthropic.ImageBlockParam {
 }
 
 export async function extractAttributes(
-  image: ImageInput,
+  images: ImageInput | ImageInput[],
   modelConfig: ModelConfig,
 ): Promise<ExtractResult> {
+  // Buffer is not Array.isArray, so this correctly disambiguates
+  // single Buffer / single URL object from arrays of either.
+  const imageArray = Array.isArray(images) ? images : [images];
   if (modelConfig.vendor !== "anthropic") {
     // Exhaustive guard: adding a new vendor to ModelConfig surfaces here at
     // compile time as `never` narrowing, so this branch can't silently swallow
@@ -113,7 +116,7 @@ export async function extractAttributes(
       {
         role: "user",
         content: [
-          buildImageBlock(image),
+          ...imageArray.map(buildImageBlock),
           { type: "text", text: USER_PROMPT },
         ],
       },

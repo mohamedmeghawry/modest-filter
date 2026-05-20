@@ -9,4 +9,4 @@ NULL semantics — use null for any attribute that does not apply to the garment
 Be honest about uncertainty. If an attribute is not clearly visible (e.g. the back is not shown), return null rather than guessing.`;
 
 export const USER_PROMPT =
-  "Extract the modesty-relevant attributes from this product image using the tag_product tool.";
+  "Extract the modesty-relevant attributes from the product shown in the following image(s) using the tag_product tool. Multiple images may show different views (e.g., front and back) of the same garment.";
