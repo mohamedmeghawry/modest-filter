@@ -42,7 +42,13 @@ const ATTRIBUTE_TO_ENUM: ReadonlyArray<[string, Record<string, string>]> = [
 describe("TAG_PRODUCT_TOOL completeness", () => {
   const properties = TAG_PRODUCT_TOOL.input_schema.properties as Record<
     string,
-    { type: string[]; enum: (string | null)[]; description: string }
+    {
+      description: string;
+      anyOf: [
+        { type: string; enum: string[] },
+        { type: string },
+      ];
+    }
   >;
 
   it("covers all 14 product attribute fields, no more, no less", () => {
@@ -52,29 +58,32 @@ describe("TAG_PRODUCT_TOOL completeness", () => {
   });
 
   it.each(ATTRIBUTE_TO_ENUM)(
-    "%s schema includes every Prisma enum value plus null",
+    "%s schema includes every Prisma enum value plus an explicit null branch",
     (field, enumObj) => {
       const property = properties[field];
       expect(property, `missing property: ${field}`).toBeDefined();
+      expect(
+        property.anyOf,
+        `${field} must use anyOf for strict-mode nullable enums`,
+      ).toBeDefined();
+      expect(
+        property.anyOf.length,
+        `${field} anyOf must have exactly 2 branches`,
+      ).toBe(2);
 
-      // Every Prisma value must appear in the schema's enum array.
+      const [stringBranch, nullBranch] = property.anyOf;
+
+      // String branch carries the enum of all valid Prisma values.
+      expect(stringBranch.type).toBe("string");
       for (const value of Object.values(enumObj)) {
         expect(
-          property.enum,
-          `${field} schema is missing Prisma enum value '${value}' — Prisma migration likely added a value without updating the vision schema`,
+          stringBranch.enum,
+          `${field} string branch is missing Prisma enum value '${value}' — Prisma migration likely added a value without updating the vision schema`,
         ).toContain(value);
       }
 
-      // Nullable: schema must accept null both via type and via enum membership.
-      expect(property.enum, `${field} schema must accept null`).toContain(null);
-      expect(
-        property.type,
-        `${field} schema type must include 'null'`,
-      ).toContain("null");
-      expect(
-        property.type,
-        `${field} schema type must include 'string'`,
-      ).toContain("string");
+      // Null branch is the explicit type:"null" form (required by strict mode).
+      expect(nullBranch.type).toBe("null");
     },
   );
 

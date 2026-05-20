@@ -56,15 +56,18 @@ function nullableEnum(
   enumObj: Record<string, string>,
   description: string,
 ): {
-  type: ["string", "null"];
-  enum: (string | null)[];
   description: string;
+  anyOf: [
+    { type: "string"; enum: string[] },
+    { type: "null" },
+  ];
 } {
-  const values = Object.values(enumObj);
   return {
-    type: ["string", "null"],
-    enum: [...values, null],
     description,
+    anyOf: [
+      { type: "string", enum: Object.values(enumObj) },
+      { type: "null" },
+    ],
   };
 }
 
