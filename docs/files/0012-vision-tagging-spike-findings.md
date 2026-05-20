@@ -57,6 +57,17 @@ ADR-0005 specified Claude Vision as the tagging strategy without empirical valid
 
 > *Recommendation: document a preferred-granularity convention before building the eval set. When both general and specific values exist (`blue`/`navy`, `red`/`burgundy`), tagger and model must align on which to prefer; otherwise apparent disagreement is convention drift, not extraction error.*
 
+### Image source inadequacy surfaced (post-spike addendum)
+
+After completing the spike against the Aritzia product-only photos, the same dress's model-on photo was reviewed and revealed that two of the four mismatches above were not what the original categorization implied:
+
+- **`hemLength` "floor vs ankle" was not image ambiguity** — both ground truth and Claude were wrong. The dress is `midi` when measured against a human body. Product-only photos lose scale reference for length entirely.
+- **`slit` "none vs none" was a shared blind spot** — both ground truth and Claude missed a clearly visible high slit because slits only manifest visually when the garment is worn.
+
+This reframes the spike's central learning: image-only extraction is insufficient not just because text descriptions add context (the `material` finding), but because **product-only photography hides modesty-critical attributes that only appear on bodies**. For a modesty-filtering product specifically, this is the single most important production-design implication of the spike.
+
+> *Updated recommendation: production extraction MUST prefer model-on photos when available. Product-only photos should be treated as supplementary (good for color/pattern/material/silhouette) rather than primary (insufficient for length/slit/neckline-on-body/sleeve-fall/fit).*
+
 ### Multi-image support validated
 
 Phase B's extension to `ImageInput | ImageInput[]` was load-bearing. `backStyle` correctly extracted as `closed` from image B (the back view). Single-image-only would have returned `null` per the prompt's "honest about uncertainty" rule.
@@ -91,6 +102,8 @@ Continue with Claude Opus 4.7 for vision tagging in production, per ADR-0005. Ba
 
 Defer model alternatives (Sonnet 4.6, Gemini 3.1 Pro) to Session N+2's evaluation harness, where per-attribute accuracy and cost across N=50 products can be measured empirically.
 
+The 10/14 accuracy figure is measured against ground truth that was itself derived from insufficient (product-only) images. True accuracy against correctly-tagged ground truth may be higher — Claude's `ankle` reading is arguably as defensible as the hand-tagged `floor`, given both worked from the same inadequate photos. The eval harness's ground truth must be derived from model-on photos to be a reliable measurement substrate.
+
 ## Alternatives considered
 
 - **Skip the spike, build the eval harness directly.** Rejected. The spike surfaced the strict-mode schema bug, the multi-image architecture need, the AVIF format incompatibility, and four distinct mismatch categories — all before sinking effort into a 50-product ground-truth set. Spike cost was ~$0.04; deferred discovery cost would have been a 50× rework.
@@ -101,5 +114,6 @@ Defer model alternatives (Sonnet 4.6, Gemini 3.1 Pro) to Session N+2's evaluatio
 
 1. **Add `collar` to the Prisma `Neckline` enum** + migration + Prisma client regen. The JSON schema regenerates from Prisma; the completeness test continues to pass after regeneration.
 2. **Document tagging conventions** in `docs/tagging-conventions.md`: color granularity (prefer specific when applicable), hem ambiguity (operational definition of `floor` vs `ankle`), material attribution (always cross-check with brand description before tagging).
-3. **Expand sample manifest to N≥5 products** before Session N+2's eval harness build — manifest growth is operational; the harness is architectural.
-4. **Production prompt redesign incorporating product description text** — deferred to N+2's evaluation context where the lift can be measured.
+3. **Production prompt and image-selection logic should prefer model-on photos.** Brand product pages typically include both; the ingestion pipeline should detect and prioritize model-on shots. Product-only shots become supplementary input for attributes that are scale-invariant (color, pattern, material, basic shape).
+4. **Expand sample manifest to N≥5 products** before Session N+2's eval harness build — manifest growth is operational; the harness is architectural. Ground-truth tagging must use model-on photos.
+5. **Production prompt redesign incorporating product description text** — deferred to N+2's evaluation context where the lift can be measured.
