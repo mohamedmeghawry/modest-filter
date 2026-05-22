@@ -49,3 +49,6 @@ next-env.d.ts
 /samples/*.jpeg
 /samples/*.png
 /samples/*.webp
+
+# local credentials file (never commit) — matches any extension
+/affiliates-info*
