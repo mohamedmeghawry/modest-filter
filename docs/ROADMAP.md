@@ -2,7 +2,7 @@
 
 This is the durable record of project direction, market context, and known-but-not-yet-decided next steps. It is updated as the project evolves. Unlike the ADRs (which document *decided* choices) or the README (public-facing demo), this document captures *where the project is going and why*.
 
-_Last updated: 2026-05-20._
+_Last updated: 2026-06-01._
 
 ## Market context (why this project matters)
 
@@ -13,7 +13,7 @@ _Last updated: 2026-05-20._
 
 ## Where we are (engineering state, May 2026)
 
-ADRs 0001–0012 accepted. The core vertical is complete: catalogue list → URL-based filtering (collapsible Accordion sections on desktop, mobile Sheet drawer) → product detail, all through the `lib/data` seam (ADR-0004). 74 unit tests (filter parser + display helpers + vision schema completeness). Vision tagging viability validated empirically against a first product (ADR-0012). Deployed at [modest-filter.vercel.app](https://modest-filter.vercel.app/products).
+ADRs 0001–0013 accepted. The core vertical is complete: catalogue list → URL-based filtering (collapsible Accordion sections on desktop, mobile Sheet drawer) → product detail, all through the `lib/data` seam (ADR-0004). 74 unit tests (filter parser + display helpers + vision schema completeness). Vision tagging viability validated empirically against a first product (ADR-0012). Deployed at [modest-filter.vercel.app](https://modest-filter.vercel.app/products).
 
 See `AGENTS.md` for the authoritative, current ADR list.
 
@@ -49,7 +49,10 @@ Build the hand-tagged evaluation set **before** the first Vision pipeline prompt
 ## Prioritized session-by-session next steps
 
 - **Session N+1** — Vision tagging spike: ✓ shipped 2026-05-20 (commits f2b8524..22157c3); findings documented in ADR-0012; five follow-ups identified (✓ `collar` enum, ✓ tagging conventions doc, prefer model-on photos in ingestion, manifest growth, prompt redesign w/ description).
-- **Session N+1.5** — Tier 1 coverage audit on Rakuten / seed brands per ADR-0013, before sinking effort into eval harness against potentially-wrong assumptions about Tier 1 yields.
+- **Session N+1.5** — Two tracks, deliberately **decoupled** so the blocked one does not gate the other:
+  - **Track A — Tier 1 coverage audit (currently blocked).** Answer ADR-0013's open questions: actual model-on photo % per Rakuten seed brand. Blocked on affiliate-feed access (not yet obtained). This is a *sourcing* problem.
+  - **Track B — Vision validation on model-on photos (unblocked, do this first).** Whether Claude detects modesty attributes on *good* photos is a *tech* problem that needs no affiliate access — model-on shots are on the brands' own public product pages. Plan: (1) re-tag the existing Aritzia dress from its model-on photo to confirm the known-bad ground truth (`hemLength` floor→midi, `slit` none→high) from ADR-0012's addendum; (2) hand-source ~5 seed-brand products, saving both the product-only and the model-on shot for each (convert AVIF→PNG; Anthropic rejects AVIF); (3) hand-tag ground truth from the model-on shot per `docs/tagging-conventions.md`; (4) add as **paired** manifest entries — one flat-only, one model-only per product — so `npm run vision:spike` shows flat-vs-model detection side by side; (5) eyeball the difference. Goal: confirm the ADR-0012 model-on hypothesis on N>1 and learn how much model-on photos matter, which sets the success bar for Track A. Output is eyeballed; the automated accuracy **scorer is deferred to Session N+2** (do not build it here).
+  - **Rationale:** affiliate access is sourcing; vision accuracy is tech. Letting the blocked sourcing track stall the tech validation would be a false dependency.
 - **Session N+2** — Evaluation harness, framed by ADR-0012's open questions: image-only vs image+description A/B, 50-product ground truth (expand from manifest's current 1), per-attribute accuracy table, model-cost tradeoff measurement (Opus 4.7 vs Sonnet 4.6).
 - **Session N+3** — Mobile-first filter redesign per ADR-0010: ✓ structural part shipped in e85b3cb (Accordion + Sheet + responsive, documented in ADR-0011). Polish + interactive browser verification deferred to a fresh-eyes session.
 - **Session N+4** — First user-research conversations (target: 3 modest-dressing women, 30 min each, open-ended).
