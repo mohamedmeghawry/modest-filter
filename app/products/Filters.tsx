@@ -16,6 +16,7 @@ import {
   PrimaryColor,
   TopLength,
 } from "@/lib/generated/prisma/enums";
+import { humanize } from "@/lib/products/display";
 
 // TODO: fetch category options from the DB (Category table) instead of hardcoding
 const CATEGORY_OPTIONS = ["dresses", "tops", "bottoms"];
@@ -39,10 +40,6 @@ const FILTER_GROUPS: FilterGroup[] = [
   },
   { key: "topLength", label: "Top Length", options: Object.values(TopLength) },
 ];
-
-function humanize(value: string): string {
-  return value.replace(/_/g, " ");
-}
 
 export default function Filters() {
   const router = useRouter();
