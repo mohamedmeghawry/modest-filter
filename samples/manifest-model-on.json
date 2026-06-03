@@ -1,0 +1,128 @@
+[
+  {
+    "id": "aritzia-eleta-linen-maxi-dress",
+    "images": ["./Eleta Linen Maxi Dress_front.png", "./Eleta Linen Maxi Dress_back.png"],
+    "notes": "Oatmeal linen shirtdress, belted, short rolled sleeves, button-front placket. material: confirm from description (likely linen).",
+    "groundTruth": {
+      "sleeveLength": "short",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "linen",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    }
+  },
+  {
+    "id": "aritzia-mural-linen-halter-dress",
+    "images": ["./Mural Linen Halter Dress_front.png", "./Mural Linen Halter Dress_back.png"],
+    "notes": "White linen halter dress, deep-V front, open scoop back. material: confirm (likely linen). backStyle low_back vs open_back is a judgment call.",
+    "groundTruth": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "halter",
+      "backStyle": "low_back",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "linen",
+      "primaryColor": "white",
+      "pattern": "solid"
+    }
+  },
+  {
+    "id": "aritzia-barrafina-linen-dress",
+    "images": ["./Barrafina Linen Dress_front.png", "./Barrafina Linen Dress_back.png"],
+    "notes": "Beige linen spaghetti-strap slip midi, VISIBLE HIGH FRONT SLIT, closed back with zip. material: confirm (likely linen).",
+    "groundTruth": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "scoop",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "high",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "linen",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    }
+  },
+  {
+    "id": "aritzia-countess-linen-dress",
+    "images": ["./Countess Linen Dress_front.png", "./Countess Linen Dress_back.png"],
+    "notes": "Navy sleeveless fit-and-flare midi, KEYHOLE CUTOUT + tie at front neck, closed back zip. material + lined: confirm from description.",
+    "groundTruth": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "present",
+      "material": "linen",
+      "primaryColor": "navy",
+      "pattern": "solid"
+    }
+  },
+  {
+    "id": "aritzia-seacoast-halter-dress",
+    "images": ["./Seacoast Halter Dress_front.png", "./Seacoast Halter Dress_back.png"],
+    "notes": "Yellow open-crochet-knit halter mini, SEMI-SHEER, open back. material: confirm (knit; cotton-blend?).",
+    "groundTruth": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "halter",
+      "backStyle": "open_back",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "yellow",
+      "pattern": "solid"
+    }
+  },
+  {
+    "id": "aritzia-effortless-pant-CONFOUND",
+    "images": ["./The Effortless Pant™ - PowerLinen™_front.png", "./The Effortless Pant™ - PowerLinen™_back.png"],
+    "notes": "STYLING-CONFOUND DEMO. Product is the wide-leg pants (a bottom), but photo is styled with a white shirt + tank. Ground truth describes the PANTS ONLY; upper-body attrs are null. Expect the AI to mis-tag the shirt because the rig sends no product context.",
+    "groundTruth": {
+      "sleeveLength": null,
+      "sleeveOpacity": null,
+      "neckline": null,
+      "backStyle": null,
+      "hemLength": "floor",
+      "topLength": null,
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "linen",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    }
+  }
+]

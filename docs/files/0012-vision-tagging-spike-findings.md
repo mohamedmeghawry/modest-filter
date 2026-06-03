@@ -117,3 +117,35 @@ The 10/14 accuracy figure is measured against ground truth that was itself deriv
 3. **Production prompt and image-selection logic should prefer model-on photos.** Brand product pages typically include both; the ingestion pipeline should detect and prioritize model-on shots. Product-only shots become supplementary input for attributes that are scale-invariant (color, pattern, material, basic shape).
 4. **Expand sample manifest to N≥5 products** before Session N+2's eval harness build — manifest growth is operational; the harness is architectural. Ground-truth tagging must use model-on photos.
 5. **Production prompt redesign incorporating product description text** — deferred to N+2's evaluation context where the lift can be measured.
+
+## Session N+1.5 addendum — model-on validation (2026-06-03)
+
+**Goal (ROADMAP Track B):** test whether Claude fills the 14-attribute row accurately from *model-on* front+back photos — the inputs production will actually use — on N>1, by eyeball. Deliberately decoupled from the blocked affiliate-sourcing track (Track A).
+
+**Setup:** 5 Aritzia linen dresses (Eleta, Mural, Barrafina, Countess, Seacoast) + 1 styling-confound case (The Effortless Pant), each front+back, model-on, hand-sourced from Aritzia product pages. Ground truth was hand-tagged from the photos **before** running the model (`samples/manifest-model-on.json`). Model: Claude Opus 4.7, same rig and zero-shot prompt as the spike. Images converted AVIF→PNG via `sharp` (already bundled by Next.js; declaring it a direct dep + committing a converter is a follow-up).
+
+**Result: 78/84 attributes exact-match (93%); zero clear errors.** All 6 disagreements are defensible judgment calls or a NULL-vs-"none" nuance, not extraction failures:
+
+| Product | Match | Disagreement |
+|---|---|---|
+| Eleta Maxi | 13/14 | fit `loose` vs `semi_fitted` (belted) |
+| Mural Halter | 13/14 | backStyle `low_back` vs `open_back` (model arguably more correct) |
+| Barrafina | 12/14 | neckline `scoop` vs `square`; backStyle `closed` vs `scoop_back` |
+| Countess | **14/14** | — (incl. keyhole `cutouts: present`) |
+| Seacoast Halter | 13/14 | fit `semi_fitted` vs `fitted` |
+| Effortless Pant | 13/14 | slit `null` vs `none` |
+
+**Findings:**
+
+1. **Slit hypothesis confirmed on N>1.** Barrafina's high front slit — exactly the attribute this ADR flagged flat photos as hiding — was correctly extracted (`slit: high`) from the model-on shot. Model-on photography surfaces modesty-critical attributes as predicted; this is the N>1 confirmation Track B existed to produce.
+2. **Styling confound did not materialize (single example).** The Effortless Pant is photographed styled with a shirt + tank; the model still returned `null` for all upper-body attributes and tagged only the pants. Tentative — one case, and pants dominate the frame. Does *not* retire the "feed product name/category into the prompt" recommendation, but weakens its urgency.
+3. **On good photos, Opus ≈ human-agreement.** The spike's 10/14 was measured against flat photos with flawed ground truth; on model-on photos the disagreements collapse to genuinely ambiguous attributes. Strongest validation to date of the ADR-0005 tagging premise.
+
+**Caveats — do not over-read the 93%:**
+
+- Ground truth was tagged by the same agent, from the same photos the model saw — shared-blind-spot bias is possible; not yet independently validated by the curation lead.
+- `material` was **not** genuinely tested: ground truth guessed `linen` from product names and the model agreed by the same assumption. Real material validation requires the brand description (finding #3 above stands).
+
+**Cost:** $0.2322 for 6 products / 12 images (~$0.039/product), consistent with the spike's ~$37/1,000 extrapolation. Cache still cold (system+tools below the 4,096-token cacheable minimum).
+
+**Status:** ROADMAP Session N+1.5 Track B essentially complete (eyeballed). Automated scorer stays deferred to N+2. Open follow-ups: curation-lead validation of the 6 disagreements; materials from product descriptions; resolve the convention gaps now listed in `docs/tagging-conventions.md`.

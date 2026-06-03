@@ -1,6 +1,6 @@
 # Tagging Conventions
 
-_Last updated: 2026-05-20._
+_Last updated: 2026-06-03._
 
 ## Purpose & scope
 
@@ -72,6 +72,10 @@ Always tag from a model-on photo. Product-only photos lack scale reference (ADR-
 Conventions that future tagging will surface, to be documented as they arise:
 
 - **Compound attributes** — how to handle a garment that is, e.g., `lined` and `unlined` in different regions (the bodice is lined, the skirt is not). Current default: tag the dominant region's state; flag for review in tagger notes if ambiguous.
+- **`scoop` vs `square` for straight necklines** — a near-horizontal neckline with slightly rounded corners sits between the two (surfaced by Barrafina, model-on validation 2026-06-03). Need an operational threshold.
+- **`low_back` vs `open_back` vs `scoop_back`** — no operational definition for how far down the back must be exposed to cross each boundary (surfaced by Mural/Seacoast halters, where agent and model disagreed). Define in terms of exposure relative to a landmark (e.g., below the bra line = `open_back`).
+- **`fit` when a belt is involved** — a loose garment cinched by a belt reads as `loose` (construction) or `semi_fitted` (as worn). Surfaced by Eleta (belted shirtdress). Decide whether `fit` describes the garment or the styled silhouette.
+- **`slit` for bottoms** — `null` (not applicable) vs `none` (applicable, absent). The model returned `none` for trousers where the agent tagged `null` (Effortless Pant). Align with ADR-0008 NULL semantics: prefer `null` for garments where a slit is not a meaningful attribute.
 - _(Add as encountered.)_
 
 ## Update process
