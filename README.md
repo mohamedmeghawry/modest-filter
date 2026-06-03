@@ -22,9 +22,9 @@ Catalogue, filtering, and product detail UI are complete and deployed. Remaining
 - **Database schema** — Postgres on Supabase: 3 entities (Brand, Category, Product) with 14 modesty-relevant product attributes, modelled in Prisma 7 ([ADR-0007](docs/files/0007-v1-schema.md))
 - **Data layer** — shared, typed data-access helpers in `lib/data/`, called from both API routes and server components so business logic is written once ([ADR-0004](docs/files/0004-api-first-architecture.md))
 - **API** — `GET /api/products` returns the catalogue with brand and category relations
-- **Filterable product listing** — `/products`, a server-rendered responsive grid with URL-based filter state across category, sleeve length, hem length, and opacity; filtered URLs are shareable ([ADR-0008](docs/files/0008-filter-null-semantics.md) documents the strict-`in` NULL semantics)
+- **Filterable product listing** — `/products`, a server-rendered responsive grid with URL-based filter state across category, sleeve length, hem length, opacity, material, primary color, and top length; filtered URLs are shareable ([ADR-0008](docs/files/0008-filter-null-semantics.md) documents the strict-`in` NULL semantics)
 - **Product detail pages** — `/products/[id]`, full attribute breakdown grouped by Coverage / Fit & material / Visual, with an affiliate click-through ([ADR-0009](docs/files/0009-product-url-design.md))
-- **Unit tests** — 21 vitest tests covering the filter parser: input shapes, comma/repeated multi-value, and forgiving validation (`npm test`)
+- **Unit tests** — 74 vitest tests covering the filter parser, display helpers, and vision schema completeness: input shapes, comma/repeated multi-value, and forgiving validation (`npm test`)
 - **ADR-driven decisions** — every stack and architecture choice is an Accepted ADR in [`docs/files/`](docs/files/), written before it's built
 
 ## What's next

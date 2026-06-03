@@ -19,7 +19,7 @@ import {
 import { humanize } from "@/lib/products/display";
 
 // TODO: fetch category options from the DB (Category table) instead of hardcoding
-const CATEGORY_OPTIONS = ["dresses", "tops", "bottoms"];
+const CATEGORY_OPTIONS = ["dresses", "abayas", "tops"];
 
 type FilterGroup = { key: string; label: string; options: string[] };
 

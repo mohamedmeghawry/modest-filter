@@ -49,10 +49,10 @@ async function main() {
     create: { name: "Tops", slug: "tops" },
   });
 
-  const bottoms = await prisma.category.upsert({
-    where: { slug: "bottoms" },
-    update: { name: "Bottoms" },
-    create: { name: "Bottoms", slug: "bottoms" },
+  const abayas = await prisma.category.upsert({
+    where: { slug: "abayas" },
+    update: { name: "Abayas" },
+    create: { name: "Abayas", slug: "abayas" },
   });
 
   // --- Products (upsert on deterministic explicit id) ---
@@ -102,21 +102,26 @@ async function main() {
       pattern: "solid",
     },
     {
-      id: "seed-aritzia-wide-leg-trouser",
-      name: "Wide-Leg Tailored Trouser",
+      id: "seed-aritzia-flowing-abaya",
+      name: "Flowing Long-Sleeve Maxi Abaya",
       brandId: aritzia.id,
-      categoryId: bottoms.id,
-      imageUrl: "https://via.placeholder.com/600x800?text=Wide+Leg+Trouser",
-      price: "148.00",
-      affiliateUrl: "https://www.aritzia.com/product/wide-leg-trouser/2002.html",
-      tagConfidence: "0.88",
+      categoryId: abayas.id,
+      imageUrl: "https://via.placeholder.com/600x800?text=Maxi+Abaya",
+      price: "168.00",
+      affiliateUrl: "https://www.aritzia.com/product/maxi-abaya/2002.html",
+      tagConfidence: "0.90",
+      sleeveLength: "long",
+      sleeveOpacity: "opaque",
+      neckline: "crew",
+      backStyle: "closed",
       hemLength: "floor",
+      slit: "none",
       fit: "loose",
       opacity: "opaque",
       lined: "unlined",
       cutouts: "none",
       material: "polyester",
-      primaryColor: "navy",
+      primaryColor: "black",
       pattern: "solid",
     },
     {

@@ -48,7 +48,7 @@ _(none currently)_
 - **Backend:** Next.js API routes (same repo)
 - **Database:** PostgreSQL on Supabase (free tier); Row Level Security enabled from day one
 - **ORM:** Prisma
-- **AI tagging:** Claude Vision API (Anthropic), abstracted behind `lib/tagging/`
+- **AI tagging:** Claude Vision API (Anthropic), abstracted behind `lib/vision/`
 - **Hosting:** Vercel (free tier)
 - **Version control + CI:** GitHub + GitHub Actions
 - **Future mobile (post-v1):** React Native + Expo, consuming the same API
