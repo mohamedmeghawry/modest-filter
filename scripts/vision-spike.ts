@@ -1,23 +1,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { extractAttributes } from "../lib/vision/extract";
-
-// Opus 4.7 pricing per the Anthropic claude-api skill (cached 2026-04-29).
-// Refresh via `client.models.retrieve("claude-opus-4-7")` or
-// https://platform.claude.com/docs/en/pricing before quoting in production.
-const PRICING = {
-  inputPerMTok: 5.0,
-  outputPerMTok: 25.0,
-  cacheReadPerMTok: 0.5, // ~0.1× input
-  cacheWritePerMTok: 6.25, // ~1.25× input (5-minute TTL)
-};
-
-type Usage = {
-  inputTokens: number;
-  cacheCreationInputTokens: number;
-  cacheReadInputTokens: number;
-  outputTokens: number;
-};
+import { estimateCost, type Usage } from "../lib/vision/cost";
 
 // Only the fields this script consumes. Manifest may carry additional
 // fields (sourceUrl, notes, groundTruth) that Phase D's eval harness uses;
@@ -26,16 +10,6 @@ type ManifestEntry = {
   id: string;
   images: string[];
 };
-
-function estimateCost(usage: Usage): number {
-  return (
-    (usage.inputTokens * PRICING.inputPerMTok +
-      usage.cacheCreationInputTokens * PRICING.cacheWritePerMTok +
-      usage.cacheReadInputTokens * PRICING.cacheReadPerMTok +
-      usage.outputTokens * PRICING.outputPerMTok) /
-    1_000_000
-  );
-}
 
 async function main() {
   const manifestArg = process.argv[2];

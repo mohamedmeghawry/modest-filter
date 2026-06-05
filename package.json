@@ -12,7 +12,8 @@
     "db:test": "tsx --env-file=.env.local scripts/test-db.ts",
     "db:seed": "tsx --env-file=.env.local prisma/seed.ts",
     "test": "vitest run",
-    "vision:spike": "tsx --env-file=.env.local scripts/vision-spike.ts"
+    "vision:spike": "tsx --env-file=.env.local scripts/vision-spike.ts",
+    "vision:tag": "tsx --env-file=.env.local scripts/tag-catalogue.ts"
   },
   "prisma": {
     "seed": "tsx --env-file=.env.local prisma/seed.ts"
