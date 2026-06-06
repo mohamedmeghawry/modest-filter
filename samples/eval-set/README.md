@@ -70,6 +70,32 @@ Different brands are strong for different rare values. Rough routing:
 > find them in ~10 min, mark those values "out of scope" (see the plan's open
 > questions) rather than forcing a bad source.
 
+## Starter leads (verified live June 2026)
+
+Real products that match the trickiest archetypes, so the curation lead isn't
+hunting blind. **Stock changes constantly — treat these as starting points, and
+she has final say on modesty fit.** If a link is dead, the search term that found
+it still works.
+
+| # | Archetype | Lead | Where |
+|---|---|---|---|
+| 2 | Floral viscose maxi | Reformation **Lisola** floral-print maxi (100% viscose) | [reformation floral dresses](https://www.thereformation.com/dresses/floral-dresses) |
+| 3 | Halter + open back | Aritzia **Cayenne Halter Dress** / **Talula Halter Midi** | [Cayenne](https://www.aritzia.com/us/en/product/cayenne-halter-dress/95675.html) |
+| 4 | Denim shirtdress, collar, long sleeve | Everlane **The Denim Shirtdress** (Indigo) | [Everlane](https://www.everlane.com/products/womens-denim-shirtdress-indigo) |
+| 5 | Silk slip, open/low back, slit | Reformation **Casette** (open back) or **Alli** (halter, back slit) | [Casette](https://www.thereformation.com/products/casette-silk-dress/1311240.html) · [Alli](https://www.thereformation.com/products/alli-silk-dress/1310701.html) |
+| 6 | Sheer off-shoulder | Anthropologie **Off-Shoulder Mesh Slim Midi** (~$148) | [Anthropologie](https://www.anthropologie.com/shop/by-anthropologie-off-shoulder-mesh-slim-midi-dress) |
+| 8 | Cutout midi (knit) | Aritzia **Cutout Knit Midi Dress** | [Aritzia](https://www.aritzia.com/us/en/product/cutout-knit-midi-dress/104560.html) |
+| 9 | Wool sweater dress, gray, 3/4 | Banana Republic merino **sweater dress** (browse category) | [BR sweater dresses](https://bananarepublic.gap.com/shop/sweater-dress-0zaz06d) |
+| 10 | Plaid, square neck | Anthropologie **Maeve Belted Square-Neck Plaid Dress** | [Anthropologie](https://www.anthropologie.com/shop/maeve-belted-square-neck-plaid-dress) |
+| 11 | Animal-print wrap | Anthropologie **By Anthropologie Printed Wrap** / **Maeve Long-Sleeve Printed Wrap** | [By Anthro](https://www.anthropologie.com/shop/by-anthropologie-printed-wrap-dress) |
+| 17 | Polka-dot top | Anthropologie **Maeve Short-Sleeve Polka Dot Blouse** | [Anthropologie](https://www.anthropologie.com/shop/maeve-short-sleeve-polka-dot-blouse) |
+| 19 | Geometric/abstract top | Anthropologie **Thales Geometric Blouse** / **Geometric Dolman-Sleeved Blouse** | [Dolman](https://www.anthropologie.com/shop/geometric-dolman-sleeved-blouse) |
+| 20 | Leather top | Anthropologie **faux-leather** clothing (reads as `leather` to the camera) | [faux leather](https://www.anthropologie.com/faux-leather-clothing-and-accessories) |
+
+> **Leather caveat:** the target brands carry *faux* leather, not real. For
+> image-based tagging that's fine — the AI tags what the photo looks like
+> (`leather`). If you'd rather not include it, it's a fair value to drop.
+
 ## Gather checklist
 
 Tick each box as you capture it. "Find this" is the short version — full detail
