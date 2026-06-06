@@ -62,16 +62,21 @@ create structure; you fill values. For each product you source:
    (e.g. `silk-slip` → `reformation-casette-silk`, and the photos to match).
 2. **Save** the front + back photos in this folder under those names.
 3. **Paste** the product-page text into `description`, and the link into `sourceUrl`.
-4. **Replace every `"TODO"`** in `groundTruth` with the correct tag.
+4. **Replace every `"TODO: ..."`** in `groundTruth` with one of the options shown.
 
 Conventions in the stubs:
 
-- **`"TODO"` = you must fill this.** Search the file for `TODO`; when none remain,
-  the set is complete.
+- **`"TODO: a|b|c"` = you must fill this — pick ONE of the listed options.** Each
+  unfilled field already shows its valid values, so you don't have to remember the
+  enum. Example: `"sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long"`
+  → replace the whole string with e.g. `"short"`. Search the file for `TODO`; when
+  none remain, the set is complete.
 - **`null` (already set) = correct as-is** — it's a category rule, not a blank.
   Dresses/abayas have `topLength: null`; tops have `hemLength: null` + `slit: null`.
   (If a field turns out genuinely N/A — e.g. `sleeveOpacity` on a sleeveless dress —
   replace its `TODO` with `null`.)
+- **Some fields are pre-filled** (not `TODO`) on the lead products — those came from
+  the product description (material, etc.); just confirm them.
 - **`priority`**: do the **17 `core`** stubs first — they carry the rare values.
   The **11 `extra`** stubs are common anchors and gap-fillers; fill them once core
   is done. (Per the start-small advice: even the first ~12 core gives me enough to

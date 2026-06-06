@@ -4,14 +4,27 @@
     "category": "dresses",
     "priority": "extra",
     "note": "Black long-sleeve crew midi (common-dress anchor). Browse any brand. Rename id + image files to the real brand-product slug once sourced.",
-    "images": ["./black-ls-midi_front.png", "./black-ls-midi_back.png"],
+    "images": [
+      "./black-ls-midi_front.png",
+      "./black-ls-midi_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -19,29 +32,55 @@
     "category": "dresses",
     "priority": "core",
     "note": "Floral V-neck viscose, floor length. Lead: Reformation 'Lisola' floral maxi (100% viscose).",
-    "images": ["./floral-viscose-maxi_front.png", "./floral-viscose-maxi_back.png"],
+    "images": [
+      "./floral-viscose-maxi_front.png",
+      "./floral-viscose-maxi_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
     "id": "striped-halter-midi",
     "category": "dresses",
     "priority": "core",
-    "note": "Striped halter, sleeveless. Lead: Aritzia Cayenne/Talula halter (halter + open back); find a striped one if possible.",
-    "images": ["./striped-halter-midi_front.png", "./striped-halter-midi_back.png"],
+    "note": "Striped halter, sleeveless. NOTE: the Aritzia 'Cayenne Halter Dress' lead is SOLD OUT and is knit/solid (not striped). Source a different STRIPED halter midi instead. Leave tags as the option lists until sourced.",
+    "images": [
+      "./striped-halter-midi_front.png",
+      "./striped-halter-midi_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -49,14 +88,27 @@
     "category": "dresses",
     "priority": "core",
     "note": "Everlane 'The Denim Shirtdress' (Indigo). FILLED FROM DESCRIPTION: neckline=collar (point collar), material=denim (fabric; fiber is 60% cotton / 40% Tencel), pattern=solid. PROOFREAD/SET FROM PHOTO: hemLength (desc says both 'midi' and 'maxi' — confirm), sleeveLength, fit ('slim fit'), opacity, lined, cutouts, backStyle, slit, primaryColor (indigo→navy or blue?). SAVE front+back images manually.",
-    "images": ["./everlane-denim-shirtdress_front.png", "./everlane-denim-shirtdress_back.png"],
+    "images": [
+      "./everlane-denim-shirtdress_front.png",
+      "./everlane-denim-shirtdress_back.png"
+    ],
     "description": "Western-inspired denim shirtdress with a classic point collar, two patch pockets, and a button-front design. 60% organic cotton, 40% TENCEL with REFIBRA. Slim fit. Color: Indigo.",
     "sourceUrl": "https://www.everlane.com/products/womens-denim-shirtdress-indigo",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "collar",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "denim", "primaryColor": "TODO", "pattern": "solid"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "collar",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "denim",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "solid"
     }
   },
   {
@@ -64,29 +116,55 @@
     "category": "dresses",
     "priority": "core",
     "note": "Reformation 'Casette' silk dress. Covers silk + open back + sleeveless. FILLED FROM DESCRIPTION: material=silk, sleeveLength=sleeveless, sleeveOpacity=null, backStyle=open_back, fit=fitted, hemLength=midi, pattern=solid. PROOFREAD/SET FROM PHOTO: opacity, lined, cutouts, slit, primaryColor (comes in Cornflower/Mahogany/Artichoke — set to the one you photograph). NECKLINE = high cowl, which is NOT in our Neckline enum — curation call (closest scoop/high_neck, or a schema gap like 'collar' was in ADR-0012); left TODO. NOTE: Casette has no side slit, so the 'high slit' archetype still needs a separate source (try Reformation 'Alli', which has a back slit). SAVE front+back images manually.",
-    "images": ["./reformation-casette-silk_front.png", "./reformation-casette-silk_back.png"],
+    "images": [
+      "./reformation-casette-silk_front.png",
+      "./reformation-casette-silk_back.png"
+    ],
     "description": "Sleeveless midi dress with a high cowl neckline, side ruching, and an open back with criss-cross straps. Designed to be fitted throughout; hits several inches above the ankle. 100% silk (lightweight charmeuse).",
     "sourceUrl": "https://www.thereformation.com/products/casette-silk-dress/1311240.html",
     "groundTruth": {
-      "sleeveLength": "sleeveless", "sleeveOpacity": null, "neckline": "TODO",
-      "backStyle": "open_back", "hemLength": "midi", "topLength": null, "slit": "TODO",
-      "fit": "fitted", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "silk", "primaryColor": "TODO", "pattern": "solid"
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "open_back",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "fitted",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "silk",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "solid"
     }
   },
   {
-    "id": "sheer-offshoulder",
+    "id": "anthropologie-loretta-offshoulder-mesh",
     "category": "dresses",
     "priority": "core",
-    "note": "Sheer chiffon, off-shoulder. Lead: Anthropologie 'Off-Shoulder Mesh Slim Midi' (~$148).",
-    "images": ["./sheer-offshoulder_front.png", "./sheer-offshoulder_back.png"],
-    "description": "",
-    "sourceUrl": "",
+    "note": "Anthropologie 'Loretta Off-Shoulder Mesh Slim Midi Dress'. FILLED FROM PAGE: neckline=off_shoulder, hemLength=midi, opacity=sheer (sheer mesh), material=polyester (93% poly/7% elastane), lined=lined (viscose/nylon lining), primaryColor=black, pattern=solid. PROOFREAD/SET FROM PHOTO: sleeveLength, sleeveOpacity, backStyle, slit, fit, cutouts. SAVE front+back images.",
+    "images": [
+      "./anthropologie-loretta-offshoulder-mesh_front.png",
+      "./anthropologie-loretta-offshoulder-mesh_back.png"
+    ],
+    "description": "Sheer mesh slim midi dress with an off-shoulder neckline. 93% polyester, 7% elastane; viscose/nylon lining. Color: Black.",
+    "sourceUrl": "https://www.anthropologie.com/shop/loretta-off-shoulder-mesh-slim-midi-dress",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "off_shoulder",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "sheer",
+      "lined": "lined",
+      "cutouts": "TODO: none|present",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
     }
   },
   {
@@ -94,14 +172,27 @@
     "category": "dresses",
     "priority": "core",
     "note": "Knit bodycon, fitted, turtleneck, mini. Browse Aritzia/Anthropologie knit minis.",
-    "images": ["./knit-turtleneck-mini_front.png", "./knit-turtleneck-mini_back.png"],
+    "images": [
+      "./knit-turtleneck-mini_front.png",
+      "./knit-turtleneck-mini_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -109,14 +200,27 @@
     "category": "dresses",
     "priority": "core",
     "note": "Aritzia 'Cutout Knit Midi Dress'. IMAGES CAPTURED (front + side, model-on, verified) — note the front shot has a thin nav strip at the very top edge; re-save cleaner if you like. FILLED FROM NAME/COPY: cutouts=present, material=knit. PROOFREAD/SET FROM PHOTO: neckline, sleeveLength (cap?), fit, hemLength, opacity, lined, backStyle, slit, primaryColor (sage green?), pattern.",
-    "images": ["./aritzia-cutout-knit-midi_front.jpeg", "./aritzia-cutout-knit-midi_side.jpeg"],
+    "images": [
+      "./aritzia-cutout-knit-midi_front.jpeg",
+      "./aritzia-cutout-knit-midi_side.jpeg"
+    ],
     "description": "Ribbed knit midi dress with a waist cutout, cap sleeves, and a fitted silhouette. Made with Aritzia 'Wonder Yarn' (wool-free, all-season). Color shown: sage green.",
     "sourceUrl": "https://www.aritzia.com/us/en/product/cutout-knit-midi-dress/104560.html",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "present",
-      "material": "knit", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "present",
+      "material": "knit",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -124,44 +228,83 @@
     "category": "dresses",
     "priority": "extra",
     "note": "Wool sweater dress, gray, three-quarter sleeve. Lead: Banana Republic merino sweater dress.",
-    "images": ["./wool-sweater-dress_front.png", "./wool-sweater-dress_back.png"],
+    "images": [
+      "./wool-sweater-dress_front.png",
+      "./wool-sweater-dress_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
-    "id": "plaid-square",
+    "id": "anthropologie-maeve-square-neck-plaid",
     "category": "dresses",
     "priority": "core",
-    "note": "Plaid, elbow sleeve, square neck. Lead: Anthropologie 'Maeve Belted Square-Neck Plaid Dress'.",
-    "images": ["./plaid-square_front.png", "./plaid-square_back.png"],
-    "description": "",
-    "sourceUrl": "",
+    "note": "Anthropologie 'Maeve Belted Square-Neck Plaid Dress'. FILLED FROM PAGE: neckline=square, pattern=plaid, material=cotton (Cotton+elastane), lined=lined (viscose lining). primaryColor: page says 'Tan Plaid' -> map to beige or brown (your call), left TODO. PROOFREAD/SET FROM PHOTO: sleeveLength, backStyle, hemLength, slit, fit, opacity, cutouts. SAVE front+back images.",
+    "images": [
+      "./anthropologie-maeve-square-neck-plaid_front.png",
+      "./anthropologie-maeve-square-neck-plaid_back.png"
+    ],
+    "description": "Belted square-neck plaid shirt dress. Cotton, elastane; viscose lining. Color: Tan Plaid.",
+    "sourceUrl": "https://www.anthropologie.com/shop/maeve-belted-square-neck-plaid-dress",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "lined",
+      "cutouts": "TODO: none|present",
+      "material": "cotton",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "plaid"
     }
   },
   {
-    "id": "animalprint-wrap",
+    "id": "anthropologie-printed-wrap",
     "category": "dresses",
     "priority": "core",
-    "note": "Animal-print wrap, cap sleeve, v-back. Lead: Anthropologie 'By Anthropologie Printed Wrap' / Maeve Long-Sleeve Printed Wrap.",
-    "images": ["./animalprint-wrap_front.png", "./animalprint-wrap_back.png"],
-    "description": "",
-    "sourceUrl": "",
+    "note": "Anthropologie 'By Anthropologie Printed Wrap Dress'. WARNING: page only says 'Black Pattern' — the print type is NOT confirmed as animal_print. If you need animal_print specifically, verify the actual print or swap for a leopard/zebra wrap. FILLED FROM PAGE: material=polyester, lined=lined (viscose lining). pattern left TODO until print confirmed. PROOFREAD/SET FROM PHOTO: sleeveLength, neckline, backStyle, hemLength, slit, fit, opacity, cutouts, primaryColor. SAVE front+back images.",
+    "images": [
+      "./anthropologie-printed-wrap_front.png",
+      "./anthropologie-printed-wrap_back.png"
+    ],
+    "description": "Wrap dress with an all-over print. Polyester; viscose lining. Color: Black Pattern.",
+    "sourceUrl": "https://www.anthropologie.com/shop/by-anthropologie-printed-wrap-dress",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "lined",
+      "cutouts": "TODO: none|present",
+      "material": "polyester",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -169,14 +312,27 @@
     "category": "dresses",
     "priority": "extra",
     "note": "Floral midi described 'fully lined' (tests lined-from-description). Browse Anthropologie florals; capture the lining line in the description.",
-    "images": ["./lined-floral-midi_front.png", "./lined-floral-midi_back.png"],
+    "images": [
+      "./lined-floral-midi_front.png",
+      "./lined-floral-midi_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -184,14 +340,27 @@
     "category": "dresses",
     "priority": "extra",
     "note": "Open-back maxi, ankle hem, low slit. Browse Reformation maxis (back photo is essential here).",
-    "images": ["./openback-maxi_front.png", "./openback-maxi_back.png"],
+    "images": [
+      "./openback-maxi_front.png",
+      "./openback-maxi_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -199,14 +368,27 @@
     "category": "tops",
     "priority": "extra",
     "note": "Cropped tank, scoop, sleeveless (common-top anchor). Browse any brand.",
-    "images": ["./cropped-tank_front.png", "./cropped-tank_back.png"],
+    "images": [
+      "./cropped-tank_front.png",
+      "./cropped-tank_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -214,14 +396,27 @@
     "category": "tops",
     "priority": "core",
     "note": "Oversized button-down, collar, longline, long sleeve. Browse Everlane/Aritzia oversized shirts.",
-    "images": ["./oversized-buttondown_front.png", "./oversized-buttondown_back.png"],
+    "images": [
+      "./oversized-buttondown_front.png",
+      "./oversized-buttondown_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -229,29 +424,55 @@
     "category": "tops",
     "priority": "extra",
     "note": "Tunic blouse, high-neck, three-quarter sleeve. Browse Anthropologie tunics.",
-    "images": ["./tunic-highneck_front.png", "./tunic-highneck_back.png"],
+    "images": [
+      "./tunic-highneck_front.png",
+      "./tunic-highneck_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
-    "id": "polkadot-tee",
+    "id": "anthropologie-maeve-polkadot-blouse",
     "category": "tops",
     "priority": "core",
-    "note": "Waist-length tee, polka-dot, short sleeve. Lead: Anthropologie 'Maeve Short-Sleeve Polka Dot Blouse'.",
-    "images": ["./polkadot-tee_front.png", "./polkadot-tee_back.png"],
-    "description": "",
-    "sourceUrl": "",
+    "note": "Anthropologie 'Maeve Short-Sleeve Polka Dot Blouse'. FILLED FROM PAGE: sleeveLength=short, pattern=polka_dot, material=viscose (100% viscose), primaryColor=white ('White Dot'). PROOFREAD/SET FROM PHOTO: neckline, backStyle, topLength, fit, opacity, lined, cutouts, sleeveOpacity. SAVE front+back images.",
+    "images": [
+      "./anthropologie-maeve-polkadot-blouse_front.png",
+      "./anthropologie-maeve-polkadot-blouse_back.png"
+    ],
+    "description": "Short-sleeve polka-dot button-front blouse. 100% viscose. Color: White Dot.",
+    "sourceUrl": "https://www.anthropologie.com/shop/maeve-short-sleeve-polka-dot-blouse",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "short",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "viscose",
+      "primaryColor": "white",
+      "pattern": "polka_dot"
     }
   },
   {
@@ -259,29 +480,55 @@
     "category": "tops",
     "priority": "core",
     "note": "Semi-sheer blouse, brown, scoop-back. Browse Anthropologie sheer blouses (back photo essential).",
-    "images": ["./semisheer-scoopback_front.png", "./semisheer-scoopback_back.png"],
+    "images": [
+      "./semisheer-scoopback_front.png",
+      "./semisheer-scoopback_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
-    "id": "geometric-top",
+    "id": "anthropologie-geometric-dolman-blouse",
     "category": "tops",
     "priority": "core",
-    "note": "Geometric print, purple. Lead: Anthropologie 'Thales Geometric Blouse' / 'Geometric Dolman-Sleeved Blouse'.",
-    "images": ["./geometric-top_front.png", "./geometric-top_back.png"],
-    "description": "",
-    "sourceUrl": "",
+    "note": "Anthropologie 'Geometric Dolman-Sleeved Blouse' (Conditions Apply). FILLED FROM PAGE: sleeveLength=three_quarter (3/4 dolman), pattern=geometric, material=viscose. primaryColor: page says 'Red Pattern' (print base ambiguous) -> left TODO. PROOFREAD/SET FROM PHOTO: neckline, backStyle, topLength, fit, opacity, lined, cutouts, sleeveOpacity. SAVE front+back images.",
+    "images": [
+      "./anthropologie-geometric-dolman-blouse_front.png",
+      "./anthropologie-geometric-dolman-blouse_back.png"
+    ],
+    "description": "Dolman-sleeved blouse with a geometric, illustration-style print. Viscose. 3/4 dolman sleeves. Color: Red Pattern.",
+    "sourceUrl": "https://www.anthropologie.com/shop/geometric-dolman-sleeved-blouse",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "three_quarter",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "viscose",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "geometric"
     }
   },
   {
@@ -289,14 +536,27 @@
     "category": "tops",
     "priority": "core",
     "note": "Faux-leather top, black (tags as 'leather' — see ADR-0014). Lead: Anthropologie faux-leather clothing. OPTIONAL — drop if hard to source.",
-    "images": ["./leather-top_front.png", "./leather-top_back.png"],
+    "images": [
+      "./leather-top_front.png",
+      "./leather-top_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -304,14 +564,27 @@
     "category": "tops",
     "priority": "extra",
     "note": "Abstract-print cami, orange. Browse Anthropologie prints.",
-    "images": ["./abstract-cami_front.png", "./abstract-cami_back.png"],
+    "images": [
+      "./abstract-cami_front.png",
+      "./abstract-cami_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -319,14 +592,27 @@
     "category": "tops",
     "priority": "extra",
     "note": "Modal top described 'partially lined' (tests partially_lined from description). Browse loungewear; capture the lining line.",
-    "images": ["./modal-partlined_front.png", "./modal-partlined_back.png"],
+    "images": [
+      "./modal-partlined_front.png",
+      "./modal-partlined_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -334,14 +620,27 @@
     "category": "abayas",
     "priority": "extra",
     "note": "Black classic abaya, long sleeve, floor, crew (abaya anchor). Source from your modest retailer.",
-    "images": ["./black-classic-abaya_front.png", "./black-classic-abaya_back.png"],
+    "images": [
+      "./black-classic-abaya_front.png",
+      "./black-classic-abaya_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -349,14 +648,27 @@
     "category": "abayas",
     "priority": "core",
     "note": "Open-front abaya, extra-long sleeve, beige. Source from modest retailer.",
-    "images": ["./openfront-abaya_front.png", "./openfront-abaya_back.png"],
+    "images": [
+      "./openfront-abaya_front.png",
+      "./openfront-abaya_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -364,14 +676,27 @@
     "category": "abayas",
     "priority": "core",
     "note": "Multicolor embroidered abaya ('other' pattern). Source from modest retailer.",
-    "images": ["./multicolor-abaya_front.png", "./multicolor-abaya_back.png"],
+    "images": [
+      "./multicolor-abaya_front.png",
+      "./multicolor-abaya_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -379,14 +704,27 @@
     "category": "abayas",
     "priority": "extra",
     "note": "Abaya described 'cotton/poly blend' (tests material=blend), mid slit. Source from modest retailer.",
-    "images": ["./blend-abaya_front.png", "./blend-abaya_back.png"],
+    "images": [
+      "./blend-abaya_front.png",
+      "./blend-abaya_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -394,14 +732,27 @@
     "category": "tops",
     "priority": "core",
     "note": "Item with an unusual material (metallic / lamé / tencel — tags material='other' per description). Browse for a metallic top.",
-    "images": ["./other-material-metallic_front.png", "./other-material-metallic_back.png"],
+    "images": [
+      "./other-material-metallic_front.png",
+      "./other-material-metallic_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": null,
+      "topLength": "TODO: cropped|waist|hip|tunic|longline",
+      "slit": null,
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   },
   {
@@ -409,14 +760,27 @@
     "category": "dresses",
     "priority": "extra",
     "note": "Anything YELLOW if not yet captured elsewhere (fills the color gap). Any category — change 'category' + the null fields if it's a top.",
-    "images": ["./yellow-item_front.png", "./yellow-item_back.png"],
+    "images": [
+      "./yellow-item_front.png",
+      "./yellow-item_back.png"
+    ],
     "description": "",
     "sourceUrl": "",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
+      "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
+      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "hemLength": "TODO: mini|knee|midi|ankle|floor",
+      "topLength": null,
+      "slit": "TODO: none|low|mid|high",
+      "fit": "TODO: fitted|semi_fitted|loose|oversized",
+      "opacity": "TODO: sheer|semi_sheer|opaque",
+      "lined": "TODO: lined|partially_lined|unlined",
+      "cutouts": "TODO: none|present",
+      "material": "TODO: cotton|linen|silk|polyester|viscose|modal|wool|denim|leather|knit|blend|other",
+      "primaryColor": "TODO: black|white|beige|brown|gray|navy|blue|green|yellow|orange|red|pink|purple|multicolor",
+      "pattern": "TODO: solid|striped|floral|plaid|geometric|animal_print|polka_dot|abstract|other"
     }
   }
 ]
