@@ -57,7 +57,7 @@ Always tag from a model-on photo. Product-only photos lack scale reference (ADR-
 
 **`lined`** — Use the enum value matching whether the garment is lined. Often determinable only from the inside of the garment or from the brand description; use `null` if not visible in available images and the description is silent.
 
-**`cutouts`** — Use the enum value matching cutout presence (`none` or `present`).
+**`cutouts`** — Use the enum value matching cutout presence (`none` or `present`). A **keyhole** — the small teardrop / water-drop opening at the front neckline or upper back, often closed at the top with a button or tie — counts as `present`. A keyhole does **not** change the `neckline` (a crew neck with a front keyhole is still `crew`, plus `cutouts: present`), and a small back keyhole is `backStyle: closed` + `cutouts: present` — reserve `open_back` for a substantially open back. Known limitation: `present` is binary and does not distinguish a minor neck keyhole from a midriff or side cutout; location-based granularity is a pending schema decision (tracked alongside the `cowl` neckline gap).
 
 **`material`** — **Always cross-check the brand product description before tagging.** Image-only material extraction is unreliable (ADR-0012 finding — Claude tagged `viscose` for an "Airplush Cotton™" dress because drapey cotton resembles viscose in product-only images). If the description names a material, tag it regardless of how the fabric appears in the image. If the description is silent on material, tag based on visual best-guess and note the uncertainty.
 
