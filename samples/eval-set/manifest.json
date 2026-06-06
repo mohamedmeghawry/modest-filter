@@ -9,7 +9,7 @@
       "./black-ls-midi_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=black%20long%20sleeve%20crew%20midi%20dress",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -37,7 +37,7 @@
       "./floral-viscose-maxi_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.thereformation.com/dresses/floral-dresses",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -65,7 +65,7 @@
       "./striped-halter-midi_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=striped%20halter%20midi%20dress",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -177,7 +177,7 @@
       "./knit-turtleneck-mini_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=knit%20turtleneck%20bodycon%20mini%20dress",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -233,7 +233,7 @@
       "./wool-sweater-dress_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://bananarepublic.gap.com/shop/sweater-dress-0zaz06d",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -317,7 +317,7 @@
       "./lined-floral-midi_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=floral%20midi%20dress%20fully%20lined%20anthropologie",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -345,7 +345,7 @@
       "./openback-maxi_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=open%20back%20maxi%20dress%20ankle%20length",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -373,7 +373,7 @@
       "./cropped-tank_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=cropped%20tank%20top%20scoop%20neck",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -401,7 +401,7 @@
       "./oversized-buttondown_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=oversized%20longline%20button%20down%20shirt",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -429,7 +429,7 @@
       "./tunic-highneck_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=tunic%20blouse%20high%20neck%20three%20quarter%20sleeve",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -485,7 +485,7 @@
       "./semisheer-scoopback_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=semi%20sheer%20blouse%20scoop%20back",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -541,7 +541,7 @@
       "./leather-top_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.anthropologie.com/faux-leather-clothing-and-accessories",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -569,7 +569,7 @@
       "./abstract-cami_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=abstract%20print%20cami%20top",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -597,7 +597,7 @@
       "./modal-partlined_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=modal%20top%20partially%20lined",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -625,7 +625,7 @@
       "./black-classic-abaya_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=black%20classic%20abaya%20long%20sleeve",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -653,7 +653,7 @@
       "./openfront-abaya_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=open%20front%20abaya%20extra%20long%20sleeve%20beige",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -681,7 +681,7 @@
       "./multicolor-abaya_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=multicolor%20embroidered%20abaya",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -709,7 +709,7 @@
       "./blend-abaya_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=cotton%20poly%20blend%20abaya",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -737,7 +737,7 @@
       "./other-material-metallic_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=metallic%20lame%20top%20women",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",
@@ -765,7 +765,7 @@
       "./yellow-item_back.png"
     ],
     "description": "",
-    "sourceUrl": "",
+    "sourceUrl": "https://www.google.com/search?q=yellow%20midi%20dress",
     "groundTruth": {
       "sleeveLength": "TODO: sleeveless|cap|short|elbow|three_quarter|long|extra_long",
       "sleeveOpacity": "TODO: sheer|semi_sheer|opaque|null (if no sleeves)",

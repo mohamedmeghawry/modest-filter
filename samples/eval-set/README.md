@@ -77,6 +77,10 @@ Conventions in the stubs:
   replace its `TODO` with `null`.)
 - **Some fields are pre-filled** (not `TODO`) on the lead products — those came from
   the product description (material, etc.); just confirm them.
+- **`sourceUrl` is always populated.** On the 8 lead products it's the real product
+  page. On the other stubs it's a **search/category starting point** (a Google or
+  brand-category link) to help you find a match — replace it with the actual product
+  URL once you pick one.
 - **`priority`**: do the **17 `core`** stubs first — they carry the rare values.
   The **11 `extra`** stubs are common anchors and gap-fillers; fill them once core
   is done. (Per the start-small advice: even the first ~12 core gives me enough to
