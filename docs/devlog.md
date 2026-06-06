@@ -12,6 +12,28 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-06-06 — A 2026 design audit, then the polish pass it pointed to
+
+**Goal:** Step back from the tagging pipeline and answer a different question — does the UI look *current and credible* for 2026, and where is it leaving usability on the table? Then implement the changes that were clear wins, and only those.
+
+**What shipped:** Two artifacts, a research report and a scoped UI pass.
+
+First, `docs/research/2026-ui-design-research.md` — a cited survey of 2026 standards (calm/content-first minimalism, fluid type, OKLCH/earthy color, purposeful motion, WCAG 2.2 floors, mobile faceted-filter UX, performance-as-design) mapped screen-by-screen onto our real browse/filter/product views, with every recommendation tagged confidence/effort/risk and the taste calls parked as open questions.
+
+Then the 11 recommendations that were high-confidence, minimalist-consistent, and low-risk: semantic color tokens replacing uncontrolled `opacity-60/80` dimming (R1); 24px+ tap targets and focus per WCAG 2.2 (R2); fixed `aspect-[3/4]` image boxes so real photos land with ~0 layout shift (R6); a `prefers-reduced-motion` guard (R8); tabular-aligned prices (R7a); a color-swatch grid replacing 14 color checkboxes (R5); removable active-filter chips above the grid (R4); a clear-filters affordance on the empty state (R10); per-option result counts in the filter (R3); a fluid `clamp()` heading scale (R7b); and card hover elevation (R11).
+
+**Challenges & how we solved them:**
+- *The "premium vs generic minimalist" gap turned out to be self-inflicted.* The screens dimmed text with `opacity-60` while `globals.css` already defined proper `--muted-foreground`/`--border` tokens that nobody was using. Opacity-dimming is uncontrolled — it shifts with whatever's behind it and silently fails contrast, and it *would* have muddied future product images. The single highest-value fix was using the design system we already had.
+- *Faceted result counts can quietly break multi-select.* Counting each option with all active filters (including its own group) makes picking "Long" sleeves drop every other sleeve option to a standalone count. We compute counts with `buildWhere(filters, omit: thisFacet)` — every active filter *except* the one being counted — the standard drill-down semantic, which also makes the ADR-0008 NULL gotcha visible as a literal "(0)".
+- *Typing a dynamic Prisma `groupBy` cleanly.* Six near-identical facet aggregations plus a filtered relation-count for category, assembled through a small generic `tally()` helper, kept it type-safe with no `any`.
+- *Verified it for real, not just green.* `npm run build` passing doesn't prove pixels; we booted the dev server against the seeded Supabase set and drove it with Playwright — confirming the swatch grid (multicolor rendered as a spectrum chip), the live "Dresses ×" chip, and counts recomputing on filter.
+
+**Takeaway:** A design audit's most useful output isn't the trend list — it's the separation of *standard* from *bet* and the honest mapping onto your own screens. Most of the "make it look 2026" work was using the tokens, fonts, and color space the repo already had, not adding anything.
+
+> Follow-up worth an ADR: R3 added a per-option count contract to the filter data layer (`getFacetCounts`) that intersects ADR-0008's NULL semantics and ADR-0010's scaling debt — a candidate for a short decision record if the approach sticks.
+
+---
+
 ### 2026-06-06 — Parsing the two fields vision can't see
 
 **Goal:** Build the production path ADR-0014's A/B pointed to — read `material` and `lined` straight from the feed description text, instead of routing the description through the vision model (which recovered those two fields but distracted the model, regressing visual attributes like `backStyle`).

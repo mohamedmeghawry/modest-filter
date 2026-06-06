@@ -45,6 +45,8 @@ _(none currently)_
 
 **Schema backlog:** see [`docs/schema-gaps.md`](docs/schema-gaps.md) — objective-attribute gaps surfaced during eval sourcing/tagging (parked, not decided), to be resolved together in one schema-evolution ADR rather than bolted on piecemeal.
 
+**Design research:** see [`docs/research/`](docs/research/) — point-in-time research reports (e.g. `2026-ui-design-research.md`: 2026 UI/UX standards mapped onto our screens, with prioritized recommendations tagged confidence/effort/risk). Background and intent, not binding decisions; the durable calls graduate to ADRs or the roadmap.
+
 ## Tech stack
 
 - **Language:** TypeScript (frontend, backend, scripts)
