@@ -12,6 +12,21 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-06-06 — Measuring the model: the eval scorer and the description A/B
+
+**Goal:** Build the scorer that turns "the AI is ~93% accurate" into a measured per-attribute number, run it against the ground-truth set, and test the one experiment the data points to.
+
+**What shipped:** A pure scorer (`score.ts`, 6 tests) plus a runner (`npm run vision:eval`) that grades each product against ground truth and prints a per-attribute table, disagreements, and cost; a `--detail` your-tag-vs-model view; and `--with-description` to fold the product description into extraction (ADR-0014). First real numbers: Opus 4.7 at ~80% exact-match, with `lined` and `material` the clear worst.
+
+**Challenges & how we solved them:**
+- *The first run graded our answer key, not just the model.* Several "model errors" were our ground truth being wrong (a back slit tagged `none`, a sleeveless dress tagged long-sleeve, a cropped top mis-filed as a dress). We treated the eval as a ground-truth audit, hand-checked each conflict, and corrected the key. The model was more accurate than the raw score showed.
+- *One bad image crashed the entire run.* A manifest image path that pointed at a directory threw mid-run and took everything down. We made the runner read each image in a try/catch and magic-byte-check the format, skipping bad products with a specific reason instead of dying. The check also caught AVIF files and a saved HTML page masquerading as images, which surfaced a real production requirement: ingestion must validate image formats, since the vision API rejects AVIF.
+- *The description A/B had a twist.* Feeding the description lifted exactly the two target attributes (`lined` +17, `material` +11) but distracted the model from the photo, regressing `backStyle` −12. So we refined the design: parse `material`/`lined` from the feed text directly, and run vision image-only on the visual attributes, rather than routing the description through the model.
+
+**Takeaway:** An evaluation's first job is to harden the ground truth; its second is to point precisely at the highest-leverage fix. Both showed up in the first run.
+
+---
+
 ### 2026-06-06 — A vision spike becomes a tagging engine
 
 **Goal:** Turn the one-product vision proof-of-concept into a production tagging engine, and stand up a trustworthy ground-truth set to measure it against.

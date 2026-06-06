@@ -68,3 +68,30 @@ Material parsing rule for the feed: map fiber content to the enum by dominant fi
 - Which feed fields are *reliably present* across Rakuten / impact.com / ShareASale? The split assumes `material` and `lined` are consistently supplied — verify per network in Phase 5.
 - Does passing `material` *measurably* improve `opacity`/`fit` accuracy, or is the adjacent-judgment benefit theoretical? Measure in the Session N+2 vision-alone vs vision+facts comparison.
 - What is the right `primaryColor` strategy when description color and photo disagree? Default here is "photo wins"; revisit if the eval shows description color is the better arbiter for any color.
+
+## Amendment (2026-06-06): A/B measured — parse the two fields, don't route them through vision
+
+Session N+2 ran the image-only vs image+description A/B this ADR called for (Opus 4.7, 17 products that have descriptions, scored against curation-lead-validated ground truth via `npm run vision:eval --require-description [--with-description]`).
+
+**Result — the thesis holds, sharply:**
+
+| Attribute | image-only | image+description | Δ |
+|---|---|---|---|
+| `lined` | 71% | **88%** | **+17** |
+| `material` | 71% | **82%** | **+11** |
+| `backStyle` | 88% | 76% | **−12** |
+| `slit` / `sleeveOpacity` | 88% | 82% | −6 |
+| overall | 80.7% | 83.2% | +2.5 |
+
+The description lifted exactly the two attributes this ADR predicted (`material`, `lined`) — but **folding it into the vision prompt also distracted the model from the image**, regressing visual-only attributes (`backStyle` −12 especially). Net overall gain was only +2.5 because the targeted wins were partly cancelled by collateral visual losses.
+
+**Refinement to the Decision:** routing the description *through* the vision model is the wrong pipe for `material` and `lined`. The original "Why pass, not pre-fill" reasoning (adjacent-judgment benefit) is real but **outweighed by the distraction cost** on visual attributes. The production path is therefore:
+
+- **`material` and `lined`: parse directly from the feed text** (deterministic, ~100% on stated fields, zero distraction). Do not ask the vision model for them.
+- **All visual attributes: vision, image-only** (no description in the prompt), so the model attends fully to the photo.
+
+This supersedes the earlier implication that production would pass the description to the vision model for these two fields. It keeps the +17/+11 on `material`/`lined` *without* the −12 on `backStyle`.
+
+**Narrow exception:** the description-to-vision path is retained only as a Tier-3 fallback (ADR-0013) — product-only photos + description, where there is no separate parse step and the visual baseline is already degraded, so the regression risk is acceptable.
+
+This also answers an open question above: passing `material` does measurably move adjacent attributes (`opacity` +6, `fit` +5), but at the cost of `backStyle`/`slit`, so the net-best design is the targeted parse, not whole-description context.
