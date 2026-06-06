@@ -29,6 +29,17 @@ function parseArgs(argv: string[]): Args {
   return args;
 }
 
+// Magic-byte check: returns the format, or null for anything the vision API
+// can't accept (notably AVIF, or a non-image like a saved HTML page).
+function imageKind(b: Buffer): "jpeg" | "png" | "webp" | "gif" | null {
+  if (b.length < 12) return null;
+  if (b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff) return "jpeg";
+  if (b[0] === 0x89 && b[1] === 0x50 && b[2] === 0x4e && b[3] === 0x47) return "png";
+  if (b[0] === 0x52 && b[1] === 0x49 && b[8] === 0x57 && b[9] === 0x45) return "webp";
+  if (b[0] === 0x47 && b[1] === 0x49 && b[2] === 0x46) return "gif";
+  return null;
+}
+
 // A ground-truth row is ready only if no field is still a "TODO: ..." placeholder.
 function isComplete(gt: Record<string, string | null>): boolean {
   return ATTRIBUTE_KEYS.every((k) => {
@@ -60,13 +71,21 @@ async function main() {
   for (const e of entries) {
     if (!isComplete(e.groundTruth)) { skipped.push(`${e.id} (incomplete tags)`); continue; }
     const buffers: Buffer[] = [];
-    let missing = false;
+    let badReason = "";
     for (const img of e.images) {
-      const p = resolve(manifestDir, img);
-      if (!existsSync(p)) { missing = true; break; }
-      buffers.push(readFileSync(p));
+      const rel = img.replace(/^\.\//, "").trim();
+      const p = resolve(manifestDir, rel);
+      if (!rel || !existsSync(p)) { badReason = `missing image "${img}"`; break; }
+      let buf: Buffer;
+      try { buf = readFileSync(p); } catch (err) {
+        badReason = `unreadable "${img}" (${(err as { code?: string }).code ?? "error"})`;
+        break;
+      }
+      const kind = imageKind(buf);
+      if (!kind) { badReason = `unsupported format "${img}" (not jpeg/png/webp/gif — likely avif or a saved web page)`; break; }
+      buffers.push(buf);
     }
-    if (missing) { skipped.push(`${e.id} (missing image)`); continue; }
+    if (badReason || buffers.length === 0) { skipped.push(`${e.id}: ${badReason || "no images"}`); continue; }
 
     process.stdout.write(`. ${e.id} ... `);
     const outcome = await tagProductWithRetry(buffers, { vendor: "anthropic", model: args.model });
@@ -84,9 +103,12 @@ async function main() {
 
   const agg = aggregate(scores);
 
-  console.log(`\nScored ${scores.length} products` +
-    (skipped.length ? ` (skipped ${skipped.length}: ${skipped.join(", ")})` : "") +
-    (errored.length ? ` (errored ${errored.length}: ${errored.join(", ")})` : ""));
+  console.log(`\nScored ${scores.length} products.`);
+  if (skipped.length) {
+    console.log(`Skipped ${skipped.length} (fix these):`);
+    skipped.forEach((s) => console.log(`  - ${s}`));
+  }
+  if (errored.length) console.log(`Errored ${errored.length}: ${errored.join(", ")}`);
 
   console.log("\nPer-attribute accuracy (worst first):");
   [...ATTRIBUTE_KEYS]
