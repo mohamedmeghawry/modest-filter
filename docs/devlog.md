@@ -12,6 +12,21 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-06-06 — Parsing the two fields vision can't see
+
+**Goal:** Build the production path ADR-0014's A/B pointed to — read `material` and `lined` straight from the feed description text, instead of routing the description through the vision model (which recovered those two fields but distracted the model, regressing visual attributes like `backStyle`).
+
+**What shipped:** `parseFeedFacts(description)` → `{ material, lined }`, a pure parser with 11 tests drawn from the real eval-set descriptions, so the tests double as its eval — a deterministic parser is measured by unit tests, not an LLM run. Material strips lining clauses before fiber detection, lets named construction fabrics (denim/knit/leather) override fiber content, then falls back to dominant-fiber-by-percent and first-fiber-by-position. Lined reads explicit phrases plus a stated lining fabric.
+
+**Challenges & how we solved them:**
+- *A lining's fiber masqueraded as the garment's.* "93% polyester … viscose/nylon lining" reads as viscose if parsed naively. We split the description on clause boundaries and drop any segment mentioning "lining" before looking for the main fiber.
+- *Fabric name and fiber content disagreed.* A "denim shirtdress" is 60% cotton by fiber, but the ground truth — and a shopper — calls it denim. We let a named construction fabric take precedence over the fiber percentages.
+- *One ground-truth tag fought the description.* A metallic top lists a polyester lining yet was hand-tagged `unlined`. Rather than weaken the signal to fit one debatable tag, the parser trusts the description and we logged "does a bonded lining count as lined?" as a schema-gap.
+
+**Takeaway:** When a deterministic parser can do the job, it beats the model on the fields it covers — free, instant, ~100% on stated text, and its test suite *is* its eval.
+
+---
+
 ### 2026-06-06 — Measuring the model: the eval scorer and the description A/B
 
 **Goal:** Build the scorer that turns "the AI is ~93% accurate" into a measured per-attribute number, run it against the ground-truth set, and test the one experiment the data points to.
