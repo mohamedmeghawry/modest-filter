@@ -98,7 +98,7 @@
       "sleeveLength": "long",
       "sleeveOpacity": "opaque",
       "neckline": "collar",
-      "backStyle": "TODO: closed",
+      "backStyle": "closed",
       "hemLength": "midi",
       "topLength": null,
       "slit": "none",
@@ -224,7 +224,7 @@
     }
   },
   {
-    "id": "wool-sweater-dress- find an alternaive",
+    "id": "wool-sweater-dress",
     "category": "dresses",
     "priority": "extra",
     "note": "Wool sweater dress, gray, three-quarter sleeve. Lead: Banana Republic merino sweater dress.",
@@ -265,7 +265,7 @@
     "groundTruth": {
       "sleeveLength": "sleeveless",
       "sleeveOpacity": null,
-      "neckline": "null",
+      "neckline": "square",
       "backStyle": "open_back",
       "hemLength": "midi",
       "topLength": null,
@@ -532,7 +532,7 @@
     }
   },
   {
-    "id": "leather-top: alternative",
+    "id": "leather-top",
     "category": "tops",
     "priority": "core",
     "note": "Faux-leather top, black (tags as 'leather' — see ADR-0014). Lead: Anthropologie faux-leather clothing. OPTIONAL — drop if hard to source.",
@@ -600,8 +600,8 @@
     "sourceUrl": "https://skims.com/en-ca/products/sheer-modal-long-sleeve-boatneck-top-onyx?variant=41781582004356&utm_source=google&utm_medium=cpc&utm_campaign=CA_PMax_NonBrand_XX_XX&utm_term=&utm_content=&gad_source=4&gad_campaignid=18953801985&gbraid=0AAAAABXxPQK6CGZkoiyUabIG9LmRfkj9b&gclid=Cj0KCQjw54nRBhDCARIsAMcY_SDnJw6tE1y05n1piiy1ZhQBa1PqBG32WbiyQLTiEicUneHAO5acf-QaAgchEALw_wcB",
     "groundTruth": {
       "sleeveLength": "long",
-      "sleeveOpacity": "sheer (if no sleeves)",
-      "neckline": "TODO: crew|v_neck|scoop|high_neck|collar|turtleneck|off_shoulder|halter|square",
+      "sleeveOpacity": "sheer",
+      "neckline": "off_shoulder",
       "backStyle": "scoop_back",
       "hemLength": null,
       "topLength": "waist",
@@ -770,7 +770,7 @@
       "sleeveLength": "short",
       "sleeveOpacity": "opaque",
       "neckline": "crew",
-      "backStyle": "TODO: closed|scoop_back|v_back|low_back|open_back",
+      "backStyle": "closed",
       "hemLength": "midi",
       "topLength": null,
       "slit": "none",
