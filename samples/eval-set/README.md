@@ -53,6 +53,32 @@ This is what one finished entry looks like (description **and** tags filled in):
 Note how `material` (silk), `lined` (unlined), and the slit all came **from the
 description**, not the photo — that's exactly why we capture it.
 
+## Filling in the pre-built stubs
+
+`manifest.json` is **pre-populated with 28 stubs** — one per archetype. You don't
+create structure; you fill values. For each product you source:
+
+1. **Rename** the stub `id` and the two `images` filenames to the real product
+   (e.g. `silk-slip` → `reformation-casette-silk`, and the photos to match).
+2. **Save** the front + back photos in this folder under those names.
+3. **Paste** the product-page text into `description`, and the link into `sourceUrl`.
+4. **Replace every `"TODO"`** in `groundTruth` with the correct tag.
+
+Conventions in the stubs:
+
+- **`"TODO"` = you must fill this.** Search the file for `TODO`; when none remain,
+  the set is complete.
+- **`null` (already set) = correct as-is** — it's a category rule, not a blank.
+  Dresses/abayas have `topLength: null`; tops have `hemLength: null` + `slit: null`.
+  (If a field turns out genuinely N/A — e.g. `sleeveOpacity` on a sleeveless dress —
+  replace its `TODO` with `null`.)
+- **`priority`**: do the **17 `core`** stubs first — they carry the rare values.
+  The **11 `extra`** stubs are common anchors and gap-fillers; fill them once core
+  is done. (Per the start-small advice: even the first ~12 core gives me enough to
+  build the scorer and show you real numbers.)
+- **`note`** is guidance for sourcing — you can delete it once the entry is filled,
+  or leave it; the scorer ignores unknown fields.
+
 ## Where to hunt each brand
 
 Different brands are strong for different rare values. Rough routing:

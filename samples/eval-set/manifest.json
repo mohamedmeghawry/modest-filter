@@ -1,1 +1,422 @@
-[]
+[
+  {
+    "id": "black-ls-midi",
+    "category": "dresses",
+    "priority": "extra",
+    "note": "Black long-sleeve crew midi (common-dress anchor). Browse any brand. Rename id + image files to the real brand-product slug once sourced.",
+    "images": ["./black-ls-midi_front.png", "./black-ls-midi_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "floral-viscose-maxi",
+    "category": "dresses",
+    "priority": "core",
+    "note": "Floral V-neck viscose, floor length. Lead: Reformation 'Lisola' floral maxi (100% viscose).",
+    "images": ["./floral-viscose-maxi_front.png", "./floral-viscose-maxi_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "striped-halter-midi",
+    "category": "dresses",
+    "priority": "core",
+    "note": "Striped halter, sleeveless. Lead: Aritzia Cayenne/Talula halter (halter + open back); find a striped one if possible.",
+    "images": ["./striped-halter-midi_front.png", "./striped-halter-midi_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "denim-shirtdress",
+    "category": "dresses",
+    "priority": "core",
+    "note": "Denim shirtdress, collar, knee, long sleeve. Lead: Everlane 'The Denim Shirtdress' (Indigo).",
+    "images": ["./denim-shirtdress_front.png", "./denim-shirtdress_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "silk-slip",
+    "category": "dresses",
+    "priority": "core",
+    "note": "Silk slip, scoop, high side slit, low/open back. Lead: Reformation 'Casette' or 'Alli' (100% silk).",
+    "images": ["./silk-slip_front.png", "./silk-slip_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "sheer-offshoulder",
+    "category": "dresses",
+    "priority": "core",
+    "note": "Sheer chiffon, off-shoulder. Lead: Anthropologie 'Off-Shoulder Mesh Slim Midi' (~$148).",
+    "images": ["./sheer-offshoulder_front.png", "./sheer-offshoulder_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "knit-turtleneck-mini",
+    "category": "dresses",
+    "priority": "core",
+    "note": "Knit bodycon, fitted, turtleneck, mini. Browse Aritzia/Anthropologie knit minis.",
+    "images": ["./knit-turtleneck-mini_front.png", "./knit-turtleneck-mini_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "cutout-midi",
+    "category": "dresses",
+    "priority": "core",
+    "note": "Cutout midi (waist cutout), knit. Lead: Aritzia 'Cutout Knit Midi Dress'.",
+    "images": ["./cutout-midi_front.png", "./cutout-midi_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "wool-sweater-dress",
+    "category": "dresses",
+    "priority": "extra",
+    "note": "Wool sweater dress, gray, three-quarter sleeve. Lead: Banana Republic merino sweater dress.",
+    "images": ["./wool-sweater-dress_front.png", "./wool-sweater-dress_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "plaid-square",
+    "category": "dresses",
+    "priority": "core",
+    "note": "Plaid, elbow sleeve, square neck. Lead: Anthropologie 'Maeve Belted Square-Neck Plaid Dress'.",
+    "images": ["./plaid-square_front.png", "./plaid-square_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "animalprint-wrap",
+    "category": "dresses",
+    "priority": "core",
+    "note": "Animal-print wrap, cap sleeve, v-back. Lead: Anthropologie 'By Anthropologie Printed Wrap' / Maeve Long-Sleeve Printed Wrap.",
+    "images": ["./animalprint-wrap_front.png", "./animalprint-wrap_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "lined-floral-midi",
+    "category": "dresses",
+    "priority": "extra",
+    "note": "Floral midi described 'fully lined' (tests lined-from-description). Browse Anthropologie florals; capture the lining line in the description.",
+    "images": ["./lined-floral-midi_front.png", "./lined-floral-midi_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "openback-maxi",
+    "category": "dresses",
+    "priority": "extra",
+    "note": "Open-back maxi, ankle hem, low slit. Browse Reformation maxis (back photo is essential here).",
+    "images": ["./openback-maxi_front.png", "./openback-maxi_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "cropped-tank",
+    "category": "tops",
+    "priority": "extra",
+    "note": "Cropped tank, scoop, sleeveless (common-top anchor). Browse any brand.",
+    "images": ["./cropped-tank_front.png", "./cropped-tank_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "oversized-buttondown",
+    "category": "tops",
+    "priority": "core",
+    "note": "Oversized button-down, collar, longline, long sleeve. Browse Everlane/Aritzia oversized shirts.",
+    "images": ["./oversized-buttondown_front.png", "./oversized-buttondown_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "tunic-highneck",
+    "category": "tops",
+    "priority": "extra",
+    "note": "Tunic blouse, high-neck, three-quarter sleeve. Browse Anthropologie tunics.",
+    "images": ["./tunic-highneck_front.png", "./tunic-highneck_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "polkadot-tee",
+    "category": "tops",
+    "priority": "core",
+    "note": "Waist-length tee, polka-dot, short sleeve. Lead: Anthropologie 'Maeve Short-Sleeve Polka Dot Blouse'.",
+    "images": ["./polkadot-tee_front.png", "./polkadot-tee_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "semisheer-scoopback",
+    "category": "tops",
+    "priority": "core",
+    "note": "Semi-sheer blouse, brown, scoop-back. Browse Anthropologie sheer blouses (back photo essential).",
+    "images": ["./semisheer-scoopback_front.png", "./semisheer-scoopback_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "geometric-top",
+    "category": "tops",
+    "priority": "core",
+    "note": "Geometric print, purple. Lead: Anthropologie 'Thales Geometric Blouse' / 'Geometric Dolman-Sleeved Blouse'.",
+    "images": ["./geometric-top_front.png", "./geometric-top_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "leather-top",
+    "category": "tops",
+    "priority": "core",
+    "note": "Faux-leather top, black (tags as 'leather' — see ADR-0014). Lead: Anthropologie faux-leather clothing. OPTIONAL — drop if hard to source.",
+    "images": ["./leather-top_front.png", "./leather-top_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "abstract-cami",
+    "category": "tops",
+    "priority": "extra",
+    "note": "Abstract-print cami, orange. Browse Anthropologie prints.",
+    "images": ["./abstract-cami_front.png", "./abstract-cami_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "modal-partlined",
+    "category": "tops",
+    "priority": "extra",
+    "note": "Modal top described 'partially lined' (tests partially_lined from description). Browse loungewear; capture the lining line.",
+    "images": ["./modal-partlined_front.png", "./modal-partlined_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "black-classic-abaya",
+    "category": "abayas",
+    "priority": "extra",
+    "note": "Black classic abaya, long sleeve, floor, crew (abaya anchor). Source from your modest retailer.",
+    "images": ["./black-classic-abaya_front.png", "./black-classic-abaya_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "openfront-abaya",
+    "category": "abayas",
+    "priority": "core",
+    "note": "Open-front abaya, extra-long sleeve, beige. Source from modest retailer.",
+    "images": ["./openfront-abaya_front.png", "./openfront-abaya_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "multicolor-abaya",
+    "category": "abayas",
+    "priority": "core",
+    "note": "Multicolor embroidered abaya ('other' pattern). Source from modest retailer.",
+    "images": ["./multicolor-abaya_front.png", "./multicolor-abaya_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "blend-abaya",
+    "category": "abayas",
+    "priority": "extra",
+    "note": "Abaya described 'cotton/poly blend' (tests material=blend), mid slit. Source from modest retailer.",
+    "images": ["./blend-abaya_front.png", "./blend-abaya_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "other-material-metallic",
+    "category": "tops",
+    "priority": "core",
+    "note": "Item with an unusual material (metallic / lamé / tencel — tags material='other' per description). Browse for a metallic top.",
+    "images": ["./other-material-metallic_front.png", "./other-material-metallic_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": null, "topLength": "TODO", "slit": null,
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  },
+  {
+    "id": "yellow-item",
+    "category": "dresses",
+    "priority": "extra",
+    "note": "Anything YELLOW if not yet captured elsewhere (fills the color gap). Any category — change 'category' + the null fields if it's a top.",
+    "images": ["./yellow-item_front.png", "./yellow-item_back.png"],
+    "description": "",
+    "sourceUrl": "",
+    "groundTruth": {
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+    }
+  }
+]
