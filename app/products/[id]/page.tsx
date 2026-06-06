@@ -52,20 +52,20 @@ export default async function ProductDetailPage({
     <main className="mx-auto w-full max-w-6xl px-4 py-8">
       <div className="flex flex-col gap-8 lg:flex-row">
         <div
-          className="h-64 w-full rounded-lg border border-black/10 lg:w-96 lg:shrink-0"
+          className="aspect-[3/4] w-full rounded-lg border border-border lg:w-96 lg:shrink-0"
           style={{ backgroundColor: swatch }}
           aria-hidden="true"
         />
 
         <div className="flex flex-1 flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <span className="text-xs uppercase tracking-wide opacity-60">
+            <span className="text-xs uppercase tracking-wide text-muted-foreground">
               {product.brand.name}
             </span>
-            <h1 className="text-2xl font-semibold leading-tight">
+            <h1 className="text-[clamp(1.5rem,1.15rem+1.6vw,2.125rem)] font-semibold leading-tight tracking-tight">
               {product.name}
             </h1>
-            <span className="text-xl font-semibold">
+            <span className="text-xl font-semibold tabular-nums">
               {formatPrice(product.price)}
             </span>
           </div>
@@ -74,7 +74,7 @@ export default async function ProductDetailPage({
             href={product.affiliateUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="self-start rounded-full border border-black/10 px-5 py-2 text-sm font-medium opacity-80 transition-opacity hover:opacity-100"
+            className="min-h-8 self-start rounded-full border border-border px-5 py-2 text-sm font-medium transition-colors hover:bg-muted"
           >
             Affiliate link
           </a>
@@ -87,16 +87,16 @@ export default async function ProductDetailPage({
               if (populated.length === 0) return null;
               return (
                 <section key={group.heading} className="flex flex-col gap-2">
-                  <h2 className="text-sm font-semibold uppercase tracking-wide opacity-60">
+                  <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                     {group.heading}
                   </h2>
                   <dl className="flex flex-col gap-1">
                     {populated.map(([label, value]) => (
                       <div
                         key={label}
-                        className="flex justify-between border-b border-black/10 py-1 text-sm"
+                        className="flex justify-between border-b border-border py-1 text-sm"
                       >
-                        <dt className="opacity-60">{label}</dt>
+                        <dt className="text-muted-foreground">{label}</dt>
                         <dd className="capitalize">{humanize(value)}</dd>
                       </div>
                     ))}

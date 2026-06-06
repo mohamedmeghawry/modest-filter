@@ -13,8 +13,9 @@ import {
 import { Button } from "@/components/ui/button";
 import Filters from "@/app/products/Filters";
 import { countActiveFilters } from "@/lib/products/filter-state";
+import type { FacetCounts } from "@/lib/data/products";
 
-export default function MobileFilters() {
+export default function MobileFilters({ counts }: { counts?: FacetCounts }) {
   const [open, setOpen] = useState(false);
   const searchParams = useSearchParams();
 
@@ -35,7 +36,7 @@ export default function MobileFilters() {
           </SheetDescription>
         </SheetHeader>
         <div className="px-4 pb-8">
-          <Filters />
+          <Filters counts={counts} />
         </div>
       </SheetContent>
     </Sheet>

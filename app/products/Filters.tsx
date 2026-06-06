@@ -16,7 +16,8 @@ import {
   PrimaryColor,
   TopLength,
 } from "@/lib/generated/prisma/enums";
-import { humanize } from "@/lib/products/display";
+import { getSwatch, humanize } from "@/lib/products/display";
+import type { FacetCounts } from "@/lib/data/products";
 
 // TODO: fetch category options from the DB (Category table) instead of hardcoding
 const CATEGORY_OPTIONS = ["dresses", "abayas", "tops"];
@@ -41,7 +42,11 @@ const FILTER_GROUPS: FilterGroup[] = [
   { key: "topLength", label: "Top Length", options: Object.values(TopLength) },
 ];
 
-export default function Filters() {
+// `multicolor` has no single honest hex, so render it as a spectrum chip.
+const MULTICOLOR_GRADIENT =
+  "conic-gradient(from 0deg, #dc2626, #eab308, #16a34a, #3b82f6, #9333ea, #dc2626)";
+
+export default function Filters({ counts }: { counts?: FacetCounts }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -81,33 +86,91 @@ export default function Filters() {
     });
   };
 
+  const countFor = (key: string, option: string): number | undefined =>
+    counts?.[key]?.[option];
+
   return (
     <div className={`flex flex-col gap-4 ${isPending ? "opacity-60" : ""}`}>
       <Accordion type="multiple" defaultValue={["category"]}>
         {FILTER_GROUPS.map((group) => {
           const selected = selectedFor(group.key);
+          const isColor = group.key === "primaryColor";
           return (
             <AccordionItem key={group.key} value={group.key}>
               <AccordionTrigger>{group.label}</AccordionTrigger>
               <AccordionContent>
-                <div className="flex flex-col gap-1.5">
-                  {group.options.map((option) => (
-                    <label
-                      key={option}
-                      className="flex items-center gap-2 text-sm capitalize opacity-80"
-                    >
-                      <input
-                        type="checkbox"
-                        checked={selected.includes(option)}
-                        onChange={(e) =>
-                          toggle(group.key, option, e.target.checked)
-                        }
-                        className="h-4 w-4 rounded border-black/20"
-                      />
-                      {humanize(option)}
-                    </label>
-                  ))}
-                </div>
+                {isColor ? (
+                  <div className="grid grid-cols-6 gap-2">
+                    {group.options.map((option) => {
+                      const isSelected = selected.includes(option);
+                      const count = countFor(group.key, option);
+                      const isEmpty = count === 0;
+                      return (
+                        <button
+                          key={option}
+                          type="button"
+                          aria-pressed={isSelected}
+                          aria-label={
+                            count === undefined
+                              ? humanize(option)
+                              : `${humanize(option)}, ${count} products`
+                          }
+                          title={
+                            count === undefined
+                              ? humanize(option)
+                              : `${humanize(option)} (${count})`
+                          }
+                          onClick={() =>
+                            toggle(group.key, option, !isSelected)
+                          }
+                          style={
+                            option === "multicolor"
+                              ? { background: MULTICOLOR_GRADIENT }
+                              : { backgroundColor: getSwatch(option as PrimaryColor) }
+                          }
+                          className={`aspect-square w-full rounded-full transition ${
+                            isSelected
+                              ? "ring-2 ring-foreground ring-offset-2 ring-offset-background"
+                              : "border border-border"
+                          } ${isEmpty && !isSelected ? "opacity-30" : ""}`}
+                        />
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="flex flex-col">
+                    {group.options.map((option) => {
+                      const count = countFor(group.key, option);
+                      return (
+                        <label
+                          key={option}
+                          className="flex min-h-8 cursor-pointer items-center gap-2.5 py-1 text-sm capitalize"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={selected.includes(option)}
+                            onChange={(e) =>
+                              toggle(group.key, option, e.target.checked)
+                            }
+                            className="h-4 w-4 rounded border-input"
+                          />
+                          <span className="flex-1">{humanize(option)}</span>
+                          {count !== undefined && (
+                            <span
+                              className={`text-xs tabular-nums ${
+                                count === 0
+                                  ? "text-muted-foreground/50"
+                                  : "text-muted-foreground"
+                              }`}
+                            >
+                              {count}
+                            </span>
+                          )}
+                        </label>
+                      );
+                    })}
+                  </div>
+                )}
               </AccordionContent>
             </AccordionItem>
           );
@@ -118,7 +181,7 @@ export default function Filters() {
         <button
           type="button"
           onClick={clearFilters}
-          className="self-start rounded-full border border-black/10 px-4 py-1.5 text-sm font-medium opacity-80 transition-opacity hover:opacity-100"
+          className="min-h-8 self-start rounded-full border border-border px-4 py-1.5 text-sm font-medium transition-colors hover:bg-muted"
         >
           Clear filters
         </button>
