@@ -33,7 +33,7 @@ This document is the operational guide for hand-tagging products with the 14 mod
 
 **`neckline`** — Use the enum value matching the visible neckline. The `collar` value was added in commit `feat(schema): add \`collar\` to Neckline enum per ADR-0012 finding` for collared shapes (polo, button-up). `null` for bottoms or no-upper-body items.
 
-**`backStyle`** — Use the enum value matching the visible back. `null` if the back is not visible in the available images. Per ADR-0013, model-on photos are strongly preferred when back coverage is a meaningful filter dimension — product-only photos commonly omit back views.
+**`backStyle`** — Use the enum value matching the visible back. `null` if the back is not visible in the available images. Per ADR-0013, model-on photos are strongly preferred when back coverage is a meaningful filter dimension — product-only photos commonly omit back views. A very-low / extreme open back (e.g. open down to under the armpit) has no exact value yet — tag the closest, `open_back`, until the granularity gap is resolved (see [`docs/schema-gaps.md`](schema-gaps.md)).
 
 **`hemLength`** — operational definitions:
 
@@ -47,7 +47,7 @@ Always tag from a model-on photo. Product-only photos lack scale reference (ADR-
 
 **`topLength`** — Use the enum value matching the visible top length. `null` for dresses and bottoms (per ADR-0008 NULL semantics).
 
-**`slit`** — Use the enum value matching the visible slit height. **Only reliably tagged from model-on photos** (ADR-0012 finding — slits manifest visually only when the garment is worn; product-only photos consistently hide them). If only product-only photos are available and the brand description doesn't confirm slit presence, prefer `null` over `"none"` — the spike's slit "none vs none" mismatch was a shared blind spot precisely because both ground-truth and model defaulted to "none" without on-body evidence.
+**`slit`** — Use the enum value matching the visible slit height. **Location does not matter, height does** — a slit at the back or center-back hem counts exactly like a side or front slit; tag it by height (`low`/`mid`/`high`), never `none`, just because it is not on the side. (Real case from eval review: a back walking-slit was wrongly tagged `none` on the assumption that slits are only side slits.) **Only reliably tagged from model-on photos** (ADR-0012 finding — slits manifest visually only when the garment is worn; product-only photos consistently hide them). If only product-only photos are available and the brand description doesn't confirm slit presence, prefer `null` over `"none"` — the spike's slit "none vs none" mismatch was a shared blind spot precisely because both ground-truth and model defaulted to "none" without on-body evidence.
 
 ### Fit & material (5)
 

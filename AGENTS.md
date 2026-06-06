@@ -43,6 +43,8 @@ _(none currently)_
 
 **Build journal:** see [`docs/devlog.md`](docs/devlog.md) — narrative log of what was built, the challenges hit, and how they were solved (newest first). The story layer that sits above ADRs (*decisions*) and commit messages (*per-change why*); written to be mined for interviews, articles, and social posts. Add an entry at session end when meaningful work shipped.
 
+**Schema backlog:** see [`docs/schema-gaps.md`](docs/schema-gaps.md) — objective-attribute gaps surfaced during eval sourcing/tagging (parked, not decided), to be resolved together in one schema-evolution ADR rather than bolted on piecemeal.
+
 ## Tech stack
 
 - **Language:** TypeScript (frontend, backend, scripts)
