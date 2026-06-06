@@ -2,7 +2,7 @@
 
 This is the durable record of project direction, market context, and known-but-not-yet-decided next steps. It is updated as the project evolves. Unlike the ADRs (which document *decided* choices) or the README (public-facing demo), this document captures *where the project is going and why*.
 
-_Last updated: 2026-06-03._
+_Last updated: 2026-06-06._
 
 ## Market context (why this project matters)
 
@@ -11,11 +11,33 @@ _Last updated: 2026-06-03._
 - Existing players are mostly retailers (Modanisa, Artizara, Louella). Our positioning as an **aggregator-and-curator over mainstream brands** — not a retailer — is structurally different from the incumbents.
 - These figures are based on industry research conducted **2026-05-17** and should be **re-verified before any pitch or launch claim**. Treat them as directional, not citable, until refreshed.
 
-## Where we are (engineering state, May 2026)
+## Where we are (engineering state, June 2026)
 
-ADRs 0001–0013 accepted. The core vertical is complete: catalogue list → URL-based filtering (collapsible Accordion sections on desktop, mobile Sheet drawer) → product detail, all through the `lib/data` seam (ADR-0004). 74 unit tests (filter parser + display helpers + vision schema completeness). Vision tagging viability validated empirically against a first product (ADR-0012). Deployed at [modest-filter.vercel.app](https://modest-filter.vercel.app/products).
+ADRs 0001–0014 accepted. The core vertical is complete: catalogue list → URL-based filtering (collapsible Accordion sections on desktop, mobile Sheet drawer) → product detail, all through the `lib/data` seam (ADR-0004). The AI tagging toolchain is built and measured: the vision spike validated at 93% (ADR-0012, above the brief's 90% target), an extraction engine with retry/backoff, an eval harness over a 28-product ground-truth set, and a deterministic feed-text parser for `material`/`lined` (ADR-0014). 105 unit tests. Deployed at [modest-filter.vercel.app](https://modest-filter.vercel.app/products). The one thing missing before real products flow through the pipeline is affiliate-feed access (Phase 2 below).
 
 See `AGENTS.md` for the authoritative, current ADR list.
+
+## Phase model (v1 critical path)
+
+These are the coarse milestones to the v1 success criterion in the brief — *the founder's wife finds at least one piece she actually buys, and 3–5 women give feedback*. The phases are ordered by the critical path, not by ease. The finer-grained "Session N+X" steps further down map underneath these phases.
+
+> **Note on phase numbers:** earlier ADRs used informal, inconsistent `Phase N` labels that predate this model (ADR-0012 "Phase 1", ADR-0011 and ADR-0014 both say "Phase 5" for *different* work). This section is the canonical phase map; treat the stray ADR labels as historical.
+
+- **✅ Phase 0 — Foundations & architecture** *(done)*. Stack (Next.js/TS/Prisma/Supabase), API-first seam (ADR-0004), v1 schema (ADR-0007), filter semantics (ADR-0008), shadcn/ui (ADR-0011), catalogue UI (list → filter → detail), deployment. The vertical works end-to-end on seed data.
+
+- **✅ Phase 1 — AI tagging viability & toolchain** *(done)*. Vision spike at 93% (ADR-0012), extraction engine + retry/backoff, eval harness + 28-product ground-truth set, hybrid-extraction decision (ADR-0014), deterministic feed parser for `material`/`lined`. Everything needed to tag products except a real catalogue to tag.
+
+- **⛔ Phase 2 — Real catalogue ingestion** *(BLOCKED — the long pole)*. Affiliate network access (Rakuten / impact.com / ShareASale); feed ingestion + idempotent upsert; feed-field → known-facts mapping (wires in the Phase 1 parser); three-tier image sourcing (ADR-0013) + image-rights validation per network; run vision tagging over the real catalogue (the ~$50 budget item). **Blocked by affiliate approval + image-rights validation.** This is the gate: the v1 success criterion is impossible without a real catalogue. (This is what the ADRs loosely call "Phase 5 ingestion".)
+
+- **◻️ Phase 3 — Pre-launch hardening** *(not started; unblocked)*. The brief's "mandatory controls before production": rate limiting (100/min/IP) on public API routes, verified Supabase RLS with explicit policies, security headers, billing alerts + a hard Anthropic spend cap, bot protection. Small and concrete; first-pass findings in [`security-review.md`](security-review.md).
+
+- **◻️ Phase 4 — UX polish & mobile** *(partly done; unblocked)*. Mobile filter polish (the deferred N+3 work), accessibility (ARIA, keyboard, focus), real-device verification, and ADR-0010's "filter UI doesn't scale past ~30 options" debt.
+
+- **◻️ Phase 5 — Validation with real users** *(not started; this IS the success metric)*. Wife + 3–5 women use it, find and buy, give qualitative feedback; user-research interviews (the deferred N+4 work). Interviews can begin now, but meaningful product validation needs Phase 2 (a real catalogue to shop).
+
+- **◻️ Phase 6 — Post-v1 / launch readiness** *(future; mostly out of v1 scope)*. SEO (an explicit v1 non-goal), legal (ToS/privacy, PIPEDA/GDPR), v2 slug URLs (ADR-0009), image CDN at scale, authentication, React Native app.
+
+**Critical-path priority:** Phase 2 has external lead time you don't control — affiliate approval can take days to weeks. Everything unblocked (Phases 3, 4, and Phase 5 interviews) is engineering you can do on your own schedule. So the highest-leverage move is to **apply for affiliate access now** to start that clock, and fill the wait with hardening / polish / user interviews in parallel.
 
 ## Skill roadmap (gaps mapped to phases)
 
@@ -35,6 +57,7 @@ See `AGENTS.md` for the authoritative, current ADR list.
 - **SEO** — JSON-LD Product schema (required for Google rich results), `sitemap.xml` generation, canonical URLs (ties to ADR-0009's v2 slug plan), OpenGraph tags.
 - **Performance** — Lighthouse / Core Web Vitals monitoring. Next.js + server components gives a strong baseline; the work is regression prevention as real images and third-party scripts arrive.
 - **Legal/compliance** — Terms of Service, Privacy Policy, GDPR (EU) and PIPEDA (Canada) compliance.
+- **Security hardening** — rate limiting on public API routes, verified Supabase RLS, security headers, hard Anthropic spending cap. Pre-launch checklist tracked in [`docs/security-review.md`](security-review.md) (first pass 2026-06-06).
 
 ## Standing practices to start now (not deferred)
 

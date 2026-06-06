@@ -1,0 +1,60 @@
+# Security Review — 2026-06-06
+
+First security pass over modest-filter, run with the third-party `vibe-security` skill
+(Chris Raroque, MIT — auditing patterns AI assistants commonly get wrong) applied against
+the actual code: the public API route, the Prisma client, the vision/Anthropic code,
+env handling, migrations, and config. Findings verified by hand, not taken on the skill's word.
+
+**Headline:** no exploitable vulnerabilities in the code. Secrets are server-side only,
+DB queries are parameterized through Prisma, filter inputs are allowlisted against enums,
+and `.env*` is gitignored (only `.env.local.example` with placeholders is tracked). The
+findings below are pre-launch hardening plus one verification — not an active exposure.
+
+Categories N/A by design (correctly skipped): authentication/JWT/sessions (no user accounts
+in v1), payments (affiliate click-through only, no checkout), mobile (no app yet).
+
+## Medium — verify, low effort
+
+### RLS is claimed in docs but unproven in the repo
+- **Where:** `AGENTS.md` / ADR-0003 state "Row Level Security enabled from day one."
+  Prisma migrations (`prisma/migrations/*`) contain **no** RLS statements — confirmed.
+  Prisma does not manage RLS, so it is only on if the SQL was run manually in the Supabase dashboard.
+- **Why it matters:** Supabase auto-exposes a PostgREST REST API at
+  `https://<project>.supabase.co/rest/v1/` reachable with the public anon key. The app never
+  uses that path (it reaches Postgres via Prisma with a privileged server-side connection
+  string, which is correct). But if RLS is off, the anon key could read the tables through
+  that side door, bypassing the app.
+- **Actual impact: low.** The data is a public product catalogue — no user accounts, no PII,
+  no payments. Worst case is catalogue scraping, already an accepted low-priority threat in
+  AGENTS.md. This item is about closing the gap between a documented claim and verifiable reality.
+- **Action (Supabase SQL editor, ~5 min):**
+  ```sql
+  -- check
+  SELECT tablename, rowsecurity FROM pg_tables WHERE schemaname='public';
+  -- enable on all public tables if any show false
+  DO $$ DECLARE r RECORD; BEGIN
+    FOR r IN SELECT tablename FROM pg_tables WHERE schemaname='public'
+    LOOP EXECUTE format('ALTER TABLE public.%I ENABLE ROW LEVEL SECURITY;', r.tablename); END LOOP;
+  END $$;
+  ```
+  With RLS on and no policies, PostgREST denies all access — which is the desired state, since
+  the app does not use PostgREST. **Status: pending dashboard check.**
+
+## Low — acknowledged pre-launch items
+
+1. **No rate limiting on `/api/products`** (`app/api/products/route.ts`). Already listed in
+   AGENTS.md as "mandatory before production." Pre-launch impact: mild scraping. Note the
+   skill's "attacker drains your Anthropic budget" worry does **not** apply — vision calls are
+   not behind any public route; they run only from local CLI scripts (`vision:spike`/`vision:tag`).
+2. **Confirm a hard spending cap on the Anthropic console** (not just a billing alert).
+   Not verifiable from code — a dashboard setting. Cheap insurance for the AI budget.
+3. **No security headers** (`next.config.ts` is empty). CSP, X-Frame-Options, etc. Low for a
+   catalogue app with no login; a one-time add during launch hardening.
+
+## Note on the tool
+
+`vibe-security` matched the stack precisely, produced no false alarms, and correctly skipped
+N/A categories. Its single most valuable output was "verify the claim your own docs make,"
+not a code bug — three of four findings were already known/accepted in AGENTS.md. Treat its
+output as a checklist to verify, never a to-do list to auto-apply. Installed per-project at
+`.agents/skills/vibe-security/` (not global).
