@@ -69,6 +69,13 @@ describe("tagProductWithRetry", () => {
     expect(sleep).not.toHaveBeenCalled();
   });
 
+  it("forwards the description to the extractor (ADR-0014)", async () => {
+    const extract = vi.fn().mockResolvedValue(OK);
+    const { opts } = harness(extract);
+    await tagProductWithRetry(IMAGE, MODEL, { ...opts, description: "100% linen. Lined." });
+    expect(extract).toHaveBeenCalledWith(IMAGE, MODEL, { description: "100% linen. Lined." });
+  });
+
   it("recovers after a transient error and reports attempt count", async () => {
     const extract = vi
       .fn()

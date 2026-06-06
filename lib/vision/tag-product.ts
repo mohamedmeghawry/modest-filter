@@ -3,6 +3,7 @@ import {
   type ImageInput,
   type ModelConfig,
   type ExtractResult,
+  type ExtractOptions,
 } from "./extract";
 
 /**
@@ -26,6 +27,7 @@ export type TagOutcome =
 type ExtractFn = (
   images: ImageInput | ImageInput[],
   modelConfig: ModelConfig,
+  options?: ExtractOptions,
 ) => Promise<ExtractResult>;
 
 export type TagOptions = {
@@ -33,6 +35,8 @@ export type TagOptions = {
   maxAttempts?: number;
   /** First backoff delay; doubles each retry (baseDelayMs, 2×, 4×, …). */
   baseDelayMs?: number;
+  /** Product description folded in as context (ADR-0014). */
+  description?: string;
   /** Injectable for tests; defaults to a real timer. */
   sleep?: (ms: number) => Promise<void>;
   /** Injectable for tests; defaults to the live Anthropic extractor. */
@@ -67,6 +71,7 @@ export async function tagProductWithRetry(
   const {
     maxAttempts = 3,
     baseDelayMs = 1_000,
+    description,
     sleep = defaultSleep,
     extract = extractAttributes,
   } = options;
@@ -75,7 +80,7 @@ export async function tagProductWithRetry(
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     try {
-      const { attributes, usage } = await extract(images, modelConfig);
+      const { attributes, usage } = await extract(images, modelConfig, { description });
       return { status: "tagged", attributes, usage, attempts: attempt };
     } catch (error) {
       lastError = error instanceof Error ? error.message : String(error);

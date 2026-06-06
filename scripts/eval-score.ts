@@ -9,14 +9,29 @@ const DEFAULT_MODEL = "claude-opus-4-7";
 type ManifestEntry = {
   id: string;
   category?: string;
+  description?: string;
   images: string[];
   groundTruth: Record<string, string | null>;
 };
 
-type Args = { model: string; manifest: string; limit?: number; id?: string; detail: boolean };
+type Args = {
+  model: string;
+  manifest: string;
+  limit?: number;
+  id?: string;
+  detail: boolean;
+  withDescription: boolean;
+  requireDescription: boolean;
+};
 
 function parseArgs(argv: string[]): Args {
-  const args: Args = { model: DEFAULT_MODEL, manifest: "samples/eval-set/manifest.json", detail: false };
+  const args: Args = {
+    model: DEFAULT_MODEL,
+    manifest: "samples/eval-set/manifest.json",
+    detail: false,
+    withDescription: false,
+    requireDescription: false,
+  };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--model") args.model = argv[++i];
@@ -24,6 +39,8 @@ function parseArgs(argv: string[]): Args {
     else if (a === "--limit") args.limit = Number(argv[++i]);
     else if (a === "--id") args.id = argv[++i];
     else if (a === "--detail") args.detail = true;
+    else if (a === "--with-description") args.withDescription = true;
+    else if (a === "--require-description") args.requireDescription = true;
     else { console.error(`Unknown argument: ${a}`); process.exit(1); }
   }
   return args;
@@ -61,7 +78,7 @@ async function main() {
   if (args.id) entries = entries.filter((e) => e.id === args.id);
   if (args.limit) entries = entries.slice(0, args.limit);
 
-  console.log(`=== Eval scorer: ${args.model} ===`);
+  console.log(`=== Eval scorer: ${args.model}${args.withDescription ? " +description" : ""} ===`);
 
   const scores: ProductScore[] = [];
   const skipped: string[] = [];
@@ -70,6 +87,7 @@ async function main() {
 
   for (const e of entries) {
     if (!isComplete(e.groundTruth)) { skipped.push(`${e.id} (incomplete tags)`); continue; }
+    if (args.requireDescription && !e.description?.trim()) { skipped.push(`${e.id} (no description)`); continue; }
     const buffers: Buffer[] = [];
     let badReason = "";
     for (const img of e.images) {
@@ -88,7 +106,11 @@ async function main() {
     if (badReason || buffers.length === 0) { skipped.push(`${e.id}: ${badReason || "no images"}`); continue; }
 
     process.stdout.write(`. ${e.id} ... `);
-    const outcome = await tagProductWithRetry(buffers, { vendor: "anthropic", model: args.model });
+    const outcome = await tagProductWithRetry(
+      buffers,
+      { vendor: "anthropic", model: args.model },
+      { description: args.withDescription ? e.description : undefined },
+    );
     if (outcome.status === "failed") { console.log(`ERROR: ${outcome.error}`); errored.push(e.id); continue; }
 
     const comparisons = scoreProduct(outcome.attributes as Record<string, string | null>, e.groundTruth);

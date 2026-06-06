@@ -1,6 +1,11 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { TAG_PRODUCT_TOOL, type ProductAttributes } from "./schema";
-import { SYSTEM_PROMPT, USER_PROMPT } from "./prompt";
+import { SYSTEM_PROMPT, USER_PROMPT, descriptionBlock } from "./prompt";
+
+export type ExtractOptions = {
+  /** Product description folded in as authoritative context (ADR-0014). */
+  description?: string;
+};
 
 export type ModelConfig = { vendor: "anthropic"; model: string };
 // Future shapes — additions to this discriminated union surface in the
@@ -81,6 +86,7 @@ function buildImageBlock(image: ImageInput): Anthropic.ImageBlockParam {
 export async function extractAttributes(
   images: ImageInput | ImageInput[],
   modelConfig: ModelConfig,
+  options: ExtractOptions = {},
 ): Promise<ExtractResult> {
   // Buffer is not Array.isArray, so this correctly disambiguates
   // single Buffer / single URL object from arrays of either.
@@ -118,6 +124,14 @@ export async function extractAttributes(
         content: [
           ...imageArray.map(buildImageBlock),
           { type: "text", text: USER_PROMPT },
+          ...(options.description?.trim()
+            ? [
+                {
+                  type: "text" as const,
+                  text: descriptionBlock(options.description.trim()),
+                },
+              ]
+            : []),
         ],
       },
     ],
