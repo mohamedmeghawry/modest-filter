@@ -45,25 +45,41 @@ const FIBER_TO_MATERIAL: ReadonlyArray<readonly [RegExp, Material]> = [
   [/\b(?:wool|merino|cashmere)\b/i, Material.wool],
 ];
 
-// Drop clauses describing a lining so its fiber isn't mistaken for the
-// garment's main material ("93% polyester ... viscose lining" -> polyester).
+// A clause that styles the garment ("wear it with ... denim") names other
+// items, not the garment's own fabric — so "sleek denim" in a tunic's copy
+// must not read as a denim garment. The preposition must follow the verb
+// closely so a noun use ("chic style ... comfortable with ...") doesn't match.
+const STYLING_RE =
+  /\b(?:wear|pair|style|team|layer)\s+(?:it\s+|this\s+|them\s+)?(?:up\s+)?(?:with|over|under|back)\b|dress it up with/i;
+
+// Strip clauses that don't describe the garment's main fabric (a lining's fiber,
+// or a styling suggestion) and remove "X-free" tokens ("wool-free" is not wool).
 function selfFabricText(text: string): string {
   return text
     .split(/[.;]/)
-    .filter((seg) => !/lining/i.test(seg))
-    .join(". ");
+    .filter((seg) => !/lining/i.test(seg) && !STYLING_RE.test(seg))
+    .join(". ")
+    .replace(/\b\w+-free\b/gi, "");
 }
 
 function parseMaterial(text: string): Material | null {
   const self = selfFabricText(text);
 
-  // Construction fabrics are asserted by name and beat fiber content: a "denim
+  // denim/leather are fabric *identities* and override fiber content: a "denim
   // shirtdress" is `denim` even though its fibers are cotton/Tencel (ADR-0014).
   if (/\bdenim\b/i.test(self)) return Material.denim;
   if (/\bleather\b/i.test(self)) return Material.leather; // incl. "faux leather"
+
+  // An explicitly stated fiber percentage wins next: "striped knit material ...
+  // 95% Cotton" is cotton, not knit (a knit weave doesn't change the fiber).
+  const byPct = dominantFiberByPercent(self);
+  if (byPct) return byPct;
+
+  // "knit" only stands as the material when no fiber is stated ("ribbed knit
+  // midi dress" with no fiber content).
   if (/\bknit(?:ted)?\b/i.test(self)) return Material.knit;
 
-  return dominantFiberByPercent(self) ?? firstFiberByPosition(self);
+  return firstFiberByPosition(self);
 }
 
 // Find each "<n>% <phrase>" and map the phrase to a fiber; return the fiber with

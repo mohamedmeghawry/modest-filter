@@ -76,6 +76,43 @@ describe("parseFeedFacts — material", () => {
     );
   });
 
+  it("lets a stated fiber percentage win over a 'knit' weave", () => {
+    // striped-halter (real): "striped knit material" but "95% Cotton" -> cotton,
+    // because a knit weave doesn't change the fiber. (Regression: real-manifest run.)
+    expect(
+      parseFeedFacts(
+        "This top features striped knit material and self-tie halter neckline with bead detail. 95% Cotton 5% Nylon",
+      ).material,
+    ).toBe("cotton");
+    // aritzia (real): "Ribbed knit ... Wonder Yarn (wool-free)" -> knit, not wool.
+    expect(
+      parseFeedFacts(
+        "Ribbed knit midi dress with a waist cutout. Made with Aritzia 'Wonder Yarn' (wool-free, all-season).",
+      ).material,
+    ).toBe("knit");
+  });
+
+  it("ignores a fabric named only as a styling suggestion", () => {
+    // tunic-highneck (real): "dress it up with ... sleek denim" is a style tip,
+    // not the garment's fabric -> no material. (Regression: real-manifest run.)
+    expect(
+      parseFeedFacts(
+        "This Papillon 3/4 sleeve tunic brings effortlessly chic style. Wear it with cropped pants or dress it up with statement jewelry and sleek denim.",
+      ).material,
+    ).toBeNull();
+  });
+
+  it("keeps the fabric when 'style' is a noun, not a styling verb", () => {
+    // modal-partlined (real): "chic style keeps you comfortable with ... modal-
+    // cashmere fabric" — the real material survives; only a true "Wear with ..."
+    // suggestion is dropped. (Regression: real-manifest run.)
+    expect(
+      parseFeedFacts(
+        "This chic style keeps you comfortable with its soft modal-cashmere fabric. Wear with the Sheer Modal Pant to complete the set.",
+      ).material,
+    ).toBe("modal");
+  });
+
   it("does not mistake a 'ribbed texture' on a stated fiber for knit", () => {
     // knit-turtleneck-mini: "100% soft cotton. Defined with a ribbed texture."
     expect(
