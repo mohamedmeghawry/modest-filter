@@ -55,7 +55,7 @@ Always tag from a model-on photo. Product-only photos lack scale reference (ADR-
 
 **`opacity`** — Use the enum value matching the overall opacity of the main fabric.
 
-**`lined`** — Use the enum value matching whether the garment is lined. Often determinable only from the inside of the garment or from the brand description; use `null` if not visible in available images and the description is silent.
+**`lined`** — Use the enum value matching whether the garment is lined. Lining is usually invisible in product photos, so the **fiber-content breakdown is the primary signal**: if the composition lists a separate lining component (e.g. "Shell: 100% linen; Lining: 100% cotton", or "…; viscose lining"), tag `lined`; if it says "partially lined", tag `partially_lined`. Use `null` only when the images don't show it **and** the description is silent on both lining and fabric composition.
 
 **`cutouts`** — Use the enum value matching cutout presence (`none` or `present`). A **keyhole** — the small teardrop / water-drop opening at the front neckline or upper back, often closed at the top with a button or tie — counts as `present`. A keyhole does **not** change the `neckline` (a crew neck with a front keyhole is still `crew`, plus `cutouts: present`), and a small back keyhole is `backStyle: closed` + `cutouts: present` — reserve `open_back` for a substantially open back. Known limitation: `present` is binary and does not distinguish a minor neck keyhole from a midriff or side cutout; location-based granularity is a pending schema decision (tracked alongside the `cowl` neckline gap).
 
