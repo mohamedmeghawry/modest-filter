@@ -45,33 +45,33 @@
     }
   },
   {
-    "id": "denim-shirtdress",
+    "id": "everlane-denim-shirtdress",
     "category": "dresses",
     "priority": "core",
-    "note": "Denim shirtdress, collar, knee, long sleeve. Lead: Everlane 'The Denim Shirtdress' (Indigo).",
-    "images": ["./denim-shirtdress_front.png", "./denim-shirtdress_back.png"],
-    "description": "",
-    "sourceUrl": "",
+    "note": "Everlane 'The Denim Shirtdress' (Indigo). FILLED FROM DESCRIPTION: neckline=collar (point collar), material=denim (fabric; fiber is 60% cotton / 40% Tencel), pattern=solid. PROOFREAD/SET FROM PHOTO: hemLength (desc says both 'midi' and 'maxi' — confirm), sleeveLength, fit ('slim fit'), opacity, lined, cutouts, backStyle, slit, primaryColor (indigo→navy or blue?). SAVE front+back images manually.",
+    "images": ["./everlane-denim-shirtdress_front.png", "./everlane-denim-shirtdress_back.png"],
+    "description": "Western-inspired denim shirtdress with a classic point collar, two patch pockets, and a button-front design. 60% organic cotton, 40% TENCEL with REFIBRA. Slim fit. Color: Indigo.",
+    "sourceUrl": "https://www.everlane.com/products/womens-denim-shirtdress-indigo",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
+      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "collar",
       "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
       "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "material": "denim", "primaryColor": "TODO", "pattern": "solid"
     }
   },
   {
-    "id": "silk-slip",
+    "id": "reformation-casette-silk",
     "category": "dresses",
     "priority": "core",
-    "note": "Silk slip, scoop, high side slit, low/open back. Lead: Reformation 'Casette' or 'Alli' (100% silk).",
-    "images": ["./silk-slip_front.png", "./silk-slip_back.png"],
-    "description": "",
-    "sourceUrl": "",
+    "note": "Reformation 'Casette' silk dress. Covers silk + open back + sleeveless. FILLED FROM DESCRIPTION: material=silk, sleeveLength=sleeveless, sleeveOpacity=null, backStyle=open_back, fit=fitted, hemLength=midi, pattern=solid. PROOFREAD/SET FROM PHOTO: opacity, lined, cutouts, slit, primaryColor (comes in Cornflower/Mahogany/Artichoke — set to the one you photograph). NECKLINE = high cowl, which is NOT in our Neckline enum — curation call (closest scoop/high_neck, or a schema gap like 'collar' was in ADR-0012); left TODO. NOTE: Casette has no side slit, so the 'high slit' archetype still needs a separate source (try Reformation 'Alli', which has a back slit). SAVE front+back images manually.",
+    "images": ["./reformation-casette-silk_front.png", "./reformation-casette-silk_back.png"],
+    "description": "Sleeveless midi dress with a high cowl neckline, side ruching, and an open back with criss-cross straps. Designed to be fitted throughout; hits several inches above the ankle. 100% silk (lightweight charmeuse).",
+    "sourceUrl": "https://www.thereformation.com/products/casette-silk-dress/1311240.html",
     "groundTruth": {
-      "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
-      "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "sleeveLength": "sleeveless", "sleeveOpacity": null, "neckline": "TODO",
+      "backStyle": "open_back", "hemLength": "midi", "topLength": null, "slit": "TODO",
+      "fit": "fitted", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
+      "material": "silk", "primaryColor": "TODO", "pattern": "solid"
     }
   },
   {
