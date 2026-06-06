@@ -105,18 +105,18 @@
     }
   },
   {
-    "id": "cutout-midi",
+    "id": "aritzia-cutout-knit-midi",
     "category": "dresses",
     "priority": "core",
-    "note": "Cutout midi (waist cutout), knit. Lead: Aritzia 'Cutout Knit Midi Dress'.",
-    "images": ["./cutout-midi_front.png", "./cutout-midi_back.png"],
-    "description": "",
-    "sourceUrl": "",
+    "note": "Aritzia 'Cutout Knit Midi Dress'. IMAGES CAPTURED (front + side, model-on, verified) — note the front shot has a thin nav strip at the very top edge; re-save cleaner if you like. FILLED FROM NAME/COPY: cutouts=present, material=knit. PROOFREAD/SET FROM PHOTO: neckline, sleeveLength (cap?), fit, hemLength, opacity, lined, backStyle, slit, primaryColor (sage green?), pattern.",
+    "images": ["./aritzia-cutout-knit-midi_front.jpeg", "./aritzia-cutout-knit-midi_side.jpeg"],
+    "description": "Ribbed knit midi dress with a waist cutout, cap sleeves, and a fitted silhouette. Made with Aritzia 'Wonder Yarn' (wool-free, all-season). Color shown: sage green.",
+    "sourceUrl": "https://www.aritzia.com/us/en/product/cutout-knit-midi-dress/104560.html",
     "groundTruth": {
       "sleeveLength": "TODO", "sleeveOpacity": "TODO", "neckline": "TODO",
       "backStyle": "TODO", "hemLength": "TODO", "topLength": null, "slit": "TODO",
-      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "TODO",
-      "material": "TODO", "primaryColor": "TODO", "pattern": "TODO"
+      "fit": "TODO", "opacity": "TODO", "lined": "TODO", "cutouts": "present",
+      "material": "knit", "primaryColor": "TODO", "pattern": "TODO"
     }
   },
   {
