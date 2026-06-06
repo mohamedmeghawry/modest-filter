@@ -8,20 +8,22 @@ const DEFAULT_MODEL = "claude-opus-4-7";
 
 type ManifestEntry = {
   id: string;
+  category?: string;
   images: string[];
   groundTruth: Record<string, string | null>;
 };
 
-type Args = { model: string; manifest: string; limit?: number; id?: string };
+type Args = { model: string; manifest: string; limit?: number; id?: string; detail: boolean };
 
 function parseArgs(argv: string[]): Args {
-  const args: Args = { model: DEFAULT_MODEL, manifest: "samples/eval-set/manifest.json" };
+  const args: Args = { model: DEFAULT_MODEL, manifest: "samples/eval-set/manifest.json", detail: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--model") args.model = argv[++i];
     else if (a === "--manifest") args.manifest = argv[++i];
     else if (a === "--limit") args.limit = Number(argv[++i]);
     else if (a === "--id") args.id = argv[++i];
+    else if (a === "--detail") args.detail = true;
     else { console.error(`Unknown argument: ${a}`); process.exit(1); }
   }
   return args;
@@ -101,6 +103,20 @@ async function main() {
     console.log(`  ${pad("product", 38)} ${pad("attr", 15)} predicted -> truth`);
     for (const d of agg.disagreements) {
       console.log(`  ${pad(d.id, 38)} ${pad(d.key, 15)} ${String(d.predicted)} -> ${String(d.truth)}`);
+    }
+  }
+
+  if (args.detail) {
+    const catOf = (id: string) => entries.find((e) => e.id === id)?.category ?? "";
+    console.log(`\n=== Per-product detail (yours vs model) ===`);
+    for (const s of scores) {
+      const hits = s.comparisons.filter((c) => c.match).length;
+      console.log(`\n--- ${s.id} [${catOf(s.id)}] (${hits}/14) ---`);
+      console.log(`  ${pad("attr", 15)} ${pad("yours", 16)} model`);
+      for (const c of s.comparisons) {
+        const mark = c.match ? "" : "   <- diff";
+        console.log(`  ${pad(c.key, 15)} ${pad(String(c.truth), 16)} ${String(c.predicted)}${mark}`);
+      }
     }
   }
 
