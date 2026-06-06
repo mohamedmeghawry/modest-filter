@@ -41,6 +41,8 @@ _(none currently)_
 
 **Operational docs:** see [`docs/tagging-conventions.md`](docs/tagging-conventions.md) — hand-tagging guide for the 14 modesty-relevant product attributes (dual audience: human taggers and Claude Vision prompt design).
 
+**Build journal:** see [`docs/devlog.md`](docs/devlog.md) — narrative log of what was built, the challenges hit, and how they were solved (newest first). The story layer that sits above ADRs (*decisions*) and commit messages (*per-change why*); written to be mined for interviews, articles, and social posts. Add an entry at session end when meaningful work shipped.
+
 ## Tech stack
 
 - **Language:** TypeScript (frontend, backend, scripts)
