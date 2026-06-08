@@ -48,8 +48,13 @@ in v1), payments (affiliate click-through only, no checkout), mobile (no app yet
    not behind any public route; they run only from local CLI scripts (`vision:spike`/`vision:tag`).
 2. **Confirm a hard spending cap on the Anthropic console** (not just a billing alert).
    Not verifiable from code — a dashboard setting. Cheap insurance for the AI budget.
-3. **No security headers** (`next.config.ts` is empty). CSP, X-Frame-Options, etc. Low for a
-   catalogue app with no login; a one-time add during launch hardening.
+3. **Security headers** — ✅ first pass shipped 2026-06-08. `next.config.ts` now sets
+   `Strict-Transport-Security`, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`,
+   `Referrer-Policy`, and `Permissions-Policy` on every route (verified live via curl on
+   `/` and `/api/products`). **`Content-Security-Policy` is deliberately deferred** to the
+   before-launch pass: a correct CSP for a Next.js app needs per-request nonces via
+   middleware, and a too-strict policy silently breaks inline scripts and external product
+   images. Tracked there, not here.
 
 ## Note on the tool
 
