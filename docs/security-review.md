@@ -38,7 +38,9 @@ in v1), payments (affiliate click-through only, no checkout), mobile (no app yet
   END $$;
   ```
   With RLS on and no policies, PostgREST denies all access — which is the desired state, since
-  the app does not use PostgREST. **Status: pending dashboard check.**
+  the app does not use PostgREST. **Status: ✅ verified 2026-06-08 — `rowsecurity = true` on all
+  four public tables (`_prisma_migrations`, `brands`, `categories`, `products`). RLS was already
+  on; no change needed. The documented claim is now proven.**
 
 ## Low — acknowledged pre-launch items
 
