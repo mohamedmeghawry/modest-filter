@@ -48,8 +48,9 @@ in v1), payments (affiliate click-through only, no checkout), mobile (no app yet
    AGENTS.md as "mandatory before production." Pre-launch impact: mild scraping. Note the
    skill's "attacker drains your Anthropic budget" worry does **not** apply — vision calls are
    not behind any public route; they run only from local CLI scripts (`vision:spike`/`vision:tag`).
-2. **Confirm a hard spending cap on the Anthropic console** (not just a billing alert).
-   Not verifiable from code — a dashboard setting. Cheap insurance for the AI budget.
+2. **Hard spending cap on the Anthropic console** — ✅ set 2026-06-08. Organization
+   monthly spend limit of **$60** (a hard cap — the API rejects calls once reached, not just
+   an alert), with email notifications on approach. Comfortably above the ~$50 tagging budget.
 3. **Security headers** — ✅ shipped 2026-06-08. `next.config.ts` sets
    `Strict-Transport-Security`, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`,
    `Referrer-Policy`, and `Permissions-Policy` on every route (verified live via curl on
