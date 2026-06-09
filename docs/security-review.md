@@ -48,13 +48,19 @@ in v1), payments (affiliate click-through only, no checkout), mobile (no app yet
    not behind any public route; they run only from local CLI scripts (`vision:spike`/`vision:tag`).
 2. **Confirm a hard spending cap on the Anthropic console** (not just a billing alert).
    Not verifiable from code — a dashboard setting. Cheap insurance for the AI budget.
-3. **Security headers** — ✅ first pass shipped 2026-06-08. `next.config.ts` now sets
+3. **Security headers** — ✅ shipped 2026-06-08. `next.config.ts` sets
    `Strict-Transport-Security`, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`,
    `Referrer-Policy`, and `Permissions-Policy` on every route (verified live via curl on
-   `/` and `/api/products`). **`Content-Security-Policy` is deliberately deferred** to the
-   before-launch pass: a correct CSP for a Next.js app needs per-request nonces via
-   middleware, and a too-strict policy silently breaks inline scripts and external product
-   images. Tracked there, not here.
+   `/` and `/api/products`).
+   - **Content-Security-Policy** — ✅ shipped 2026-06-08 via `proxy.ts` (Next 16's renamed
+     Middleware) with a per-request nonce. `script-src` is strict (`'nonce-…' 'strict-dynamic'`,
+     no `unsafe-inline`; `unsafe-eval` dev-only); verified in a production build that every
+     `<script>` carries the matching nonce (0 un-nonced) on `/`, `/products`, and
+     `/products/[id]`. Deliberate trade-offs: `style-src 'self' 'unsafe-inline'` (the color
+     swatches use dynamic inline `style`, which strict style-src would block; style injection
+     runs no script), and `img-src 'self' blob: data:` (correct while images are same-origin —
+     **revisit when real product images are wired**, or route them through `next/image`). The
+     home page was forced dynamic (`await connection()`) so the nonce applies.
 
 ## Note on the tool
 
