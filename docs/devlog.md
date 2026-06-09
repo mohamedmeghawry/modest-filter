@@ -12,6 +12,22 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-06-08 — Phase 3 hardening, part one: security headers and a real CSP
+
+**Goal:** Start the pre-launch hardening phase (`security-review.md`). Of the four findings, do the two that are pure code and fully in our control — security headers and a Content-Security-Policy — and hand the two dashboard items (Supabase RLS, Anthropic spend cap) back as a checklist. Rate limiting was scoped out: it needs a dependency decision (Upstash vs in-memory vs Vercel WAF) we chose to defer.
+
+**What shipped:** Five baseline response headers on every route via `next.config.ts`'s `headers()` — HSTS, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy`, `Permissions-Policy`. Then a strict nonce-based CSP via `proxy.ts`, with `script-src 'nonce-…' 'strict-dynamic'` and no `unsafe-inline`.
+
+**Challenges & how we solved them:**
+- *The framework renamed the file out from under our training data.* AGENTS.md warns this isn't the Next.js we know, so before writing the CSP we read the bundled v16 docs — and Middleware is now **Proxy** (`proxy.ts`, same behaviour, new name). Trusting memory would have produced a `middleware.ts` that the framework silently ignores. The lesson the repo keeps teaching: read the vendored docs first.
+- *A strict CSP would have silently broken the color swatches.* Grepping our own screens before writing the policy found three sites setting dynamic inline `style={{ backgroundColor }}` (colors are data, not CSS classes). A strict `style-src 'nonce-…'` blocks inline style *attributes*, so the swatches would have vanished with no error. We split the risk: keep `script-src` strict (that's where CSP stops XSS) and allow `style-src 'unsafe-inline'` (inline *style* injection runs no script — low-severity for a no-auth catalogue). A deliberate, documented trade, not an accident.
+- *Nonces force dynamic rendering.* The nonce is minted per request, so a statically prerendered page ships scripts with no matching nonce and hydration dies under `strict-dynamic`. The one static page (`/`) was forced dynamic with `await connection()`.
+- *Verified the policy actually holds, not just that it builds.* "Build is green" says nothing about runtime CSP. We ran a **production** build (the dev CSP is looser) and, fetching header and body in one request, confirmed the header nonce matched every `<script>` tag — 13 on `/`, 19 on `/products`, 14 on a detail page, with **zero un-nonced scripts** that would have been blocked.
+
+**Takeaway:** A security header is only as good as the runtime proof that it didn't break the app. The highest-value move wasn't writing the policy — it was the two greps beforehand (what files does this framework version use? what inline styles do our own screens set?) that turned a likely silent breakage into a documented, intentional trade.
+
+---
+
 ### 2026-06-06 — A 2026 design audit, then the polish pass it pointed to
 
 **Goal:** Step back from the tagging pipeline and answer a different question — does the UI look *current and credible* for 2026, and where is it leaving usability on the table? Then implement the changes that were clear wins, and only those.
