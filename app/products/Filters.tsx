@@ -17,6 +17,7 @@ import {
   TopLength,
 } from "@/lib/generated/prisma/enums";
 import { getSwatch, humanize } from "@/lib/products/display";
+import { activeFilterValues } from "@/lib/products/filter-state";
 import type { FacetCounts } from "@/lib/data/products";
 
 // TODO: fetch category options from the DB (Category table) instead of hardcoding
@@ -52,10 +53,8 @@ export default function Filters({ counts }: { counts?: FacetCounts }) {
   const searchParams = useSearchParams();
   const [isPending, startTransition] = useTransition();
 
-  const selectedFor = (key: string): string[] => {
-    const raw = searchParams.get(key);
-    return raw ? raw.split(",").filter(Boolean) : [];
-  };
+  const selectedFor = (key: string): string[] =>
+    activeFilterValues(searchParams, key);
 
   const hasActiveFilters = FILTER_GROUPS.some(
     (g) => selectedFor(g.key).length > 0,

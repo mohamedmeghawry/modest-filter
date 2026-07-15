@@ -2,7 +2,7 @@
 
 import { useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { FILTER_KEYS } from "@/lib/products/filter-state";
+import { FILTER_KEYS, activeFilterValues } from "@/lib/products/filter-state";
 import { humanize } from "@/lib/products/display";
 
 // Active filters shown as removable chips above the grid, so the current
@@ -14,19 +14,14 @@ export default function ActiveFilterChips() {
   const searchParams = useSearchParams();
   const [isPending, startTransition] = useTransition();
 
-  const active = FILTER_KEYS.flatMap((key) => {
-    const raw = searchParams.get(key);
-    if (!raw) return [];
-    return raw
-      .split(",")
-      .filter(Boolean)
-      .map((value) => ({ key, value }));
-  });
+  const active = FILTER_KEYS.flatMap((key) =>
+    activeFilterValues(searchParams, key).map((value) => ({ key, value })),
+  );
 
   if (active.length === 0) return null;
 
   const remove = (key: string, value: string) => {
-    const current = (searchParams.get(key) ?? "").split(",").filter(Boolean);
+    const current = activeFilterValues(searchParams, key);
     const next = current.filter((v) => v !== value);
 
     const params = new URLSearchParams(searchParams.toString());
