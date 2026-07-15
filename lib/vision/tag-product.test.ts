@@ -120,7 +120,11 @@ describe("tagProductWithRetry", () => {
       maxAttempts: 3,
     });
 
-    expect(outcome).toMatchObject({ status: "failed", attempts: 3 });
+    expect(outcome).toMatchObject({
+      status: "failed",
+      attempts: 3,
+      retryable: true, // transient-but-exhausted → re-runnable next pass
+    });
     expect(extract).toHaveBeenCalledTimes(3);
     expect(sleep).toHaveBeenCalledTimes(2); // no sleep after the final attempt
   });
@@ -131,7 +135,11 @@ describe("tagProductWithRetry", () => {
 
     const outcome = await tagProductWithRetry(IMAGE, MODEL, opts);
 
-    expect(outcome).toMatchObject({ status: "failed", attempts: 1 });
+    expect(outcome).toMatchObject({
+      status: "failed",
+      attempts: 1,
+      retryable: false, // deterministic client error → needs a human
+    });
     if (outcome.status === "failed") {
       expect(outcome.error).toContain("400");
     }

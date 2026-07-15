@@ -92,13 +92,17 @@ async function main() {
       }
     } else {
       flagged++;
+      // Transient failures that merely exhausted their retries are re-runnable
+      // next pass (the query above already re-picks "failed"); deterministic
+      // failures need a human first, so route them to "needs_review".
+      const nextStatus = outcome.retryable ? "failed" : "needs_review";
       console.log(
-        `FAILED after ${outcome.attempts} attempt(s): ${outcome.error} → needs_review`,
+        `FAILED after ${outcome.attempts} attempt(s): ${outcome.error} → ${nextStatus}`,
       );
       if (!args.dryRun) {
         await prisma.product.update({
           where: { id: product.id },
-          data: { tagStatus: "needs_review" },
+          data: { tagStatus: nextStatus },
         });
       }
     }

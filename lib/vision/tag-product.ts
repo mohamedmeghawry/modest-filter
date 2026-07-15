@@ -22,6 +22,11 @@ export type TagOutcome =
       status: "failed";
       error: string;
       attempts: number;
+      // Whether the underlying error was transient (retryable next run) vs a
+      // deterministic error that needs a human. Persisted by the tagStatus state
+      // machine: retryable → "failed" (auto-retried), else → "needs_review".
+      // Required (not optional) so no construction site can silently omit it.
+      retryable: boolean;
     };
 
 type ExtractFn = (
@@ -86,7 +91,15 @@ export async function tagProductWithRetry(
       lastError = error instanceof Error ? error.message : String(error);
       const canRetry = isRetryable(error) && attempt < maxAttempts;
       if (!canRetry) {
-        return { status: "failed", error: lastError, attempts: attempt };
+        // Derive retryability from the ERROR, not from `canRetry`: `canRetry` is
+        // also false when a transient error simply exhausted its attempts, and
+        // those must still be marked retryable (auto-retried next run).
+        return {
+          status: "failed",
+          error: lastError,
+          attempts: attempt,
+          retryable: isRetryable(error),
+        };
       }
       // attempt 1 → wait base, attempt 2 → wait 2×base, …
       await sleep(baseDelayMs * 2 ** (attempt - 1));
@@ -94,5 +107,10 @@ export async function tagProductWithRetry(
   }
 
   // Unreachable (loop returns on the final attempt), but keeps types honest.
-  return { status: "failed", error: lastError, attempts: maxAttempts };
+  return {
+    status: "failed",
+    error: lastError,
+    attempts: maxAttempts,
+    retryable: true,
+  };
 }
