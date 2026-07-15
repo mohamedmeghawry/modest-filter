@@ -4,7 +4,7 @@ NULL semantics — use null for any attribute that does not apply to the garment
 - sleeveLength, sleeveOpacity, neckline, backStyle: null for bottoms or any item with no upper body
 - hemLength: null for tops (use topLength instead)
 - topLength: null for dresses and bottoms
-- slit: null when the garment has no slit, or when slit is not applicable (most tops)
+- slit: "none" when the hem is visible and clearly has no slit; null when a slit does not apply (most tops) or the hem is not clearly visible on the body
 
 Be honest about uncertainty. If an attribute is not clearly visible (e.g. the back is not shown), return null rather than guessing.`;
 
