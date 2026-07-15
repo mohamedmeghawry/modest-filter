@@ -12,6 +12,20 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-07-14 — An evidence-gated bug hunt across the core flows
+
+**Goal:** Trace the catalogue, API, and vision-tagging flows and fix only real, evidence-backed bugs — smallest change each, tests in the same commit — without re-reporting the documented debt (ADR-0008 filter semantics, no rate limiting, rounded prices).
+
+**What shipped:** Five findings in three commits. (1) The client filter components read each URL param with `searchParams.get()` — first value only — so a shareable `?material=cotton&material=linen` (a contract the *server* parser tests) showed one value checked, undercounted the mobile badge, and silently dropped the invisible value on any edit; fixed with one shared `activeFilterValues()` helper reading all occurrences. (2) The tagging pipeline had a dead `"failed"` state: the script re-runs "failed" products as transient, but every failure was written `"needs_review"`, so a one-night API blip permanently ejected products — fixed by giving the failed outcome a required `retryable` flag derived from the error and routing on it. (3) The vision prompt told the model to return `null` for slitless garments, conflating "none" with "unknown" against tagging-conventions.md and the strict-`in` filter — reworded to match.
+
+**Challenges & how we solved them:**
+- *The bug was the gap between two files that were each internally consistent.* The server parser tests repeated params as a supported contract; the client read only the first. Neither file was "wrong" alone — the failure lived in the seam, found by tracing one shareable URL end to end.
+- *A "just add a retryable flag" fix can silently reproduce the bug.* Deriving it from `canRetry` (false both for non-retryable AND exhausted-transient errors) would map every failure to `needs_review` again. Made the field required and computed it from `isRetryable(error)`, with tests asserting `true` on the exhausted-transient path and `false` on fail-fast.
+
+**Takeaway:** An evidence bar outranks a target count — every fix started from a failing test or a grep proof, and the documented debt was left documented, not re-discovered. Suite 105 → 112.
+
+---
+
 ### 2026-06-08 — Phase 3 hardening, part one: security headers and a real CSP
 
 **Goal:** Start the pre-launch hardening phase (`security-review.md`). Of the four findings, do the two that are pure code and fully in our control — security headers and a Content-Security-Policy — and hand the two dashboard items (Supabase RLS, Anthropic spend cap) back as a checklist. Rate limiting was scoped out: it needs a dependency decision (Upstash vs in-memory vs Vercel WAF) we chose to defer.
