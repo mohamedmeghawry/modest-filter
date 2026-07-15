@@ -12,6 +12,20 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-07-14 — Getting the brand, the outage, and the host decision out of chat and into the repo
+
+**Goal:** The live site was down (Supabase free-tier auto-paused ~2026-06-15), a resolved brand-name decision was sitting uncommitted on disk, and three wargamed battle plans were waiting. Turn that into a committed, coherent state and fix the *cause* of the outage, not just its symptom.
+
+**What shipped:** (1) Committed the resolved brand name — **Kashf Edit** (كشف, "uncover/reveal" + Edit; domains registered 2026-06-16, trademark-cleared) — so the decision stops living only on disk. (2) Ran the wargame-06 bug hunt (its own entry below). (3) Diagnosed the outage as Supabase free tier's ~7-day inactivity pause and added a **keep-alive GitHub Action** that queries the products API every two days — a real Prisma→Postgres hit that resets the idle timer and doubles as an uptime check. (4) Made the host call explicit: Supabase is the right *product* (Postgres, RLS, planned Supabase Auth); the free-tier pause is the mismatch — tolerable now because the catalogue is reseedable, a real risk once ~$50 of AI tags make the data expensive, so the durable-host decision is deferred to Phase 2 ingestion.
+
+**Challenges & how we solved them:**
+- *The scary-sounding deadline wasn't scary.* "Data unrecoverable after Sept 1" reads as a crisis until you notice the DB holds only seed data reproducible from `prisma/seed.ts`. Separating reproducible-now from expensive-later reframed the urgency and set the real host-decision trigger — before paid tagging, not before a calendar date.
+- *A keep-alive can lie.* A raw TCP ping to the DB port can trip Supabase's artificial-activity detection and says nothing about whether the app actually works. Hitting the real API route runs a genuine query *and* fails loudly if the site is broken — the exact early-warning signal that was missing when the pause went unnoticed for a month.
+
+**Takeaway:** The outage's lesson wasn't "restore faster" — it was that every green check in the repo (tests, lint, build, even the CSP nonce proof) passes against a paused database, because they all test code, not liveness. The fix for a liveness gap is a liveness probe, not more unit tests.
+
+---
+
 ### 2026-07-14 — An evidence-gated bug hunt across the core flows
 
 **Goal:** Trace the catalogue, API, and vision-tagging flows and fix only real, evidence-backed bugs — smallest change each, tests in the same commit — without re-reporting the documented debt (ADR-0008 filter semantics, no rate limiting, rounded prices).
