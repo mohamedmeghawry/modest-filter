@@ -12,6 +12,23 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-07-22 — A real front door: landing page, About, and Privacy
+
+**Goal:** Connecting the domain earlier the same day quietly promoted a cosmetic gap into a credibility blocker — `kashfedit.com` was serving the untouched `create-next-app` starter, headline and all: *"To get started, edit the page.tsx file."* The catalogue underneath was fine; only the front door was missing. Build one before an affiliate reviewer, or anyone else, sees it.
+
+**What shipped:** A real landing page replacing the boilerplate, plus `/about` and `/privacy`, plus the shared header/footer the site never had (the footer is what makes Privacy discoverable — reviewers look for it there). Metadata moved from `"modest-filter"` to Kashf Edit branding with a title template and `metadataBase`, now that a domain exists.
+
+The design took one deliberate risk: **no imagery at all**. A fashion site with no photos sounds like a failure state, but there genuinely are no product photos yet — the catalogue renders colour swatches. So instead of papering over it, the app's data model became the visual identity. The hero is an **interactive ordinal threshold scale**: click a sleeve length to set "your line" and watch what falls above and below it. It's the product in miniature, and it *demonstrates* the brief's core thesis — we extract objective attributes, you decide what modest means — rather than describing it. Supporting choices: Geist Mono (already loaded, never used) now carries the attribute data, giving real typographic contrast without adding a font dependency or pre-empting the parked display-face decision; and the "how it works" section is labelled by *who acts* (`KASHF EDIT` → `YOU` → `THE BRAND`) instead of generic `01/02/03`, because that handoff of responsibility is the product's actual ethical stance.
+
+**Challenges & how we solved them:**
+- *Every new page was one `await connection()` away from silently breaking in production.* The CSP in `proxy.ts` is strict — `script-src 'nonce-…' 'strict-dynamic'`, no `unsafe-inline` — so a statically prerendered page ships scripts with no matching nonce and dies on hydration. Dev would have looked perfect. Caught it by reading `proxy.ts` before writing the pages, forced all three routes dynamic, and used the build output as the proof: `/`, `/about`, and `/privacy` all render as `ƒ`, not `○`.
+- *Reading the rendered copy beat reviewing the design.* Browser screenshots failed repeatedly, so verification fell back to reading the page's actual text — which surfaced a bug a visual skim would likely have missed. The threshold caption read "You'd see the **2 options** from there up." Arithmetically correct (three-quarter + long), but a shopper parses "2 options" as *"this site only has 2 products."* Reworded to "Anything shorter is filtered out."
+- *Writing a privacy policy is a code-verification task, not a copy task.* Rather than adapt a template, the claims were checked against the dependency list and a grep for tracking code: no analytics package, no cookies set, no auth. So the policy states exactly that — a strong, and more importantly *true*, position.
+
+**Takeaway:** Honest framing outperformed polish. The catalogue is four demo products with fabricated names, so the page says "early preview" instead of implying a full storefront — the version that survives contact with a reviewer. And the constraint that looked most like a weakness (no photography) produced the most distinctive thing on the page.
+
+---
+
 ### 2026-07-22 — Connecting the custom domain (kashfedit.com) to the live site
 
 **Goal:** The site was only reachable at `modest-filter.vercel.app`. Point the registered brand domain **kashfedit.com** at it — a real branded domain is a prerequisite for the affiliate application (Rakuten reviewers check), which gates the whole v1 path.
