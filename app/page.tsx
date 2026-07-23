@@ -1,5 +1,28 @@
 import { connection } from "next/server";
-import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ThresholdDemo } from "@/components/home/ThresholdDemo";
+
+// The handoff of responsibility is the product's actual thesis: we measure,
+// you judge, the brand sells. Labelling each step by *who acts* encodes that,
+// where generic step numbering would not.
+const STEPS = [
+  {
+    actor: "Kashf Edit",
+    title: "Reads the garment",
+    body: "A vision model extracts objective attributes from each product photo — sleeve length, neckline, hem length, fit, opacity. Facts, not opinions.",
+  },
+  {
+    actor: "You",
+    title: "Set your lines",
+    body: "Filter on those attributes directly. There is no modesty score and no presets, because no two people draw the line in the same place.",
+  },
+  {
+    actor: "The brand",
+    title: "Sells you the piece",
+    body: "Kashf Edit holds no stock and sells nothing. When something works, you check out on the brand’s own site.",
+  },
+];
 
 export default async function Home() {
   // Force dynamic rendering so the per-request CSP nonce (proxy.ts) applies;
@@ -7,64 +30,81 @@ export default async function Home() {
   await connection();
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="mx-auto w-full max-w-6xl px-4 py-16 sm:py-24">
+      <section className="max-w-2xl">
+        <h1 className="text-[clamp(2rem,1.4rem+2.8vw,3.25rem)] font-semibold leading-[1.1] tracking-tight text-balance">
+          Modest is a line you draw.
+        </h1>
+
+        <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+          Mainstream brands don’t let you filter for sleeve length, hem length,
+          or opacity. Kashf Edit reads those facts for every piece — then gets
+          out of the way while you decide which ones meet your standard.
+        </p>
+
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <Button asChild size="lg" className="rounded-full">
+            <Link href="/products">Browse the catalogue</Link>
+          </Button>
+          <Button asChild variant="ghost" size="lg" className="rounded-full">
+            <Link href="/about">What this is</Link>
+          </Button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
+          Early preview — the catalogue is a small sample while brand
+          partnerships are being set up.
+        </p>
+      </section>
+
+      <section className="mt-16 sm:mt-24" aria-labelledby="try-it">
+        <h2 id="try-it" className="sr-only">
+          Try setting a threshold
+        </h2>
+        <div className="max-w-3xl">
+          <ThresholdDemo />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mt-16 sm:mt-24" aria-labelledby="how-it-works">
+        <h2
+          id="how-it-works"
+          className="text-[clamp(1.375rem,1.15rem+1.1vw,1.75rem)] font-semibold tracking-tight"
+        >
+          Who does what
+        </h2>
+
+        <div className="mt-8 grid gap-8 sm:grid-cols-3 sm:gap-6">
+          {STEPS.map((step) => (
+            <div
+              key={step.actor}
+              className="border-t border-border pt-4 sm:pt-5"
+            >
+              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                {step.actor}
+              </p>
+              <h3 className="mt-2 text-base font-medium">{step.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {step.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-16 max-w-2xl sm:mt-24">
+        <p className="text-sm leading-relaxed text-muted-foreground">
+          Kashf Edit is built by one person, in the open, for his wife and the
+          women she shops with. It is early and it shows its work.{" "}
+          <Link
+            href="/about"
+            className="rounded-sm text-foreground underline underline-offset-4 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
+          >
+            Read the longer version
+          </Link>
+          .
+        </p>
+      </section>
+    </main>
   );
 }

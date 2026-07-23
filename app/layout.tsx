@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "modest-filter",
+  metadataBase: new URL("https://kashfedit.com"),
+  title: {
+    default: "Kashf Edit — modest clothing from mainstream brands",
+    template: "%s · Kashf Edit",
+  },
   description:
-    "Find modest clothing from mainstream brands. Filter by sleeve length, hem length, opacity, and more.",
+    "Mainstream brands don’t let you filter for sleeve length, hem length, or opacity. Kashf Edit reads those facts for every piece, so you can set your own standard.",
 };
 
 export default function RootLayout({
@@ -28,7 +34,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
