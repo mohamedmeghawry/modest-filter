@@ -47,6 +47,8 @@ _(none currently)_
 
 **Design research:** see [`docs/research/`](docs/research/) — point-in-time research reports (e.g. `2026-ui-design-research.md`: 2026 UI/UX standards mapped onto our screens, with prioritized recommendations tagged confidence/effort/risk). Background and intent, not binding decisions; the durable calls graduate to ADRs or the roadmap.
 
+**Battle plans (wargames):** see [`docs/wargames.md`](docs/wargames.md) — pointer record for the pre-execution battle plans that target this repo (missions 06/07/08 from the 2026-07-06 Fable 5 run). The plans themselves live outside the repo in `projects\wargames\`; this file records what they do and which have run (06 executed 2026-07-14; 07/08 pending).
+
 ## Tech stack
 
 - **Language:** TypeScript (frontend, backend, scripts)
