@@ -12,6 +12,20 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-07-22 — Bringing the wargamed battle plans into the repo's memory
+
+**Goal:** Three wargamed battle plans target this project, but the repo only knew about one of them, and only as a single passing line in a devlog entry. A future session working inside the repo had no way to learn that missions 07 and 08 exist, are waiting, and carry hard gates. Close that "repo over conversation" gap before executing anything.
+
+**What shipped:** A new pointer doc, [`docs/wargames.md`](wargames.md), that records what the wargames are, where the plans live (the sibling `projects\wargames\` folder, deliberately outside this repo), and the status of all three modest-filter missions — 06 (bug hunt) executed 2026-07-14, 07 (tagging pipeline) pending behind its Phase-2 ingestion gate, 08 (roadmap) pending behind 07. Registered it as a doc category in AGENTS.md, and marked 06 as EXECUTED in the external `LEDGER.md` (which until now recorded the plans only as *drafted and graded*, never *run*).
+
+**Challenges & how we solved them:**
+- *A plan that lives outside the repo is invisible to the repo.* The battle plans sit in a separate `wargames\` tree so one Fable run could serve every project, but that same separation means an in-repo session never sees them. The fix wasn't to copy the plans in (they'd drift, and they're not decisions) — it was a thin pointer that says what exists, where, and its run state. Discoverability without duplication.
+- *"Graded PASS" and "executed" are different facts, and the ledger only tracked the first.* The wargames ledger proved each plan was *sound*; nothing recorded that 06 had actually *run*. Adding an EXECUTED marker keeps the plan-of-record honest about what has happened versus what was merely planned — the same distinction the repo already draws between an ADR (decided) and a devlog entry (shipped).
+
+**Takeaway:** Documentation debt isn't only stale docs; it's also correct information stranded in the wrong place. The wargame plans were fine — they were just unreachable from where the next session would start. A four-line pointer is cheaper than re-discovering three battle plans from chat history that may not survive.
+
+---
+
 ### 2026-07-14 — Getting the brand, the outage, and the host decision out of chat and into the repo
 
 **Goal:** The live site was down (Supabase free-tier auto-paused ~2026-06-15), a resolved brand-name decision was sitting uncommitted on disk, and three wargamed battle plans were waiting. Turn that into a committed, coherent state and fix the *cause* of the outage, not just its symptom.
