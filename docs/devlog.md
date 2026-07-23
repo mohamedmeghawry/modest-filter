@@ -12,6 +12,20 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-07-22 — Connecting the custom domain (kashfedit.com) to the live site
+
+**Goal:** The site was only reachable at `modest-filter.vercel.app`. Point the registered brand domain **kashfedit.com** at it — a real branded domain is a prerequisite for the affiliate application (Rakuten reviewers check), which gates the whole v1 path.
+
+**What shipped:** Wired `kashfedit.com` to the Vercel `modest-filter` project through Cloudflare DNS. Two **grey-cloud (DNS-only) CNAME** records — apex `@` and `www` — both pointing at Vercel's per-account target `0a2cf61b08315b75.vercel-dns-017.com`. Vercel verified them, issued the Let's Encrypt cert, and all three domains went **Valid Configuration**. Set **`kashfedit.com` as primary** (serves the app), with **`www.kashfedit.com` → 308 permanent redirect → apex**.
+
+**Challenges & how we solved them:**
+- *A green "Valid Configuration" check doesn't mean your own browser can reach it.* Vercel verified the records within seconds via its own resolvers, but this machine kept throwing browser errors — the home router had cached a negative (NXDOMAIN) answer from *before* the records existed, and Cloudflare's SOA negative-cache TTL is 30 minutes. Proved the site was genuinely live worldwide by resolving through `1.1.1.1`/`8.8.8.8` and `curl`-ing Vercel directly (apex → 200, www → 308), separating "is it live?" (yes) from "does my local cache know yet?" (not for ~30 min). Same lesson as the outage entry below: a green check tests configuration, not reachability from where you're standing.
+- *Cloudflare defaults to the wrong setting for Vercel.* New records come up **orange-cloud (proxied)**, and Cloudflare even shows a banner insisting "proxying is required." For a Vercel-hosted site that's wrong — proxying double-CDNs and fights Vercel's own TLS/edge, breaking cert issuance. Both records were set to **DNS-only** and the banner ignored on purpose.
+
+**Takeaway:** DNS is eventually-consistent, so "it doesn't work on my machine" and "it works for everyone else" can both be true at the same moment. Verify from *outside* your own resolver before diagnosing — the failure was two hops away, in a router cache, not in the setup.
+
+---
+
 ### 2026-07-22 — Bringing the wargamed battle plans into the repo's memory
 
 **Goal:** Three wargamed battle plans target this project, but the repo only knew about one of them, and only as a single passing line in a devlog entry. A future session working inside the repo had no way to learn that missions 07 and 08 exist, are waiting, and carry hard gates. Close that "repo over conversation" gap before executing anything.
