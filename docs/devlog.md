@@ -27,6 +27,8 @@ The design took one deliberate risk: **no imagery at all**. A fashion site with 
 
 **Takeaway:** Honest framing outperformed polish. The catalogue is four demo products with fabricated names, so the page says "early preview" instead of implying a full storefront — the version that survives contact with a reviewer. And the constraint that looked most like a weakness (no photography) produced the most distinctive thing on the page.
 
+**Shipped live:** pushed as `d64d5ee..33d6b0b` and auto-deployed to production. Verified on the real domain — `/`, `/about`, `/privacy`, and `/products` all return 200 on `kashfedit.com`, the title renders as *Kashf Edit — modest clothing from mainstream brands*, and the boilerplate headline is gone. One note for future sessions: the local SSH key is passphrase-protected and unusable from a non-interactive shell, but `git -c credential.helper='!gh auth git-credential' push https://github.com/…` works, because the `gh` CLI is already authenticated. That's the reliable push path from an agent session.
+
 ---
 
 ### 2026-07-22 — Connecting the custom domain (kashfedit.com) to the live site
