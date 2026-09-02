@@ -2,7 +2,27 @@
 
 This is the durable record of project direction, market context, and known-but-not-yet-decided next steps. It is updated as the project evolves. Unlike the ADRs (which document *decided* choices) or the README (public-facing demo), this document captures *where the project is going and why*.
 
-_Last updated: 2026-06-06._
+_Last updated: 2026-09-01._
+
+> **Audit note (2026-09-01).** A full state audit after 39 days of dormancy is recorded in
+> [`audit-2026-09-01.md`](audit-2026-09-01.md). Three of its findings bear directly on this
+> document and are **not** yet folded into the text below, because acting on them requires a
+> confirmation only Mohamed can make:
+>
+> 1. **The seed brand list may be invalid.** Wargame 08's recon (2026-07-06, web-sourced,
+>    ⚠️ unverified from inside the repo) found that **Aritzia has no affiliate program**,
+>    **Banana Republic is ineligible**, and **ShareASale has folded into Awin**. Aritzia and
+>    ShareASale still appear throughout this file, the README, the project brief, and ADR-0013.
+>    They are left in place until confirmed rather than swapped for a second unsourced claim.
+> 2. **An Awin account already exists** (recovery code on disk, dated 2026-05-22, recorded in
+>    no document). Given the ShareASale→Awin merger this may be an already-approved publisher
+>    account, which would mean the Phase 2 clock started months ago. Resolvable only by logging
+>    in — and it should be the first action of the next session.
+> 3. **Phase 1 is less finished than "done" implies.** `parseFeedFacts` is imported by nothing
+>    outside its own test, `Product` has no `description` or `imageUrls` column, and the eval
+>    gate has never been run at full scale. The toolchain is complete; the production path it
+>    was built for does not exist yet. Wargame 07's Moves 1–3 close exactly this gap and need
+>    no catalogue — see [`wargames.md`](wargames.md).
 
 ## Market context (why this project matters)
 

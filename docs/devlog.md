@@ -12,6 +12,28 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-09-01 — A state-of-the-project audit after 39 days away
+
+**Goal:** Come back to the repo after five weeks and answer one question honestly — *what is actually next?* The last session ended with the front door shipped and a status note reading "Apply to Rakuten — all content blockers now cleared." Then nothing happened for 39 days. Before writing any code, find out what that gap cost.
+
+**What shipped:** No application code — deliberately. The output is [`docs/audit-2026-09-01.md`](audit-2026-09-01.md), a verified state map covering the live site, the build, the data layer, the vision pipeline, the docs backlog, and the affiliate paper trail; plus corrections to the two documents the audit proved were misdirecting future sessions (`wargames.md`, `ROADMAP.md`).
+
+The reassuring half first: lint clean, 112/112 tests, `next build` green, `kashfedit.com` serving 200s on every route, and the Supabase keep-alive cron 15-for-15 across the entire dormancy. The infrastructure genuinely looked after itself. The unreassuring half is everything below.
+
+**Challenges & how we solved them:**
+
+- *The most expensive finding was a composed failure that every individual review had passed.* The domain, the landing page, the About page and the Privacy policy were each built and verified correctly, all in service of one goal: look credible to an affiliate reviewer. But nobody walked the reviewer's actual path. Their next click after the landing page is `/products` — which publicly serves four **fabricated products attributed to real named brands**, including an "Aritzia Flowing Long-Sleeve Maxi Abaya" that Aritzia does not sell, pointing at a constructed URL, with every image sourced from `via.placeholder.com` — a service that is now fully dead, so the boxes render as nothing at all. Each artifact passed its own review; the journey they compose never got one. Found it by checking the seed data against production instead of reading the pages in isolation.
+
+- *A pointer doc quoted the plan it pointed at, backwards.* `docs/wargames.md` — added six weeks ago precisely to stop battle plans from being stranded outside the repo — told the next session "do not start 07 until there is a real catalogue to tag." Opening the actual plan showed fork F0 says the opposite: run **Moves 1–3 anyway** (the migration, the code, the eval gate — none of which need a catalogue), stop after Move 3, and report it as *a successful partial mission, not a failure*. So the one doc written to make the plans discoverable was the reason the only unblocked engineering in the project went undone for six weeks. Verified against the plan text before correcting, rather than trusting the summary a second time.
+
+- *Refusing to fix three stale facts was the right call.* Wargame 08's recon says Aritzia has no affiliate program, Banana Republic is ineligible, and ShareASale has folded into Awin. If true, that invalidates the brand list in the README, the project brief, ADR-0013 and the roadmap — and it retroactively reframes the vision accuracy numbers, since the entire evidence base (the spike product, all six model-on products, both seed brands) is Aritzia. It also probably explains the unexplained Awin recovery code sitting on disk since May: ShareASale migrated. But none of it is verifiable from inside the repo. Correcting four documents on the strength of an unverified note would have replaced one unsourced claim with another, so the finding is recorded as ⚠️ unverified with the confirmation step named, and the stale text left standing until someone logs in and checks.
+
+- *"Green" turned out to be three different things again.* `npm run build` passes while `npx tsc --noEmit` fails, because Next's TypeScript pass skips test files — so the repo satisfies its own definition of done and fails a plain typecheck, which means the first CI workflow added will fail on commit 1. The keep-alive workflow is 15-for-15 green while probing `modest-filter.vercel.app`, not the production domain, so a DNS or cert failure on the real front door would never turn it red. And that same workflow quietly self-destructs around **2026-09-22**, because GitHub disables scheduled workflows after 60 days of repository inactivity — which would restore the exact conditions of the June outage that went unnoticed for a month. This commit resets that clock.
+
+**Takeaway:** Dormancy does not freeze a project; it degrades it in ways the tests cannot see. Every automated check was green throughout, and in five weeks the site became a liability at the review it was waiting for, the brand list went stale, a pointer doc inverted its own plan, and the only thing keeping the database alive quietly started counting down. The audit found nothing broken in the code — and about a dozen things broken in the space between the code and the world it was pointed at.
+
+---
+
 ### 2026-07-22 — A real front door: landing page, About, and Privacy
 
 **Goal:** Connecting the domain earlier the same day quietly promoted a cosmetic gap into a credibility blocker — `kashfedit.com` was serving the untouched `create-next-app` starter, headline and all: *"To get started, edit the page.tsx file."* The catalogue underneath was fine; only the front door was missing. Build one before an affiliate reviewer, or anyone else, sees it.

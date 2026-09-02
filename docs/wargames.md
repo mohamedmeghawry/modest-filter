@@ -24,7 +24,7 @@ the cross-project findings: `projects\wargames\BRIEFING.md`.
 | # | Plan file | What it does | Status |
 |---|-----------|-------------|--------|
 | 06 | `06-mf-bugs.md` | Evidence-gated bug hunt across catalogue / API / vision flows | ✅ **Executed 2026-07-14** |
-| 07 | `07-mf-tagging.md` | The AI tagging pipeline (batch Claude Vision over the real catalogue) | ⏳ Pending — gated on Phase 2 ingestion |
+| 07 | `07-mf-tagging.md` | The AI tagging pipeline (batch Claude Vision over the real catalogue) | ⏳ Partially runnable now — **Moves 1–3 need no catalogue**; Moves 4–7 gated on Phase 2 ingestion |
 | 08 | `08-mf-future.md` | The v1 roadmap (stabilize → Reddit-first launch → retention verdict → monetization-or-freeze) | ⏳ Pending — runs after 07 |
 
 ### 06 — bug hunt (done)
@@ -45,11 +45,25 @@ flows" and the status note for the same date. Five findings shipped in three com
 RECON that needed Mohamed (R4 — verify Supabase RLS still enabled live) was resolved when
 the Supabase project was restored the same session.
 
-### 07 — tagging pipeline (pending, gated)
+### 07 — tagging pipeline (partially runnable now)
 
-The next mission in sequence, but it opens with a **hard gate (fork F0)**: it assumes the
-Phase 2 catalogue ingestion has landed and **stops cleanly if not**. Do not start 07 until
-there is a real catalogue to tag. Key parameters baked into the plan: eval gate ≥80% overall
+The next mission in sequence. It opens with **fork F0**, which is a *routing* gate, not a stop
+sign — and this file previously described it wrongly (corrected 2026-09-01, see
+[`audit-2026-09-01.md`](audit-2026-09-01.md) §D).
+
+What F0 actually says, verbatim from the plan (`07-mf-tagging.md`, Move 0 step 5): if
+`vision:tag --dry-run` reports `No products to tag`, then **"execute Moves 1–3 anyway
+(migration, code, eval gate — they need no catalogue), then STOP after Move 3 and report
+'pipeline armed, gate passed/failed, awaiting catalogue' — that is a successful partial
+mission, not a failure. Do NOT fabricate test products in the production DB."**
+
+So **Moves 1–3 are unblocked today** and are the only Phase-2-enabling engineering available
+before affiliate access lands: the `description`/`imageUrls` schema migration (which is what
+makes `parseFeedFacts` reachable at all, and lets tagging send multi-image input), the
+supporting code, and the eval gate — which per the audit has **never actually been run**.
+Moves 4–7 (rollout over a real catalogue) remain genuinely gated on Phase 2.
+
+Key parameters baked into the plan: eval gate ≥80% overall
 exact-match on the 28-product ground truth (every vision attribute ≥65%); ~$0.012/product via
 the batch API (~$12.50 per 1,000); $40/month in-script budget ceiling under the $60 org cap;
 1092px downscale; 100-product chunks halving on 413. Builds on the decided 14-attribute schema
