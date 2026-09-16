@@ -32,31 +32,37 @@ Feeds and links can come from different networks. FlexOffers is the feed workhor
 | Tax ID and payout details ready | ⬜ | business number, bank details; Awin asks for tax ID at onboarding (DAC7) |
 | Awin recovery code stored safely | ⬜ plaintext in `affiliates-info.txt` (gitignored) | move to Bitwarden, delete the file |
 
-## 3. Brand list (fill in before applying)
+## 3. Brand list (ranked 2026-09-15)
 
-Recon rows are from wargame 08, web-verified 2026-07-06, **not re-verified in the repo** (audit §C). Confirm in each network's advertiser directory after the publisher account exists. Ranking comes from the curation lead's list of 5 to 8 brands she and her circle actually shop.
+Mohamed's call: "the 8 most mainstream brands women shop at in Canada." Ranked by reach in Canada: Aritzia leads elevated womenswear, Reitmans holds about 21 % of dedicated women's clothing stores (IBISWorld), and the rest are mass-market chains with a store in every major mall. Activewear (Lululemon) is excluded because v1 covers dresses, abayas, and tops. Rows marked "aggregator" come from third-party directories and must be confirmed inside each network after signup; "recon" rows are from wargame 08 (2026-07-06).
 
-| Brand | Rank | Program? | Where | Classification | Verified? |
+| # | Brand | Program? | Where | Classification | Source |
 |---|---|---|---|---|---|
-| Everlane | | yes | Ascend (Partnerize); also FlexOffers, Sovrn, Skimlinks | monetizable | ⚠️ recon |
-| Anthropologie | | yes | Rakuten Advertising; FlexOffers; Skimlinks (~6–10 %, 30-day cookie) | monetizable | ⚠️ recon |
-| Reformation | | yes | direct (`thereformation.com/ref-affiliates.html`); CJ, Rakuten, Skimlinks (~2.8 %) | monetizable | ⚠️ recon |
-| H&M | | yes | Sovrn Commerce (no traffic minimum) | monetizable | ⚠️ recon |
-| Mango | | yes | CJ (manual approval) | monetizable | ⚠️ recon |
-| Uniqlo | | yes (~3 %) | host network unknown | recon needed | ⚠️ recon |
-| Aritzia | | **no** (influencer program only) | none | link-only, $0 | ⚠️ recon |
-| Banana Republic / Gap | | US-only creator program, 1,000+ followers | ineligible | link-only | ⚠️ recon |
-| ShareASale | | closed 2025-10-06, merged into Awin | | treat every doc mention as "Awin" | ⚠️ recon |
+| 1 | Aritzia | **no** (influencer program only) | none | link-only, $0 | ⚠️ recon |
+| 2 | H&M | yes (~7 %, 30-day cookie) | Sovrn Commerce (no traffic minimum) | monetizable | ⚠️ recon |
+| 3 | Zara | gated creator program only (Captiv8, LTK) | not open to site publishers | link-only, $0 | ⚠️ aggregator |
+| 4 | Uniqlo | yes (~2–5 %) | Awin (primary); also Sovrn, FlexOffers, Skimlinks | monetizable | ⚠️ aggregator |
+| 5 | Simons | yes (2–4 %, free, no minimum sales) | Impact; also FlexOffers | monetizable | ✅ simons.ca affiliate page |
+| 6 | Reitmans | yes (1.6–4 %, 3-day cookie) | Impact; also FlexOffers, Sovrn | monetizable | ⚠️ aggregator |
+| 7 | Dynamite / Garage | yes (own program page) | network unknown; ambassador program is separate | monetizable, recon needed | ⚠️ brand page |
+| 8 | Old Navy / Gap | US-only creator program, 1,000+ followers | ineligible | link-only | ⚠️ recon |
+
+**Second tier** (programs exist, less mainstream in Canada; the original brief's targets): Anthropologie (Rakuten, FlexOffers, Skimlinks), Everlane (Ascend, FlexOffers, Sovrn), Reformation (direct, CJ, Rakuten), Mango (CJ). Recon-sourced.
+
+ShareASale closed 2025-10-06 and merged into Awin; treat every doc mention as "Awin."
+
+**What the ranking changes:** five of the top eight are monetizable and three are link-only, which is inside the wargame-08 fork threshold (at least 3 of 8 viable). **Impact** joins the application list because Simons and Reitmans both run there. **Awin** matters more (Uniqlo). **Rakuten** is now only needed for second-tier brands.
 
 Classification rule: **monetizable** = a joinable program exists; **link-only** = plain outbound link, no commission, images and data via ADR-0013 Tier 2 extraction-only.
 
 ## 4. Application sequence (parallel, same evening)
 
-1. **Rakuten Advertising** publisher signup. Open network, no screening at signup. Then per-advertiser requests for the ranked list.
-2. **FlexOffers.** Application review; unrestricted programs approve in about five business days. This is the feed source for ingestion.
-3. **Sovrn Commerce.** No traffic minimum. Covers H&M and gives a fallback for brands that reject a new publisher elsewhere.
-4. **Awin Canada.** First, log in with the recovery code and establish what the account already is (the ShareASale migration may have created it). Recon says a $1 refundable deposit and near-real-time review. Awin keeps application data 60 days; reapply after that if rejected.
-5. **Everlane via Ascend** and **Reformation direct**, only if they make the ranked list.
+1. **Impact.** Simons (free, no minimum sales) and Reitmans. Apply as a content / tool publisher, then request both programs.
+2. **Awin Canada.** First, log in with the recovery code and establish what the account already is (the ShareASale migration may have created it). Recon says a $1 refundable deposit and near-real-time review. Then request Uniqlo. Awin keeps application data 60 days; reapply after that if rejected.
+3. **Sovrn Commerce.** No traffic minimum. Covers H&M, and gives a fallback for Uniqlo and Reitmans if they reject a new publisher elsewhere.
+4. **FlexOffers.** Application review; unrestricted programs approve in about five business days. Simons, Reitmans, and Uniqlo all list here, and its daily product feeds are the ingestion path.
+5. **Rakuten Advertising.** Open network, no screening at signup. Only needed for second-tier brands (Anthropologie, Reformation).
+6. **Groupe Dynamite direct** (Dynamite / Garage): find the network behind their affiliate page after the above accounts exist.
 
 ## 5. Application answers (paste-ready)
 
