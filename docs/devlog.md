@@ -12,6 +12,22 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-09-15 — Making the live site safe for the reviewer it is waiting on
+
+**Goal:** Clear the three things the 2026-09-01 audit said made the project amber, in one sitting: push the audit commit before GitHub's 60-day inactivity rule disables the Supabase keep-alive cron (~2026-09-22), replace the fabricated Aritzia/Everlane products on `/products`, and add the missing `rel="sponsored"` on affiliate links.
+
+**What shipped:** Commit `48de681`, pushed and deployed. The seed now creates two clearly fictional brands ("Sample Brand One/Two") with neutral product names, product ids that no longer carry a real brand name into the URL, affiliate links that point at `/about`, and an idempotent cleanup of the legacy rows. A shared `SampleCatalogueNotice` renders on `/products` and every product page, linking to the About page's existing "Where it is right now" section. The affiliate anchor gained `rel="sponsored"`. Production was re-seeded in place and verified live: zero mentions of either real brand, the old `/products/seed-aritzia-…` URL returns 404, and `/api/products` (the keep-alive's only target) still returns 200. The push landed with seven days to spare on the cron clock; the next dormancy cliff is ~2026-11-14 if nothing else is pushed.
+
+**Challenges & how we solved them:**
+
+- *The fix was smaller than the finding, and knowing that mattered.* The audit described dead `via.placeholder.com` images rendering as empty boxes. Checking what the pages actually render showed neither page reads `imageUrl` at all — both draw a colour swatch from `primaryColor`. So the "dead images" half of the finding was invisible to a visitor, and the real exposure was the brand attribution plus the brand name baked into product ids and URLs. Scoping the fix to what renders, rather than to the finding as written, kept the change to four files and avoided inventing an image pipeline for sample data.
+
+- *Renaming was not enough because the identifiers leak.* Products are upserted by an explicit id (`seed-aritzia-effortless-midi`) and that id is the public URL. Changing the display name alone would have left "aritzia" in every product link. Changing the ids meant the old rows would survive a re-seed as orphans, so the seed gained a targeted `deleteMany` for the legacy ids and slugs, ordered products-then-brands to respect the `Restrict` foreign key, and written to be a no-op on every subsequent run. Re-seeding production converged in one pass: 4 products and 2 brands removed, 4 and 2 written back.
+
+- *Verify the reviewer's path, not the diff.* The audit's sharpest lesson was that four individually correct pages composed into a bad journey. So verification this time walked that journey against the live domain with `curl`: the list page, a product page, the retired URL, and the API endpoint, each checked for the specific strings a reviewer or a crawler would see. Lint, build, and 112/112 tests said the code was fine; the curl checks said the site was.
+
+**Next:** the one thing no code can do — log into Awin with the recovery code, establish what that account is, and submit the affiliate application. Then the eval gate (~$1, never run) and wargame 07 Moves 1–3.
+
 ### 2026-09-01 — A state-of-the-project audit after 39 days away
 
 **Goal:** Come back to the repo after five weeks and answer one question honestly — *what is actually next?* The last session ended with the front door shipped and a status note reading "Apply to Rakuten — all content blockers now cleared." Then nothing happened for 39 days. Before writing any code, find out what that gap cost.
