@@ -79,7 +79,7 @@ export default async function ProductDetailPage({
             rel="sponsored noopener noreferrer"
             className="min-h-8 self-start rounded-full border border-border px-5 py-2 text-sm font-medium transition-colors hover:bg-muted"
           >
-            Affiliate link
+            View at {product.brand.name}
           </a>
 
           <div className="mt-2 flex flex-col gap-5">

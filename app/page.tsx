@@ -10,12 +10,12 @@ const STEPS = [
   {
     actor: "Kashf Edit",
     title: "Reads the garment",
-    body: "A vision model extracts objective attributes from each product photo — sleeve length, neckline, hem length, fit, opacity. Facts, not opinions.",
+    body: "A vision model reads each product photo and records the sleeve length, neckline, hem length, fit, and opacity.",
   },
   {
     actor: "You",
     title: "Set your lines",
-    body: "Filter on those attributes directly. There is no modesty score and no presets, because no two people draw the line in the same place.",
+    body: "Filter on those attributes directly. There is no modesty score and no presets, because people draw the line in different places.",
   },
   {
     actor: "The brand",
@@ -37,9 +37,9 @@ export default async function Home() {
         </h1>
 
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-          Mainstream brands don’t let you filter for sleeve length, hem length,
-          or opacity. Kashf Edit reads those facts for every piece — then gets
-          out of the way while you decide which ones meet your standard.
+          Mainstream brands don’t let you filter by sleeve length, hem length,
+          or opacity. Kashf Edit reads those details off every piece so you can
+          filter on them yourself and decide which ones meet your standard.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -52,7 +52,7 @@ export default async function Home() {
         </div>
 
         <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
-          Early preview — the catalogue is a small sample while brand
+          Early preview. The catalogue is a small sample while brand
           partnerships are being set up.
         </p>
       </section>
@@ -94,13 +94,13 @@ export default async function Home() {
 
       <section className="mt-16 max-w-2xl sm:mt-24">
         <p className="text-sm leading-relaxed text-muted-foreground">
-          Kashf Edit is built by one person, in the open, for his wife and the
-          women she shops with. It is early and it shows its work.{" "}
+          Kashf Edit is built by one person, for his wife and the women she
+          shops with. It is still early.{" "}
           <Link
             href="/about"
             className="rounded-sm text-foreground underline underline-offset-4 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
           >
-            Read the longer version
+            Read more about the project
           </Link>
           .
         </p>

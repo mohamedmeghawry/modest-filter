@@ -21,7 +21,7 @@ export default async function AboutPage() {
 
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           A tool for finding modest clothing in the catalogues of mainstream
-          brands — without scrolling past hundreds of pieces to find the few
+          brands, without scrolling past hundreds of pieces to find the few
           that work.
         </p>
 
@@ -41,51 +41,50 @@ export default async function AboutPage() {
 
         <h2 className="mt-12 text-lg font-medium">The principle</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          Kashf Edit does not decide what counts as modest. That would be the
-          easy build and the wrong one — modesty is personal, and it varies
-          enormously between people who are equally sincere about it.
+          Kashf Edit does not decide what counts as modest. That would be
+          easier to build, and it would be wrong. Modesty is personal, and it
+          varies a lot between people who are equally sincere about it.
         </p>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           Instead, a vision model reads each garment for{" "}
           <span className="font-mono text-xs text-foreground">
-            objective, checkable attributes
-          </span>{" "}
-          — sleeve length, neckline, hem length, fit, opacity, and a handful
-          more. Those are facts about a piece of cloth, and reasonable people
-          don’t disagree about them. You then filter on those facts using
-          whatever thresholds are right for you.
+            attributes anyone can check
+          </span>: sleeve length, neckline, hem length, fit, opacity, and a
+          handful more. Two people looking at the same dress will agree on
+          where its sleeves end. You filter on those attributes using whatever
+          thresholds suit you.
         </p>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          No modesty score. No “modest / very modest” presets. No opinion from us
-          about where your line belongs.
+          There is no modesty score, no “modest / very modest” preset, and no
+          opinion from us about where your line should be.
         </p>
 
         <h2 className="mt-12 text-lg font-medium">The name</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           <span className="font-medium text-foreground">Kashf</span> (كشف) means
-          to uncover or reveal. The job here is revealing what’s already sitting
-          in these catalogues — not adding anything to them.
+          to uncover or reveal. The site’s job is to show what is already in
+          these catalogues. It adds nothing to them.
         </p>
 
         <h2 className="mt-12 text-lg font-medium">What this isn’t</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           Kashf Edit is not a shop. It holds no stock, takes no payments, and
           ships nothing. Every piece links out to the brand’s own site, and you
-          buy there on their terms. It is also not a religious authority — it’s a
-          filter.
+          buy there on their terms. It is not a religious authority either. It
+          is a filter.
         </p>
 
         <h2 className="mt-12 text-lg font-medium">Where it is right now</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          Early, and honest about it. The catalogue you can browse today is a
-          small sample used to build and test the filtering, while brand and
-          affiliate partnerships are being arranged. Product photography and a
-          full catalogue follow once those are in place.
+          The catalogue you can browse today is a small sample used to build
+          and test the filtering while brand and affiliate partnerships are
+          arranged. Product photography and a full catalogue follow once those
+          are in place.
         </p>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          It’s built and maintained by one person — Mohamed Meghawry, in Toronto
-          — with his wife as the product and curation lead. She is the reason it
-          exists and the reason it gets the details right.
+          It is built and maintained by one person, Mohamed Meghawry in
+          Toronto, with his wife as the product and curation lead. She is the
+          reason it exists, and she is the one who checks the details.
         </p>
 
         <p className="mt-12 text-sm leading-relaxed text-muted-foreground">

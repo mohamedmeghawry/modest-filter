@@ -59,13 +59,13 @@ export function ThresholdDemo() {
       <p className="mt-5 text-sm leading-relaxed">
         Your line sits at <span className="font-mono font-medium">{chosen}</span>
         {lineIndex === 0
-          ? " — the lowest setting, so nothing is filtered out."
+          ? ", the lowest setting, so nothing is filtered out."
           : ". Anything shorter is filtered out."}
       </p>
 
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-        Move it. Someone else draws their line somewhere else — same catalogue,
-        different results. That’s the whole idea.
+        Move it. Someone else will put their line somewhere else and get a
+        different set of results from the same catalogue.
       </p>
     </div>
   );

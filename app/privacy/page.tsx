@@ -46,16 +46,16 @@ export default async function PrivacyPage() {
             no third-party script measuring your visit.
           </li>
           <li className="border-l border-border pl-4">
-            We ask for no email address, name, location, or payment details —
-            there is nowhere on this site to enter them.
+            We ask for no email address, name, location, or payment details.
+            There is nowhere on this site to enter them.
           </li>
         </ul>
 
         <h2 className="mt-12 text-lg font-medium">What our host sees</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           The site is hosted on Vercel and its database is hosted on Supabase.
-          Like any web host, Vercel processes standard technical request data —
-          such as your IP address, browser user-agent, and the page requested —
+          Like any web host, Vercel processes standard technical request data,
+          such as your IP address, browser user-agent, and the page requested,
           in order to serve the page and to protect the service from abuse. That
           is infrastructure logging, and it is handled under their terms rather
           than ours. We do not build our own records on top of it.
@@ -73,7 +73,7 @@ export default async function PrivacyPage() {
           Kashf Edit sells nothing. When you click through to buy, you leave this
           site and land on the brand’s own storefront, where their privacy policy
           and cookies apply, not ours. Some of those outbound links may be
-          affiliate links, meaning we could earn a small commission if you buy —
+          affiliate links, meaning we could earn a small commission if you buy,
           at no extra cost to you. That never changes which pieces are shown to
           you or how they’re ordered.
         </p>
@@ -86,7 +86,7 @@ export default async function PrivacyPage() {
 
         <h2 className="mt-12 text-lg font-medium">Changes</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          If this ever changes — for example if analytics are added — this page
+          If this ever changes, for example if analytics are added, this page
           is updated and the date at the top changes with it.
         </p>
 
