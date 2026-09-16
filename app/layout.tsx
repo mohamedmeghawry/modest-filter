@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     "Mainstream brands don’t let you filter for sleeve length, hem length, or opacity. Kashf Edit reads those facts for every piece, so you can set your own standard.",
 };
 
+// impact.com website-ownership verification (affiliate playbook section 4).
+// Impact's snippet uses a `value` attribute, which React's <meta> typings
+// don't know, so it is spread in; `content` is included too in case the
+// checker reads that instead.
+const IMPACT_SITE_VERIFICATION = "4400bac6-7394-4980-b345-8fb2c1967ce4";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +40,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta
+          name="impact-site-verification"
+          content={IMPACT_SITE_VERIFICATION}
+          {...{ value: IMPACT_SITE_VERIFICATION }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <SiteHeader />
         {children}
