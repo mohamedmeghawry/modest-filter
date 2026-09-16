@@ -1,6 +1,6 @@
 # Affiliate application playbook
 
-**Status:** Impact submitted 2026-09-15 (in review); Awin, Sovrn, FlexOffers pending. **Owner:** Mohamed. **Why this doc exists:** the v1 goal has been gated on affiliate-feed access since May; the application has never been started. This is the checklist, the answers, and the tracker so it can be done in one evening and picked up by any future session.
+**Status:** Impact and Awin submitted 2026-09-15 (both in review); Sovrn, FlexOffers pending. **Owner:** Mohamed. **Why this doc exists:** the v1 goal has been gated on affiliate-feed access since May; the application has never been started. This is the checklist, the answers, and the tracker so it can be done in one evening and picked up by any future session.
 
 Related: ADR-0013 (image sourcing, affiliate feeds as Tier 1), `docs/audit-2026-09-01.md` §B and §C, wargame 08 Move A3 (`projects\wargames\wargames\08-mf-future.md`, outside the repo).
 
@@ -123,7 +123,7 @@ Classification rule: **monetizable** = a joinable program exists; **link-only** 
 | Network | Programs to request | Applied | Status | Notes |
 |---|---|---|---|---|
 | Impact | Simons, Reitmans | 2026-09-15 | In review (marketplace application) | publisher, individual, editorial content, CAD; site verified via meta tag; TikTok @kashfedit + YouTube @thekashfedit connected |
-| Awin Canada | Uniqlo | | | recovery code exists since 2026-05-22; account state unknown |
+| Awin Canada | Uniqlo | 2026-09-15 | Application received, in review | NEW account under kashfedit@gmail.com (old May account not used); Editorial Content (primary) + Comparison Engine; sectors Clothing, Womenswear, Department Stores; region Canada |
 | Sovrn Commerce | H&M (+ fallback for Uniqlo, Reitmans) | | | |
 | FlexOffers | Simons, Reitmans, Uniqlo (feeds) | | | |
 | Rakuten Advertising | Anthropologie, Reformation (second tier) | | | |
