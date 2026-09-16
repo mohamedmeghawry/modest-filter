@@ -1,6 +1,6 @@
 # Affiliate application playbook
 
-**Status:** Impact, Awin, and Sovrn submitted 2026-09-15 (all in review); FlexOffers attempted, blocked client-side, retry in Incognito. **Owner:** Mohamed. **Why this doc exists:** the v1 goal has been gated on affiliate-feed access since May; the application has never been started. This is the checklist, the answers, and the tracker so it can be done in one evening and picked up by any future session.
+**Status:** Impact and Sovrn submitted 2026-09-15 (in review); **Awin rejected 2026-09-15** (automated, no reason; follow-up email sent); FlexOffers attempted, blocked client-side, retry in Incognito. **Owner:** Mohamed. **Why this doc exists:** the v1 goal has been gated on affiliate-feed access since May; the application has never been started. This is the checklist, the answers, and the tracker so it can be done in one evening and picked up by any future session.
 
 Related: ADR-0013 (image sourcing, affiliate feeds as Tier 1), `docs/audit-2026-09-01.md` §B and §C, wargame 08 Move A3 (`projects\wargames\wargames\08-mf-future.md`, outside the repo).
 
@@ -109,6 +109,21 @@ Classification rule: **monetizable** = a joinable program exists; **link-only** 
 5. Reapply to Gate 2 with a screenshot of a real catalogue once ingestion lands (wargame 08 Move A4).
 6. If after 60 days fewer than 3 of the top 8 brands are monetizable or link-only-viable, that is a re-scope decision for Mohamed, not something to improvise around (wargame 08 fork).
 
+**Reconsideration email template (used for Awin, 2026-09-15):**
+> Subject: Publisher application for kashfedit.com: request for the decline reason
+>
+> Hello,
+>
+> I applied today as a publisher for kashfedit.com under this email address and received an automated decline a few minutes later, with no reason stated. Could you tell me which criterion the application did not meet, so I can address it?
+>
+> For context: Kashf Edit is a content-based discovery tool for women who dress modestly. It filters mainstream brands’ catalogues by objective garment attributes and links to the brand’s own site. It is not a coupon, cashback, or incentive site, and it runs no paid search on brand terms. The site is pre-launch, so there is no traffic history yet; the catalogue currently shows a labelled sample while brand partnerships are arranged. Privacy policy and affiliate disclosure are published.
+>
+> If the decline was because an earlier account exists under a different email from May 2026, I am happy to close either one.
+>
+> Thank you,
+> Mohamed Meghawry
+> kashfedit.com
+
 ## 8. What not to do
 
 - Put real brand names back on the sample catalogue to look bigger.
@@ -123,7 +138,7 @@ Classification rule: **monetizable** = a joinable program exists; **link-only** 
 | Network | Programs to request | Applied | Status | Notes |
 |---|---|---|---|---|
 | Impact | Simons, Reitmans | 2026-09-15 | In review (marketplace application) | publisher, individual, editorial content, CAD; site verified via meta tag; TikTok @kashfedit + YouTube @thekashfedit connected |
-| Awin Canada | Uniqlo | 2026-09-15 | Application received, in review | NEW account under kashfedit@gmail.com (old May account not used); Editorial Content (primary) + Comparison Engine; sectors Clothing, Womenswear, Department Stores; region Canada |
+| Awin Canada | Uniqlo | 2026-09-15 | **Rejected 2026-09-15** (minutes later, no reason given; automated screen). Follow-up sent to global-approvals@awin.com asking for the criterion; reapply after the 60-day window if unanswered. Uniqlo still reachable via Sovrn and FlexOffers. | NEW account under kashfedit@gmail.com (old May account not used); Editorial Content (primary) + Comparison Engine; sectors Clothing, Womenswear, Department Stores; region Canada |
 | Sovrn Commerce | H&M (+ fallback for Uniqlo, Reitmans) | 2026-09-15 | Site submitted for review | account via Google sign-in (kashfedit@gmail.com); Commerce → Website → kashfedit.com; link-creation tutorial steps skipped |
 | FlexOffers | Simons, Reitmans, Uniqlo (feeds) | | Not yet: attempted 2026-09-15, Continue never sent a request ("We couldn’t complete your request"); likely the invisible reCAPTCHA blocked by an ad blocker | Retry in an Incognito window at https://publisherprobeta.flexoffers.com/signup/accountInfo |
 | Rakuten Advertising | Anthropologie, Reformation (second tier) | | | |
