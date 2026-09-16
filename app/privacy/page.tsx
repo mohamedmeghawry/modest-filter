@@ -94,10 +94,10 @@ export default async function PrivacyPage() {
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           Questions about any of this can go to{" "}
           <a
-            href="mailto:meghawry.medo@gmail.com"
+            href="mailto:hello@kashfedit.com"
             className="rounded-sm text-foreground underline underline-offset-4 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
           >
-            meghawry.medo@gmail.com
+            hello@kashfedit.com
           </a>
           .
         </p>
