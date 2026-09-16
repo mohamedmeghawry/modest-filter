@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getProductById } from "@/lib/data/products";
 import { formatPrice, getSwatch, humanize } from "@/lib/products/display";
+import { SampleCatalogueNotice } from "@/components/site/SampleCatalogueNotice";
 
 export const dynamic = "force-dynamic";
 
@@ -50,6 +51,8 @@ export default async function ProductDetailPage({
 
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-8">
+      <SampleCatalogueNotice />
+
       <div className="flex flex-col gap-8 lg:flex-row">
         <div
           className="aspect-[3/4] w-full rounded-lg border border-border lg:w-96 lg:shrink-0"
@@ -73,7 +76,7 @@ export default async function ProductDetailPage({
           <a
             href={product.affiliateUrl}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored noopener noreferrer"
             className="min-h-8 self-start rounded-full border border-border px-5 py-2 text-sm font-medium transition-colors hover:bg-muted"
           >
             Affiliate link

@@ -2,37 +2,65 @@ import prisma from "../lib/prisma";
 
 const now = new Date();
 
+// Sample catalogue: illustrative placeholders used to build and test the
+// filters until affiliate feeds supply real products. Deliberately NOT
+// attributed to real brands (audit 2026-09-01 §B). `imageUrl` is empty because
+// nothing renders it yet and there is no product photography for sample data.
+
+const LEGACY_PRODUCT_IDS = [
+  "seed-aritzia-effortless-midi",
+  "seed-everlane-cotton-tee",
+  "seed-aritzia-flowing-abaya",
+  "seed-everlane-linen-maxi",
+];
+const LEGACY_BRAND_SLUGS = ["aritzia", "everlane"];
+
 async function main() {
   console.log("Seeding database...");
 
+  // --- Remove the pre-2026-09-15 seed rows that misattributed sample
+  //     products to real brands. Products first (Brand.onDelete: Restrict).
+  //     No-op on subsequent runs.
+  const removedProducts = await prisma.product.deleteMany({
+    where: { id: { in: LEGACY_PRODUCT_IDS } },
+  });
+  const removedBrands = await prisma.brand.deleteMany({
+    where: { slug: { in: LEGACY_BRAND_SLUGS } },
+  });
+  if (removedProducts.count > 0 || removedBrands.count > 0) {
+    console.log(
+      `  Removed legacy rows: ${removedProducts.count} products, ${removedBrands.count} brands`,
+    );
+  }
+
   // --- Brands (upsert on unique slug) ---
-  const aritzia = await prisma.brand.upsert({
-    where: { slug: "aritzia" },
+  const sampleOne = await prisma.brand.upsert({
+    where: { slug: "sample-brand-one" },
     update: {
-      name: "Aritzia",
-      websiteUrl: "https://www.aritzia.com",
-      affiliateProgram: "rakuten",
+      name: "Sample Brand One",
+      websiteUrl: "https://kashfedit.com/about",
+      affiliateProgram: "none",
     },
     create: {
-      name: "Aritzia",
-      slug: "aritzia",
-      websiteUrl: "https://www.aritzia.com",
-      affiliateProgram: "rakuten",
+      name: "Sample Brand One",
+      slug: "sample-brand-one",
+      websiteUrl: "https://kashfedit.com/about",
+      affiliateProgram: "none",
     },
   });
 
-  const everlane = await prisma.brand.upsert({
-    where: { slug: "everlane" },
+  const sampleTwo = await prisma.brand.upsert({
+    where: { slug: "sample-brand-two" },
     update: {
-      name: "Everlane",
-      websiteUrl: "https://www.everlane.com",
-      affiliateProgram: "impact",
+      name: "Sample Brand Two",
+      websiteUrl: "https://kashfedit.com/about",
+      affiliateProgram: "none",
     },
     create: {
-      name: "Everlane",
-      slug: "everlane",
-      websiteUrl: "https://www.everlane.com",
-      affiliateProgram: "impact",
+      name: "Sample Brand Two",
+      slug: "sample-brand-two",
+      websiteUrl: "https://kashfedit.com/about",
+      affiliateProgram: "none",
     },
   });
 
@@ -58,13 +86,13 @@ async function main() {
   // --- Products (upsert on deterministic explicit id) ---
   const products = [
     {
-      id: "seed-aritzia-effortless-midi",
-      name: "Effortless Long-Sleeve Midi Dress",
-      brandId: aritzia.id,
+      id: "sample-midi-dress",
+      name: "Long-Sleeve Midi Dress",
+      brandId: sampleOne.id,
       categoryId: dresses.id,
-      imageUrl: "https://via.placeholder.com/600x800?text=Effortless+Midi",
+      imageUrl: "",
       price: "128.00",
-      affiliateUrl: "https://www.aritzia.com/product/effortless-midi/1001.html",
+      affiliateUrl: "https://kashfedit.com/about",
       tagConfidence: "0.95",
       sleeveLength: "long",
       sleeveOpacity: "opaque",
@@ -81,13 +109,13 @@ async function main() {
       pattern: "solid",
     },
     {
-      id: "seed-everlane-cotton-tee",
-      name: "The Organic Cotton Long-Sleeve Tee",
-      brandId: everlane.id,
+      id: "sample-cotton-tee",
+      name: "Organic Cotton Long-Sleeve Tee",
+      brandId: sampleTwo.id,
       categoryId: tops.id,
-      imageUrl: "https://via.placeholder.com/600x800?text=Cotton+Tee",
+      imageUrl: "",
       price: "38.00",
-      affiliateUrl: "https://www.everlane.com/products/womens-cotton-ls-tee-white",
+      affiliateUrl: "https://kashfedit.com/about",
       tagConfidence: "0.91",
       sleeveLength: "long",
       sleeveOpacity: "opaque",
@@ -102,13 +130,13 @@ async function main() {
       pattern: "solid",
     },
     {
-      id: "seed-aritzia-flowing-abaya",
-      name: "Flowing Long-Sleeve Maxi Abaya",
-      brandId: aritzia.id,
+      id: "sample-maxi-abaya",
+      name: "Long-Sleeve Maxi Abaya",
+      brandId: sampleOne.id,
       categoryId: abayas.id,
-      imageUrl: "https://via.placeholder.com/600x800?text=Maxi+Abaya",
+      imageUrl: "",
       price: "168.00",
-      affiliateUrl: "https://www.aritzia.com/product/maxi-abaya/2002.html",
+      affiliateUrl: "https://kashfedit.com/about",
       tagConfidence: "0.90",
       sleeveLength: "long",
       sleeveOpacity: "opaque",
@@ -125,13 +153,13 @@ async function main() {
       pattern: "solid",
     },
     {
-      id: "seed-everlane-linen-maxi",
-      name: "The Linen Maxi Dress",
-      brandId: everlane.id,
+      id: "sample-linen-maxi",
+      name: "Linen Maxi Dress",
+      brandId: sampleTwo.id,
       categoryId: dresses.id,
-      imageUrl: "https://via.placeholder.com/600x800?text=Linen+Maxi",
+      imageUrl: "",
       price: "98.00",
-      affiliateUrl: "https://www.everlane.com/products/womens-linen-maxi-beige",
+      affiliateUrl: "https://kashfedit.com/about",
       tagConfidence: "0.93",
       sleeveLength: "short",
       sleeveOpacity: "opaque",

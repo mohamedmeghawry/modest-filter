@@ -5,6 +5,7 @@ import Link from "next/link";
 import Filters from "@/app/products/Filters";
 import MobileFilters from "@/app/products/MobileFilters";
 import ActiveFilterChips from "@/app/products/ActiveFilterChips";
+import { SampleCatalogueNotice } from "@/components/site/SampleCatalogueNotice";
 import {
   formatPrice,
   getSwatch,
@@ -34,6 +35,8 @@ export default async function ProductsPage({
       <h1 className="mb-6 text-[clamp(1.5rem,1.15rem+1.6vw,2.125rem)] font-semibold leading-tight tracking-tight">
         Products
       </h1>
+
+      <SampleCatalogueNotice />
 
       <div className="flex flex-col gap-8 lg:flex-row">
         <aside className="hidden lg:block lg:w-64 lg:shrink-0">
