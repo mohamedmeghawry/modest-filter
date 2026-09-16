@@ -114,14 +114,14 @@ Classification rule: **monetizable** = a joinable program exists; **link-only** 
 
 ## 9. Tracker
 
-| Network | Applied | Status | Notes |
-|---|---|---|---|
-| Rakuten Advertising | | | |
-| FlexOffers | | | |
-| Sovrn Commerce | | | |
-| Awin Canada | | | recovery code exists since 2026-05-22; account state unknown |
-| Ascend (Everlane) | | | |
-| Reformation direct | | | |
+| Network | Programs to request | Applied | Status | Notes |
+|---|---|---|---|---|
+| Impact | Simons, Reitmans | | | |
+| Awin Canada | Uniqlo | | | recovery code exists since 2026-05-22; account state unknown |
+| Sovrn Commerce | H&M (+ fallback for Uniqlo, Reitmans) | | | |
+| FlexOffers | Simons, Reitmans, Uniqlo (feeds) | | | |
+| Rakuten Advertising | Anthropologie, Reformation (second tier) | | | |
+| Groupe Dynamite direct | Dynamite / Garage | | | network behind their page unknown |
 
 ## Sources
 
