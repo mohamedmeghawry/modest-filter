@@ -57,10 +57,10 @@ Classification rule: **monetizable** = a joinable program exists; **link-only** 
 
 ## 4. Application sequence (parallel, same evening)
 
-1. **Impact.** Simons (free, no minimum sales) and Reitmans. Apply as a content / tool publisher, then request both programs.
-2. **Awin Canada.** First, log in with the recovery code and establish what the account already is (the ShareASale migration may have created it). Recon says a $1 refundable deposit and near-real-time review. Then request Uniqlo. Awin keeps application data 60 days; reapply after that if rejected.
-3. **Sovrn Commerce.** No traffic minimum. Covers H&M, and gives a fallback for Uniqlo and Reitmans if they reject a new publisher elsewhere.
-4. **FlexOffers.** Application review; unrestricted programs approve in about five business days. Simons, Reitmans, and Uniqlo all list here, and its daily product feeds are the ingestion path.
+1. **Impact.** Sign up: https://app.impact.com/signup/none/create-new-mediapartner-account-flow.ihtml (or impact.com → Get started → Partner). Simons (free, no minimum sales) and Reitmans. Apply as a content / tool publisher, then request both programs.
+2. **Awin Canada.** Existing account: log in at https://ui.awin.com/ ; fresh signup: https://ui.awin.com/publisher-signup/en/awin/ (choose Canada). First, log in with the recovery code and establish what the account already is (the ShareASale migration may have created it). Recon says a $1 refundable deposit and near-real-time review. Then request Uniqlo. Awin keeps application data 60 days; reapply after that if rejected.
+3. **Sovrn Commerce.** Sign up at https://www.sovrn.com/ (email or Google), then Welcome page → "Get started" under Commerce; site settings live at https://platform.sovrn.com/commerce/settings/site . No traffic minimum. Covers H&M, and gives a fallback for Uniqlo and Reitmans if they reject a new publisher elsewhere.
+4. **FlexOffers.** Sign up: https://www.flexoffers.com/sign-up/ (use the plain link, not one with an `aid=` referral tag). Application review; unrestricted programs approve in about five business days. Simons, Reitmans, and Uniqlo all list here, and its daily product feeds are the ingestion path.
 5. **Rakuten Advertising.** Open network, no screening at signup. Only needed for second-tier brands (Anthropologie, Reformation).
 6. **Groupe Dynamite direct** (Dynamite / Garage): find the network behind their affiliate page after the above accounts exist.
 
