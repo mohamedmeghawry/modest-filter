@@ -26,7 +26,7 @@ Feeds and links can come from different networks. FlexOffers is the feed workhor
 | `rel="sponsored"` on outbound links | ✅ 2026-09-15 | none |
 | Cookie consent | n/a: the site sets no cookies and `/privacy` says so | none |
 | Prose reads as human-written | ✅ 2026-09-15 (`07c369b`) | none |
-| Contact email on own domain | ✅ 2026-09-15: `hello@kashfedit.com` via Cloudflare Email Routing → **kashfedit@gmail.com** (project inbox; verified destination); `/privacy` updated | none |
+| Contact email on own domain | ✅ 2026-09-15: `hello@kashfedit.com` via Cloudflare Email Routing → **kashfedit@gmail.com** (project inbox; verified destination; end-to-end delivery tested 2026-09-15); `/privacy` updated | none |
 | Clear description of promotion method | ⬜ | §5 below |
 | Traffic / social presence | ⬜ none | be honest; describe the plan (§5) |
 | Tax ID and payout details ready | ⬜ | business number, bank details; Awin asks for tax ID at onboarding (DAC7) |
