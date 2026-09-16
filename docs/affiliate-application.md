@@ -83,6 +83,12 @@ Classification rule: **monetizable** = a joinable program exists; **link-only** 
 **Monetization:**
 > Affiliate commission on outbound clicks that convert. Commission never affects which products are shown or how they are ordered (stated on `/privacy`).
 
+**Impact partner profile (used 2026-09-15):**
+> Kashf Edit is a discovery tool for women who dress modestly and shop mainstream brands. Brand sites let you filter by size, colour and price, but not by sleeve length, hem length, or opacity, so these shoppers check products one at a time and often give up. We read those attributes from each listing and let the shopper set her own thresholds, then link straight to the product on the brand's site. Every click through is a shopper who already knows the piece meets her standard. We hold no stock, sell nothing, and run no coupons or cashback. Built in Toronto for women in Canada and the US who dress modestly, for religious or personal reasons, mostly in the 20 to 45 range.
+
+**Impact content and interest tags:**
+> modest fashion, modest clothing, modest dresses, women's fashion, dresses, abayas, tops, product discovery, shopping tool, Canada
+
 **Product data and images:**
 > Feed data is used to populate the catalogue; images are fetched for attribute extraction and are not stored or republished. Read each network's product-data and image clause at signup and save the quote into this file (ADR-0013's licensing assumption).
 
