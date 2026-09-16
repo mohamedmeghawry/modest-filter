@@ -41,6 +41,8 @@ _(none currently)_
 
 **Operational docs:** see [`docs/tagging-conventions.md`](docs/tagging-conventions.md) — hand-tagging guide for the 14 modesty-relevant product attributes (dual audience: human taggers and Claude Vision prompt design).
 
+**Affiliate application:** see [`docs/affiliate-application.md`](docs/affiliate-application.md) — the playbook for getting affiliate-network approval on the demo site: how the two approval gates work, the reviewer checklist mapped to the live site, the ranked brand table (recon-sourced, unverified until checked in each network's directory), paste-ready application answers, the rejection playbook, and the per-network tracker. Update the tracker whenever an application is submitted or answered.
+
 **Build journal:** see [`docs/devlog.md`](docs/devlog.md) — narrative log of what was built, the challenges hit, and how they were solved (newest first). The story layer that sits above ADRs (*decisions*) and commit messages (*per-change why*); written to be mined for interviews, articles, and social posts. Add an entry at session end when meaningful work shipped.
 
 **Schema backlog:** see [`docs/schema-gaps.md`](docs/schema-gaps.md) — objective-attribute gaps surfaced during eval sourcing/tagging (parked, not decided), to be resolved together in one schema-evolution ADR rather than bolted on piecemeal.
