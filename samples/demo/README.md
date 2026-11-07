@@ -2,7 +2,9 @@
 
 Real products for the demo catalogue, stored the way an affiliate feed would provide them (Google Shopping product-spec columns). When a licensed feed arrives, it replaces these rows and the schema stays the same.
 
-**Rules (see `docs/research/2026-11-07-brand-terms.md`):** store facts, links and image *URLs* only. Never save image files or page copies. Tagging sends the image URL straight to the vision API (ADR-0013, extraction-only).
+**Rules:** images may be saved locally for tagging (with `fetch_images.py`, or the Claude browser extension when a brand blocks scripted downloads) and may be shown on the demo website to a closed group of people. Saved images stay in `images/` and are never committed (gitignored). Page copies are still not saved.
+
+This is Mohamed's decision (2026-11-07). It overrides the brand-terms finding (`docs/research/2026-11-07-brand-terms.md`: saving is barred or needs consent for every brand whose terms we could read) and the no-republication rule in ADR-0013, until that ADR is amended.
 
 ## `products.csv` columns
 
