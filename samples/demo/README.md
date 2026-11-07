@@ -23,4 +23,5 @@ Real products for the demo catalogue, stored the way an affiliate feed would pro
 
 1. Append rows to the end; never reorder or reuse an `id`.
 2. Fill in everything up to `collected_on`, leave the attributes blank and set `tag_status` to `untagged`.
-3. Run the tagger on the untagged rows (script to come), then review.
+3. Run `python samples/demo/fetch_images.py` to download the new rows' images to `images/<id>/` (local only, gitignored; existing files are skipped).
+4. Run the tagger on the untagged rows (script to come), then review.
