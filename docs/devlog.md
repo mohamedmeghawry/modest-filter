@@ -12,6 +12,34 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-09-29 — The affiliate wall, and the terms of service that redrew the plan
+
+**Goal:** Come back to the three network applications filed on 09-15, finish whatever was still open, and work out how to get a real catalogue into the site. The session turned into a strategy correction instead.
+
+**What we found (no code, deliberately):** Two of the three networks declined. **Impact declined 2026-09-17** with an email that cited "one or more reasons" and then listed none. **Awin declined on appeal 2026-09-21** — the follow-up asking for the criterion came back from the Network Quality Team refusing to give one at all. Both are opaque, and the common denominator is the one thing neither will say and neither we can edit away: a brand-new domain, zero traffic, pre-launch, showing a labelled sample. Then Sovrn, opened in the browser, turned out not to be a half-filled form at all — it is a five-step usage funnel (submit URL → create a link → share it → get a click → *then* site review), and it sits at step 2. Sovrn is a link *converter*, not a product feed: you bring it a product URL and it hands back a commissioned link. It never hands you products.
+
+**Challenges & how we solved them:**
+
+- *The blocker we had been staring at for four months was the wrong blocker.* "Apply to a network" has been logged as the v1 gate since May. Writing down what a network actually provides — commission, and a licensed product feed — showed that neither is required to have a working, demonstrable product. This is a hobby/portfolio build, so the commission is not the point; and ADR-0013 already planned two non-feed sourcing tiers, while a plain outbound link needs no affiliate relationship at all. The real product never depended on approval. The unblock was conceptual, not technical: stop waiting for a yes that the site, as it stands, can't earn.
+
+- *Checking the store's terms before scraping changed the plan and saved us from building the wrong thing.* The obvious next move was to pull ~15 real H&M items to seed a genuine catalogue. Mohamed insisted we read H&M's terms first. Two clauses bite: their general terms forbid using any "agent or other device or mechanism ... to copy content from the Site" (so bots, crawlers, Firecrawl, Playwright, *and* a browser agent are all out), and their IP clause forbids storing their content for any non-personal use without permission. That reframes the whole sourcing question: the affiliate feed is not merely a convenience, it is the *permission* — the license that makes a feed-based catalogue legitimate in the first place. So the "just scrape a few" shortcut would have stood the project on exactly the foundation ADR-0013's extraction-only rule was written to avoid. Cost of checking: ten minutes. Cost of skipping it: a catalogue we would have had to tear out.
+
+- *Sovrn described the chicken-and-egg in its own UI.* Its onboarding won't review the site until you have created a real affiliate link, put it somewhere, and gotten a real person to click it. You cannot manufacture that click without a real product link live on a real site — which is the very thing we did not have. The network's own funnel was drawing the pivot we needed: there is no shortcut around having a product.
+
+**The pivot (intended, not yet an ADR):** stop reapplying to networks; build the product first. Immediate, fully unblocked, zero legal exposure: run the **eval gate** on the sample set we already own (~$1) to prove the vision tagger — the one measurement the project keeps deferring. A real live catalogue then comes from one of two compliant routes: a licensed feed once we qualify for one, or a human-curated, facts-only-plus-links set with no stored images (which happens to match the current swatch UI exactly). Scraping is not one of the routes.
+
+**Next:** run the eval gate; decide feed-vs-hand-curated for the first real catalogue; leave Sovrn parked at step 2 until there is a real product link worth creating. If the pivot holds, it graduates to an ADR (no-scrape; feed-as-permission; interim facts-only catalogue) amending ADR-0013.
+
+**Later the session: from "what do we do" to a curation tool.** With scraping ruled out and no feed access, the real question was how anyone in this position sources product data. Research confirmed there are only three legitimate channels — a licensed affiliate feed, an official API (e.g. Amazon's, now the Creators API after PA-API closed to new sign-ups in May 2026), or your own facts-plus-deep-links — and never scraping. For a pre-launch prototype the third is enough and needs no one's permission: store the objective facts you can see and link out, which also matches our swatch UI (no brand imagery is shown). Studying the feed format showed there is really one standard to learn — Google Shopping's product spec, which Awin's feed mirrors — and its columns (id, title, description, link, image_link, price, availability, brand, plus apparel's color/size/material/pattern) map cleanly onto our schema. The tell is what is *missing* from every feed: sleeve length, neckline, hem, opacity. That gap is the product; our tagging fills it.
+
+The output was a tool, not a plan: `catalogue/kashf-catalogue-template.xlsx` — one row per product in feed shape, with dropdowns on all 14 modesty attributes locked to the exact Prisma enum values (so hand-entry cannot drift from what the filter matches, per ADR-0008), two worked example rows (a dress and a top, showing the mutually-exclusive `hemLength`/`topLength`), and reference / how-to tabs. Workflow: hand-pick real items as a shopper, fill the sheet, ingest straight to the database. The first real catalogue is human-curated facts-only; a licensed feed replaces it once one is approved.
+
+*Lesson recorded:* an earlier framing in this session over-applied full commercial-launch compliance to what is a hobby/portfolio prototype, which made the path feel blocked when it was not. Right-sized: automated scraping and republishing imagery at scale are the real no-gos; a human curating a handful of items with facts and links is ordinary site use.
+
+**Next (revised):** fill the template with a first handful of real H&M items → ingest to the database → run the eval gate and see real products in the app.
+
+---
+
 ### 2026-09-15 — Making the live site safe for the reviewer it is waiting on
 
 **Goal:** Clear the three things the 2026-09-01 audit said made the project amber, in one sitting: push the audit commit before GitHub's 60-day inactivity rule disables the Supabase keep-alive cron (~2026-09-22), replace the fabricated Aritzia/Everlane products on `/products`, and add the missing `rel="sponsored"` on affiliate links.
