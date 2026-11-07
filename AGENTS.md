@@ -37,6 +37,8 @@ Architectural decisions live in `docs/files/`. Read the relevant ADR before prop
 
 _(none currently)_
 
+**Action board:** see [`docs/ACTIONS.md`](docs/ACTIONS.md) — the short, owner-tagged list of what happens next (Now / Next / Waiting). Check it first each session and update it instead of writing long status prose.
+
 **Project direction:** see [`docs/ROADMAP.md`](docs/ROADMAP.md) — the durable record of where the project is going (market context, skill-gap phases, prioritized session-by-session backlog). ADRs are *decided*; the roadmap is *intended*.
 
 **Operational docs:** see [`docs/tagging-conventions.md`](docs/tagging-conventions.md) — hand-tagging guide for the 14 modesty-relevant product attributes (dual audience: human taggers and Claude Vision prompt design).
