@@ -109,3 +109,35 @@ As the project grows toward profitability:
 - Are there brands where Tier 1 is <30% model-on (Tier 2 becomes primary — re-evaluation trigger fires)?
 - What % of products will fall to Tier 3 (target: <10%)?
 - Is the brand-product-page image set materially richer than the affiliate feed for any brand (i.e., does Tier 2 actually have something to add)?
+
+## Amendment (2026-11-07): demo catalogue — hotlinked display on a private preview, local copies for tagging (owner decision)
+
+**Context.** The 2026-09-29 pivot (stop reapplying to affiliate networks, build the product first) needs a demo catalogue before any licensed feed exists. 25 real products from 5 brands were collected in feed shape (`samples/demo/products.csv`). A demo with no product pictures cannot be judged by the people it is meant for. Simons' image CDN returns `403` to non-browser clients, so its images had to be fetched in a real browser for tagging.
+
+**Tested 2026-11-08:** all five brands' image CDNs (Uniqlo, H&M, Zara, Simons, Reitmans) serve their images when another site embeds them (`<img>` from a third-party origin; every test image loaded). kashfedit.com's own CSP (`proxy.ts`, `img-src 'self' blob: data:`) currently blocks them, as `docs/audit-2026-09-01.md` predicted.
+
+**What changes (scope: demo catalogue only, `samples/demo/`).**
+
+| Rule in this ADR | Before | Now |
+|---|---|---|
+| Image storage | Never stored | Local copies allowed **for tagging only**, in `samples/demo/images/` (gitignored, never committed, never served). Saved with `fetch_images.py`, or the Claude browser extension when a brand blocks scripted downloads |
+| Image display | Never served or republished; users see images on the brand's page | Shown by **linking to the brand's own image server** (plain `<img src>` to the brand CDN). The site never serves or caches a copy: no Next.js image optimizer and no proxy |
+| Where it is shown | n/a | **A private preview deployment only**, not the public production domain |
+| Production ingestion (Tier 1/2/3) | Extraction-only | **Unchanged.** Licensed feeds will bring their own display rights |
+
+**This is Mohamed's decision, made knowing it goes against two earlier findings.** The record should say so plainly:
+
+- The Legal posture section lists "republishing copyrighted content" as not protected. Hotlinking is a smaller step than serving copies, because the file never leaves the brand's server and the brand can switch it off. But it still puts their photos on our page. Some US courts treat that as non-infringing (the "server test"), others do not, and Canadian law is unsettled. This reduces exposure; it does not remove it.
+- The Tier 2 mitigations say "no anti-bot circumvention". Fetching Simons' images through a real browser for tagging, after the CDN refused `curl`, is close to that line.
+- `docs/research/2026-11-07-brand-terms.md` found that saving images is barred, or needs consent, for every brand whose terms could be read (Zara: explicitly prohibited; Simons: needs express consent).
+
+**Conditions (the decision only holds while all of these are true):**
+
+1. **Brand images appear only on a protected preview.** Brand CDN hosts are added to the CSP `img-src` only when `VERCEL_ENV` is `preview`, so the public production domain cannot display them even by mistake. Previews already sit behind Vercel Authentication (Standard Protection, free on Hobby), and the group gets in through the account's one Shareable Link. *Check:* (a) an anonymous request to the preview URL returns the Vercel login page; (b) the production CSP on kashfedit.com has no brand hosts.
+2. **No copies are served.** Local images are for tagging only; they are never committed, pushed, or uploaded to a public bucket or CDN.
+3. **Brand servers are hit lightly.** Collection downloads each image once, one request per second, and skips files that already exist. Tagging and eval re-runs read the local copies, so they cost the brands zero requests. Visitors' browsers fetch straight from the brand CDN, the same as visiting the brand's own site.
+4. **Scope is the demo rows only.** New brands or rows need the same check again.
+5. **If a brand objects** (cease-and-desist, any complaint, or a hotlink block), remove that brand's rows and local images that day. The existing response rule above applies unchanged.
+6. **Exit:** once a licensed affiliate feed covers a brand, switch that brand to the feed's image links under the feed's terms and delete its local demo copies. The amendment lapses when the demo ends or when licensed feeds replace the demo catalogue, whichever comes first.
+
+**Status on 2026-11-08: condition 1 NOT YET BUILT.** No brand images are shown anywhere yet. The CSP still blocks them on every deployment, which is the safe default until the preview-only rule exists.

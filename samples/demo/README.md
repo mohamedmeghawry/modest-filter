@@ -2,9 +2,9 @@
 
 Real products for the demo catalogue, stored the way an affiliate feed would provide them (Google Shopping product-spec columns). When a licensed feed arrives, it replaces these rows and the schema stays the same.
 
-**Rules:** images may be saved locally for tagging (with `fetch_images.py`, or the Claude browser extension when a brand blocks scripted downloads) and may be shown on the demo website to a closed group of people. Saved images stay in `images/` and are never committed (gitignored). Page copies are still not saved.
+**Rules:** images may be saved locally **for tagging only** (with `fetch_images.py`, or the Claude browser extension when a brand blocks scripted downloads). Saved images stay in `images/`, are never committed (gitignored), and are never served by the site. On the demo website, images are shown by linking to the brand's own image server (`image_link`), on a private preview for a closed group of people. Page copies are still not saved.
 
-This is Mohamed's decision (2026-11-07). It overrides the brand-terms finding (`docs/research/2026-11-07-brand-terms.md`: saving is barred or needs consent for every brand whose terms we could read) and the no-republication rule in ADR-0013, until that ADR is amended.
+This is Mohamed's decision (2026-11-07). It overrides the brand-terms finding (`docs/research/2026-11-07-brand-terms.md`: saving is barred or needs consent for every brand whose terms we could read) and the no-republication rule in ADR-0013. The conditions it depends on are in the ADR-0013 amendment (2026-11-07). The most important one: images are shown only once access control enforces the closed group.
 
 ## `products.csv` columns
 
