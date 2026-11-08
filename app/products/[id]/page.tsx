@@ -2,6 +2,11 @@ import { notFound } from "next/navigation";
 import { getProductById } from "@/lib/data/products";
 import { formatPrice, getSwatch, humanize } from "@/lib/products/display";
 import { SampleCatalogueNotice } from "@/components/site/SampleCatalogueNotice";
+import { ProductImage } from "@/components/products/ProductImage";
+import {
+  brandImagesAllowed,
+  displayableImageUrl,
+} from "@/lib/products/brand-images";
 
 export const dynamic = "force-dynamic";
 
@@ -16,6 +21,10 @@ export default async function ProductDetailPage({
   if (!product) notFound();
 
   const swatch = getSwatch(product.primaryColor);
+  const imageSrc = displayableImageUrl(
+    product.imageUrl,
+    brandImagesAllowed(process.env.VERCEL_ENV),
+  );
 
   const groups: { heading: string; items: [string, string | null][] }[] = [
     {
@@ -54,11 +63,21 @@ export default async function ProductDetailPage({
       <SampleCatalogueNotice />
 
       <div className="flex flex-col gap-8 lg:flex-row">
-        <div
-          className="aspect-[3/4] w-full rounded-lg border border-border lg:w-96 lg:shrink-0"
-          style={{ backgroundColor: swatch }}
-          aria-hidden="true"
-        />
+        {imageSrc ? (
+          <ProductImage
+            src={imageSrc}
+            alt={`${product.brand.name} ${product.name}`}
+            swatch={swatch}
+            className="aspect-[3/4] w-full rounded-lg border border-border lg:w-96 lg:shrink-0"
+            eager
+          />
+        ) : (
+          <div
+            className="aspect-[3/4] w-full rounded-lg border border-border lg:w-96 lg:shrink-0"
+            style={{ backgroundColor: swatch }}
+            aria-hidden="true"
+          />
+        )}
 
         <div className="flex flex-1 flex-col gap-4">
           <div className="flex flex-col gap-1">

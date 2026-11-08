@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { brandImagesAllowed, imgSrcSources } from "@/lib/products/brand-images";
 
 // Content-Security-Policy with a per-request nonce (Phase 3 hardening,
 // security-review.md). In Next.js 16 this file is "Proxy" — the former
@@ -14,19 +15,21 @@ import { NextRequest, NextResponse } from "next/server";
 //     which a strict style-src would silently block. Inline *style* injection
 //     executes no script and is low-severity for a no-auth catalogue, so this is
 //     an accepted trade for keeping script-src strict.
-//   - img-src is 'self' blob: data: — correct while images are same-origin
-//     (none rendered yet; the product image box is a placeholder). Wiring real
-//     product images later must revisit this (or route them via next/image,
-//     which serves from /_next/image = same origin).
+//   - img-src is 'self' blob: data: everywhere, plus the demo brands' image
+//     CDNs on Vercel preview deployments ONLY (ADR-0013 amendment 2026-11-07:
+//     hotlinked demo images, never on the public production domain). The same
+//     gate decides whether pages render the images; see
+//     lib/products/brand-images.ts.
 export function proxy(request: NextRequest) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const isDev = process.env.NODE_ENV === "development";
+  const imgSrc = imgSrcSources(brandImagesAllowed(process.env.VERCEL_ENV));
 
   const csp = `
     default-src 'self';
     script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${isDev ? " 'unsafe-eval'" : ""};
     style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data:;
+    img-src ${imgSrc};
     font-src 'self';
     object-src 'none';
     base-uri 'self';

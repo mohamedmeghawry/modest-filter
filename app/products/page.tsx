@@ -6,6 +6,11 @@ import Filters from "@/app/products/Filters";
 import MobileFilters from "@/app/products/MobileFilters";
 import ActiveFilterChips from "@/app/products/ActiveFilterChips";
 import { SampleCatalogueNotice } from "@/components/site/SampleCatalogueNotice";
+import { ProductImage } from "@/components/products/ProductImage";
+import {
+  brandImagesAllowed,
+  displayableImageUrl,
+} from "@/lib/products/brand-images";
 import {
   formatPrice,
   getSwatch,
@@ -26,6 +31,7 @@ export default async function ProductsPage({
     listProducts(filters),
     getFacetCounts(filters),
   ]);
+  const allowBrandImages = brandImagesAllowed(process.env.VERCEL_ENV);
   const hasActiveFilters = Object.values(filters).some(
     (v) => Array.isArray(v) && v.length > 0,
   );
@@ -74,6 +80,10 @@ export default async function ProductsPage({
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {products.map((product) => {
                 const swatch = getSwatch(product.primaryColor);
+                const imageSrc = displayableImageUrl(
+                  product.imageUrl,
+                  allowBrandImages,
+                );
 
                 const badges = [
                   product.sleeveLength,
@@ -87,11 +97,20 @@ export default async function ProductsPage({
                     href={`/products/${product.id}`}
                     className="flex flex-col overflow-hidden rounded-lg border border-border transition-shadow hover:shadow-md"
                   >
-                    <div
-                      className="aspect-[3/4] w-full"
-                      style={{ backgroundColor: swatch }}
-                      aria-hidden="true"
-                    />
+                    {imageSrc ? (
+                      <ProductImage
+                        src={imageSrc}
+                        alt={`${product.brand.name} ${product.name}`}
+                        swatch={swatch}
+                        className="aspect-[3/4] w-full"
+                      />
+                    ) : (
+                      <div
+                        className="aspect-[3/4] w-full"
+                        style={{ backgroundColor: swatch }}
+                        aria-hidden="true"
+                      />
+                    )}
 
                     <div className="flex flex-col gap-2 p-4">
                       <span className="text-xs uppercase tracking-wide text-muted-foreground">
