@@ -49,7 +49,7 @@ const FIBER_TO_MATERIAL: ReadonlyArray<readonly [RegExp, Material]> = [
 // items, not the garment's own fabric — so "sleek denim" in a tunic's copy
 // must not read as a denim garment. The preposition must follow the verb
 // closely so a noun use ("chic style ... comfortable with ...") doesn't match.
-const STYLING_RE =
+export const STYLING_RE =
   /\b(?:wear|pair|style|team|layer)\s+(?:it\s+|this\s+|them\s+)?(?:up\s+)?(?:with|over|under|back)\b|dress it up with/i;
 
 // Strip clauses that don't describe the garment's main fabric (a lining's fiber,
