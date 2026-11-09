@@ -3670,5 +3670,656 @@
         "vision": "other"
       }
     ]
+  },
+  {
+    "id": "hm-1370739001",
+    "title": "Draped Satin Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:07.824Z",
+    "costUsd": 0.01014,
+    "text": {
+      "neckline": [
+        "v_neck"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted",
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "v_back",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "v_back",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "viscose"
+      }
+    ]
+  },
+  {
+    "id": "hm-1385267001",
+    "title": "Flounced Lace Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:07.853Z",
+    "costUsd": 0.01015,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "v_neck"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "longline",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "black",
+      "pattern": "floral"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "longline",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "sheer",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "other"
+      }
+    ]
+  },
+  {
+    "id": "hm-1365784001",
+    "title": "Ruched Velour Top",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:07.884Z",
+    "costUsd": 0.01012,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": "blue",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "navy",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "navy",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "blue",
+        "vision": "navy"
+      }
+    ]
+  },
+  {
+    "id": "hm-1360593004",
+    "title": "Sequined Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:07.913Z",
+    "costUsd": 0.01572,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "red",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "red",
+      "pattern": "other"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "red",
+      "pattern": "other"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "other"
+      }
+    ]
+  },
+  {
+    "id": "hm-1332648001",
+    "title": "Motif-Detail Crochet-Look Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:07.942Z",
+    "costUsd": 0.0102,
+    "text": {
+      "hemLength": [
+        "mini"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "pattern": [
+        "striped",
+        "floral",
+        "plaid",
+        "geometric",
+        "animal_print",
+        "polka_dot",
+        "abstract",
+        "other"
+      ],
+      "primaryColor": null,
+      "material": "knit",
+      "lined": "unlined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "unlined",
+      "cutouts": "present",
+      "material": "knit",
+      "primaryColor": "white",
+      "pattern": "floral"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "unlined",
+      "cutouts": "present",
+      "material": "knit",
+      "primaryColor": "white",
+      "pattern": "floral"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "hm-1368058003",
+    "title": "Scarf-Detail Satin Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:07.971Z",
+    "costUsd": 0.01015,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "v_neck"
+      ],
+      "hemLength": [
+        "ankle"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "ankle"
+        ],
+        "vision": "midi"
+      }
+    ]
+  },
+  {
+    "id": "hm-1352174001",
+    "title": "Fine-Knit Polo Shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:08.000Z",
+    "costUsd": 0.01012,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "primaryColor": "black",
+      "material": "knit",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "hm-1367724007",
+    "title": "Raglan-Sleeved Cotton Top",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:08.030Z",
+    "costUsd": 0.01011,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": "red",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "other"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "other"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "red",
+        "vision": "white"
+      }
+    ]
+  },
+  {
+    "id": "hm-1369161003",
+    "title": "Knit Mock Turtleneck Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:08.060Z",
+    "costUsd": 0.01012,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "turtleneck",
+        "high_neck"
+      ],
+      "primaryColor": "beige",
+      "material": "knit",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "hm-1383780001",
+    "title": "Glittery Puff-Sleeved Cape Top",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01DPaJ9PKBmTMphtynK5CyNU",
+    "taggedAt": "2026-11-09T09:08:08.088Z",
+    "costUsd": 0.01016,
+    "text": {
+      "fit": [
+        "oversized",
+        "loose"
+      ],
+      "primaryColor": "black",
+      "material": "knit",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "square",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "oversized",
+      "opacity": "semi_sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "square",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "oversized",
+      "opacity": "semi_sheer",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": []
   }
 ]

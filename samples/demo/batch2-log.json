@@ -368,5 +368,57 @@
         "reason": "spare, not needed (4 tops already have front + back)"
       }
     ]
+  },
+  "Zara": {
+    "collected_on": "2026-11-10",
+    "products": {
+      "zara-04764287": 1,
+      "zara-01758731": 3,
+      "zara-02587159": 4,
+      "zara-04772226": 3,
+      "zara-04764037": 3,
+      "zara-07836071": 2,
+      "zara-05755157": 3,
+      "zara-04764123": 2,
+      "zara-08372306": 3,
+      "zara-06050841": 3
+    },
+    "skipped": [
+      {
+        "link": "https://www.zara.com/ca/en/short-sleeve-buttoned-top-p02180050.html",
+        "listing_position": 2,
+        "reason": "long-sleeve tops: name says short sleeve (text gate, no photos)"
+      },
+      {
+        "link": "https://www.zara.com/ca/en/zw-collection-contrast-tuxedo-dress-p02291570.html",
+        "listing_position": 2,
+        "reason": "no back photo on a model (only a flat product back)"
+      },
+      {
+        "link": "https://www.zara.com/ca/en/combined-knit-and-lace-dress-p08779743.html",
+        "listing_position": 4,
+        "reason": "no back photo in the gallery (street shots front only)"
+      },
+      {
+        "link": "https://www.zara.com/ca/en/satin-lace-zw-collection-dress-p05919133.html",
+        "listing_position": 7,
+        "reason": "no back photo in the gallery (one model front and flats)"
+      },
+      {
+        "link": "https://www.zara.com/ca/en/beaded-fringe-mini-dress-p04577100.html",
+        "listing_position": 8,
+        "reason": "no back photo in the gallery (front and side only)"
+      },
+      {
+        "link": "https://www.zara.com/ca/en/gold-tone-button-peplum-top-p09070612.html",
+        "listing_position": 4,
+        "reason": "no back photo in the gallery (front and side only)"
+      },
+      {
+        "link": "https://www.zara.com/ca/en/belted-knit-dress-p05536013.html",
+        "listing_position": 11,
+        "reason": "spare, not needed (6 dresses already have front + back)"
+      }
+    ]
   }
 }

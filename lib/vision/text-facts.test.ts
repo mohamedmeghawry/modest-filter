@@ -113,6 +113,8 @@ describe("parseTextFacts — description", () => {
     expect(facts.sleeveLength).toEqual(["long", "extra_long"]);
     // A cami as the garment itself still reads as sleeveless.
     expect(parseTextFacts("Satin Cami Top").sleeveLength).toEqual(["sleeveless"]);
+    // Same for short: "short puff sleeves".
+    expect(parseTextFacts("Gold Button Peplum Top", "Lapel collar and short puff sleeves.").sleeveLength).toEqual(["short", "cap"]);
     // Long must still be about the sleeves, not another word.
     expect(parseTextFacts("Long Line Blazer").sleeveLength).toBeUndefined();
   });

@@ -42,7 +42,8 @@ const SLEEVE_RULES: Rule<SleeveLength>[] = [
   // layer of another garment ("detachable cami lining", Gap 2026-11-10).
   [/\b(?:cami(?:sole)?|tank)\b(?![\s-](?:lining|liner|slip|underlay)\b)/i, [SleeveLength.sleeveless]],
   [/\bcap[\s-]sleeves?\b/i, [SleeveLength.cap]],
-  [/\bshort[\s-]sleeve(?:s|d)?\b/i, [SleeveLength.short, SleeveLength.cap]],
+  // A style word may sit between, as for long sleeves: "short puff sleeves" (Zara).
+  [/\bshort[\s-](?:[a-z]+[\s-])?sleeve(?:s|d)?\b/i, [SleeveLength.short, SleeveLength.cap]],
   [/\belbow[\s-](?:length[\s-])?sleeves?\b/i, [SleeveLength.elbow]],
   // Uniqlo writes a bare "3/4" in the title for a 3/4-sleeve top.
   [
