@@ -32,14 +32,24 @@ async function fetchImage(url: string): Promise<BundleImage> {
 }
 
 async function main() {
-  const [inPath, outPath] = process.argv.slice(2);
-  if (!inPath || !outPath) throw new Error("Usage: build-bundle.ts <records.json> <bundle-out.json>");
+  const [inPath, outPath, ...flags] = process.argv.slice(2);
+  if (!inPath || !outPath) throw new Error("Usage: build-bundle.ts <records.json> <bundle-out.json> [--images <url-to-base64.json>]");
+  // --images: photos the browser already fetched (one download of {url: base64}),
+  // for image servers that refuse scripts (e.g. Simons behind Cloudflare). We
+  // never work around such a refusal; the browser loads them as any shopper's would.
+  const imagesAt = flags.indexOf("--images");
+  const given: Record<string, string> | null = imagesAt >= 0 ? JSON.parse(readFileSync(flags[imagesAt + 1], "utf8")) : null;
   const recs: RecordsFile = JSON.parse(readFileSync(inPath, "utf8"));
   const products: BundleProduct[] = [];
   for (const { gallery_urls, ...p } of recs.products) {
     if (!gallery_urls.length) throw new Error(`${p.id}: no gallery images`);
     const gallery: BundleImage[] = [];
     for (const u of gallery_urls) {
+      if (given) {
+        if (!given[u]) throw new Error(`${p.id}: ${u} missing from the images file`);
+        gallery.push({ url: u, b64: given[u] });
+        continue;
+      }
       await sleep(GAP_MS);
       gallery.push(await fetchImage(u));
     }

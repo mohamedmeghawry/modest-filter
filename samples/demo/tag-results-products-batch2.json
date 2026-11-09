@@ -4321,5 +4321,340 @@
       "pattern": "solid"
     },
     "disagreements": []
+  },
+  {
+    "id": "zara-04764287",
+    "title": "VELVET MINI DRESS WITH SASH",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01AMF2s8gGhYkK8a1BvKG9JG",
+    "taggedAt": "2026-11-09T09:19:16.160Z",
+    "costUsd": 0.01572,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "other"
+      }
+    ]
+  },
+  {
+    "id": "zara-04772226",
+    "title": "VOLUME SLEEVE MINI DRESS",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01AMF2s8gGhYkK8a1BvKG9JG",
+    "taggedAt": "2026-11-09T09:19:16.191Z",
+    "costUsd": 0.01008,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": null,
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "zara-01758731",
+    "title": "SHOULDER PAD GATHERED MAXI DRESS",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01AMF2s8gGhYkK8a1BvKG9JG",
+    "taggedAt": "2026-11-09T09:19:16.221Z",
+    "costUsd": 0.01013,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": "black",
+      "material": "viscose",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "floor",
+      "topLength": null,
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "floor",
+      "topLength": null,
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "zara-08372306",
+    "title": "SHOULDER PAD MINI DRESS",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01AMF2s8gGhYkK8a1BvKG9JG",
+    "taggedAt": "2026-11-09T09:19:16.251Z",
+    "costUsd": 0.0101,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": null,
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "zara-02587159",
+    "title": "PRINTED BOW DRESS",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01AMF2s8gGhYkK8a1BvKG9JG",
+    "taggedAt": "2026-11-09T09:19:16.281Z",
+    "costUsd": 0.01022,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "pattern": [
+        "striped",
+        "floral",
+        "plaid",
+        "geometric",
+        "animal_print",
+        "polka_dot",
+        "abstract",
+        "other"
+      ],
+      "primaryColor": "green",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "high_neck",
+      "backStyle": "v_back",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "partially_lined",
+      "cutouts": "present",
+      "material": "polyester",
+      "primaryColor": "green",
+      "pattern": "other"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "high_neck",
+      "backStyle": "v_back",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "lined",
+      "cutouts": "present",
+      "material": "polyester",
+      "primaryColor": "green",
+      "pattern": "other"
+    },
+    "disagreements": [
+      {
+        "attribute": "lined",
+        "text": "lined",
+        "vision": "partially_lined"
+      }
+    ]
   }
 ]

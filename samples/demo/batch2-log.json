@@ -420,5 +420,57 @@
         "reason": "spare, not needed (6 dresses already have front + back)"
       }
     ]
+  },
+  "Simons": {
+    "collected_on": "2026-11-10",
+    "products": {
+      "simons-19659-230848": 1,
+      "simons-6867-232379": 2,
+      "simons-10597-230174": 2,
+      "simons-13410-232321": 1,
+      "simons-11796-2984772": 2,
+      "simons-11318-229469": 2,
+      "simons-15258-217922": 1,
+      "simons-22478-229650": 2,
+      "simons-12709-229657": 1,
+      "simons-17455-232695": 1
+    },
+    "skipped": [
+      {
+        "link": "https://www.simons.ca/en/women-clothing/dresses/fine-fringe-one-shoulder-dress--23235-60022",
+        "listing_position": 1,
+        "reason": "dresses (no long-sleeve filter, plain listing): name says one-shoulder (text gate, no photos)"
+      },
+      {
+        "link": "https://www.simons.ca/en/women-clothing/dresses/flared-pleated-waist-shirtdress--15168-229790",
+        "listing_position": 3,
+        "reason": "dresses (no long-sleeve filter, plain listing): in batch 1"
+      },
+      {
+        "link": "https://www.simons.ca/en/women-clothing/dresses/sequined-tweed-jumpsuit-with-belt--16362-231740",
+        "listing_position": 7,
+        "reason": "dresses (no long-sleeve filter, plain listing): jumpsuit, not a dress"
+      },
+      {
+        "link": "https://www.simons.ca/en/women-clothing/dresses/soft-velvet-cap-sleeve-maxi-dress--7023-222737",
+        "listing_position": 9,
+        "reason": "dresses (no long-sleeve filter, plain listing): name says cap sleeve (text gate, no photos)"
+      },
+      {
+        "link": "https://www.simons.ca/en/women-clothing/dresses/double-face-satin-maxi-sleeveless-dress--16362-225233",
+        "listing_position": 11,
+        "reason": "dresses (no long-sleeve filter, plain listing): name says sleeveless (text gate, no photos)"
+      },
+      {
+        "link": "https://www.simons.ca/en/women-clothing/dresses/knit/belted-crossover-knit-dress--6867-218467",
+        "listing_position": 12,
+        "reason": "spare, not needed (6 dresses already have front + back)"
+      },
+      {
+        "link": "https://www.simons.ca/en/women-clothing/blouses-shirts/long-sleeves/ruched-details-v-neck-blouse--15258-229641",
+        "listing_position": 5,
+        "reason": "spare, not needed (4 tops already have front + back)"
+      }
+    ]
   }
 }
