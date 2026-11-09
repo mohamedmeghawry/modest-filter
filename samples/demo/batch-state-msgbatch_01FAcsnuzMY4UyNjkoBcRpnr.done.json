@@ -1,0 +1,65 @@
+{
+  "batchId": "msgbatch_01FAcsnuzMY4UyNjkoBcRpnr",
+  "csv": "samples/demo/products-batch2.csv",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "submittedAt": "2026-11-09T08:41:55.152Z",
+  "products": {
+    "anthropologie-4130972460275": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "anthropologie-4130916210343": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "anthropologie-4130957990276": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "anthropologie-104378609": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "anthropologie-4110907290018": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "anthropologie-4110089540181": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "anthropologie-4110957990027": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "anthropologie-4114326950374": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    }
+  }
+}

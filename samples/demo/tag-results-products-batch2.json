@@ -3119,5 +3119,556 @@
       "pattern": "solid"
     },
     "disagreements": []
+  },
+  {
+    "id": "anthropologie-4114326950374",
+    "title": "Maeve Markie 100% Cashmere Turtleneck Top",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01FAcsnuzMY4UyNjkoBcRpnr",
+    "taggedAt": "2026-11-09T08:53:30.907Z",
+    "costUsd": 0.01018,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "turtleneck",
+        "high_neck",
+        "collar"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": "blue",
+      "material": "knit",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "anthropologie-104378609",
+    "title": "Hutch Feathered Kaftan",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01FAcsnuzMY4UyNjkoBcRpnr",
+    "taggedAt": "2026-11-09T08:53:30.940Z",
+    "costUsd": 0.01018,
+    "text": {
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "pink",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "oversized",
+      "opacity": "semi_sheer",
+      "lined": "lined",
+      "cutouts": "present",
+      "material": "polyester",
+      "primaryColor": "pink",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "oversized",
+      "opacity": "semi_sheer",
+      "lined": null,
+      "cutouts": "present",
+      "material": "polyester",
+      "primaryColor": "pink",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "anthropologie-4130972460275",
+    "title": "Maeve Caroline Linen Blend Lace Trim Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01FAcsnuzMY4UyNjkoBcRpnr",
+    "taggedAt": "2026-11-09T08:53:30.972Z",
+    "costUsd": 0.01573,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "pattern": [
+        "striped"
+      ],
+      "primaryColor": "brown",
+      "material": "viscose",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "red",
+      "pattern": "striped"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "red",
+      "pattern": "striped"
+    },
+    "disagreements": [
+      {
+        "attribute": "neckline",
+        "text": [
+          "collar"
+        ],
+        "vision": "v_neck"
+      },
+      {
+        "attribute": "primaryColor",
+        "text": "brown",
+        "vision": "red"
+      },
+      {
+        "attribute": "material",
+        "text": "viscose",
+        "vision": "cotton"
+      }
+    ]
+  },
+  {
+    "id": "anthropologie-4130957990276",
+    "title": "Maeve Metallic Sequined Knit Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01FAcsnuzMY4UyNjkoBcRpnr",
+    "taggedAt": "2026-11-09T08:53:31.006Z",
+    "costUsd": 0.01013,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": null,
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "scoop",
+      "backStyle": "scoop_back",
+      "hemLength": "knee",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "scoop",
+      "backStyle": "scoop_back",
+      "hemLength": "knee",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "mini"
+        ],
+        "vision": "knee"
+      },
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "other"
+      }
+    ]
+  },
+  {
+    "id": "anthropologie-4110957990027",
+    "title": "Pilcro Hadley Velvet Relaxed Buttondown Shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01FAcsnuzMY4UyNjkoBcRpnr",
+    "taggedAt": "2026-11-09T08:53:31.038Z",
+    "costUsd": 0.01008,
+    "text": {
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "beige",
+      "material": "viscose",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "pink",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "pink",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "beige",
+        "vision": "pink"
+      },
+      {
+        "attribute": "material",
+        "text": "viscose",
+        "vision": "other"
+      }
+    ]
+  },
+  {
+    "id": "anthropologie-4130916210343",
+    "title": "Delphine Sweater Twofer Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01FAcsnuzMY4UyNjkoBcRpnr",
+    "taggedAt": "2026-11-09T08:53:31.069Z",
+    "costUsd": 0.0101,
+    "text": {
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "brown",
+      "material": "cotton",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "knee",
+      "topLength": null,
+      "slit": "none",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "knee",
+      "topLength": null,
+      "slit": "none",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "mini"
+        ],
+        "vision": "knee"
+      },
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "anthropologie-4110907290018",
+    "title": "By Anthropologie Sheer Satin Tuxedo Blouse",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01FAcsnuzMY4UyNjkoBcRpnr",
+    "taggedAt": "2026-11-09T08:53:31.101Z",
+    "costUsd": 0.01011,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": null,
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "tunic",
+      "slit": null,
+      "fit": "oversized",
+      "opacity": "sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "tunic",
+      "slit": null,
+      "fit": "oversized",
+      "opacity": "sheer",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "other"
+      }
+    ]
+  },
+  {
+    "id": "anthropologie-4110089540181",
+    "title": "Maeve Smocked Puff Sleeve Blouse",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01FAcsnuzMY4UyNjkoBcRpnr",
+    "taggedAt": "2026-11-09T08:53:31.133Z",
+    "costUsd": 0.01008,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted",
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "green",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "green",
+      "pattern": "plaid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "green",
+      "pattern": "plaid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "other"
+      }
+    ]
   }
 ]

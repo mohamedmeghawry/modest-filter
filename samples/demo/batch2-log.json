@@ -331,5 +331,42 @@
         "reason": "no back photo in the gallery (front and side only)"
       }
     ]
+  },
+  "H&M": {
+    "collected_on": "2026-11-10",
+    "products": {
+      "hm-1360593004": 2,
+      "hm-1385267001": 3,
+      "hm-1368058003": 3,
+      "hm-1370739001": 3,
+      "hm-1369161003": 3,
+      "hm-1332648001": 2,
+      "hm-1367724007": 4,
+      "hm-1383780001": 2,
+      "hm-1365784001": 2,
+      "hm-1352174001": 3
+    },
+    "skipped": [
+      {
+        "link": "https://www2.hm.com/en_ca/productpage.1364282001.html",
+        "listing_position": 6,
+        "reason": "long-sleeve dresses: in batch 1"
+      },
+      {
+        "link": "https://www2.hm.com/en_ca/productpage.1376657002.html",
+        "listing_position": 8,
+        "reason": "no back photo in the gallery (flat shot and fabric only)"
+      },
+      {
+        "link": "https://www2.hm.com/en_ca/productpage.1364285004.html",
+        "listing_position": 9,
+        "reason": "spare, not needed (6 dresses already have front + back)"
+      },
+      {
+        "link": "https://www2.hm.com/en_ca/productpage.1372608001.html",
+        "listing_position": 5,
+        "reason": "spare, not needed (4 tops already have front + back)"
+      }
+    ]
   }
 }
