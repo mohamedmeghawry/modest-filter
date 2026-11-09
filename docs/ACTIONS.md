@@ -4,7 +4,6 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 
 ## Now
 - [ ] **C** Batch 2 (approved 2026-11-09): 10 brands × 10 products (6 dresses + 4 tops), long-sleeve listings in listing order, front + back photos, browser at human pace. Steps: ~~1 prep~~ ~~2 lab test~~ → 3 terms check (Mango, Dynamite, Old Navy, Gap, Banana Republic) → 4 pilot (2 products, then show Mohamed) → 5 collect → 6 batch-API tagging (Opus 5.5 low on all; Jev on all) → 7 Mohamed judges disagreements + 10 random agreements. Rules fixed before results: 0 immodest shown first, then fewer good hidden, then cost; Jev earns the reject role if ≤2 of 100 confident rejects are wrong
-- [ ] **M** Policy: an abaya photo where the hijab hides the neckline. Count the neckline as unknown (hidden) or allow it?
 - [ ] **M** Look at the preview on your phone (signed in to Vercel): https://modest-filter-git-demo-images-mohamedmeghawrys-projects.vercel.app/products and say what looks wrong
 - [ ] **M** When the group should see it: create the one Hobby share link (Vercel → deployment → Share)
 - [ ] **M** Reset the `kashfedit-demo` DB password once more: it showed in a Claude screenshot (Risk Register INC-2026-04). Make it in Bitwarden, paste into Supabase reset, `.env.demo.local` and both Vercel Preview vars

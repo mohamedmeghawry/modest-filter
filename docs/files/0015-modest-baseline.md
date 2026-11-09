@@ -24,6 +24,8 @@ Every product the site shows must pass a **modest baseline**. Shoppers can't tur
 
 **Unknown fails.** If a baseline attribute is null (the AI couldn't judge it, for example `backStyle` with no back photo), the product stays hidden until a human checks it. The only exception is `slit` on tops, where null means "not applicable".
 
+**Amended 2026-11-09 (Mohamed):** a second exception, `neckline` on abayas. Abaya photos show the model in a hijab that covers the neck and chest, so the neckline can't be seen (the lab test hid 2 clearly modest abayas for this). The neckline rule only blocks off-shoulder and halter, which a long-sleeve abaya worn with a hijab can't realistically be. A neckline the AI does see must still pass. Dresses and tops keep the strict rule.
+
 **Deliberately left to shoppers (filters, not baseline):** hem length and see-through (`opacity`, `sleeveOpacity`). People layer: a short dress over trousers, a sheer blouse over a camisole. Mohamed chose this explicitly on 2026-11-08.
 
 ## Implementation

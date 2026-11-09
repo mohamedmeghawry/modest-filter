@@ -5,8 +5,10 @@ import type { Prisma } from "@/lib/generated/prisma/client";
  * Shoppers can't switch it off; filters only narrow WITHIN it.
  *
  * Unknown (null) fails: a product the AI couldn't judge stays hidden until a
- * human checks it. The one exception is `slit` on tops, where null means
- * "not applicable" (vision leaves slit empty for tops, ADR-0012 conventions).
+ * human checks it. Two exceptions: `slit` on tops, where null means "not
+ * applicable" (vision leaves slit empty for tops, ADR-0012 conventions), and
+ * `neckline` on abayas, where the hijab in the photo usually covers it
+ * (Mohamed, 2026-11-09; a long-sleeve abaya can't be off-shoulder or halter).
  *
  * Deliberately NOT in the baseline (Mohamed, 2026-11-08): hem length and
  * see-through. People layer, so those stay shopper filters.
@@ -34,8 +36,7 @@ export function passesModestBaseline(p: BaselineFields): boolean {
     has(LONG_SLEEVES, p.sleeveLength) &&
     p.backStyle === "closed" &&
     p.cutouts === "none" &&
-    p.neckline != null &&
-    !has(EXCLUDED_NECKLINES, p.neckline) &&
+    ((p.neckline != null && !has(EXCLUDED_NECKLINES, p.neckline)) || (p.neckline == null && p.categorySlug === "abayas")) &&
     (has(ALLOWED_SLITS, p.slit) || (p.slit == null && p.categorySlug === "tops"))
   );
 }
@@ -46,9 +47,18 @@ export const modestBaselineWhere: Prisma.ProductWhereInput = {
   sleeveLength: { in: [...LONG_SLEEVES] },
   backStyle: "closed",
   cutouts: "none",
-  neckline: { not: null, notIn: [...EXCLUDED_NECKLINES] },
-  OR: [
-    { slit: { in: [...ALLOWED_SLITS] } },
-    { slit: null, category: { slug: "tops" } },
+  AND: [
+    {
+      OR: [
+        { neckline: { not: null, notIn: [...EXCLUDED_NECKLINES] } },
+        { neckline: null, category: { slug: "abayas" } },
+      ],
+    },
+    {
+      OR: [
+        { slit: { in: [...ALLOWED_SLITS] } },
+        { slit: null, category: { slug: "tops" } },
+      ],
+    },
   ],
 };

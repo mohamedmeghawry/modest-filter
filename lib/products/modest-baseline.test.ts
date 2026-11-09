@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { passesModestBaseline, type BaselineFields } from "./modest-baseline";
+import { passesModestBaseline, modestBaselineWhere, type BaselineFields } from "./modest-baseline";
 import { parseCsv } from "./demo-csv";
 
 const ok: BaselineFields = {
@@ -34,6 +34,20 @@ describe("passesModestBaseline", () => {
     expect(passesModestBaseline({ ...ok, neckline: null })).toBe(false);
     expect(passesModestBaseline({ ...ok, slit: null })).toBe(false);
     expect(passesModestBaseline({ ...ok, slit: null, categorySlug: "tops" })).toBe(true);
+  });
+
+  it("allows an unknown neckline on abayas only (hijab covers it in photos)", () => {
+    expect(passesModestBaseline({ ...ok, neckline: null, categorySlug: "abayas" })).toBe(true);
+    expect(passesModestBaseline({ ...ok, neckline: null, categorySlug: "tops" })).toBe(false);
+    // A neckline the AI did see still has to pass, abaya or not.
+    expect(passesModestBaseline({ ...ok, neckline: "halter", categorySlug: "abayas" })).toBe(false);
+  });
+
+  it("keeps the Prisma filter in step: neckline and slit exceptions are separate ORs", () => {
+    const and = (modestBaselineWhere.AND ?? []) as Record<string, unknown>[];
+    expect(JSON.stringify(and)).toContain('"slug":"abayas"');
+    expect(JSON.stringify(and)).toContain('"slug":"tops"');
+    expect(modestBaselineWhere.OR).toBeUndefined(); // a single top-level OR would let one exception cancel the other
   });
 
   it("does not use hem length or see-through (shopper filters)", () => {
