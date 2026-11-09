@@ -15,9 +15,8 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 - [ ] **C** Photo picking at scale: per-brand order rule vs a cheap view-labelling pass
 - [ ] **C** Wire `findDisagreements` (`lib/vision/text-facts.ts`) into the tagger: when the title or description contradicts vision, mark the product `needs_review`
 - [ ] **C** Add the TypeSafe key (`modest-filter`, `.env.local` only) to `Security/Inventory.md`
-- [ ] **C** Collect product descriptions and the "details" section (e.g. H&M/Uniqlo state sleeve length) with the next collection batch, run `textGate` + parsers on them, store only the parsed facts, never the brand's text. Do it in the browser at 1 page per second (Simons blocks scripts)
-- [ ] **C** Run the eval on the 28-product set with Opus 4.7 as-is (baseline, ~$1)
-- [ ] **C** Move the tagger to `claude-opus-5-5`: structured outputs replace the forced tool (`extract.ts:120` would 400), max_tokens 1024→16000, explicit effort, add the price to `cost.ts`. Re-run the eval and compare.
+- [ ] **C** Collect product descriptions and the "details" section (e.g. H&M/Uniqlo state sleeve length) with the next collection batch, run `textGate` + parsers on them, store only the parsed facts, never the brand's text. Part of batch 2, in the browser at human pace (Simons blocks scripts)
+- [ ] **C** Re-tag the 25 batch-1 products with Opus 5.5 low and the new rules (~$0.60, approved)
 
 ## Waiting
 - Sovrn: parked at step 2 until a real product link exists
