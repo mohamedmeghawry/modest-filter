@@ -153,5 +153,156 @@
         "reason": "spare, not needed (4 tops already have front + back)"
       }
     ]
+  },
+  "Uniqlo": {
+    "collected_on": "2026-11-10",
+    "products": {},
+    "skipped": [
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E487294-000/00",
+        "listing_position": 1,
+        "reason": "dresses: in batch 1"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E488722-000/00",
+        "listing_position": 2,
+        "reason": "dresses: title says sleeveless (text gate, no photos)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E488186-000/00",
+        "listing_position": 3,
+        "reason": "dresses: title says sleeveless (text gate, no photos)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E492380-000/00",
+        "listing_position": 4,
+        "reason": "dresses: no back photo in the gallery (front on model + flat shot only)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E487286-000/00",
+        "listing_position": 5,
+        "reason": "dresses: title says sleeveless (text gate, no photos)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E488693-000/00",
+        "listing_position": 6,
+        "reason": "dresses: in batch 1"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E482982-000/00",
+        "listing_position": 8,
+        "reason": "dresses: title says sleeveless (text gate, no photos)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E487635-000/00",
+        "listing_position": 9,
+        "reason": "dresses: in batch 1"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E488216-000/00",
+        "listing_position": 10,
+        "reason": "dresses: title says sleeveless (text gate, no photos); listing ends at 10 styles, so 1 dress only and 8 tops"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E487526-000/00",
+        "listing_position": 2,
+        "reason": "long-sleeve shirts: in batch 1"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E479071-000/00",
+        "listing_position": 3,
+        "reason": "long-sleeve shirts: same garment name as an earlier pick (Uniqlo gives each pattern its own code): treated as a colour variant"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E488559-000/00",
+        "listing_position": 5,
+        "reason": "long-sleeve shirts: same garment name as an earlier pick (Uniqlo gives each pattern its own code): treated as a colour variant"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E489508-000/00",
+        "listing_position": 6,
+        "reason": "long-sleeve shirts: same garment name as an earlier pick (Uniqlo gives each pattern its own code): treated as a colour variant"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E489407-000/00",
+        "listing_position": 7,
+        "reason": "long-sleeve shirts: same garment name as an earlier pick (Uniqlo gives each pattern its own code): treated as a colour variant"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E488520-000/00",
+        "listing_position": 9,
+        "reason": "long-sleeve shirts: same garment name as an earlier pick (Uniqlo gives each pattern its own code): treated as a colour variant"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E488522-000/00",
+        "listing_position": 10,
+        "reason": "long-sleeve shirts: same garment name as an earlier pick (Uniqlo gives each pattern its own code): treated as a colour variant"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E491380-000/00",
+        "listing_position": 11,
+        "reason": "long-sleeve shirts: same garment name as an earlier pick (Uniqlo gives each pattern its own code): treated as a colour variant"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E465734-000/00",
+        "listing_position": 2,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E465735-000/00",
+        "listing_position": 6,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E465736-000/00",
+        "listing_position": 4,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E470187-000/00",
+        "listing_position": 13,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E484928-000/00",
+        "listing_position": 8,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E486600-000/00",
+        "listing_position": 12,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E487514-000/00",
+        "listing_position": 5,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E487855-000/00",
+        "listing_position": 1,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E487931-000/00",
+        "listing_position": 3,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E489227-000/00",
+        "listing_position": 1,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E489406-000/00",
+        "listing_position": 4,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      },
+      {
+        "link": "https://www.uniqlo.com/ca/en/products/E489452-000/00",
+        "listing_position": 7,
+        "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
+      }
+    ]
   }
 }
