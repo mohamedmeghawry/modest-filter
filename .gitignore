@@ -53,3 +53,7 @@ next-env.d.ts
 
 # local credentials file (never commit) — matches any extension
 /affiliates-info*
+
+# HEIF photos (some brand downloads are HEIF under a .png name; save as .jpg)
+/samples/**/*.heic
+/samples/**/*.heif

@@ -58,6 +58,8 @@ const defaultSleep = (ms: number) =>
  * malformed request won't fix itself, so we fail fast.
  */
 export function isRetryable(error: unknown): boolean {
+  // TaggingError (refusal, cut-off or invalid output) says so explicitly.
+  if ((error as { retryable?: unknown })?.retryable === false) return false;
   const status = (error as { status?: unknown })?.status;
   if (typeof status !== "number") return true; // network / unknown → retry
   if (status === 429) return true;

@@ -41,4 +41,18 @@ describe("estimateCost", () => {
       (2_400 * PRICING.inputPerMTok + 300 * PRICING.outputPerMTok) / 1_000_000;
     expect(estimateCost(usage)).toBeCloseTo(expected, 9);
   });
+
+  const MILLION_IN = { inputTokens: 1_000_000, cacheCreationInputTokens: 0, cacheReadInputTokens: 0, outputTokens: 1_000_000 };
+
+  it("prices Opus 5.5 at its own rates ($4 in, $20 out)", () => {
+    expect(estimateCost(MILLION_IN, "claude-opus-5-5")).toBeCloseTo(24, 6);
+  });
+
+  it("halves the cost for the batch API", () => {
+    expect(estimateCost(MILLION_IN, "claude-opus-5-5", { batch: true })).toBeCloseTo(12, 6);
+  });
+
+  it("throws on a model with no price instead of returning 0", () => {
+    expect(() => estimateCost(MILLION_IN, "claude-unknown")).toThrow(/No price/);
+  });
 });

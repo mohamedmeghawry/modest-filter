@@ -11,7 +11,7 @@
 // Writes samples/eval-set/jev-results.json (answers only, no image bytes).
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import sharp from "sharp";
+import { prepareImage } from "./prepare-image";
 import { passesModestBaseline, LONG_SLEEVES, ALLOWED_SLITS, EXCLUDED_NECKLINES } from "../lib/products/modest-baseline";
 
 const API = "https://api.typesafe.ai/v1/systemone";
@@ -136,14 +136,6 @@ const ATTRIBUTES: Record<string, Choice> = {
 type Entry = { id: string; category: string; images: string[]; groundTruth: Record<string, string | null> };
 type Answer = { type: string; noul?: number; choice?: string; confidence?: number; probabilities?: Record<string, number> };
 
-async function toJpeg(file: string): Promise<Buffer | null> {
-  try {
-    return await sharp(file).rotate().resize(1568, 1568, { fit: "inside", withoutEnlargement: true }).jpeg({ quality: 88 }).toBuffer();
-  } catch {
-    return null; // not an image (one "png" in the set is a saved HTML page)
-  }
-}
-
 async function ask(entry: Entry, photos: Buffer[]) {
   const isTop = entry.category === "tops";
   const questions: Record<string, Noul | Choice> = {};
@@ -214,7 +206,7 @@ async function main() {
   for (const e of todo) {
     const cost = (tokens * USD_PER_M_INPUT) / 1e6;
     if (cost > BUDGET_USD) throw new Error(`Budget reached ($${cost.toFixed(4)}), stopping`);
-    const photos = (await Promise.all(e.images.map((p) => toJpeg(join(DIR, p))))).filter((b): b is Buffer => b != null);
+    const photos = (await Promise.all(e.images.map((p) => prepareImage(join(DIR, p))))).filter((b): b is Buffer => b != null);
     if (photos.length === 0) { console.log(`• ${e.id}: no usable photo, skipped`); continue; }
 
     const t0 = Date.now();

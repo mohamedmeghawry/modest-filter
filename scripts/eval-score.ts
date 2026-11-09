@@ -1,8 +1,11 @@
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { tagProductWithRetry } from "../lib/vision/tag-product";
 import { scoreProduct, aggregate, ATTRIBUTE_KEYS, type ProductScore } from "../lib/vision/score";
 import { estimateCost, type Usage } from "../lib/vision/cost";
+import type { Effort } from "../lib/vision/extract";
+import { passesModestBaseline } from "../lib/products/modest-baseline";
+import { prepareImage } from "./prepare-image";
 
 const DEFAULT_MODEL = "claude-opus-4-7";
 
@@ -22,6 +25,11 @@ type Args = {
   detail: boolean;
   withDescription: boolean;
   requireDescription: boolean;
+  effort?: Effort;
+  /** Per-product results JSON (attributes + modest-baseline pass/fail), for comparing with Jev. */
+  out?: string;
+  /** Stop before the next product once the spend reaches this many USD. */
+  budget: number;
 };
 
 function parseArgs(argv: string[]): Args {
@@ -31,6 +39,7 @@ function parseArgs(argv: string[]): Args {
     detail: false,
     withDescription: false,
     requireDescription: false,
+    budget: 2,
   };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -41,20 +50,12 @@ function parseArgs(argv: string[]): Args {
     else if (a === "--detail") args.detail = true;
     else if (a === "--with-description") args.withDescription = true;
     else if (a === "--require-description") args.requireDescription = true;
+    else if (a === "--effort") args.effort = argv[++i] as Effort;
+    else if (a === "--out") args.out = argv[++i];
+    else if (a === "--budget") args.budget = Number(argv[++i]);
     else { console.error(`Unknown argument: ${a}`); process.exit(1); }
   }
   return args;
-}
-
-// Magic-byte check: returns the format, or null for anything the vision API
-// can't accept (notably AVIF, or a non-image like a saved HTML page).
-function imageKind(b: Buffer): "jpeg" | "png" | "webp" | "gif" | null {
-  if (b.length < 12) return null;
-  if (b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff) return "jpeg";
-  if (b[0] === 0x89 && b[1] === 0x50 && b[2] === 0x4e && b[3] === 0x47) return "png";
-  if (b[0] === 0x52 && b[1] === 0x49 && b[8] === 0x57 && b[9] === 0x45) return "webp";
-  if (b[0] === 0x47 && b[1] === 0x49 && b[2] === 0x46) return "gif";
-  return null;
 }
 
 // A ground-truth row is ready only if no field is still a "TODO: ..." placeholder.
@@ -62,6 +63,19 @@ function isComplete(gt: Record<string, string | null>): boolean {
   return ATTRIBUTE_KEYS.every((k) => {
     const v = gt[k];
     return v === null || (typeof v === "string" && !v.startsWith("TODO"));
+  });
+}
+
+type Row = {
+  id: string; category: string; photos: number; truthPass: boolean; modelPass: boolean;
+  attributes: Record<string, string | null>; usage: Usage; costUsd: number;
+};
+
+/** Modest baseline (ADR-0015) on a set of tags, as if the product were tagged. */
+function baseline(o: Record<string, string | null>, category = ""): boolean {
+  return passesModestBaseline({
+    tagStatus: "tagged", categorySlug: category,
+    sleeveLength: o.sleeveLength, backStyle: o.backStyle, cutouts: o.cutouts, slit: o.slit, neckline: o.neckline,
   });
 }
 
@@ -78,9 +92,10 @@ async function main() {
   if (args.id) entries = entries.filter((e) => e.id === args.id);
   if (args.limit) entries = entries.slice(0, args.limit);
 
-  console.log(`=== Eval scorer: ${args.model}${args.withDescription ? " +description" : ""} ===`);
+  console.log(`=== Eval scorer: ${args.model}${args.effort ? ` effort=${args.effort}` : ""}${args.withDescription ? " +description" : ""} ===`);
 
   const scores: ProductScore[] = [];
+  const rows: Row[] = [];
   const skipped: string[] = [];
   const errored: string[] = [];
   const totals: Usage = { inputTokens: 0, cacheCreationInputTokens: 0, cacheReadInputTokens: 0, outputTokens: 0 };
@@ -88,27 +103,24 @@ async function main() {
   for (const e of entries) {
     if (!isComplete(e.groundTruth)) { skipped.push(`${e.id} (incomplete tags)`); continue; }
     if (args.requireDescription && !e.description?.trim()) { skipped.push(`${e.id} (no description)`); continue; }
+    // Same conversion as scripts/jev-eval.ts, so both models see the same
+    // pixels (and HEIF files work). A file that isn't a decodable image is
+    // dropped; the product is skipped only when no photo is left.
     const buffers: Buffer[] = [];
-    let badReason = "";
+    const dropped: string[] = [];
     for (const img of e.images) {
-      const rel = img.replace(/^\.\//, "").trim();
-      const p = resolve(manifestDir, rel);
-      if (!rel || !existsSync(p)) { badReason = `missing image "${img}"`; break; }
-      let buf: Buffer;
-      try { buf = readFileSync(p); } catch (err) {
-        badReason = `unreadable "${img}" (${(err as { code?: string }).code ?? "error"})`;
-        break;
-      }
-      const kind = imageKind(buf);
-      if (!kind) { badReason = `unsupported format "${img}" (not jpeg/png/webp/gif — likely avif or a saved web page)`; break; }
-      buffers.push(buf);
+      const p = resolve(manifestDir, img.replace(/^\.\//, "").trim());
+      const buf = existsSync(p) ? await prepareImage(p) : null;
+      if (buf) buffers.push(buf); else dropped.push(img);
     }
-    if (badReason || buffers.length === 0) { skipped.push(`${e.id}: ${badReason || "no images"}`); continue; }
+    if (buffers.length === 0) { skipped.push(`${e.id}: no usable image (${dropped.join(", ")})`); continue; }
+    const spent = estimateCost(totals, args.model);
+    if (spent >= args.budget) { console.log(`Budget reached ($${spent.toFixed(3)} of $${args.budget}), stopping`); break; }
 
-    process.stdout.write(`. ${e.id} ... `);
+    process.stdout.write(`. ${e.id}${dropped.length ? ` (dropped ${dropped.join(", ")})` : ""} ... `);
     const outcome = await tagProductWithRetry(
       buffers,
-      { vendor: "anthropic", model: args.model },
+      { vendor: "anthropic", model: args.model, effort: args.effort },
       { description: args.withDescription ? e.description : undefined },
     );
     if (outcome.status === "failed") { console.log(`ERROR: ${outcome.error}`); errored.push(e.id); continue; }
@@ -117,6 +129,12 @@ async function main() {
     const hits = comparisons.filter((c) => c.match).length;
     console.log(`${hits}/14`);
     scores.push({ id: e.id, comparisons });
+    const attributes = outcome.attributes as Record<string, string | null>;
+    rows.push({
+      id: e.id, category: e.category ?? "", photos: buffers.length,
+      truthPass: baseline(e.groundTruth, e.category), modelPass: baseline(attributes, e.category),
+      attributes, usage: outcome.usage, costUsd: Number(estimateCost(outcome.usage, args.model).toFixed(5)),
+    });
     totals.inputTokens += outcome.usage.inputTokens;
     totals.cacheCreationInputTokens += outcome.usage.cacheCreationInputTokens;
     totals.cacheReadInputTokens += outcome.usage.cacheReadInputTokens;
@@ -164,7 +182,18 @@ async function main() {
     }
   }
 
-  console.log(`\nCost: $${estimateCost(totals).toFixed(4)}  (input=${totals.inputTokens} output=${totals.outputTokens})`);
+  const ids = (f: (r: Row) => boolean) => rows.filter(f).map((r) => r.id);
+  console.log(`\nModest baseline vs ground truth: both pass ${ids((r) => r.truthPass && r.modelPass).length}, both fail ${ids((r) => !r.truthPass && !r.modelPass).length}`);
+  console.log(`  FALSE PASS (immodest shown): ${ids((r) => !r.truthPass && r.modelPass).join(", ") || "none"}`);
+  console.log(`  false reject (good one hidden): ${ids((r) => r.truthPass && !r.modelPass).join(", ") || "none"}`);
+
+  const cost = estimateCost(totals, args.model);
+  console.log(`\nCost: $${cost.toFixed(4)}  (input=${totals.inputTokens} cache_read=${totals.cacheReadInputTokens} output=${totals.outputTokens})`);
+  if (args.out) {
+    const out = { model: args.model, effort: args.effort ?? null, ranAt: new Date().toISOString(), costUsd: Number(cost.toFixed(4)), skipped, errored, rows };
+    writeFileSync(args.out, JSON.stringify(out, null, 2) + "\n");
+    console.log(`Wrote ${args.out}`);
+  }
 }
 
 main().catch((err) => { console.error(err); process.exit(1); });

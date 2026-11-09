@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
 import { tagProductWithRetry, isRetryable, type TagOptions } from "./tag-product";
-import type { ExtractResult } from "./extract";
+import { TaggingError, type ExtractResult } from "./extract";
 
 const MODEL = { vendor: "anthropic", model: "claude-opus-4-7" } as const;
 const IMAGE = { type: "url", url: "https://example.com/dress.png" } as const;
@@ -54,6 +54,20 @@ describe("isRetryable", () => {
     expect(isRetryable(apiError(400))).toBe(false);
     expect(isRetryable(apiError(401))).toBe(false);
     expect(isRetryable(apiError(404))).toBe(false);
+  });
+
+  it("does not retry a TaggingError (refusal, cut-off or bad JSON)", () => {
+    expect(isRetryable(new TaggingError("refusal"))).toBe(false);
+  });
+});
+
+describe("tagProductWithRetry with a TaggingError", () => {
+  it("stops after one paid attempt and sends the product to review", async () => {
+    const extract = vi.fn().mockRejectedValue(new TaggingError("Model declined to tag this product (refusal)"));
+    const { opts } = harness(extract);
+    const outcome = await tagProductWithRetry(IMAGE, MODEL, { ...opts, maxAttempts: 3 });
+    expect(extract).toHaveBeenCalledTimes(1);
+    expect(outcome).toMatchObject({ status: "failed", attempts: 1, retryable: false });
   });
 });
 

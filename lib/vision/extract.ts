@@ -7,7 +7,45 @@ export type ExtractOptions = {
   description?: string;
 };
 
-export type ModelConfig = { vendor: "anthropic"; model: string };
+export type Effort = "low" | "medium" | "high" | "xhigh" | "max";
+
+/**
+ * `effort` is sent explicitly: Opus 5.5 defaults to "medium" and always
+ * thinks (thinking can't be disabled there), so effort is the cost lever.
+ */
+export type ModelConfig = { vendor: "anthropic"; model: string; effort?: Effort };
+
+/**
+ * A failure that will not fix itself on retry (refusal, truncated or invalid
+ * output). `retryable: false` stops tagProductWithRetry paying for 2 more
+ * identical attempts; the product goes to needs_review instead.
+ */
+export class TaggingError extends Error {
+  readonly retryable = false;
+}
+
+/**
+ * Turn a Messages API response into attributes. Structured outputs
+ * (output_config.format) guarantee the JSON matches the schema when the
+ * model finishes normally, so the checks here are about how it stopped.
+ */
+export function parseTaggingResponse(
+  response: Pick<Anthropic.Message, "content" | "stop_reason">,
+): ProductAttributes {
+  if (response.stop_reason === "refusal") throw new TaggingError("Model declined to tag this product (refusal)");
+  if (response.stop_reason === "max_tokens") throw new TaggingError("Output was cut off at max_tokens");
+  const text = response.content.find((b): b is Anthropic.TextBlock => b.type === "text");
+  if (!text) {
+    throw new TaggingError(
+      `No JSON in the response; stop_reason=${response.stop_reason}, content types=[${response.content.map((b) => b.type).join(", ")}]`,
+    );
+  }
+  try {
+    return JSON.parse(text.text) as ProductAttributes;
+  } catch {
+    throw new TaggingError(`Response is not valid JSON: ${text.text.slice(0, 120)}`);
+  }
+}
 // Future shapes — additions to this discriminated union surface in the
 // exhaustive guard inside extractAttributes() at compile time:
 //   | { vendor: "google"; model: string }
@@ -106,9 +144,20 @@ export async function extractAttributes(
 
   const client = new Anthropic({ apiKey });
 
+  // Structured outputs instead of a forced tool call: Opus 5.5 rejects forced
+  // tool_choice with a 400. Same schema, so the attribute contract is
+  // unchanged. No `thinking` param: 5.5 thinks adaptively by default (and
+  // 400s on "disabled"); 4.7 runs without thinking when it's omitted.
+  // No refusal `fallbacks`: a silent switch to another model would corrupt
+  // eval comparisons, and the Batches API rejects the parameter anyway.
+  // A refusal becomes needs_review via TaggingError.
   const response = await client.messages.create({
     model: modelConfig.model,
-    max_tokens: 1024,
+    max_tokens: 16000,
+    output_config: {
+      format: { type: "json_schema", schema: TAG_PRODUCT_TOOL.input_schema },
+      ...(modelConfig.effort ? { effort: modelConfig.effort } : {}),
+    },
     system: [
       {
         type: "text",
@@ -116,8 +165,6 @@ export async function extractAttributes(
         cache_control: { type: "ephemeral" },
       },
     ],
-    tools: [TAG_PRODUCT_TOOL],
-    tool_choice: { type: "tool", name: "tag_product" },
     messages: [
       {
         role: "user",
@@ -137,24 +184,7 @@ export async function extractAttributes(
     ],
   });
 
-  const toolUseBlock = response.content.find(
-    (block): block is Anthropic.ToolUseBlock =>
-      block.type === "tool_use" && block.name === "tag_product",
-  );
-
-  if (!toolUseBlock) {
-    throw new Error(
-      `Expected tool_use block "tag_product"; got stop_reason=${response.stop_reason}, content types=[${response.content.map((b) => b.type).join(", ")}]`,
-    );
-  }
-
-  // tool_choice forced this exact tool, strict: true constrains parameters,
-  // all 14 fields are required, and we throw above on a missing block. The
-  // tool's input is structurally guaranteed to match ProductAttributes; this
-  // cast trusts the API contract for the spike. If we hit malformed inputs
-  // in practice, add a runtime validator (pure logic → unit-tested per
-  // AGENTS.md test-as-we-go).
-  const attributes = toolUseBlock.input as ProductAttributes;
+  const attributes = parseTaggingResponse(response);
 
   return {
     attributes,
