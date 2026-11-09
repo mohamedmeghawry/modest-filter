@@ -57,3 +57,4 @@ next-env.d.ts
 # HEIF photos (some brand downloads are HEIF under a .png name; save as .jpg)
 /samples/**/*.heic
 /samples/**/*.heif
+/samples/**/gallery/urls.json

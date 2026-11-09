@@ -1,0 +1,72 @@
+{
+  "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+  "csv": "samples/demo/products-batch2.csv",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "submittedAt": "2026-11-09T07:36:39.405Z",
+  "products": {
+    "dynamite-1001076928a4": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "dynamite-10010723306v": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "dynamite-1000996008q9": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "dynamite-10010602606v": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "dynamite-10010439206v": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "dynamite-1001066067gm": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "dynamite-1000987868a4": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "dynamite-1001071742fc": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "dynamite-1001067348f4": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    }
+  }
+}

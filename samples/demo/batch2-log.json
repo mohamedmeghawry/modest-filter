@@ -47,5 +47,37 @@
         "reason": "text gate: sleeves (title says 3/4 sleeve)"
       }
     ]
+  },
+  "Old Navy": {
+    "collected_on": "2026-11-10",
+    "products": {
+      "oldnavy-906372013": 1,
+      "oldnavy-1196187003": 1,
+      "oldnavy-1195998003": 2,
+      "oldnavy-1185410013": 1,
+      "oldnavy-1185459013": 1,
+      "oldnavy-1199534003": 1,
+      "oldnavy-903450003": 1,
+      "oldnavy-903449033": 1,
+      "oldnavy-909482003": 1,
+      "oldnavy-909495023": 1
+    },
+    "skipped": [
+      {
+        "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=906372003",
+        "listing_position": 6,
+        "reason": "colour variant of an earlier pick (position 1)"
+      },
+      {
+        "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=1199416003",
+        "listing_position": 2,
+        "reason": "no back photo in the gallery"
+      },
+      {
+        "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=911347013",
+        "listing_position": 5,
+        "reason": "spare, not needed (4 tops already have front + back)"
+      }
+    ]
   }
 }

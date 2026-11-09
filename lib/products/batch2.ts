@@ -28,6 +28,12 @@ export type BundleProduct = {
   gallery_count: number;
   back_index: number | null; // 0-based gallery position of the back photo; null = none
   images: { front: BundleImage; back: BundleImage | null };
+  /**
+   * The whole product gallery, when the front/back are picked locally after
+   * decoding (scripts/pick-photos.ts) rather than in the browser: Chrome allows
+   * one automatic download per site, so a wrong pick can't be re-fetched.
+   */
+  gallery?: BundleImage[];
 };
 
 export type Bundle = {

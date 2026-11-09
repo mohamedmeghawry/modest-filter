@@ -46,6 +46,12 @@ async function main() {
     mkdirSync(dir, { recursive: true });
     const front = await savePhoto(p.images.front.b64, join(dir, "front.jpg"));
     const back = p.images.back ? await savePhoto(p.images.back.b64, join(dir, "back.jpg")) : "none";
+    if (p.gallery?.length) {
+      // Whole gallery for picking front/back locally (scripts/pick-photos.ts).
+      mkdirSync(join(dir, "gallery"), { recursive: true });
+      for (const [i, g] of p.gallery.entries()) await savePhoto(g.b64, join(dir, "gallery", `${String(i).padStart(2, "0")}.jpg`));
+      writeFileSync(join(dir, "gallery", "urls.json"), JSON.stringify(p.gallery.map((g) => g.url), null, 2) + "\n");
+    }
     const row = toBatch2Row(p, bundle.collected_on);
     byId.set(p.id, row);
     saved++;

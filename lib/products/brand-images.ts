@@ -15,6 +15,8 @@ export const BRAND_IMAGE_ORIGINS = [
   "https://imagescdn.simons.ca",
   "https://www.reitmans.com",
   "https://media.mango.com", // batch 2 (seen on real product pages, 2026-11-10)
+  "https://dam.dynamiteclothing.com",
+  "https://content.gapinc.com", // Old Navy (and Gap Inc. sister brands)
 ] as const;
 
 /** True only on a Vercel preview deployment (`VERCEL_ENV=preview`). */

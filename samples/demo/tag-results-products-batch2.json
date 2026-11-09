@@ -537,5 +537,593 @@
         "vision": "other"
       }
     ]
+  },
+  {
+    "id": "dynamite-1001076928a4",
+    "title": "Mock Neck Mini Sweater Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+    "taggedAt": "2026-11-09T07:50:10.633Z",
+    "costUsd": 0.01156,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "beige",
+      "material": "knit",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "dynamite-10010439206v",
+    "title": "Katia Cotton Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+    "taggedAt": "2026-11-09T07:50:10.666Z",
+    "costUsd": 0.00592,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "black",
+      "material": "cotton",
+      "lined": "unlined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "dynamite-1001071742fc",
+    "title": "Diana Boxy Zip Cardigan",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+    "taggedAt": "2026-11-09T07:50:10.698Z",
+    "costUsd": 0.00592,
+    "text": {
+      "neckline": [
+        "crew"
+      ],
+      "primaryColor": "beige",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "dynamite-1001066067gm",
+    "title": "Sage Funnel Neck Zip Sweater",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+    "taggedAt": "2026-11-09T07:50:10.730Z",
+    "costUsd": 0.00595,
+    "text": {
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "brown",
+      "material": "knit",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "dynamite-10010602606v",
+    "title": "Burnout Mock Neck Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+    "taggedAt": "2026-11-09T07:50:10.765Z",
+    "costUsd": 0.00594,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "pattern": [
+        "animal_print",
+        "striped",
+        "floral",
+        "plaid",
+        "geometric",
+        "polka_dot",
+        "abstract",
+        "other"
+      ],
+      "primaryColor": "black",
+      "material": null,
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "black",
+      "pattern": "animal_print"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "black",
+      "pattern": "animal_print"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "dynamite-1000987868a4",
+    "title": "Ellora Cropped Turtleneck Sweater",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+    "taggedAt": "2026-11-09T07:50:10.797Z",
+    "costUsd": 0.00596,
+    "text": {
+      "neckline": [
+        "turtleneck",
+        "high_neck"
+      ],
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "beige",
+      "material": "knit",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "dynamite-10010723306v",
+    "title": "Kiara Draped Sash Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+    "taggedAt": "2026-11-09T07:50:10.829Z",
+    "costUsd": 0.00596,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "v_neck"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "viscose"
+      }
+    ]
+  },
+  {
+    "id": "dynamite-1001067348f4",
+    "title": "Sheer Mock Neck Sweater",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+    "taggedAt": "2026-11-09T07:50:10.861Z",
+    "costUsd": 0.00604,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "primaryColor": "red",
+      "material": "viscose",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "semi_sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "semi_sheer",
+      "lined": null,
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "red",
+        "vision": "brown"
+      },
+      {
+        "attribute": "material",
+        "text": "viscose",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "dynamite-1000996008q9",
+    "title": "Katia Mesh Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01L2Zir3v97YRyLRAy1sRPy9",
+    "taggedAt": "2026-11-09T07:50:10.895Z",
+    "costUsd": 0.00603,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "brown",
+      "material": "polyester",
+      "lined": "partially_lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "partially_lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "brown",
+      "pattern": "animal_print"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "partially_lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "brown",
+      "pattern": "animal_print"
+    },
+    "disagreements": []
   }
 ]
