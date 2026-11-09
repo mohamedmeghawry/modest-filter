@@ -1,0 +1,79 @@
+{
+  "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+  "csv": "samples/demo/products-batch2.csv",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "submittedAt": "2026-11-09T09:19:18.944Z",
+  "products": {
+    "simons-19659-230848": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "simons-6867-232379": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "simons-10597-230174": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "simons-13410-232321": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "simons-11796-2984772": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "simons-11318-229469": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "simons-15258-217922": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "simons-22478-229650": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "simons-12709-229657": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "simons-17455-232695": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    }
+  }
+}

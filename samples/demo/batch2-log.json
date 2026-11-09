@@ -472,5 +472,52 @@
         "reason": "spare, not needed (4 tops already have front + back)"
       }
     ]
+  },
+  "Reitmans": {
+    "collected_on": "2026-11-10",
+    "products": {
+      "reitmans-499136": 2,
+      "reitmans-497396": 2,
+      "reitmans-499141": 2,
+      "reitmans-499124": 3,
+      "reitmans-499183": 3,
+      "reitmans-499121": 2,
+      "reitmans-500020": 2,
+      "reitmans-498958": 3,
+      "reitmans-499550": 2,
+      "reitmans-498299": 2
+    },
+    "skipped": [
+      {
+        "link": "https://www.reitmans.com/products/mock-neck-long-sleeve-top-with-metallic-fibers-shimmer-collection-499137",
+        "listing_position": 1,
+        "reason": "long-sleeve dresses: a top, not a dress"
+      },
+      {
+        "link": "https://www.reitmans.com/products/fitted-dress-with-front-knot-92-polyester-blend-499371",
+        "listing_position": 2,
+        "reason": "long-sleeve dresses: in batch 1"
+      },
+      {
+        "link": "https://www.reitmans.com/products/draped-off-shoulder-long-sleeve-midi-dress-90-polyester-499122",
+        "listing_position": 4,
+        "reason": "long-sleeve dresses: name says off-shoulder (text gate, no photos)"
+      },
+      {
+        "link": "https://www.reitmans.com/products/woven-mini-dress-with-cutouts-ladies-collection-501018",
+        "listing_position": 6,
+        "reason": "long-sleeve dresses: name says cut-outs (text gate, no photos)"
+      },
+      {
+        "link": "https://www.reitmans.com/products/long-sleeve-bodycon-dress-with-slit-viscose-blend-498415",
+        "listing_position": 11,
+        "reason": "spare, not needed (6 dresses already have front + back)"
+      },
+      {
+        "link": "https://www.reitmans.com/products/long-sleeve-mesh-crew-neck-bodysuit-93-nylon-7-elastane-498977",
+        "listing_position": 5,
+        "reason": "spare, not needed (4 tops already have front + back)"
+      }
+    ]
   }
 }

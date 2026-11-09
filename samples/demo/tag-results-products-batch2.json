@@ -4656,5 +4656,570 @@
         "vision": "partially_lined"
       }
     ]
+  },
+  {
+    "id": "simons-12709-229657",
+    "title": "Notched collar satiny shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.159Z",
+    "costUsd": 0.00266,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "primaryColor": "white",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": null,
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "simons-10597-230174",
+    "title": "Cable-knit dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.192Z",
+    "costUsd": 0.00264,
+    "text": {
+      "primaryColor": "gray",
+      "material": "viscose",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "gray",
+      "pattern": "other"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "gray",
+      "pattern": "other"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "viscose",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "simons-11318-229469",
+    "title": "Printed micromesh side slit maxi dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.224Z",
+    "costUsd": 0.00266,
+    "text": {
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "pattern": [
+        "striped",
+        "floral",
+        "plaid",
+        "geometric",
+        "animal_print",
+        "polka_dot",
+        "abstract",
+        "other"
+      ],
+      "primaryColor": null,
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "high",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "beige",
+      "pattern": "other"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "high",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "beige",
+      "pattern": "other"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "simons-17455-232695",
+    "title": "Boxy checked lightweight shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.258Z",
+    "costUsd": 0.00266,
+    "text": {
+      "primaryColor": "brown",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": null,
+      "primaryColor": "brown",
+      "pattern": "plaid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "brown",
+      "pattern": "plaid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "simons-11796-2984772",
+    "title": "Golden crossover V-neck maxi dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.290Z",
+    "costUsd": 0.00272,
+    "text": {
+      "neckline": [
+        "v_neck"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "primaryColor": null,
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "cap",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "floor",
+      "topLength": null,
+      "slit": "high",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "cap",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "floor",
+      "topLength": null,
+      "slit": "high",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "simons-6867-232379",
+    "title": "Lace detailing plush knit dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.322Z",
+    "costUsd": 0.00267,
+    "text": {
+      "primaryColor": "beige",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "low",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "low",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "simons-22478-229650",
+    "title": "Point collar silky crepe blouse",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.354Z",
+    "costUsd": 0.00269,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "primaryColor": "white",
+      "material": "modal",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "modal",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "modal",
+        "vision": "polyester"
+      }
+    ]
+  },
+  {
+    "id": "simons-13410-232321",
+    "title": "Supple denim shirtdress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.385Z",
+    "costUsd": 0.00267,
+    "text": {
+      "primaryColor": "blue",
+      "material": "denim",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "denim",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "denim",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "simons-15258-217922",
+    "title": "Silky hidden placket shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.417Z",
+    "costUsd": 0.00268,
+    "text": {
+      "primaryColor": "white",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": null,
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "simons-19659-230848",
+    "title": "Buttoned corduroy dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01GtvmFqmpkJC1EKrZXdnh8M",
+    "taggedAt": "2026-11-09T09:29:30.450Z",
+    "costUsd": 0.00834,
+    "text": {
+      "primaryColor": "red",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "red",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "red",
+      "pattern": "solid"
+    },
+    "disagreements": []
   }
 ]
