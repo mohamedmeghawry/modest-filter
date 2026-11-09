@@ -1,5 +1,6 @@
 import prisma from "@/lib/prisma";
 import type {
+  Prisma,
   SleeveLength,
   HemLength,
   Opacity,
@@ -7,6 +8,7 @@ import type {
   PrimaryColor,
   TopLength,
 } from "@/lib/generated/prisma/client";
+import { modestBaselineWhere } from "@/lib/products/modest-baseline";
 
 export type ProductFilters = {
   category?: string[];
@@ -31,7 +33,16 @@ type ProductWhere = {
 // Build the Prisma `where` from active filters. `omit` skips one group, which is
 // how faceted counts are computed: each facet's option counts reflect the OTHER
 // active filters, not the facet's own selection (standard drill-down semantics).
+// Every query is ANDed with the modest baseline (ADR-0015): filters narrow
+// within it and can never widen past it.
 function buildWhere(
+  filters: ProductFilters,
+  omit?: keyof ProductFilters,
+): Prisma.ProductWhereInput {
+  return { AND: [modestBaselineWhere, buildFilterWhere(filters, omit)] };
+}
+
+function buildFilterWhere(
   filters: ProductFilters,
   omit?: keyof ProductFilters,
 ): ProductWhere {
@@ -147,9 +158,11 @@ export async function getFacetCounts(
   };
 }
 
+// A product outside the baseline 404s too, so a stale or guessed link can't
+// show it.
 export async function getProductById(id: string) {
-  return prisma.product.findUnique({
-    where: { id },
+  return prisma.product.findFirst({
+    where: { AND: [{ id }, modestBaselineWhere] },
     include: {
       brand: { select: { name: true, slug: true } },
       category: { select: { name: true, slug: true } },
