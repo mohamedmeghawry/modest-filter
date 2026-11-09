@@ -1,0 +1,1676 @@
+{
+  "model": "jev-latest",
+  "ranAt": "2026-11-09T05:55:06.485Z",
+  "thresholds": {
+    "YES": 0.7,
+    "NO": 0.3
+  },
+  "questions": {
+    "BASELINE": {
+      "sleeves_reach_wrist": {
+        "type": "noul",
+        "instructions": "Do the sleeves of the garment in `front_photo` and `back_photo` reach the wrist?",
+        "criteria": {
+          "true": "Each sleeve covers the arm all the way to the wrist or past it",
+          "false": "The arms are bare or partly bare: the garment is sleeveless, or the sleeves end at the shoulder, upper arm, elbow or forearm"
+        }
+      },
+      "back_closed": {
+        "type": "noul",
+        "instructions": "Is the back of the garment in `front_photo` and `back_photo` closed?",
+        "criteria": {
+          "true": "Fabric covers the back from the base of the neck downwards, with no opening or dip",
+          "false": "The back has an opening or dips low: a scoop, a V, a keyhole, a low back or an open back"
+        }
+      },
+      "has_cutout": {
+        "type": "noul",
+        "instructions": "Does the garment in `front_photo` and `back_photo` have a cut-out?",
+        "criteria": {
+          "true": "A hole or opening is cut into the fabric and shows skin, for example at the waist, side, chest or shoulder",
+          "false": "The fabric is continuous apart from the neckline, armholes and hem"
+        }
+      },
+      "slit_to_knee": {
+        "type": "noul",
+        "instructions": "Does the skirt of the garment in `front_photo` and `back_photo` have a slit that reaches the knee or higher?",
+        "criteria": {
+          "true": "A slit opens up to the knee, the thigh or higher, at the side, front or back",
+          "false": "There is no slit, or only a short slit near the hem that stays well below the knee"
+        }
+      },
+      "off_shoulder": {
+        "type": "noul",
+        "instructions": "Is the garment in `front_photo` and `back_photo` off-the-shoulder?",
+        "criteria": {
+          "true": "The neckline sits below the shoulders and leaves both shoulders bare",
+          "false": "The garment covers the tops of the shoulders"
+        }
+      },
+      "halter": {
+        "type": "noul",
+        "instructions": "Is the neckline of the garment in `front_photo` and `back_photo` a halter?",
+        "criteria": {
+          "true": "Straps or fabric go around the back of the neck, leaving the shoulders bare",
+          "false": "The garment hangs from both shoulders"
+        }
+      }
+    },
+    "ATTRIBUTES": {
+      "sleeveLength": {
+        "type": "choice",
+        "instructions": "How long are the sleeves of the garment in `front_photo` and `back_photo`?",
+        "criteria": {
+          "sleeveless": "No sleeves; the arm is bare from the shoulder",
+          "cap": "A tiny sleeve covering only the top of the shoulder",
+          "short": "Ends on the upper arm",
+          "elbow": "Ends at the elbow",
+          "three_quarter": "Ends on the forearm, between elbow and wrist",
+          "long": "Ends at the wrist",
+          "extra_long": "Goes past the wrist, over part of the hand"
+        }
+      },
+      "backStyle": {
+        "type": "choice",
+        "instructions": "What is the back of the garment in `front_photo` and `back_photo` like?",
+        "criteria": {
+          "closed": "Covered from the base of the neck down",
+          "scoop_back": "A rounded dip below the base of the neck",
+          "v_back": "A V-shaped dip",
+          "low_back": "Cut down to the middle of the back",
+          "open_back": "Mostly bare back"
+        }
+      },
+      "neckline": {
+        "type": "choice",
+        "instructions": "What is the neckline of the garment in `front_photo` and `back_photo`?",
+        "criteria": {
+          "crew": "Round, close to the base of the neck",
+          "v_neck": "V-shaped at the front",
+          "scoop": "Round and lower than a crew neck",
+          "high_neck": "Rises up the neck without folding over",
+          "collar": "A shirt or polo collar",
+          "turtleneck": "A high neck that folds over",
+          "off_shoulder": "Sits below both shoulders",
+          "halter": "Fastens around the back of the neck",
+          "square": "Straight across with corners"
+        }
+      },
+      "slit": {
+        "type": "choice",
+        "instructions": "How high does the slit in the skirt of the garment in `front_photo` and `back_photo` go?",
+        "criteria": {
+          "none": "No slit",
+          "low": "Short, stays below the knee",
+          "mid": "Reaches about the knee",
+          "high": "Reaches the thigh or higher"
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "black-ls-midi",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 180,
+      "inputTokens": 2706,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.81,
+        "has_cutout": 0.11,
+        "slit_to_knee": 0.14,
+        "off_shoulder": 0.03,
+        "halter": 0.31
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "low"
+      },
+      "groundTruth": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": "low",
+        "neckline": "crew"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "floral-viscose-maxi",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 267,
+      "inputTokens": 9906,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.01,
+        "back_closed": 0.05,
+        "has_cutout": 0.82,
+        "slit_to_knee": 0.21,
+        "off_shoulder": 0.16,
+        "halter": 0.08
+      },
+      "choices": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "low_back",
+        "neckline": "v_neck",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "closed",
+        "cutouts": "present",
+        "slit": "none",
+        "neckline": "v_neck"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "striped-halter",
+      "category": "tops",
+      "photos": 2,
+      "ms": 145,
+      "inputTokens": 9702,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.07,
+        "has_cutout": 0.14,
+        "off_shoulder": 0.39,
+        "halter": 0.93
+      },
+      "choices": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "open_back",
+        "neckline": "halter",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "open_back",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "halter"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "everlane-denim-shirtdress",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 233,
+      "inputTokens": 5886,
+      "truthPass": true,
+      "noulPass": true,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.93,
+        "has_cutout": 0.05,
+        "slit_to_knee": 0.08,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "collar"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "reformation-casette-silk",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 158,
+      "inputTokens": 10800,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": false
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.04,
+        "has_cutout": 0.95,
+        "slit_to_knee": 0.15,
+        "off_shoulder": 0.19,
+        "halter": 0.66
+      },
+      "choices": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "low_back",
+        "neckline": "high_neck",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "open_back",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "halter"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "anthropologie-loretta-offshoulder-mesh",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 145,
+      "inputTokens": 9916,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.74,
+        "has_cutout": 0.23,
+        "slit_to_knee": 0.07,
+        "off_shoulder": 0.44,
+        "halter": 0.26
+      },
+      "choices": {
+        "sleeveLength": "cap",
+        "backStyle": "closed",
+        "neckline": "off_shoulder",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "short",
+        "backStyle": "low_back",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "off_shoulder"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "knit-turtleneck-mini",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 219,
+      "inputTokens": 11022,
+      "truthPass": true,
+      "noulPass": true,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.8,
+        "back_closed": 0.95,
+        "has_cutout": 0.05,
+        "slit_to_knee": 0.05,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "turtleneck"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "aritzia-cutout-knit-midi",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 101,
+      "inputTokens": 4248,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.7,
+        "has_cutout": 0.99,
+        "slit_to_knee": 0.11,
+        "off_shoulder": 0.05,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "cap",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "short",
+        "backStyle": "closed",
+        "cutouts": "present",
+        "slit": "none",
+        "neckline": "scoop"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "wool-sweater-dress",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 291,
+      "inputTokens": 8140,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.54,
+        "back_closed": 0.96,
+        "has_cutout": 0.1,
+        "slit_to_knee": 0.07,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "three_quarter",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "three_quarter",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "v_neck"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "anthropologie-maeve-square-neck-plaid",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 167,
+      "inputTokens": 9910,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": false,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": false,
+        "neckline": false
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.01,
+        "back_closed": 0.45,
+        "has_cutout": 0.16,
+        "slit_to_knee": 0.81,
+        "off_shoulder": 0.77,
+        "halter": 0.08
+      },
+      "choices": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "closed",
+        "neckline": "off_shoulder",
+        "slit": "high"
+      },
+      "groundTruth": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "open_back",
+        "cutouts": "none",
+        "slit": "high",
+        "neckline": "square"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "anthropologie-printed-wrap",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 130,
+      "inputTokens": 9906,
+      "truthPass": true,
+      "noulPass": true,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.93,
+        "has_cutout": 0.08,
+        "slit_to_knee": 0.18,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "v_neck"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "lined-floral-midi",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 187,
+      "inputTokens": 7214,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.03,
+        "back_closed": 0.06,
+        "has_cutout": 0.56,
+        "slit_to_knee": 0.09,
+        "off_shoulder": 0.05,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "short",
+        "backStyle": "low_back",
+        "neckline": "square",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "short",
+        "backStyle": "open_back",
+        "cutouts": "present",
+        "slit": "none",
+        "neckline": "square"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "openback-maxi",
+      "category": "dresses",
+      "photos": 1,
+      "ms": 138,
+      "inputTokens": 6023,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": false
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.27,
+        "has_cutout": 0.97,
+        "slit_to_knee": 0.1,
+        "off_shoulder": 0.42,
+        "halter": 0.22
+      },
+      "choices": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "open_back",
+        "neckline": "scoop",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "open_back",
+        "cutouts": "present",
+        "slit": "none",
+        "neckline": "square"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "cropped-tank",
+      "category": "tops",
+      "photos": 2,
+      "ms": 102,
+      "inputTokens": 4758,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.04,
+        "has_cutout": 0.14,
+        "off_shoulder": 0.19,
+        "halter": 0.06
+      },
+      "choices": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "scoop_back",
+        "neckline": "scoop",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "scoop_back",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "scoop"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "oversized-buttondown",
+      "category": "tops",
+      "photos": 2,
+      "ms": 99,
+      "inputTokens": 2782,
+      "truthPass": true,
+      "noulPass": false,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.56,
+        "back_closed": 0.88,
+        "has_cutout": 0.1,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "collar"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "tunic-highneck",
+      "category": "tops",
+      "photos": 2,
+      "ms": 127,
+      "inputTokens": 6404,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.06,
+        "back_closed": 0.96,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.03,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "short",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "three_quarter",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "collar"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "anthropologie-maeve-polkadot-blouse",
+      "category": "tops",
+      "photos": 2,
+      "ms": 152,
+      "inputTokens": 9722,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.95,
+        "has_cutout": 0.06,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "short",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "short",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "v_neck"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "semisheer-scoopback",
+      "category": "tops",
+      "photos": 1,
+      "ms": 128,
+      "inputTokens": 5394,
+      "truthPass": true,
+      "noulPass": false,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.83,
+        "back_closed": 0.64,
+        "has_cutout": 0.07,
+        "off_shoulder": 0.07,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "high_neck"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "anthropologie-geometric-dolman-blouse",
+      "category": "tops",
+      "photos": 2,
+      "ms": 246,
+      "inputTokens": 9722,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.09,
+        "back_closed": 0.06,
+        "has_cutout": 0.83,
+        "off_shoulder": 0.04,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "three_quarter",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "three_quarter",
+        "backStyle": "scoop_back",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "scoop"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "leather-top",
+      "category": "tops",
+      "photos": 2,
+      "ms": 126,
+      "inputTokens": 6894,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.87,
+        "has_cutout": 0.1,
+        "off_shoulder": 0.15,
+        "halter": 0.12
+      },
+      "choices": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "v_neck"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "abstract-cami",
+      "category": "tops",
+      "photos": 2,
+      "ms": 109,
+      "inputTokens": 5250,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.05,
+        "has_cutout": 0.2,
+        "off_shoulder": 0.11,
+        "halter": 0.2
+      },
+      "choices": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "v_back",
+        "neckline": "v_neck",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "v_back",
+        "cutouts": "present",
+        "slit": null,
+        "neckline": "v_neck"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "modal-partlined",
+      "category": "tops",
+      "photos": 2,
+      "ms": 191,
+      "inputTokens": 3692,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": true,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.89,
+        "back_closed": 0.91,
+        "has_cutout": 0.15,
+        "off_shoulder": 0.72,
+        "halter": 0.07
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "off_shoulder",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "scoop_back",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "off_shoulder"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "black-classic-abaya",
+      "category": "abayas",
+      "photos": 1,
+      "ms": 231,
+      "inputTokens": 3910,
+      "truthPass": true,
+      "noulPass": true,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.88,
+        "has_cutout": 0.07,
+        "slit_to_knee": 0.17,
+        "off_shoulder": 0.03,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "crew"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "openfront-abaya",
+      "category": "abayas",
+      "photos": 1,
+      "ms": 122,
+      "inputTokens": 4056,
+      "truthPass": true,
+      "noulPass": true,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.79,
+        "has_cutout": 0.05,
+        "slit_to_knee": 0.15,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "extra_long",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "v_neck"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "multicolor-abaya",
+      "category": "abayas",
+      "photos": 2,
+      "ms": 165,
+      "inputTokens": 2401,
+      "truthPass": true,
+      "noulPass": true,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.83,
+        "back_closed": 0.91,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.2,
+        "off_shoulder": 0.03,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "crew"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "blend-abaya",
+      "category": "abayas",
+      "photos": 2,
+      "ms": 165,
+      "inputTokens": 9895,
+      "truthPass": true,
+      "noulPass": true,
+      "choicePass": true,
+      "truthRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": true,
+        "cutouts": true,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.96,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.1,
+        "off_shoulder": 0.03,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "cutouts": "none",
+        "slit": "none",
+        "neckline": "crew"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    },
+    {
+      "id": "other-material-metallic",
+      "category": "tops",
+      "photos": 2,
+      "ms": 132,
+      "inputTokens": 6136,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": true,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "noulRules": {
+        "sleeves": true,
+        "back": false,
+        "cutouts": true,
+        "slit": true,
+        "neckline": false
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.93,
+        "back_closed": 0.44,
+        "has_cutout": 0.19,
+        "off_shoulder": 0.48,
+        "halter": 0.27
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "off_shoulder",
+        "slit": null
+      },
+      "groundTruth": {
+        "sleeveLength": "long",
+        "backStyle": "low_back",
+        "cutouts": "none",
+        "slit": null,
+        "neckline": "off_shoulder"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline"
+      ]
+    },
+    {
+      "id": "yellow-item",
+      "category": "dresses",
+      "photos": 2,
+      "ms": 283,
+      "inputTokens": 7500,
+      "truthPass": false,
+      "noulPass": false,
+      "choicePass": false,
+      "truthRules": {
+        "sleeves": false,
+        "back": true,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "noulRules": {
+        "sleeves": false,
+        "back": false,
+        "cutouts": false,
+        "slit": true,
+        "neckline": true
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.13,
+        "has_cutout": 0.6,
+        "slit_to_knee": 0.07,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "short",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      },
+      "groundTruth": {
+        "sleeveLength": "short",
+        "backStyle": "closed",
+        "cutouts": "present",
+        "slit": "none",
+        "neckline": "crew"
+      },
+      "questions": [
+        "sleeves_reach_wrist",
+        "back_closed",
+        "has_cutout",
+        "slit_to_knee",
+        "off_shoulder",
+        "halter",
+        "sleeveLength",
+        "backStyle",
+        "neckline",
+        "slit"
+      ]
+    }
+  ]
+}

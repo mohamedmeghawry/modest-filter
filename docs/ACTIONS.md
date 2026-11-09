@@ -3,8 +3,9 @@
 One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to the bottom, then get deleted after a week.
 
 ## Now
-- [ ] **M** Approve ~$2 for the 2 eval runs (Opus 4.7 baseline, then Opus 5.5)
-- [ ] **M** Jev test: sign up at typesafe.ai (early access), create an API key, put it in `.env.local` as `TYPESAFE_API_KEY` (never in chat). Approve ~$0.10 of Jev spend
+- [ ] **M** Approve ~$2 for the 2 eval runs (Opus 4.7 baseline, then Opus 5.5). Also gives the Opus side of the Jev comparison
+- [ ] **M** Check by eye: eval product `black-ls-midi` is marked `sleeveless`, but its source page says "long mesh sleeves" (Jev says long). Fix the manifest if it's wrong
+- [ ] **M** Decide: wire Jev into `tag-demo` as a pre-screen (confident reject → skip Opus)? Eval says yes for rejecting, no for accepting (`docs/attribute-sources.md`)
 - [ ] **M** Look at the preview on your phone (signed in to Vercel): https://modest-filter-git-demo-images-mohamedmeghawrys-projects.vercel.app/products and say what looks wrong
 - [ ] **M** When the group should see it: create the one Hobby share link (Vercel → deployment → Share)
 - [ ] **M** Reset the `kashfedit-demo` DB password once more: it showed in a Claude screenshot (Risk Register INC-2026-04). Make it in Bitwarden, paste into Supabase reset, `.env.demo.local` and both Vercel Preview vars
@@ -15,7 +16,8 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 - [ ] **C** Measure run-to-run noise: re-tag 3 products twice with the same photos (~$0.40) before judging 2 vs 4 photos
 - [ ] **C** Photo picking at scale: per-brand order rule vs a cheap view-labelling pass
 - [ ] **C** Wire `findDisagreements` (`lib/vision/text-facts.ts`) into the tagger: when the title or description contradicts vision, mark the product `needs_review`
-- [ ] **C** Jev vs Opus on the 28-product eval set (hand ground truth, front + back photos): one Choice/Noul per baseline attribute, plain `fetch` (no SDK dependency), photos resized to ≤1568 px. Compare accuracy on the baseline attributes and cost per product. Candidate role: cheap pre-screen before Opus
+- [ ] **C** Add the TypeSafe key (`modest-filter`, `.env.local` only) to `Security/Inventory.md`
+- [ ] **C** Eval set fix: `openback-maxi_back.png` is a saved HTML page, not a photo (re-save it)
 - [ ] **C** Collect product descriptions and the "details" section (e.g. H&M/Uniqlo state sleeve length) with the next collection batch, run `textGate` + parsers on them, store only the parsed facts, never the brand's text. Do it in the browser at 1 page per second (Simons blocks scripts)
 - [ ] **C** Run the eval on the 28-product set with Opus 4.7 as-is (baseline, ~$1)
 - [ ] **C** Move the tagger to `claude-opus-5-5`: structured outputs replace the forced tool (`extract.ts:120` would 400), max_tokens 1024→16000, explicit effort, add the price to `cost.ts`. Re-run the eval and compare.
@@ -25,6 +27,7 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 - Impact / Awin: declined 09-17 / 09-21
 
 ## Done
+- [x] **M+C** Jev pre-screen eval on the 28-product set (`scripts/jev-eval.ts`, $0.008): 0 immodest passed, 16/28 confidently and correctly rejected, back is its weak spot (2026-11-09)
 - [x] **C** Modest baseline (ADR-0015) live on the preview (`0467685`): 12 of 25 shown (7 dresses, 5 tops); checks (a) anonymous → 302 login, (b) kashfedit.com CSP unchanged, re-run after the push (2026-11-08)
 - [x] **C** Pushed `demo-images` (`445383c`, secret scan clean); private preview live with 25 tagged products and brand photos. ADR-0013 checks passed: (a) anonymous → Vercel login, (b) kashfedit.com CSP unchanged (2026-11-08)
 - [x] **C** 25 demo products loaded into the demo DB and AI-tagged from hand-picked local photos ($1.58, Opus 4.7); colour parser; text vs vision tracker `docs/attribute-sources.md` (`f15b8a1`, branch `demo-images`) (2026-11-08)

@@ -48,6 +48,20 @@ Roles: **final** = the text value is the tag. **2nd opinion** = text only checks
 
 `lib/vision/text-gate.ts` rejects a product when its own words already fail the modest baseline: a stated sleeve that can't be long ("short sleeve", "camisole", "3/4", "strapless"), "halter" or "one-shoulder", "cut-out", "open back" or "backless", "high slit". It only rejects; silence goes to vision. On the 25 demo products it rejected 6, saving 6 AI calls, and all 6 also failed the baseline on vision. No good product was wrongly rejected. Text that states long sleeves is reliable (6/6 agreement), but vision still runs for the other baseline attributes in the same call, so stating long sleeves saves no money.
 
+## Jev (TypeSafe) as a cheap baseline pre-screen
+
+`scripts/jev-eval.ts` asks Jev (`jev-latest`, images are experimental) one yes/no question per baseline rule (sleeves reach the wrist, back closed, cut-out, slit to the knee, off-shoulder, halter) plus a choice per attribute, and code decides. Yes above 0.7, no below 0.3, in between = unsure. Run on the 28-product eval set against hand ground truth (2026-11-09), results in `samples/eval-set/jev-results.json`:
+
+| | Result |
+|---|---|
+| Cost / speed | 193,895 input tokens = **$0.008 for 28 products** (~$0.0003 each, vs ~$0.06 for Opus with 2 photos); 100–300 ms each |
+| Baseline from yes/no answers | 26/28 right. **0 immodest products passed.** 2 good ones hidden, both on "unsure" answers (oversized-buttondown sleeves 0.56; semisheer-scoopback back 0.64, which had no back photo) |
+| As a pre-screen | 16/28 **confidently rejected, all correctly**; 5 unsure and 7 confident passes would go on to Opus (Opus runs on 12 of 28, so its spend drops by ~57%) |
+| Per rule | sleeves 26/28, back 22/28, cut-outs 25/28, slit 28/28, neckline 25/28 |
+| Per attribute (choice) | sleeveLength 23/28, backStyle 20/28, neckline 17/28, slit 17/17 |
+
+**Read:** good enough to reject, not to accept. The back is its weak spot: it was confidently wrong 3 times (said "closed" on modal-partlined's scoop back, "open" on floral-viscose-maxi and yellow-item, which are marked closed). Other rules happened to fail those products anyway, so the product-level result held, but on a bigger set a wrong back read could hide a good product. Neckline choices are loose (crew vs v_neck vs turtleneck), so the yes/no questions are the ones to use. **Ground truth to check:** black-ls-midi is marked `sleeveless`, but its source page says "long mesh sleeves" and Jev says long (0.92). 28 products is a small sample; not yet compared with Opus on the same set (that eval needs approval).
+
 ## Photo selection for AI tagging
 
 Findings from looking at all 98 demo photos (2026-11-08):
@@ -65,4 +79,5 @@ Findings from looking at all 98 demo photos (2026-11-08):
 
 - 2026-11-08: first coverage run on the 25 demo products; colour parser added (`lib/vision/color-facts.ts`); 55 → 78 slots.
 - 2026-11-08: first AI tagging of the 25 demo products (Opus 4.7, local photos, hand-picked 2 per product; Uniqlo 479073 had 1). Cost $1.58 in total, including the 4-photo test. Results: `samples/demo/tag-results.json`. Agreement numbers are in the table above. Vision left empty: topLength 15 (dresses, expected), hemLength and slit 10 (tops, expected), sleeveOpacity 7, backStyle 3. Disagreements are recorded only; they are not yet routed to `needs_review`.
+- 2026-11-09: Jev pre-screen on the 28-product eval set ($0.008): 0 false passes, 16/28 confidently and correctly rejected. Details in the Jev section above.
 - 2026-11-08: **4 photos vs 2 on hm-1343091003:** 4 of 14 tags changed (neckline high_neck → turtleneck, topLength tunic → hip, fit semi_fitted → fitted, material polyester → viscose). One product can't separate the photo effect from run-to-run noise. **Next:** re-run a few products twice with the same photos to measure the noise first.
