@@ -2414,5 +2414,710 @@
         "vision": "knit"
       }
     ]
+  },
+  {
+    "id": "bananarepublic-859896043",
+    "title": "Bias-Cut Chiffon Maxi Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:51.899Z",
+    "costUsd": 0.01133,
+    "text": {
+      "neckline": [
+        "crew"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "primaryColor": "black",
+      "material": null,
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "multicolor",
+      "pattern": "floral"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "multicolor",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "black",
+        "vision": "multicolor"
+      }
+    ]
+  },
+  {
+    "id": "bananarepublic-709273013",
+    "title": "The Oversized Shirt in Cotton Poplin",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:51.930Z",
+    "costUsd": 0.01103,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "fit": [
+        "oversized",
+        "loose"
+      ],
+      "primaryColor": "white",
+      "material": "cotton",
+      "lined": "unlined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "tunic",
+      "slit": "low",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "tunic",
+      "slit": "low",
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "bananarepublic-709387003",
+    "title": "The Everyday Shirt in Cotton Poplin",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:51.959Z",
+    "costUsd": 0.01105,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted",
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "white",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "bananarepublic-1188283003",
+    "title": "Cotton Waffle-Knit Cardigan Sweater",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:51.989Z",
+    "costUsd": 0.01102,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "white",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "fit",
+        "text": [
+          "loose",
+          "oversized"
+        ],
+        "vision": "semi_fitted"
+      },
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "bananarepublic-1180141013",
+    "title": "Merino-Cotton Maxi Sweater Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:52.018Z",
+    "costUsd": 0.01665,
+    "text": {
+      "neckline": [
+        "crew"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "brown",
+      "material": "wool",
+      "lined": "unlined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "wool",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "ankle",
+          "floor"
+        ],
+        "vision": "midi"
+      },
+      {
+        "attribute": "fit",
+        "text": [
+          "loose",
+          "oversized"
+        ],
+        "vision": "semi_fitted"
+      },
+      {
+        "attribute": "material",
+        "text": "wool",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "bananarepublic-1180120003",
+    "title": "Mesh Long-Sleeve Maxi Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:52.047Z",
+    "costUsd": 0.01138,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "primaryColor": "purple",
+      "material": null,
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "sheer",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "partially_lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "floral"
+    },
+    "final": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "sheer",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "ankle",
+          "floor"
+        ],
+        "vision": "midi"
+      },
+      {
+        "attribute": "primaryColor",
+        "text": "purple",
+        "vision": "black"
+      },
+      {
+        "attribute": "lined",
+        "text": "lined",
+        "vision": "partially_lined"
+      }
+    ]
+  },
+  {
+    "id": "bananarepublic-1180130003",
+    "title": "Organza Tiered Maxi Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:52.077Z",
+    "costUsd": 0.01106,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "primaryColor": null,
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "brown",
+      "pattern": "animal_print"
+    },
+    "final": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "sheer",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "brown",
+      "pattern": "animal_print"
+    },
+    "disagreements": [
+      {
+        "attribute": "neckline",
+        "text": [
+          "collar"
+        ],
+        "vision": "crew"
+      },
+      {
+        "attribute": "hemLength",
+        "text": [
+          "ankle",
+          "floor"
+        ],
+        "vision": "midi"
+      },
+      {
+        "attribute": "lined",
+        "text": "lined",
+        "vision": "unlined"
+      }
+    ]
+  },
+  {
+    "id": "bananarepublic-1182116013",
+    "title": "Paneled Jersey Turtleneck Maxi Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:52.107Z",
+    "costUsd": 0.01106,
+    "text": {
+      "neckline": [
+        "turtleneck",
+        "high_neck"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "primaryColor": "black",
+      "material": "cotton",
+      "lined": "unlined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "bananarepublic-1180132003",
+    "title": "Jersey + Taffeta Turtleneck Maxi Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:52.137Z",
+    "costUsd": 0.01108,
+    "text": {
+      "neckline": [
+        "turtleneck",
+        "high_neck"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": "black",
+      "material": "knit",
+      "lined": "unlined"
+    },
+    "vision": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "blend",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "ankle",
+          "floor"
+        ],
+        "vision": "midi"
+      },
+      {
+        "attribute": "material",
+        "text": "knit",
+        "vision": "blend"
+      }
+    ]
+  },
+  {
+    "id": "bananarepublic-836722003",
+    "title": "Riley Tailored Shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01TjGqCouqxztfPeUwz63grE",
+    "taggedAt": "2026-11-09T08:41:52.166Z",
+    "costUsd": 0.01105,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "primaryColor": "white",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": []
   }
 ]

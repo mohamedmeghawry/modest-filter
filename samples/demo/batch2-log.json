@@ -304,5 +304,32 @@
         "reason": "no back photo in the gallery (Uniqlo galleries show fronts, flats, colour sets and fabric only; 0 of 12 had a back)"
       }
     ]
+  },
+  "Anthropologie": {
+    "collected_on": "2026-11-10",
+    "products": {
+      "anthropologie-4130926280016": 4,
+      "anthropologie-4130972460275": 3,
+      "anthropologie-4130916210343": 5,
+      "anthropologie-4130957990276": 3,
+      "anthropologie-104378609": 1,
+      "anthropologie-4130086690014": 3,
+      "anthropologie-4110907290018": 2,
+      "anthropologie-4110089540181": 2,
+      "anthropologie-4110957990027": 6,
+      "anthropologie-4114326950374": 5
+    },
+    "skipped": [
+      {
+        "link": "https://www.anthropologie.com/en-ca/shop/maeve-drop-waist-sweater-mini-dress",
+        "listing_position": 3,
+        "reason": "no back photo in the gallery (street shots, front and sides only)"
+      },
+      {
+        "link": "https://www.anthropologie.com/en-ca/shop/cline-chunky-crew-neck-sweater",
+        "listing_position": 2,
+        "reason": "no back photo in the gallery (front and side only)"
+      }
+    ]
   }
 }
