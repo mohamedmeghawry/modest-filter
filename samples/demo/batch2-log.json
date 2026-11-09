@@ -79,5 +79,52 @@
         "reason": "spare, not needed (4 tops already have front + back)"
       }
     ]
+  },
+  "Gap": {
+    "collected_on": "2026-11-10",
+    "products": {
+      "gap-1182627003": 1,
+      "gap-912593003": 1,
+      "gap-1184693013": 1,
+      "gap-1185332013": 1,
+      "gap-1184695003": 1,
+      "gap-1184696023": 1,
+      "gap-1184323003": 2,
+      "gap-913914013": 2,
+      "gap-1184321013": 2,
+      "gap-1184843023": 2
+    },
+    "skipped": [
+      {
+        "link": "https://www.gapcanada.ca/browse/product.do?pid=1186982003",
+        "listing_position": 2,
+        "reason": "long-sleeve filter: jumpsuit, not a dress"
+      },
+      {
+        "link": "https://www.gapcanada.ca/browse/product.do?pid=1182627023",
+        "listing_position": 3,
+        "reason": "long-sleeve filter: colour variant of position 1"
+      },
+      {
+        "link": "https://www.gapcanada.ca/browse/product.do?pid=1182627013",
+        "listing_position": 5,
+        "reason": "long-sleeve filter: colour variant of position 1; filter had only 2 dress styles, rest from the plain listing"
+      },
+      {
+        "link": "https://www.gapcanada.ca/browse/product.do?pid=1184693023",
+        "listing_position": 3,
+        "reason": "plain listing: colour variant of position 1"
+      },
+      {
+        "link": "https://www.gapcanada.ca/browse/product.do?pid=1185331013",
+        "listing_position": 6,
+        "reason": "spare, not needed (6 dresses already have front + back)"
+      },
+      {
+        "link": "https://www.gapcanada.ca/browse/product.do?pid=1182509003",
+        "listing_position": 5,
+        "reason": "spare, not needed (4 tops already have front + back)"
+      }
+    ]
   }
 }

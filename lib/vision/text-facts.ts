@@ -38,8 +38,9 @@ type Rule<T> = [RegExp, T[]];
 
 const SLEEVE_RULES: Rule<SleeveLength>[] = [
   [/\bsleeveless\b/i, [SleeveLength.sleeveless]],
-  // A camisole or tank is strap-only by definition.
-  [/\b(?:cami(?:sole)?|tank)\b/i, [SleeveLength.sleeveless]],
+  // A camisole or tank is strap-only by definition, unless it is the inner
+  // layer of another garment ("detachable cami lining", Gap 2026-11-10).
+  [/\b(?:cami(?:sole)?|tank)\b(?![\s-](?:lining|liner|slip|underlay)\b)/i, [SleeveLength.sleeveless]],
   [/\bcap[\s-]sleeves?\b/i, [SleeveLength.cap]],
   [/\bshort[\s-]sleeve(?:s|d)?\b/i, [SleeveLength.short, SleeveLength.cap]],
   [/\belbow[\s-](?:length[\s-])?sleeves?\b/i, [SleeveLength.elbow]],
@@ -48,7 +49,8 @@ const SLEEVE_RULES: Rule<SleeveLength>[] = [
     /(?:\b3\/4\b|\bthree[\s-]quarter\b)/i,
     [SleeveLength.three_quarter, SleeveLength.elbow],
   ],
-  [/\blong[\s-]sleeve(?:s|d)?\b/i, [SleeveLength.long, SleeveLength.extra_long]],
+  // One style word may sit between: "long puff sleeves", "long bell sleeves".
+  [/\blong[\s-](?:[a-z]+[\s-])?sleeve(?:s|d)?\b/i, [SleeveLength.long, SleeveLength.extra_long]],
 ];
 
 const NECKLINE_RULES: Rule<Neckline>[] = [

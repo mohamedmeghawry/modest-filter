@@ -105,6 +105,18 @@ describe("parseTextFacts — description", () => {
     expect(facts.fit).toEqual(["loose", "oversized"]);
   });
 
+  it("reads a style word inside 'long … sleeves' and ignores a cami lining", () => {
+    const facts = parseTextFacts(
+      "Voile Plaid Empire-Waist Maxi Dress",
+      "Cotton voile maxi dress with a detachable cami lining. Long puff sleeves with banded cuffs.",
+    );
+    expect(facts.sleeveLength).toEqual(["long", "extra_long"]);
+    // A cami as the garment itself still reads as sleeveless.
+    expect(parseTextFacts("Satin Cami Top").sleeveLength).toEqual(["sleeveless"]);
+    // Long must still be about the sleeves, not another word.
+    expect(parseTextFacts("Long Line Blazer").sleeveLength).toBeUndefined();
+  });
+
   it("accepts a null description", () => {
     expect(parseTextFacts("Glittery Halterneck Dress", null)).toEqual({
       neckline: ["halter"],

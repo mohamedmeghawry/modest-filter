@@ -1125,5 +1125,605 @@
       "pattern": "animal_print"
     },
     "disagreements": []
+  },
+  {
+    "id": "oldnavy-906372013",
+    "title": "SoSoft Long-Sleeve V-Neck Mini Sweater Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_015nXJuZT9SRVQD9FVyX3PsM",
+    "taggedAt": "2026-11-09T08:07:57.242Z",
+    "costUsd": 0.01665,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "v_neck"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": null,
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "oldnavy-909495023",
+    "title": "Snug Long-Sleeve Ribbed Henley T-Shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_015nXJuZT9SRVQD9FVyX3PsM",
+    "taggedAt": "2026-11-09T08:07:57.271Z",
+    "costUsd": 0.01102,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "crew"
+      ],
+      "primaryColor": "brown",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "brown",
+        "vision": "beige"
+      },
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "oldnavy-1185410013",
+    "title": "The Occasion by Old Navy Long-Sleeve Tie-Front Maxi Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_015nXJuZT9SRVQD9FVyX3PsM",
+    "taggedAt": "2026-11-09T08:07:57.302Z",
+    "costUsd": 0.01105,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "v_neck"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "ankle",
+          "floor"
+        ],
+        "vision": "midi"
+      }
+    ]
+  },
+  {
+    "id": "oldnavy-909482003",
+    "title": "Hug Double-Layer Crew-Neck Long-Sleeve Top",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_015nXJuZT9SRVQD9FVyX3PsM",
+    "taggedAt": "2026-11-09T08:07:57.332Z",
+    "costUsd": 0.01101,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "crew"
+      ],
+      "primaryColor": null,
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "green",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "green",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "oldnavy-903449033",
+    "title": "SoSoft Ribbed V-Neck Sweater",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_015nXJuZT9SRVQD9FVyX3PsM",
+    "taggedAt": "2026-11-09T08:07:57.363Z",
+    "costUsd": 0.01107,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "v_neck"
+      ],
+      "primaryColor": null,
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "oldnavy-1185459013",
+    "title": "Long-Sleeve Twist-Front Ruched Midi Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_015nXJuZT9SRVQD9FVyX3PsM",
+    "taggedAt": "2026-11-09T08:07:57.393Z",
+    "costUsd": 0.01101,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "hemLength": [
+        "midi"
+      ],
+      "primaryColor": "black",
+      "material": "viscose",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "viscose",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "oldnavy-1195998003",
+    "title": "Floral Burnout Velvet Fit & Flare Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_015nXJuZT9SRVQD9FVyX3PsM",
+    "taggedAt": "2026-11-09T08:07:57.423Z",
+    "costUsd": 0.01108,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "scoop"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "pattern": [
+        "floral"
+      ],
+      "primaryColor": null,
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "scoop",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": null,
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "red",
+      "pattern": "floral"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "scoop",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "red",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "other"
+      }
+    ]
+  },
+  {
+    "id": "oldnavy-1199534003",
+    "title": "Long-Sleeve Crepe Swing Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_015nXJuZT9SRVQD9FVyX3PsM",
+    "taggedAt": "2026-11-09T08:07:57.451Z",
+    "costUsd": 0.01099,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": null,
+      "material": "viscose",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "present",
+      "material": "viscose",
+      "primaryColor": "red",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "present",
+      "material": "viscose",
+      "primaryColor": "red",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "oldnavy-903450003",
+    "title": "SoSoft V-Neck Sweater",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_015nXJuZT9SRVQD9FVyX3PsM",
+    "taggedAt": "2026-11-09T08:07:57.480Z",
+    "costUsd": 0.01102,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "v_neck"
+      ],
+      "primaryColor": "black",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
   }
 ]

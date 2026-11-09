@@ -33,6 +33,8 @@ describe("textGate", () => {
   it("ignores slip straps when the text states long sleeves", () => {
     // Sheer long-sleeve dress over a strappy slip: the straps are the lining's.
     expect(textGate("Burnout Mock Neck Mini Dress", "Long sleeves and a mock neck. Inner slip with adjustable spaghetti straps. Fully lined.").pass).toBe(true);
+    // Same for a cami lining under long puff sleeves (Gap).
+    expect(textGate("Voile Plaid Empire-Waist Maxi Dress", "Voile maxi dress with a detachable cami lining. Long puff sleeves with banded cuffs.").pass).toBe(true);
     // Without a long-sleeve statement, straps still reject.
     expect(textGate("Satin Midi Dress", "Adjustable spaghetti straps.").reasons).toEqual(["sleeves"]);
   });
