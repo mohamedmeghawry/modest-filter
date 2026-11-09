@@ -1,12 +1,18 @@
 {
   "Mango": {
     "collected_on": "2026-11-10",
-    "products": 2,
-    "with_back_photo": 2,
-    "back_photo_positions": [
-      2,
-      2
-    ],
+    "products": {
+      "mango-37049131": 2,
+      "mango-37019126": 2,
+      "mango-37059131": 2,
+      "mango-37067785": 2,
+      "mango-47071445": 2,
+      "mango-47081351": 2,
+      "mango-37039132": 2,
+      "mango-37066353": 2,
+      "mango-37019125": 2,
+      "mango-37039121": 2
+    },
     "skipped": [
       {
         "link": "https://shop.mango.com/ca/en/p/women/dresses-and-jumpsuits/black/velvet-cut-out-dress-with-frog-fastenings/37069230/99/00",

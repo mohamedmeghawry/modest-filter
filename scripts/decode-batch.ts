@@ -4,9 +4,9 @@
 //   npx tsx scripts/decode-batch.ts <bundle.json> [--keep]
 //
 // Writes samples/demo/images/<id>/front.jpg and back.jpg (gitignored, never
-// served: ADR-0013 amendment), upserts CSV rows by id, and records the brand's
-// skipped listing items in samples/demo/batch2-log.json (the per-brand
-// back-photo finding). Deletes the bundle afterwards unless --keep: it holds
+// served: ADR-0013 amendment), upserts CSV rows by id, and records per brand
+// each product's back-photo gallery position and the skipped listing items in
+// samples/demo/batch2-log.json (the per-brand photo finding), merging bundles. Deletes the bundle afterwards unless --keep: it holds
 // the brand's description text, which we parse but never keep.
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -54,14 +54,15 @@ async function main() {
 
   writeFileSync(CSV, toCsv(BATCH2_HEADER, [...byId.values()]));
 
-  const log: Record<string, unknown> = existsSync(LOG) ? JSON.parse(readFileSync(LOG, "utf8")) : {};
-  log[bundle.brand] = {
-    collected_on: bundle.collected_on,
-    products: bundle.products.length,
-    with_back_photo: bundle.products.filter((p) => p.back_index != null).length,
-    back_photo_positions: bundle.products.map((p) => p.back_index),
-    skipped: bundle.skipped,
-  };
+  // Merge with what earlier bundles of the same brand recorded (a brand can
+  // arrive in parts, e.g. the pilot then the rest), keyed by product id/link.
+  type BrandLog = { collected_on: string; products: Record<string, number | null>; skipped: Bundle["skipped"] };
+  const log: Record<string, BrandLog> = existsSync(LOG) ? JSON.parse(readFileSync(LOG, "utf8")) : {};
+  const prev = log[bundle.brand];
+  const products = { ...(prev && !Array.isArray(prev.products) && typeof prev.products === "object" ? prev.products : {}) };
+  for (const p of bundle.products) if (!validateBundleProduct(p).length) products[p.id] = p.back_index;
+  const skipped = [...(prev?.skipped ?? []), ...bundle.skipped].filter((s, i, all) => all.findIndex((x) => x.link === s.link) === i);
+  log[bundle.brand] = { collected_on: bundle.collected_on, products, skipped };
   writeFileSync(LOG, JSON.stringify(log, null, 2) + "\n");
 
   console.log(`\n${bundle.brand}: saved ${saved}, rejected ${rejected.length}, skipped on the listing ${bundle.skipped.length}. CSV now ${byId.size} rows.`);
