@@ -120,5 +120,422 @@
       "pattern": "floral"
     },
     "disagreements": []
+  },
+  {
+    "id": "mango-37066353",
+    "title": "100% silk shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_019bx1brzckzqEHbTXCLb6xd",
+    "taggedAt": "2026-11-09T07:36:36.443Z",
+    "costUsd": 0.01075,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "fit": [
+        "oversized",
+        "loose"
+      ],
+      "primaryColor": "blue",
+      "material": "silk",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": null,
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "silk",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": null,
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "silk",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "mango-47071445",
+    "title": "A-line dress with seam detail",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_019bx1brzckzqEHbTXCLb6xd",
+    "taggedAt": "2026-11-09T07:36:36.473Z",
+    "costUsd": 0.01081,
+    "text": {
+      "neckline": [
+        "crew"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": "red",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "purple",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "purple",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "red",
+        "vision": "purple"
+      }
+    ]
+  },
+  {
+    "id": "mango-37019125",
+    "title": "Floral embroidered blouse with frog closures",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_019bx1brzckzqEHbTXCLb6xd",
+    "taggedAt": "2026-11-09T07:36:36.506Z",
+    "costUsd": 0.0108,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "pattern": [
+        "floral",
+        "striped",
+        "plaid",
+        "geometric",
+        "animal_print",
+        "polka_dot",
+        "abstract",
+        "other"
+      ],
+      "primaryColor": "black",
+      "material": "viscose",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "floral"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "sheer",
+      "lined": null,
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "black",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "neckline",
+        "text": [
+          "collar"
+        ],
+        "vision": "v_neck"
+      },
+      {
+        "attribute": "material",
+        "text": "viscose",
+        "vision": "polyester"
+      }
+    ]
+  },
+  {
+    "id": "mango-37059131",
+    "title": "Polka dot tulle dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_019bx1brzckzqEHbTXCLb6xd",
+    "taggedAt": "2026-11-09T07:36:36.537Z",
+    "costUsd": 0.01651,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "pattern": [
+        "polka_dot"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "partially_lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "polka_dot"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "polka_dot"
+    },
+    "disagreements": [
+      {
+        "attribute": "neckline",
+        "text": [
+          "collar"
+        ],
+        "vision": "high_neck"
+      },
+      {
+        "attribute": "lined",
+        "text": "lined",
+        "vision": "partially_lined"
+      }
+    ]
+  },
+  {
+    "id": "mango-47081351",
+    "title": "Satin dress with lace trim",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_019bx1brzckzqEHbTXCLb6xd",
+    "taggedAt": "2026-11-09T07:36:36.569Z",
+    "costUsd": 0.01081,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "crew"
+      ],
+      "primaryColor": "navy",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "navy",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "navy",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "mango-37039121",
+    "title": "Floral lace blouse",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_019bx1brzckzqEHbTXCLb6xd",
+    "taggedAt": "2026-11-09T07:36:36.601Z",
+    "costUsd": 0.01087,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "pattern": [
+        "floral"
+      ],
+      "primaryColor": null,
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "beige",
+      "pattern": "floral"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "cropped",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "sheer",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "beige",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "other"
+      }
+    ]
   }
 ]

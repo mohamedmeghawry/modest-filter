@@ -35,7 +35,14 @@ export function textGate(title: string, description?: string | null): GateResult
   // Same styling-advice filter as the parsers: "wear it with a strapless bra"
   // describes another item, not this one.
   const text = [title, ...(description ?? "").split(/(?<=[.!?])\s+/).filter((s) => !STYLING_RE.test(s))].join(" ");
-  for (const [re, reason] of EXTRA_REJECTS) if (re.test(text)) reasons.add(reason);
+  // Straps next to stated long sleeves belong to an inner slip or lining
+  // (e.g. a sheer long-sleeve dress over a strappy slip, Dynamite 2026-11-10),
+  // so they don't make the garment sleeveless.
+  const statesLongSleeves = facts.sleeveLength?.some((v) => (LONG_SLEEVES as readonly string[]).includes(v)) ?? false;
+  for (const [re, reason] of EXTRA_REJECTS) {
+    if (reason === "sleeves" && statesLongSleeves) continue;
+    if (re.test(text)) reasons.add(reason);
+  }
 
   return { pass: reasons.size === 0, reasons: [...reasons] };
 }

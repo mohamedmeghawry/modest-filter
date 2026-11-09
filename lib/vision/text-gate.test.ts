@@ -30,6 +30,13 @@ describe("textGate", () => {
     expect(textGate("Midi Dress", "Wear it with a strapless bra.").pass).toBe(true);
   });
 
+  it("ignores slip straps when the text states long sleeves", () => {
+    // Sheer long-sleeve dress over a strappy slip: the straps are the lining's.
+    expect(textGate("Burnout Mock Neck Mini Dress", "Long sleeves and a mock neck. Inner slip with adjustable spaghetti straps. Fully lined.").pass).toBe(true);
+    // Without a long-sleeve statement, straps still reject.
+    expect(textGate("Satin Midi Dress", "Adjustable spaghetti straps.").reasons).toEqual(["sleeves"]);
+  });
+
   it("does not match inside other words", () => {
     expect(textGate("Feedback Blouse").pass).toBe(true); // "back" inside a word
     expect(textGate("Splitting Image Top").pass).toBe(true);

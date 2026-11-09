@@ -20,5 +20,32 @@
         "reason": "text gate: cutouts (title says cut-out)"
       }
     ]
+  },
+  "Dynamite": {
+    "collected_on": "2026-11-10",
+    "products": {
+      "dynamite-1001076928a4": 1,
+      "dynamite-10010723306v": 3,
+      "dynamite-1000996008q9": 2,
+      "dynamite-10010802806v": 1,
+      "dynamite-10010602606v": 2,
+      "dynamite-10010439206v": 2,
+      "dynamite-1001066067gm": 1,
+      "dynamite-1000987868a4": 1,
+      "dynamite-1001071742fc": 1,
+      "dynamite-1001067348f4": 2
+    },
+    "skipped": [
+      {
+        "link": "https://www.dynamiteclothing.com/ca/p/mock-neck-mini-sweater-dress/1001076927GM.html",
+        "listing_position": 5,
+        "reason": "colour variant of an earlier pick (position 1)"
+      },
+      {
+        "link": "https://www.dynamiteclothing.com/ca/p/lace-trim-3%2F4-sleeve-top/1001096728FK.html",
+        "listing_position": 3,
+        "reason": "text gate: sleeves (title says 3/4 sleeve)"
+      }
+    ]
   }
 }
