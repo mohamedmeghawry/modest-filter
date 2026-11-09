@@ -14,7 +14,7 @@ export function SampleCatalogueNotice() {
       {isDemoPreview ? (
         <>
           <span className="font-medium text-foreground">Private demo.</span>{" "}
-          Real products from five brands, shown to a small test group. Photos
+          Real products from mainstream brands, shown to a small test group. Photos
           load from each brand&apos;s own site. Tags are AI-generated and may
           be wrong. Kashf Edit is not affiliated with these brands.{" "}
         </>

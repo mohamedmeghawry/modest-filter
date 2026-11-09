@@ -1,0 +1,124 @@
+[
+  {
+    "id": "mango-37049131",
+    "title": "Double-breasted blazer-style dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01Rh8zTD6HmPoMpz1rZMK1Qc",
+    "taggedAt": "2026-11-09T07:12:32.638Z",
+    "costUsd": 0.01639,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "v_neck"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": null,
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "mango-37019126",
+    "title": "Floral lace blouse",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_01Rh8zTD6HmPoMpz1rZMK1Qc",
+    "taggedAt": "2026-11-09T07:12:32.671Z",
+    "costUsd": 0.01079,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "pattern": [
+        "floral"
+      ],
+      "primaryColor": "blue",
+      "material": null,
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "blue",
+      "pattern": "floral"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "sheer",
+      "lined": null,
+      "cutouts": "none",
+      "material": "other",
+      "primaryColor": "blue",
+      "pattern": "floral"
+    },
+    "disagreements": []
+  }
+]

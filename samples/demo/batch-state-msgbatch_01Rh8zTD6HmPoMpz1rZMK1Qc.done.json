@@ -1,0 +1,23 @@
+{
+  "batchId": "msgbatch_01Rh8zTD6HmPoMpz1rZMK1Qc",
+  "csv": "samples/demo/products-batch2.csv",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "submittedAt": "2026-11-09T07:06:00.998Z",
+  "products": {
+    "mango-37049131": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "mango-37019126": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    }
+  }
+}
