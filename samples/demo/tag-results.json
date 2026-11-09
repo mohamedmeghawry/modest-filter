@@ -1,0 +1,1118 @@
+[
+  {
+    "id": "hm-1364282001",
+    "title": "Bouclé-Weave Jacket Dress",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "2.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:23.453Z",
+    "costUsd": 0.0697,
+    "text": {
+      "primaryColor": "navy",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "wool",
+      "primaryColor": "navy",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "wool"
+      }
+    ]
+  },
+  {
+    "id": "hm-1369560001",
+    "title": "Lace Peplum Top",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "2.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:27.449Z",
+    "costUsd": 0.0698,
+    "text": {
+      "primaryColor": "black",
+      "material": "cotton",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "crew",
+      "backStyle": null,
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "blend",
+      "primaryColor": "black",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "blend"
+      },
+      {
+        "attribute": "lined",
+        "text": "lined",
+        "vision": "unlined"
+      }
+    ]
+  },
+  {
+    "id": "hm-1376059001",
+    "title": "Flocked-Pattern Mesh Dress",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:31.442Z",
+    "costUsd": 0.07,
+    "text": {
+      "pattern": [
+        "striped",
+        "floral",
+        "plaid",
+        "geometric",
+        "animal_print",
+        "polka_dot",
+        "abstract",
+        "other"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "floor",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "partially_lined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "lined",
+        "text": "lined",
+        "vision": "partially_lined"
+      }
+    ]
+  },
+  {
+    "id": "hm-1376060001",
+    "title": "Glittery Halterneck Dress",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:35.147Z",
+    "costUsd": 0.0698,
+    "text": {
+      "neckline": [
+        "halter"
+      ],
+      "primaryColor": "black",
+      "material": null,
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "halter",
+      "backStyle": "open_back",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "reitmans-499371",
+    "title": "Long-Sleeve Fitted Maxi Dress with Cut-Out Details",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:38.895Z",
+    "costUsd": 0.0696,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "cutouts": [
+        "present"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "high",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "present",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "ankle",
+          "floor"
+        ],
+        "vision": "midi"
+      }
+    ]
+  },
+  {
+    "id": "reitmans-500152",
+    "title": "Long-Sleeve Mock-Neck Blouse with Metallic Fibres",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:42.516Z",
+    "costUsd": 0.0696,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "high_neck",
+        "turtleneck"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "waist",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "striped"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "reitmans-500718",
+    "title": "Satin Short-Sleeve Midi Dress with Asymmetrical Neckline",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:46.256Z",
+    "costUsd": 0.0697,
+    "text": {
+      "sleeveLength": [
+        "short",
+        "cap"
+      ],
+      "hemLength": [
+        "midi"
+      ],
+      "primaryColor": null,
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "short",
+      "sleeveOpacity": "opaque",
+      "neckline": "off_shoulder",
+      "backStyle": "low_back",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "silk",
+      "primaryColor": "red",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "silk"
+      }
+    ]
+  },
+  {
+    "id": "reitmans-501161",
+    "title": "Semi-Fitted Blouse with Scarf at Waist",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:49.864Z",
+    "costUsd": 0.0695,
+    "text": {
+      "fit": [
+        "semi_fitted"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "sheer",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "tunic",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "fit",
+        "text": [
+          "semi_fitted"
+        ],
+        "vision": "loose"
+      }
+    ]
+  },
+  {
+    "id": "reitmans-502097",
+    "title": "Short-Sleeve Crew-Neck Satin Maxi Dress",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "2.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:53.640Z",
+    "costUsd": 0.0695,
+    "text": {
+      "sleeveLength": [
+        "short",
+        "cap"
+      ],
+      "neckline": [
+        "crew"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "primaryColor": "brown",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "short",
+      "sleeveOpacity": "opaque",
+      "neckline": "crew",
+      "backStyle": "closed",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "silk",
+      "primaryColor": "yellow",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "brown",
+        "vision": "yellow"
+      },
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "silk"
+      }
+    ]
+  },
+  {
+    "id": "simons-172-10597-230173",
+    "title": "Fit-and-flare knit dress",
+    "images": 2,
+    "photos": [
+      "1.jpg",
+      "2.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:25:57.406Z",
+    "costUsd": 0.0248,
+    "text": {
+      "primaryColor": "blue",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "knee",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "simons-172-15168-229790",
+    "title": "Flared pleated-waist shirtdress",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:01.157Z",
+    "costUsd": 0.0291,
+    "text": {
+      "primaryColor": "navy",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "blend",
+      "primaryColor": "navy",
+      "pattern": "striped"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "blend"
+      }
+    ]
+  },
+  {
+    "id": "simons-195-20942-233386",
+    "title": "Velvet garden dress",
+    "images": 2,
+    "photos": [
+      "2.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:05.010Z",
+    "costUsd": 0.0251,
+    "text": {
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "crew",
+      "backStyle": "scoop_back",
+      "hemLength": "ankle",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "partially_lined",
+      "cutouts": "none",
+      "material": "blend",
+      "primaryColor": "black",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "blend"
+      },
+      {
+        "attribute": "lined",
+        "text": "lined",
+        "vision": "partially_lined"
+      }
+    ]
+  },
+  {
+    "id": "simons-211-12709-225274",
+    "title": "Loose fluid satin shirt",
+    "images": 2,
+    "photos": [
+      "1.jpg",
+      "2.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:08.590Z",
+    "costUsd": 0.0249,
+    "text": {
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "primaryColor": "beige",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "beige",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "fit",
+        "text": [
+          "loose",
+          "oversized"
+        ],
+        "vision": "semi_fitted"
+      }
+    ]
+  },
+  {
+    "id": "simons-211-15110-218637",
+    "title": "Blooming print shirt Made with Liberty Fabric",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:12.123Z",
+    "costUsd": 0.0292,
+    "text": {
+      "pattern": [
+        "striped",
+        "floral",
+        "plaid",
+        "geometric",
+        "animal_print",
+        "polka_dot",
+        "abstract",
+        "other"
+      ],
+      "primaryColor": null,
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "multicolor",
+      "pattern": "floral"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "uniqlo-479073",
+    "title": "Rayon Skipper Collar Blouse | 3/4 Sleeve",
+    "images": 1,
+    "photos": [
+      "0.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:15.755Z",
+    "costUsd": 0.0415,
+    "text": {
+      "sleeveLength": [
+        "three_quarter",
+        "elbow"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "primaryColor": "white",
+      "material": "viscose",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "elbow",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": null,
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "viscose",
+        "vision": "polyester"
+      }
+    ]
+  },
+  {
+    "id": "uniqlo-487294",
+    "title": "Knitted Polo Dress",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:19.286Z",
+    "costUsd": 0.061,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "primaryColor": "black",
+      "material": "wool",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "gray",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "black",
+        "vision": "gray"
+      },
+      {
+        "attribute": "material",
+        "text": "wool",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "uniqlo-487526",
+    "title": "Rayon Blouse | Striped",
+    "images": 2,
+    "photos": [
+      "1.jpg",
+      "0.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:23.196Z",
+    "costUsd": 0.0611,
+    "text": {
+      "pattern": [
+        "striped"
+      ],
+      "primaryColor": "blue",
+      "material": "viscose",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "blend",
+      "primaryColor": "blue",
+      "pattern": "striped"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "viscose",
+        "vision": "blend"
+      }
+    ]
+  },
+  {
+    "id": "uniqlo-487635",
+    "title": "Shirt Dress",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "4.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:26.787Z",
+    "costUsd": 0.061,
+    "text": {
+      "primaryColor": "green",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "knee",
+      "topLength": null,
+      "slit": "low",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "green",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "viscose"
+      }
+    ]
+  },
+  {
+    "id": "uniqlo-488693",
+    "title": "Cotton Stand Collar Dress",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "3.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:30.631Z",
+    "costUsd": 0.061,
+    "text": {
+      "neckline": [
+        "collar"
+      ],
+      "primaryColor": "navy",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "navy",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "neckline",
+        "text": [
+          "collar"
+        ],
+        "vision": "high_neck"
+      }
+    ]
+  },
+  {
+    "id": "zara-02289158",
+    "title": "ZW COLLECTION LONG VELVET DRESS",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "2.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:34.411Z",
+    "costUsd": 0.0693,
+    "text": {
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "floor",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "partially_lined",
+      "cutouts": "none",
+      "material": "blend",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "blend"
+      },
+      {
+        "attribute": "lined",
+        "text": "lined",
+        "vision": "partially_lined"
+      }
+    ]
+  },
+  {
+    "id": "zara-05029258",
+    "title": "PEPLUM FROG CLASP TOP",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "4.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:38.070Z",
+    "costUsd": 0.0692,
+    "text": {
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "present",
+      "material": "blend",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "blend"
+      }
+    ]
+  },
+  {
+    "id": "zara-05919247",
+    "title": "ZW COLLECTION LACE SATIN MIDI DRESS",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:41.765Z",
+    "costUsd": 0.0693,
+    "text": {
+      "hemLength": [
+        "midi"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "v_neck",
+      "backStyle": null,
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "high",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "silk",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "silk"
+      }
+    ]
+  },
+  {
+    "id": "zara-07521149",
+    "title": "LACE AND BEAD CAMISOLE",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "4.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:45.643Z",
+    "costUsd": 0.0693,
+    "text": {
+      "sleeveLength": [
+        "sleeveless"
+      ],
+      "primaryColor": "green",
+      "material": "viscose",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "sleeveless",
+      "sleeveOpacity": null,
+      "neckline": "v_neck",
+      "backStyle": "low_back",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "silk",
+      "primaryColor": "green",
+      "pattern": "floral"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "viscose",
+        "vision": "silk"
+      }
+    ]
+  },
+  {
+    "id": "zara-08605934",
+    "title": "MINI BLAZER DRESS WITH JEWEL BUTTONS",
+    "images": 2,
+    "photos": [
+      "0.jpg",
+      "3.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:49.352Z",
+    "costUsd": 0.0691,
+    "text": {
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "blend",
+      "primaryColor": "black",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "blend"
+      }
+    ]
+  },
+  {
+    "id": "hm-1343091003",
+    "title": "Asymmetric Mock Turtleneck Top",
+    "images": 2,
+    "photos": [
+      "2.jpg",
+      "1.jpg"
+    ],
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:26:55.233Z",
+    "costUsd": 0.0698,
+    "text": {
+      "neckline": [
+        "turtleneck",
+        "high_neck"
+      ],
+      "primaryColor": "purple",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "short",
+      "sleeveOpacity": "opaque",
+      "neckline": "turtleneck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "viscose",
+      "primaryColor": "purple",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "polyester",
+        "vision": "viscose"
+      }
+    ]
+  }
+]

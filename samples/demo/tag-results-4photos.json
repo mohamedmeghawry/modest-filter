@@ -1,0 +1,36 @@
+[
+  {
+    "id": "hm-1343091003",
+    "title": "Asymmetric Mock Turtleneck Top",
+    "images": 4,
+    "model": "claude-opus-4-7",
+    "taggedAt": "2026-11-09T03:15:57.610Z",
+    "costUsd": 0.1175,
+    "text": {
+      "neckline": [
+        "turtleneck",
+        "high_neck"
+      ],
+      "primaryColor": "purple",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "short",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "tunic",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "purple",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  }
+]
