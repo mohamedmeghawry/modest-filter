@@ -64,6 +64,21 @@ Roles: **final** = the text value is the tag. **2nd opinion** = text only checks
 
 **Read:** good enough to reject, not to accept. The back is its weak spot: it was confidently wrong 3 times (said "closed" on modal-partlined's scoop back, "open" on floral-viscose-maxi and yellow-item, which are marked closed). Other rules happened to fail those products anyway, so the product-level result held, but on a bigger set a wrong back read could hide a good product. Neckline choices are loose (crew vs v_neck vs turtleneck), so the yes/no questions are the ones to use. **Ground truth fixed (Mohamed, 2026-11-09):** black-ls-midi was marked `sleeveless`; it has long mesh sleeves, as Jev said (0.92). `sleeveOpacity` is still unset. 28 products is a small sample; not yet compared with Opus on the same set (that eval needs approval).
 
+## Lab test: Jev vs Opus 5.5 on the 28-product eval set (2026-11-09)
+
+Same photos for both (JPEG at most 1568 px, `scripts/prepare-image.ts`), scored against Mohamed's hand answers. Judging rules fixed before the run: (1) immodest products shown must be 0, (2) then fewer good products hidden, (3) then cost. Results: `samples/eval-set/jev-results.json`, `opus55-low-results.json`, `opus55-medium-results.json`.
+
+| | Jev yes/no | Jev choices | Opus 5.5 low | Opus 5.5 medium |
+|---|---|---|---|---|
+| Immodest shown | **0** | **0** | **0** | **0** |
+| Good products hidden (of 10) | 3 | 0 | 6 | 6 |
+| Baseline right | 25/28 | 28/28 | 22/28 | 22/28 |
+| sleeveLength / backStyle / neckline | 24 / 20 / 17 | (same call) | 22 / 17 / 18 | 23 / 18 / 17 |
+| Overall, all 14 attributes | n/a | n/a | 73.7% | 73.5% |
+| Cost for 28 | $0.008 | (same call) | $0.42 | $0.44 |
+
+**Read:** on the lab set Jev wins by the agreed rules: both show no immodest product, Jev hides fewer good ones, and it costs about 50× less. But Opus's 6 hidden products are all "can't tell" answers, not wrong ones: back style left empty where no clear back photo exists (4) and the neckline left empty on abayas, where the hijab covers it (2). Jev's choice questions always pick an answer, so they guessed right where Opus declined. On 3 of those products there is only one photo, so under the "no back photo = unknown" rule every model would hide them. 28 products is small; batch 2 (100 products, Mohamed judges the disagreements) is the deciding test. **Medium effort adds cost and no accuracy, so the tagger runs at low.** Open policy question: should an abaya with the neckline hidden by a hijab count as unknown (hidden)?
+
 ## Photo selection for AI tagging
 
 Findings from looking at all 98 demo photos (2026-11-08):
@@ -81,5 +96,6 @@ Findings from looking at all 98 demo photos (2026-11-08):
 
 - 2026-11-08: first coverage run on the 25 demo products; colour parser added (`lib/vision/color-facts.ts`); 55 → 78 slots.
 - 2026-11-08: first AI tagging of the 25 demo products (Opus 4.7, local photos, hand-picked 2 per product; Uniqlo 479073 had 1). Cost $1.58 in total, including the 4-photo test. Results: `samples/demo/tag-results.json`. Agreement numbers are in the table above. Vision left empty: topLength 15 (dresses, expected), hemLength and slit 10 (tops, expected), sleeveOpacity 7, backStyle 3. Disagreements are recorded only; they are not yet routed to `needs_review`.
+- 2026-11-09: tagger moved to Opus 5.5 (structured outputs, low effort). Lab test on the 28: Jev and Opus both show 0 immodest products; Jev hides fewer good ones (0–3 vs 6) at about 1/50 of the cost ($0.008 vs $0.42). Medium effort gave no gain. Details in the lab-test section.
 - 2026-11-09: Jev pre-screen on the 28-product eval set ($0.008): 0 false passes, 16/28 confidently and correctly rejected. Details in the Jev section above.
 - 2026-11-08: **4 photos vs 2 on hm-1343091003:** 4 of 14 tags changed (neckline high_neck → turtleneck, topLength tunic → hip, fit semi_fitted → fitted, material polyester → viscose). One product can't separate the photo effect from run-to-run noise. **Next:** re-run a few products twice with the same photos to measure the noise first.
