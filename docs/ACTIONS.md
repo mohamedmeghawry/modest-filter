@@ -23,6 +23,7 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 - Impact / Awin: declined 09-17 / 09-21
 
 ## Done
+- [x] **C** Modest baseline (ADR-0015) live on the preview (`0467685`): 12 of 25 shown (7 dresses, 5 tops); checks (a) anonymous → 302 login, (b) kashfedit.com CSP unchanged, re-run after the push (2026-11-08)
 - [x] **C** Pushed `demo-images` (`445383c`, secret scan clean); private preview live with 25 tagged products and brand photos. ADR-0013 checks passed: (a) anonymous → Vercel login, (b) kashfedit.com CSP unchanged (2026-11-08)
 - [x] **C** 25 demo products loaded into the demo DB and AI-tagged from hand-picked local photos ($1.58, Opus 4.7); colour parser; text vs vision tracker `docs/attribute-sources.md` (`f15b8a1`, branch `demo-images`) (2026-11-08)
 - [x] **M+C** Demo DB wired: Vercel 2FA on; `DATABASE_URL`/`DIRECT_URL` added for Preview only (Secret; Production vars untouched, checked via Vercel API); `.env.demo.local` connects; migrations applied to `kashfedit-demo`, RLS on all 4 tables (2026-11-08)
