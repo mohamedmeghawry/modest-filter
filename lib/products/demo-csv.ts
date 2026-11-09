@@ -46,6 +46,12 @@ export function parseCsv(text: string): Record<string, string>[] {
   );
 }
 
+/** The inverse of parseCsv: quote a field only when it holds a comma, quote or newline. */
+export function toCsv(header: readonly string[], rows: Record<string, string>[]): string {
+  const cell = (v: string) => (/[",\r\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v);
+  return [header, ...rows.map((r) => header.map((h) => r[h] ?? ""))].map((r) => r.map(cell).join(",")).join("\n") + "\n";
+}
+
 export type DemoProduct = {
   id: string;
   brandName: string;

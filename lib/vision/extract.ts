@@ -143,15 +143,39 @@ export async function extractAttributes(
   }
 
   const client = new Anthropic({ apiKey });
+  const response = await client.messages.create(buildTaggingParams(imageArray, modelConfig, options));
 
-  // Structured outputs instead of a forced tool call: Opus 5.5 rejects forced
-  // tool_choice with a 400. Same schema, so the attribute contract is
-  // unchanged. No `thinking` param: 5.5 thinks adaptively by default (and
-  // 400s on "disabled"); 4.7 runs without thinking when it's omitted.
-  // No refusal `fallbacks`: a silent switch to another model would corrupt
-  // eval comparisons, and the Batches API rejects the parameter anyway.
-  // A refusal becomes needs_review via TaggingError.
-  const response = await client.messages.create({
+  const attributes = parseTaggingResponse(response);
+
+  return {
+    attributes,
+    usage: {
+      inputTokens: response.usage.input_tokens,
+      cacheCreationInputTokens: response.usage.cache_creation_input_tokens ?? 0,
+      cacheReadInputTokens: response.usage.cache_read_input_tokens ?? 0,
+      outputTokens: response.usage.output_tokens,
+    },
+  };
+}
+
+/**
+ * The tagging request, shared by the direct call above and the Message
+ * Batches API (scripts/tag-batch.ts), so both send exactly the same thing.
+ *
+ * Structured outputs instead of a forced tool call: Opus 5.5 rejects forced
+ * tool_choice with a 400. Same schema, so the attribute contract is
+ * unchanged. No `thinking` param: 5.5 thinks adaptively by default (and
+ * 400s on "disabled"); 4.7 runs without thinking when it's omitted.
+ * No refusal `fallbacks`: a silent switch to another model would corrupt
+ * eval comparisons, and the Batches API rejects the parameter anyway.
+ * A refusal becomes needs_review via TaggingError.
+ */
+export function buildTaggingParams(
+  imageArray: ImageInput[],
+  modelConfig: ModelConfig,
+  options: ExtractOptions = {},
+): Anthropic.MessageCreateParamsNonStreaming {
+  return {
     model: modelConfig.model,
     max_tokens: 16000,
     output_config: {
@@ -182,17 +206,5 @@ export async function extractAttributes(
         ],
       },
     ],
-  });
-
-  const attributes = parseTaggingResponse(response);
-
-  return {
-    attributes,
-    usage: {
-      inputTokens: response.usage.input_tokens,
-      cacheCreationInputTokens: response.usage.cache_creation_input_tokens ?? 0,
-      cacheReadInputTokens: response.usage.cache_read_input_tokens ?? 0,
-      outputTokens: response.usage.output_tokens,
-    },
   };
 }

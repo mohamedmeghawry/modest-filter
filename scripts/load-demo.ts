@@ -5,12 +5,16 @@
 // replaces it, see docs/attribute-sources.md). Products already tagged keep
 // their tags.
 //
-//   npx tsx --env-file=.env.demo.local scripts/load-demo.ts
+//   npx tsx --env-file=.env.demo.local scripts/load-demo.ts [csv]
+//
+// csv defaults to samples/demo/products.csv (batch 1); batch 2 is
+// samples/demo/products-batch2.csv, whose material/lining facts also come
+// from the product description (lib/products/batch2.ts).
 //
 // Refuses to run against any database other than the demo project.
 import { readFileSync } from "node:fs";
 import { parseCsv, toDemoProduct } from "../lib/products/demo-csv";
-import { parseFeedFacts } from "../lib/vision/feed-facts";
+import { rowFeedFacts } from "../lib/products/batch2";
 import { parseColorName } from "../lib/vision/color-facts";
 
 const DEMO_DB_USER = "postgres.cliojljksykfzbdynsra";
@@ -23,7 +27,7 @@ async function main() {
   // Import after the guard so no client is created for the wrong database.
   const { default: prisma } = await import("../lib/prisma");
 
-  const csvRows = parseCsv(readFileSync("samples/demo/products.csv", "utf8"));
+  const csvRows = parseCsv(readFileSync(process.argv[2] ?? "samples/demo/products.csv", "utf8"));
   const products = csvRows.map(toDemoProduct);
   const rawById = new Map(csvRows.map((r) => [r.id, r]));
 
@@ -60,7 +64,7 @@ async function main() {
     await prisma.product.upsert({ where: { id: p.id }, update: data, create: { id: p.id, ...data } });
 
     const raw = rawById.get(p.id)!;
-    const feed = parseFeedFacts(raw.material_raw);
+    const feed = rowFeedFacts(raw);
     await prisma.product.updateMany({
       where: { id: p.id, tagStatus: "pending" },
       data: { material: feed.material, lined: feed.lined, primaryColor: parseColorName(raw.color_raw) },

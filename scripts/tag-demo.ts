@@ -22,6 +22,7 @@ import { tagProductWithRetry } from "../lib/vision/tag-product";
 import { estimateCost } from "../lib/vision/cost";
 import type { Effort } from "../lib/vision/extract";
 import { prepareImage } from "./prepare-image";
+import { applyTaggingRules } from "../lib/vision/tagging-rules";
 
 const DEMO_DB_USER = "postgres.cliojljksykfzbdynsra";
 const MODEL = "claude-opus-5-5"; // moved from 4.7 on 2026-11-09 (cheaper, newer)
@@ -122,10 +123,7 @@ async function main() {
     await prisma.product.update({
       where: { id: p.id },
       data: {
-        ...outcome.attributes,
-        material: feed.material ?? outcome.attributes.material,
-        lined: feed.lined ?? null, // text only: a photo can't show lining
-        backStyle: pick.back ? outcome.attributes.backStyle : null, // no back photo = unknown
+        ...applyTaggingRules(outcome.attributes, { material: feed.material, lined: feed.lined }, { hasBackPhoto: pick.back }),
         tagStatus: "tagged",
         taggedAt: new Date(),
       },
