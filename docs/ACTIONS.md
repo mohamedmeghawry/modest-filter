@@ -4,7 +4,6 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 
 ## Now
 - [ ] **M** Approve ~$2 for the 2 eval runs (Opus 4.7 baseline, then Opus 5.5). Also gives the Opus side of the Jev comparison
-- [ ] **M** Check by eye: eval product `black-ls-midi` is marked `sleeveless`, but its source page says "long mesh sleeves" (Jev says long). Fix the manifest if it's wrong
 - [ ] **M** Decide: wire Jev into `tag-demo` as a pre-screen (confident reject → skip Opus)? Eval says yes for rejecting, no for accepting (`docs/attribute-sources.md`)
 - [ ] **M** Look at the preview on your phone (signed in to Vercel): https://modest-filter-git-demo-images-mohamedmeghawrys-projects.vercel.app/products and say what looks wrong
 - [ ] **M** When the group should see it: create the one Hobby share link (Vercel → deployment → Share)

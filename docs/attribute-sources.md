@@ -55,12 +55,14 @@ Roles: **final** = the text value is the tag. **2nd opinion** = text only checks
 | | Result |
 |---|---|
 | Cost / speed | 193,895 input tokens = **$0.008 for 28 products** (~$0.0003 each, vs ~$0.06 for Opus with 2 photos); 100–300 ms each |
-| Baseline from yes/no answers | 26/28 right. **0 immodest products passed.** 2 good ones hidden, both on "unsure" answers (oversized-buttondown sleeves 0.56; semisheer-scoopback back 0.64, which had no back photo) |
+| Baseline from yes/no answers | 25/28 right. **0 immodest products passed.** 3 good ones hidden, all on "unsure" answers (oversized-buttondown sleeves 0.56; semisheer-scoopback back 0.64, which had no back photo; black-ls-midi halter 0.32) |
+| Baseline from choice answers | 28/28 right, 0 immodest passed (choices always pick something, so they can't say "unsure") |
 | As a pre-screen | 16/28 **confidently rejected, all correctly**; 5 unsure and 7 confident passes would go on to Opus (Opus runs on 12 of 28, so its spend drops by ~57%) |
-| Per rule | sleeves 26/28, back 22/28, cut-outs 25/28, slit 28/28, neckline 25/28 |
-| Per attribute (choice) | sleeveLength 23/28, backStyle 20/28, neckline 17/28, slit 17/17 |
+| Per rule | sleeves 27/28, back 22/28, cut-outs 25/28, slit 28/28, neckline 25/28 |
+| Per attribute (choice) | sleeveLength 24/28, backStyle 20/28, neckline 17/28, slit 17/17 |
+| Run-to-run noise | Same photos twice: 79 of 157 yes/no probabilities moved, by at most 0.09; 2 of 112 choices changed; no product verdict changed |
 
-**Read:** good enough to reject, not to accept. The back is its weak spot: it was confidently wrong 3 times (said "closed" on modal-partlined's scoop back, "open" on floral-viscose-maxi and yellow-item, which are marked closed). Other rules happened to fail those products anyway, so the product-level result held, but on a bigger set a wrong back read could hide a good product. Neckline choices are loose (crew vs v_neck vs turtleneck), so the yes/no questions are the ones to use. **Ground truth to check:** black-ls-midi is marked `sleeveless`, but its source page says "long mesh sleeves" and Jev says long (0.92). 28 products is a small sample; not yet compared with Opus on the same set (that eval needs approval).
+**Read:** good enough to reject, not to accept. The back is its weak spot: it was confidently wrong 3 times (said "closed" on modal-partlined's scoop back, "open" on floral-viscose-maxi and yellow-item, which are marked closed). Other rules happened to fail those products anyway, so the product-level result held, but on a bigger set a wrong back read could hide a good product. Neckline choices are loose (crew vs v_neck vs turtleneck), so the yes/no questions are the ones to use. **Ground truth fixed (Mohamed, 2026-11-09):** black-ls-midi was marked `sleeveless`; it has long mesh sleeves, as Jev said (0.92). `sleeveOpacity` is still unset. 28 products is a small sample; not yet compared with Opus on the same set (that eval needs approval).
 
 ## Photo selection for AI tagging
 

@@ -1,6 +1,6 @@
 {
   "model": "jev-latest",
-  "ranAt": "2026-11-09T05:55:06.485Z",
+  "ranAt": "2026-11-09T06:04:46.625Z",
   "thresholds": {
     "YES": 0.7,
     "NO": 0.3
@@ -113,13 +113,13 @@
       "id": "black-ls-midi",
       "category": "dresses",
       "photos": 2,
-      "ms": 180,
+      "ms": 173,
       "inputTokens": 2706,
-      "truthPass": false,
+      "truthPass": true,
       "noulPass": false,
       "choicePass": true,
       "truthRules": {
-        "sleeves": false,
+        "sleeves": true,
         "back": true,
         "cutouts": true,
         "slit": true,
@@ -134,11 +134,11 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.92,
-        "back_closed": 0.81,
+        "back_closed": 0.78,
         "has_cutout": 0.11,
         "slit_to_knee": 0.14,
         "off_shoulder": 0.03,
-        "halter": 0.31
+        "halter": 0.32
       },
       "choices": {
         "sleeveLength": "long",
@@ -147,7 +147,7 @@
         "slit": "low"
       },
       "groundTruth": {
-        "sleeveLength": "sleeveless",
+        "sleeveLength": "long",
         "backStyle": "closed",
         "cutouts": "none",
         "slit": "low",
@@ -170,7 +170,7 @@
       "id": "floral-viscose-maxi",
       "category": "dresses",
       "photos": 2,
-      "ms": 267,
+      "ms": 391,
       "inputTokens": 9906,
       "truthPass": false,
       "noulPass": false,
@@ -190,12 +190,12 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.01,
+        "sleeves_reach_wrist": 0.02,
         "back_closed": 0.05,
-        "has_cutout": 0.82,
-        "slit_to_knee": 0.21,
-        "off_shoulder": 0.16,
-        "halter": 0.08
+        "has_cutout": 0.83,
+        "slit_to_knee": 0.22,
+        "off_shoulder": 0.12,
+        "halter": 0.09
       },
       "choices": {
         "sleeveLength": "sleeveless",
@@ -227,7 +227,7 @@
       "id": "striped-halter",
       "category": "tops",
       "photos": 2,
-      "ms": 145,
+      "ms": 159,
       "inputTokens": 9702,
       "truthPass": false,
       "noulPass": false,
@@ -248,9 +248,9 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.02,
-        "back_closed": 0.07,
-        "has_cutout": 0.14,
-        "off_shoulder": 0.39,
+        "back_closed": 0.08,
+        "has_cutout": 0.13,
+        "off_shoulder": 0.41,
         "halter": 0.93
       },
       "choices": {
@@ -281,7 +281,7 @@
       "id": "everlane-denim-shirtdress",
       "category": "dresses",
       "photos": 2,
-      "ms": 233,
+      "ms": 200,
       "inputTokens": 5886,
       "truthPass": true,
       "noulPass": true,
@@ -302,9 +302,9 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.92,
-        "back_closed": 0.93,
+        "back_closed": 0.94,
         "has_cutout": 0.05,
-        "slit_to_knee": 0.08,
+        "slit_to_knee": 0.09,
         "off_shoulder": 0.02,
         "halter": 0.03
       },
@@ -338,7 +338,7 @@
       "id": "reformation-casette-silk",
       "category": "dresses",
       "photos": 2,
-      "ms": 158,
+      "ms": 151,
       "inputTokens": 10800,
       "truthPass": false,
       "noulPass": false,
@@ -360,10 +360,10 @@
       "nouls": {
         "sleeves_reach_wrist": 0.02,
         "back_closed": 0.04,
-        "has_cutout": 0.95,
-        "slit_to_knee": 0.15,
-        "off_shoulder": 0.19,
-        "halter": 0.66
+        "has_cutout": 0.94,
+        "slit_to_knee": 0.14,
+        "off_shoulder": 0.18,
+        "halter": 0.65
       },
       "choices": {
         "sleeveLength": "sleeveless",
@@ -395,7 +395,7 @@
       "id": "anthropologie-loretta-offshoulder-mesh",
       "category": "dresses",
       "photos": 2,
-      "ms": 145,
+      "ms": 169,
       "inputTokens": 9916,
       "truthPass": false,
       "noulPass": false,
@@ -416,11 +416,11 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.02,
-        "back_closed": 0.74,
-        "has_cutout": 0.23,
+        "back_closed": 0.75,
+        "has_cutout": 0.22,
         "slit_to_knee": 0.07,
-        "off_shoulder": 0.44,
-        "halter": 0.26
+        "off_shoulder": 0.42,
+        "halter": 0.25
       },
       "choices": {
         "sleeveLength": "cap",
@@ -452,7 +452,7 @@
       "id": "knit-turtleneck-mini",
       "category": "dresses",
       "photos": 2,
-      "ms": 219,
+      "ms": 144,
       "inputTokens": 11022,
       "truthPass": true,
       "noulPass": true,
@@ -472,12 +472,12 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.8,
+        "sleeves_reach_wrist": 0.74,
         "back_closed": 0.95,
         "has_cutout": 0.05,
         "slit_to_knee": 0.05,
         "off_shoulder": 0.02,
-        "halter": 0.03
+        "halter": 0.04
       },
       "choices": {
         "sleeveLength": "long",
@@ -509,7 +509,7 @@
       "id": "aritzia-cutout-knit-midi",
       "category": "dresses",
       "photos": 2,
-      "ms": 101,
+      "ms": 119,
       "inputTokens": 4248,
       "truthPass": false,
       "noulPass": false,
@@ -530,9 +530,9 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.02,
-        "back_closed": 0.7,
+        "back_closed": 0.61,
         "has_cutout": 0.99,
-        "slit_to_knee": 0.11,
+        "slit_to_knee": 0.1,
         "off_shoulder": 0.05,
         "halter": 0.05
       },
@@ -566,7 +566,7 @@
       "id": "wool-sweater-dress",
       "category": "dresses",
       "photos": 2,
-      "ms": 291,
+      "ms": 261,
       "inputTokens": 8140,
       "truthPass": false,
       "noulPass": false,
@@ -586,12 +586,12 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.54,
+        "sleeves_reach_wrist": 0.58,
         "back_closed": 0.96,
         "has_cutout": 0.1,
         "slit_to_knee": 0.07,
         "off_shoulder": 0.02,
-        "halter": 0.04
+        "halter": 0.03
       },
       "choices": {
         "sleeveLength": "three_quarter",
@@ -623,7 +623,7 @@
       "id": "anthropologie-maeve-square-neck-plaid",
       "category": "dresses",
       "photos": 2,
-      "ms": 167,
+      "ms": 322,
       "inputTokens": 9910,
       "truthPass": false,
       "noulPass": false,
@@ -645,10 +645,10 @@
       "nouls": {
         "sleeves_reach_wrist": 0.01,
         "back_closed": 0.45,
-        "has_cutout": 0.16,
-        "slit_to_knee": 0.81,
-        "off_shoulder": 0.77,
-        "halter": 0.08
+        "has_cutout": 0.14,
+        "slit_to_knee": 0.82,
+        "off_shoulder": 0.8,
+        "halter": 0.09
       },
       "choices": {
         "sleeveLength": "sleeveless",
@@ -680,7 +680,7 @@
       "id": "anthropologie-printed-wrap",
       "category": "dresses",
       "photos": 2,
-      "ms": 130,
+      "ms": 284,
       "inputTokens": 9906,
       "truthPass": true,
       "noulPass": true,
@@ -700,12 +700,12 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.92,
-        "back_closed": 0.93,
+        "sleeves_reach_wrist": 0.93,
+        "back_closed": 0.94,
         "has_cutout": 0.08,
-        "slit_to_knee": 0.18,
-        "off_shoulder": 0.02,
-        "halter": 0.03
+        "slit_to_knee": 0.17,
+        "off_shoulder": 0.03,
+        "halter": 0.04
       },
       "choices": {
         "sleeveLength": "long",
@@ -737,7 +737,7 @@
       "id": "lined-floral-midi",
       "category": "dresses",
       "photos": 2,
-      "ms": 187,
+      "ms": 272,
       "inputTokens": 7214,
       "truthPass": false,
       "noulPass": false,
@@ -757,11 +757,11 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.03,
-        "back_closed": 0.06,
-        "has_cutout": 0.56,
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.05,
+        "has_cutout": 0.57,
         "slit_to_knee": 0.09,
-        "off_shoulder": 0.05,
+        "off_shoulder": 0.06,
         "halter": 0.04
       },
       "choices": {
@@ -794,7 +794,7 @@
       "id": "openback-maxi",
       "category": "dresses",
       "photos": 1,
-      "ms": 138,
+      "ms": 105,
       "inputTokens": 6023,
       "truthPass": false,
       "noulPass": false,
@@ -815,16 +815,16 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.02,
-        "back_closed": 0.27,
+        "back_closed": 0.28,
         "has_cutout": 0.97,
         "slit_to_knee": 0.1,
-        "off_shoulder": 0.42,
-        "halter": 0.22
+        "off_shoulder": 0.39,
+        "halter": 0.24
       },
       "choices": {
         "sleeveLength": "sleeveless",
         "backStyle": "open_back",
-        "neckline": "scoop",
+        "neckline": "v_neck",
         "slit": "none"
       },
       "groundTruth": {
@@ -851,7 +851,7 @@
       "id": "cropped-tank",
       "category": "tops",
       "photos": 2,
-      "ms": 102,
+      "ms": 104,
       "inputTokens": 4758,
       "truthPass": false,
       "noulPass": false,
@@ -872,9 +872,9 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.02,
-        "back_closed": 0.04,
-        "has_cutout": 0.14,
-        "off_shoulder": 0.19,
+        "back_closed": 0.05,
+        "has_cutout": 0.15,
+        "off_shoulder": 0.24,
         "halter": 0.06
       },
       "choices": {
@@ -905,7 +905,7 @@
       "id": "oversized-buttondown",
       "category": "tops",
       "photos": 2,
-      "ms": 99,
+      "ms": 103,
       "inputTokens": 2782,
       "truthPass": true,
       "noulPass": false,
@@ -925,10 +925,10 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.56,
-        "back_closed": 0.88,
+        "sleeves_reach_wrist": 0.62,
+        "back_closed": 0.87,
         "has_cutout": 0.1,
-        "off_shoulder": 0.03,
+        "off_shoulder": 0.02,
         "halter": 0.03
       },
       "choices": {
@@ -959,7 +959,7 @@
       "id": "tunic-highneck",
       "category": "tops",
       "photos": 2,
-      "ms": 127,
+      "ms": 118,
       "inputTokens": 6404,
       "truthPass": false,
       "noulPass": false,
@@ -982,8 +982,8 @@
         "sleeves_reach_wrist": 0.06,
         "back_closed": 0.96,
         "has_cutout": 0.05,
-        "off_shoulder": 0.03,
-        "halter": 0.04
+        "off_shoulder": 0.02,
+        "halter": 0.03
       },
       "choices": {
         "sleeveLength": "short",
@@ -1013,7 +1013,7 @@
       "id": "anthropologie-maeve-polkadot-blouse",
       "category": "tops",
       "photos": 2,
-      "ms": 152,
+      "ms": 263,
       "inputTokens": 9722,
       "truthPass": false,
       "noulPass": false,
@@ -1067,7 +1067,7 @@
       "id": "semisheer-scoopback",
       "category": "tops",
       "photos": 1,
-      "ms": 128,
+      "ms": 104,
       "inputTokens": 5394,
       "truthPass": true,
       "noulPass": false,
@@ -1087,10 +1087,10 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.83,
-        "back_closed": 0.64,
+        "sleeves_reach_wrist": 0.82,
+        "back_closed": 0.67,
         "has_cutout": 0.07,
-        "off_shoulder": 0.07,
+        "off_shoulder": 0.08,
         "halter": 0.03
       },
       "choices": {
@@ -1121,7 +1121,7 @@
       "id": "anthropologie-geometric-dolman-blouse",
       "category": "tops",
       "photos": 2,
-      "ms": 246,
+      "ms": 403,
       "inputTokens": 9722,
       "truthPass": false,
       "noulPass": false,
@@ -1142,8 +1142,8 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.09,
-        "back_closed": 0.06,
-        "has_cutout": 0.83,
+        "back_closed": 0.07,
+        "has_cutout": 0.82,
         "off_shoulder": 0.04,
         "halter": 0.04
       },
@@ -1175,7 +1175,7 @@
       "id": "leather-top",
       "category": "tops",
       "photos": 2,
-      "ms": 126,
+      "ms": 299,
       "inputTokens": 6894,
       "truthPass": false,
       "noulPass": false,
@@ -1196,10 +1196,10 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.02,
-        "back_closed": 0.87,
+        "back_closed": 0.88,
         "has_cutout": 0.1,
-        "off_shoulder": 0.15,
-        "halter": 0.12
+        "off_shoulder": 0.17,
+        "halter": 0.1
       },
       "choices": {
         "sleeveLength": "sleeveless",
@@ -1229,7 +1229,7 @@
       "id": "abstract-cami",
       "category": "tops",
       "photos": 2,
-      "ms": 109,
+      "ms": 122,
       "inputTokens": 5250,
       "truthPass": false,
       "noulPass": false,
@@ -1250,10 +1250,10 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.02,
-        "back_closed": 0.05,
+        "back_closed": 0.04,
         "has_cutout": 0.2,
         "off_shoulder": 0.11,
-        "halter": 0.2
+        "halter": 0.17
       },
       "choices": {
         "sleeveLength": "sleeveless",
@@ -1283,7 +1283,7 @@
       "id": "modal-partlined",
       "category": "tops",
       "photos": 2,
-      "ms": 191,
+      "ms": 112,
       "inputTokens": 3692,
       "truthPass": false,
       "noulPass": false,
@@ -1304,10 +1304,10 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.89,
-        "back_closed": 0.91,
+        "back_closed": 0.89,
         "has_cutout": 0.15,
         "off_shoulder": 0.72,
-        "halter": 0.07
+        "halter": 0.08
       },
       "choices": {
         "sleeveLength": "long",
@@ -1337,7 +1337,7 @@
       "id": "black-classic-abaya",
       "category": "abayas",
       "photos": 1,
-      "ms": 231,
+      "ms": 232,
       "inputTokens": 3910,
       "truthPass": true,
       "noulPass": true,
@@ -1357,12 +1357,12 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.92,
-        "back_closed": 0.88,
+        "sleeves_reach_wrist": 0.93,
+        "back_closed": 0.85,
         "has_cutout": 0.07,
         "slit_to_knee": 0.17,
         "off_shoulder": 0.03,
-        "halter": 0.05
+        "halter": 0.04
       },
       "choices": {
         "sleeveLength": "long",
@@ -1394,7 +1394,7 @@
       "id": "openfront-abaya",
       "category": "abayas",
       "photos": 1,
-      "ms": 122,
+      "ms": 114,
       "inputTokens": 4056,
       "truthPass": true,
       "noulPass": true,
@@ -1414,11 +1414,11 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.92,
+        "sleeves_reach_wrist": 0.93,
         "back_closed": 0.79,
-        "has_cutout": 0.05,
-        "slit_to_knee": 0.15,
-        "off_shoulder": 0.03,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.14,
+        "off_shoulder": 0.04,
         "halter": 0.03
       },
       "choices": {
@@ -1451,7 +1451,7 @@
       "id": "multicolor-abaya",
       "category": "abayas",
       "photos": 2,
-      "ms": 165,
+      "ms": 193,
       "inputTokens": 2401,
       "truthPass": true,
       "noulPass": true,
@@ -1471,10 +1471,10 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.83,
+        "sleeves_reach_wrist": 0.78,
         "back_closed": 0.91,
         "has_cutout": 0.06,
-        "slit_to_knee": 0.2,
+        "slit_to_knee": 0.22,
         "off_shoulder": 0.03,
         "halter": 0.05
       },
@@ -1508,7 +1508,7 @@
       "id": "blend-abaya",
       "category": "abayas",
       "photos": 2,
-      "ms": 165,
+      "ms": 137,
       "inputTokens": 9895,
       "truthPass": true,
       "noulPass": true,
@@ -1528,7 +1528,7 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.95,
+        "sleeves_reach_wrist": 0.96,
         "back_closed": 0.96,
         "has_cutout": 0.06,
         "slit_to_knee": 0.1,
@@ -1565,7 +1565,7 @@
       "id": "other-material-metallic",
       "category": "tops",
       "photos": 2,
-      "ms": 132,
+      "ms": 186,
       "inputTokens": 6136,
       "truthPass": false,
       "noulPass": false,
@@ -1586,14 +1586,14 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.93,
-        "back_closed": 0.44,
+        "back_closed": 0.37,
         "has_cutout": 0.19,
-        "off_shoulder": 0.48,
-        "halter": 0.27
+        "off_shoulder": 0.52,
+        "halter": 0.25
       },
       "choices": {
         "sleeveLength": "long",
-        "backStyle": "closed",
+        "backStyle": "open_back",
         "neckline": "off_shoulder",
         "slit": null
       },
@@ -1619,7 +1619,7 @@
       "id": "yellow-item",
       "category": "dresses",
       "photos": 2,
-      "ms": 283,
+      "ms": 234,
       "inputTokens": 7500,
       "truthPass": false,
       "noulPass": false,
@@ -1639,11 +1639,11 @@
         "neckline": true
       },
       "nouls": {
-        "sleeves_reach_wrist": 0.02,
+        "sleeves_reach_wrist": 0.03,
         "back_closed": 0.13,
-        "has_cutout": 0.6,
-        "slit_to_knee": 0.07,
-        "off_shoulder": 0.02,
+        "has_cutout": 0.65,
+        "slit_to_knee": 0.08,
+        "off_shoulder": 0.03,
         "halter": 0.03
       },
       "choices": {
