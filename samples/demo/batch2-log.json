@@ -126,5 +126,32 @@
         "reason": "spare, not needed (4 tops already have front + back)"
       }
     ]
+  },
+  "Banana Republic": {
+    "collected_on": "2026-11-10",
+    "products": {
+      "bananarepublic-1180141013": 1,
+      "bananarepublic-1182116013": 1,
+      "bananarepublic-859896043": 1,
+      "bananarepublic-1180130003": 1,
+      "bananarepublic-1180132003": 1,
+      "bananarepublic-1180120003": 1,
+      "bananarepublic-709387003": 1,
+      "bananarepublic-1188283003": 1,
+      "bananarepublic-709273013": 1,
+      "bananarepublic-836722003": 1
+    },
+    "skipped": [
+      {
+        "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=1180164013",
+        "listing_position": 7,
+        "reason": "spare, not needed (6 dresses already have front + back)"
+      },
+      {
+        "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=1183307013",
+        "listing_position": 5,
+        "reason": "spare, not needed (4 tops already have front + back)"
+      }
+    ]
   }
 }

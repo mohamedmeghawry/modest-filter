@@ -1725,5 +1725,694 @@
         "vision": "knit"
       }
     ]
+  },
+  {
+    "id": "gap-1184696023",
+    "title": "CashSoft Rib Turtleneck Sweater Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.387Z",
+    "costUsd": 0.01104,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "turtleneck",
+        "high_neck"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "brown",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "low",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "gray",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "low",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "gray",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "primaryColor",
+        "text": "brown",
+        "vision": "gray"
+      },
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "gap-1184321013",
+    "title": "Plaid Tie-Neck Shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.419Z",
+    "costUsd": 0.01108,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "pattern": [
+        "plaid"
+      ],
+      "primaryColor": "red",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "red",
+      "pattern": "plaid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "red",
+      "pattern": "plaid"
+    },
+    "disagreements": [
+      {
+        "attribute": "neckline",
+        "text": [
+          "collar"
+        ],
+        "vision": "high_neck"
+      }
+    ]
+  },
+  {
+    "id": "gap-1184323003",
+    "title": "Plaid Shirt Jacket",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.451Z",
+    "costUsd": 0.01099,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "fit": [
+        "loose",
+        "oversized"
+      ],
+      "pattern": [
+        "plaid"
+      ],
+      "primaryColor": "black",
+      "material": "polyester",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": null,
+      "primaryColor": "black",
+      "pattern": "plaid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "polyester",
+      "primaryColor": "black",
+      "pattern": "plaid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "gap-1184843023",
+    "title": "Organic Cotton Poplin Tie-Neck Big Shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.482Z",
+    "costUsd": 0.01102,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "fit": [
+        "oversized",
+        "loose"
+      ],
+      "primaryColor": "white",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "oversized",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "gap-913914013",
+    "title": "Organic Cotton Popin Peplum Shirt",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.515Z",
+    "costUsd": 0.01105,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "fit": [
+        "fitted",
+        "semi_fitted"
+      ],
+      "primaryColor": "white",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "extra_long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": null,
+      "topLength": "hip",
+      "slit": null,
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "white",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "gap-1185332013",
+    "title": "Voile Plaid Empire-Waist Maxi Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.546Z",
+    "costUsd": 0.01114,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "v_neck"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "pattern": [
+        "plaid"
+      ],
+      "primaryColor": "red",
+      "material": "cotton",
+      "lined": "lined"
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "red",
+      "pattern": "plaid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "semi_sheer",
+      "neckline": "v_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "semi_sheer",
+      "lined": "lined",
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "red",
+      "pattern": "plaid"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "ankle",
+          "floor"
+        ],
+        "vision": "midi"
+      },
+      {
+        "attribute": "lined",
+        "text": "lined",
+        "vision": "unlined"
+      }
+    ]
+  },
+  {
+    "id": "gap-1184693013",
+    "title": "Lightweight CashSoft Rib Sweater Maxi Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.578Z",
+    "costUsd": 0.01102,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "hemLength": [
+        "ankle",
+        "floor"
+      ],
+      "primaryColor": "brown",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "high_neck",
+      "backStyle": "closed",
+      "hemLength": "midi",
+      "topLength": null,
+      "slit": "none",
+      "fit": "fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "hemLength",
+        "text": [
+          "ankle",
+          "floor"
+        ],
+        "vision": "midi"
+      },
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "gap-912593003",
+    "title": "Denim Mini Shift Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.609Z",
+    "costUsd": 0.01101,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": null,
+      "material": "denim",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "denim",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "denim",
+      "primaryColor": "blue",
+      "pattern": "solid"
+    },
+    "disagreements": []
+  },
+  {
+    "id": "gap-1184695003",
+    "title": "CashSoft Polo Sweater Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.641Z",
+    "costUsd": 0.01102,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "primaryColor": "red",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "red",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "semi_fitted",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "red",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
+  },
+  {
+    "id": "gap-1182627003",
+    "title": "CashSoft Oversized Polo Sweater Mini Dress",
+    "photos": [
+      "front.jpg",
+      "back.jpg"
+    ],
+    "backPhoto": true,
+    "model": "claude-opus-5-5",
+    "effort": "low",
+    "batchId": "msgbatch_013Jmpzx5jrCVToyvpRG6Cq2",
+    "taggedAt": "2026-11-09T08:18:04.672Z",
+    "costUsd": 0.01663,
+    "text": {
+      "sleeveLength": [
+        "long",
+        "extra_long"
+      ],
+      "neckline": [
+        "collar"
+      ],
+      "hemLength": [
+        "mini"
+      ],
+      "fit": [
+        "oversized",
+        "loose"
+      ],
+      "primaryColor": "brown",
+      "material": "cotton",
+      "lined": null
+    },
+    "vision": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": "unlined",
+      "cutouts": "none",
+      "material": "knit",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "final": {
+      "sleeveLength": "long",
+      "sleeveOpacity": "opaque",
+      "neckline": "collar",
+      "backStyle": "closed",
+      "hemLength": "mini",
+      "topLength": null,
+      "slit": "none",
+      "fit": "loose",
+      "opacity": "opaque",
+      "lined": null,
+      "cutouts": "none",
+      "material": "cotton",
+      "primaryColor": "brown",
+      "pattern": "solid"
+    },
+    "disagreements": [
+      {
+        "attribute": "material",
+        "text": "cotton",
+        "vision": "knit"
+      }
+    ]
   }
 ]
