@@ -90,6 +90,12 @@ Findings from looking at all 98 demo photos (2026-11-08):
 - **Photo order is not consistent across brands**, so "first N photos" is a poor rule. For 25 products the picks are by hand (`samples/demo/photo-picks.json`). **Open question at scale:** a per-brand order rule, or a cheap model pass that labels each photo's view (front, back, side, close-up, flat, other colour).
 - **Lining can't be seen in photos** (ADR-0012). The first product came back "unlined" with no text support. Check whether vision should leave `lined` empty when the text is silent.
 
+**Per-brand photo order (batch 2, from the collection log `samples/demo/batch2-log.json`):**
+
+| Brand | Front on model | Back on model | Seen on |
+|---|---|---|---|
+| Mango | image `-001` (gallery position 2) | image `-003` (gallery position 3) | 2 of 2 pilot products (2026-11-10). Mango's page has no structured product data; facts come from the visible page and the "Details, composition and care" drawer. Image size is set with `?wid=` |
+
 **Experiment:** hm-1343091003 tagged with 4 photos (`samples/demo/tag-results-4photos.json`), then re-tagged with its 2 picks. Compare the two to see what 2 photos lose.
 
 ## Log

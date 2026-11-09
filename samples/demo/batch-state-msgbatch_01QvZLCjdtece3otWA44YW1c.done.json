@@ -1,0 +1,142 @@
+{
+  "batchId": "msgbatch_01QvZLCjdtece3otWA44YW1c",
+  "csv": "samples/demo/products.csv",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "submittedAt": "2026-11-09T06:51:38.261Z",
+  "products": {
+    "uniqlo-487294": {
+      "photos": [
+        "0.jpg",
+        "1.jpg"
+      ],
+      "back": false
+    },
+    "uniqlo-488693": {
+      "photos": [
+        "0.jpg",
+        "3.jpg"
+      ],
+      "back": false
+    },
+    "uniqlo-487635": {
+      "photos": [
+        "0.jpg",
+        "4.jpg"
+      ],
+      "back": true
+    },
+    "uniqlo-487526": {
+      "photos": [
+        "1.jpg",
+        "0.jpg"
+      ],
+      "back": false
+    },
+    "hm-1376059001": {
+      "photos": [
+        "0.jpg",
+        "1.jpg"
+      ],
+      "back": true
+    },
+    "hm-1364282001": {
+      "photos": [
+        "0.jpg",
+        "2.jpg"
+      ],
+      "back": false
+    },
+    "hm-1369560001": {
+      "photos": [
+        "0.jpg",
+        "2.jpg"
+      ],
+      "back": false
+    },
+    "hm-1343091003": {
+      "photos": [
+        "2.jpg",
+        "1.jpg"
+      ],
+      "back": true
+    },
+    "zara-08605934": {
+      "photos": [
+        "0.jpg",
+        "3.jpg"
+      ],
+      "back": true
+    },
+    "zara-05919247": {
+      "photos": [
+        "0.jpg",
+        "1.jpg"
+      ],
+      "back": false
+    },
+    "zara-02289158": {
+      "photos": [
+        "0.jpg",
+        "2.jpg"
+      ],
+      "back": true
+    },
+    "zara-05029258": {
+      "photos": [
+        "0.jpg",
+        "4.jpg"
+      ],
+      "back": true
+    },
+    "simons-195-20942-233386": {
+      "photos": [
+        "2.jpg",
+        "1.jpg"
+      ],
+      "back": true
+    },
+    "simons-172-10597-230173": {
+      "photos": [
+        "1.jpg",
+        "2.jpg"
+      ],
+      "back": true
+    },
+    "simons-172-15168-229790": {
+      "photos": [
+        "0.jpg",
+        "1.jpg"
+      ],
+      "back": true
+    },
+    "simons-211-12709-225274": {
+      "photos": [
+        "1.jpg",
+        "2.jpg"
+      ],
+      "back": true
+    },
+    "simons-211-15110-218637": {
+      "photos": [
+        "0.jpg",
+        "1.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-500152": {
+      "photos": [
+        "0.jpg",
+        "1.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-501161": {
+      "photos": [
+        "0.jpg",
+        "1.jpg"
+      ],
+      "back": true
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Mango": {
+    "collected_on": "2026-11-10",
+    "products": 2,
+    "with_back_photo": 2,
+    "back_photo_positions": [
+      2,
+      2
+    ],
+    "skipped": [
+      {
+        "link": "https://shop.mango.com/ca/en/p/women/dresses-and-jumpsuits/black/velvet-cut-out-dress-with-frog-fastenings/37069230/99/00",
+        "listing_position": 1,
+        "reason": "text gate: cutouts (title says cut-out)"
+      }
+    ]
+  }
+}

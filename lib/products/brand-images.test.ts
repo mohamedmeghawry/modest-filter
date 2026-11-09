@@ -25,7 +25,7 @@ describe("imgSrcSources", () => {
 
   it("adds exactly the five brand CDNs on preview", () => {
     expect(imgSrcSources(true)).toBe(
-      "'self' blob: data: https://image.uniqlo.com https://image.hm.com https://static.zara.net https://imagescdn.simons.ca https://www.reitmans.com",
+      "'self' blob: data: https://image.uniqlo.com https://image.hm.com https://static.zara.net https://imagescdn.simons.ca https://www.reitmans.com https://media.mango.com",
     );
   });
 });
