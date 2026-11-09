@@ -9,7 +9,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  SleeveLength,
   HemLength,
   Opacity,
   Material,
@@ -27,11 +26,9 @@ type FilterGroup = { key: string; label: string; options: string[] };
 
 const FILTER_GROUPS: FilterGroup[] = [
   { key: "category", label: "Category", options: CATEGORY_OPTIONS },
-  {
-    key: "sleeveLength",
-    label: "Sleeve Length",
-    options: Object.values(SleeveLength),
-  },
+  // No sleeve-length group: the modest baseline (ADR-0015) already limits every
+  // product to long sleeves, so the filter would offer a single option. The
+  // parser still accepts ?sleeveLength= so old links don't break.
   { key: "hemLength", label: "Hem Length", options: Object.values(HemLength) },
   { key: "opacity", label: "Opacity", options: Object.values(Opacity) },
   { key: "material", label: "Material", options: Object.values(Material) },
