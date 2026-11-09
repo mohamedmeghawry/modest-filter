@@ -4,6 +4,7 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 
 ## Now
 - [ ] **M** Approve ~$2 for the 2 eval runs (Opus 4.7 baseline, then Opus 5.5)
+- [ ] **M** Jev test: sign up at typesafe.ai (early access), create an API key, put it in `.env.local` as `TYPESAFE_API_KEY` (never in chat). Approve ~$0.10 of Jev spend
 - [ ] **M** Look at the preview on your phone (signed in to Vercel): https://modest-filter-git-demo-images-mohamedmeghawrys-projects.vercel.app/products and say what looks wrong
 - [ ] **M** When the group should see it: create the one Hobby share link (Vercel → deployment → Share)
 - [ ] **M** Reset the `kashfedit-demo` DB password once more: it showed in a Claude screenshot (Risk Register INC-2026-04). Make it in Bitwarden, paste into Supabase reset, `.env.demo.local` and both Vercel Preview vars
@@ -14,7 +15,8 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 - [ ] **C** Measure run-to-run noise: re-tag 3 products twice with the same photos (~$0.40) before judging 2 vs 4 photos
 - [ ] **C** Photo picking at scale: per-brand order rule vs a cheap view-labelling pass
 - [ ] **C** Wire `findDisagreements` (`lib/vision/text-facts.ts`) into the tagger: when the title or description contradicts vision, mark the product `needs_review`
-- [ ] **C** Collect product descriptions during collection, but store only the parsed facts (`parseFeedFacts` + `parseTextFacts`), never the brand's text
+- [ ] **C** Jev vs Opus on the 28-product eval set (hand ground truth, front + back photos): one Choice/Noul per baseline attribute, plain `fetch` (no SDK dependency), photos resized to ≤1568 px. Compare accuracy on the baseline attributes and cost per product. Candidate role: cheap pre-screen before Opus
+- [ ] **C** Collect product descriptions and the "details" section (e.g. H&M/Uniqlo state sleeve length) with the next collection batch, run `textGate` + parsers on them, store only the parsed facts, never the brand's text. Do it in the browser at 1 page per second (Simons blocks scripts)
 - [ ] **C** Run the eval on the 28-product set with Opus 4.7 as-is (baseline, ~$1)
 - [ ] **C** Move the tagger to `claude-opus-5-5`: structured outputs replace the forced tool (`extract.ts:120` would 400), max_tokens 1024→16000, explicit effort, add the price to `cost.ts`. Re-run the eval and compare.
 
