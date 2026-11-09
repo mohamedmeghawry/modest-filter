@@ -15,6 +15,7 @@ import { parseCsv } from "../lib/products/demo-csv";
 import { parseFeedFacts } from "../lib/vision/feed-facts";
 import { parseColorName } from "../lib/vision/color-facts";
 import { findDisagreements, parseTextFacts } from "../lib/vision/text-facts";
+import { textGate } from "../lib/vision/text-gate";
 import { tagProductWithRetry } from "../lib/vision/tag-product";
 import { estimateCost } from "../lib/vision/cost";
 
@@ -69,6 +70,14 @@ async function main() {
       console.log(`• ${p.id}: no CSV row or no local images, skipped`);
       continue;
     }
+    // Free pre-screen (ADR-0015): the brand's own words already fail the
+    // baseline, so skip the paid AI call. The product stays untagged = hidden.
+    const gate = textGate(row.title);
+    if (!gate.pass) {
+      console.log(`• ${p.id}: rejected by text (${gate.reasons.join(", ")}), not tagged, $0`);
+      continue;
+    }
+
     const files = picks[p.id] ?? readdirSync(dir).filter((f) => /\.(jpe?g|png|webp)$/i.test(f)).sort().slice(0, MAX_IMAGES);
     const outcome = await tagProductWithRetry(
       files.map((f) => readFileSync(join(dir, f))),

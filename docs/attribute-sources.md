@@ -44,6 +44,10 @@ Roles: **final** = the text value is the tag. **2nd opinion** = text only checks
 
 **Decision (2026-11-08): local copies for tagging.** This matches ADR-0013 amendment condition 3. Hotlinking is for display on the private preview only. Revisit if licensed feeds supply stable image URLs.
 
+## Free text gate before AI tagging (ADR-0015)
+
+`lib/vision/text-gate.ts` rejects a product when its own words already fail the modest baseline: a stated sleeve that can't be long ("short sleeve", "camisole", "3/4", "strapless"), "halter" or "one-shoulder", "cut-out", "open back" or "backless", "high slit". It only rejects; silence goes to vision. On the 25 demo products it rejected 6, saving 6 AI calls, and all 6 also failed the baseline on vision. No good product was wrongly rejected. Text that states long sleeves is reliable (6/6 agreement), but vision still runs for the other baseline attributes in the same call, so stating long sleeves saves no money.
+
 ## Photo selection for AI tagging
 
 Findings from looking at all 98 demo photos (2026-11-08):
