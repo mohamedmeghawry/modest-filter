@@ -3,14 +3,17 @@
 One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to the bottom, then get deleted after a week.
 
 ## Now
-- [ ] **M** Approve ~$3 API spend: tag the 25 demo products (~$1) + 2 eval runs (~$2)
+- [ ] **M** Approve ~$2 for the 2 eval runs (Opus 4.7 baseline, then Opus 5.5)
+- [ ] **M** Look at the tagged products (http://localhost:3917/products while the local server runs) and say what looks wrong
 - [ ] **M** Approve pushing branch `demo-images` (`10e591b`). Pushing creates the private preview deployment
 - [ ] **M** (after the preview works) Reset the `kashfedit-demo` DB password once more: it showed in a Claude screenshot (Risk Register INC-2026-04). Make it in Bitwarden, paste into Supabase reset, `.env.demo.local` and both Vercel Preview vars
 
 ## Next
 - [ ] **C** Add `kashfedit-demo` (Supabase, public demo catalogue only) to `Security/Inventory.md`
-- [ ] **C** Load the demo products into the preview DB. On the preview, check images show; on kashfedit.com, check the CSP is still `img-src 'self' blob: data:` (ADR-0013 amendment checks a/b). Then **M** creates the one Hobby share link
-- [ ] **C** Tag the demo samples with vision (~$1) → tags for the demo rows
+- [ ] **C** After the push: on the preview, check images show; on kashfedit.com, check the CSP is still `img-src 'self' blob: data:` (ADR-0013 amendment checks a/b). Then **M** creates the one Hobby share link
+- [ ] **C** Decide `lined` when the text is silent: vision said "unlined" 17 times with no evidence → store null? (`docs/attribute-sources.md`)
+- [ ] **C** Measure run-to-run noise: re-tag 3 products twice with the same photos (~$0.40) before judging 2 vs 4 photos
+- [ ] **C** Photo picking at scale: per-brand order rule vs a cheap view-labelling pass
 - [ ] **C** Wire `findDisagreements` (`lib/vision/text-facts.ts`) into the tagger: when the title or description contradicts vision, mark the product `needs_review`
 - [ ] **C** Collect product descriptions during collection, but store only the parsed facts (`parseFeedFacts` + `parseTextFacts`), never the brand's text
 - [ ] **C** Run the eval on the 28-product set with Opus 4.7 as-is (baseline, ~$1)
@@ -21,6 +24,7 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 - Impact / Awin: declined 09-17 / 09-21
 
 ## Done
+- [x] **C** 25 demo products loaded into the demo DB and AI-tagged from hand-picked local photos ($1.58, Opus 4.7); colour parser; text vs vision tracker `docs/attribute-sources.md` (`f15b8a1`, branch `demo-images`) (2026-11-08)
 - [x] **M+C** Demo DB wired: Vercel 2FA on; `DATABASE_URL`/`DIRECT_URL` added for Preview only (Secret; Production vars untouched, checked via Vercel API); `.env.demo.local` connects; migrations applied to `kashfedit-demo`, RLS on all 4 tables (2026-11-08)
 - [x] **C+M** Created Supabase project `kashfedit-demo` for the preview (separate from production; us-east-1, Data API off, automatic RLS on). Local template `.env.demo.local` (gitignored) (2026-11-08)
 - [x] **C** Preview-only hotlinked brand images on branch `demo-images` (`10e591b`), proven locally with `next start`: production CSP unchanged, preview adds the 5 CDNs (2026-11-08)
