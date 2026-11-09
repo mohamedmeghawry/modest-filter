@@ -92,11 +92,40 @@ Findings from looking at all 98 demo photos (2026-11-08):
 
 **Per-brand photo order (batch 2, from the collection log `samples/demo/batch2-log.json`):**
 
-| Brand | Front on model | Back on model | Seen on |
+| Brand | Front on model | Back on model | Seen on, and how it was collected |
 |---|---|---|---|
-| Mango | image `-001` (gallery position 2) | image `-003` (gallery position 3) | 2 of 2 pilot products (2026-11-10). Mango's page has no structured product data; facts come from the visible page and the "Details, composition and care" drawer. Image size is set with `?wid=` |
+| Mango | image `-001` | image `-003` | 10 of 10. No structured product data: facts from the visible page and the "Details, composition and care" drawer. Size via `?wid=` |
+| Dynamite | position 0 | `alt1` on only 5 of 10; the rest at positions 2–3 | All 10 had a back. Product pages refuse scripts (403); the image server (`dam.dynamiteclothing.com`) serves them |
+| Old Navy | 0 | 1 (one product at 2) | 10 of 11; 1 had flat shots only. Gallery in `.pdp-photo-brick-wrapper` |
+| Gap | 0 | 1 on dresses, 2 on tops | 12 of 12. Same platform as Old Navy (one site to Chrome) |
+| Banana Republic | 0 | 1 | 12 of 12; later photos show other colourways. Gallery in `.pdp-photo-single-column-wrapper` |
+| Uniqlo | 0 | **none** | **0 of 12**: fronts, flat shots, colour sets and fabric only. Brand replaced by Anthropologie (the agreed backup) |
+| Anthropologie | varies | varies | 10 of 12. Studio, street and editorial shots mixed: picked by eye |
+| H&M | varies (0 or 1) | varies (2–4) | 11 of 12 (1 flat-only). Gallery = the "View larger image" photos |
+| Zara | varies | varies | 10 of 16. Mostly editorial; 1 had only a flat back. Its long-sleeve tops category held short-sleeved tops |
+| Simons | 0 (`A1`) | `A2` or `A3` | 12 of 12, 2–3 studio photos each. The image server refuses scripts (Cloudflare 403), so the browser fetched them |
+| Reitmans | 0 (`B`) | position 2 or 3 (`D`/`E`) | 12 of 12. Shopify: product data from the public `/products/<handle>.js` |
+
+**What this means at scale:** a fixed per-brand rule works for 5 of 11 brands (Mango, Old Navy, Gap, Banana Republic, Simons); the other 6 need a view-labelling pass (front, back, side, flat, close-up, other colour) or a person. A brand's own "long sleeve" filter can't be trusted on its own: Banana Republic's listed a sleeveless dress and Zara's listed short-sleeved tops; the text gate and vision caught them.
 
 **Experiment:** hm-1343091003 tagged with 4 photos (`samples/demo/tag-results-4photos.json`), then re-tagged with its 2 picks. Compare the two to see what 2 photos lose.
+
+## Batch 2: Jev vs Opus 5.5 on 100 new products (2026-11-10)
+
+100 products, 10 brands × (6 dresses + 4 tops), front + back on a model for all. Comparison: `scripts/compare-batch2.ts` → `samples/demo/compare-batch2.json`.
+
+| Step | Result | Cost |
+|---|---|---|
+| Free text gate (title + description) | 11 rejected, 89 go on | $0 |
+| Opus 5.5 low, Message Batches | 75 shown, 14 hidden | $0.89 (batch price) |
+| Jev pre-screen | 14 reject, 12 unsure, 63 pass | $0.034 |
+
+- **Agreement:** 74 of 77 where Jev was confident (11 both hide, 63 both show). Jev never passed a product Opus hides.
+- **The 3 disagreements are all Jev rejecting what Opus shows:** H&M knit mock-neck dress (back; H&M's own text says "small V-shaped opening at back"), Reitmans fit-and-flare dress (back; a sheer yoke across the back), Zara velvet sash dress (slit). Who is right decides Jev's reject role (≤2 wrong of its confident rejects), so they lead Mohamed's review.
+- **Every immodest product spotted by eye during collection was hidden by Opus and rejected by Jev:** the sleeveless organza dress in Banana Republic's long-sleeve filter, Simons' sleeveless pinafore and sleeveless high-slit maxi, Anthropologie's deep scoop back, Zara's bow dress with an open keyhole back.
+- **Unknown still fails:** 2 dresses are hidden only because Opus left `slit` empty (Zara maxi, H&M lace dress); Jev was unsure on one of them.
+- **Shown by brand:** Gap 10, Dynamite 9, Banana Republic 9, Mango 8, Old Navy 8, Reitmans 8, H&M 7, Simons 7, Anthropologie 6, Zara 3 (Zara's "long-sleeve tops" were short-sleeved).
+- **Still open:** Mohamed's blind review (`samples/demo/review-batch2.html`: the 3 disagreements + 10 random agreements, seeded). Until then "0 immodest shown" is unverified for the 75 Opus shows.
 
 ## Log
 
@@ -106,3 +135,4 @@ Findings from looking at all 98 demo photos (2026-11-08):
 - 2026-11-09: Jev pre-screen on the 28-product eval set ($0.008): 0 false passes, 16/28 confidently and correctly rejected. Details in the Jev section above.
 - 2026-11-08: **4 photos vs 2 on hm-1343091003:** 4 of 14 tags changed (neckline high_neck → turtleneck, topLength tunic → hip, fit semi_fitted → fitted, material polyester → viscose). One product can't separate the photo effect from run-to-run noise. **Next:** re-run a few products twice with the same photos to measure the noise first.
 - 2026-11-10: batch 1 re-tagged through the Message Batches API (Opus 5.5 low, new rules): 19 tagged ($0.17 at batch price), 6 rejected free by the text gate. 8 of 25 now pass the baseline (was 12): the back-photo rule hides the 8 products whose photos don't show the back. First field check of Jev on the same 19: all 7 of Jev's confident rejects were also hidden by Opus (0 wrong); its 2 "pass" answers that Opus's result hides are both no-back-photo products, hidden by the rule rather than by vision.
+- 2026-11-10: batch 2 collected and tagged: 100 products from 10 brands (Uniqlo swapped for Anthropologie: 0 of 12 Uniqlo galleries had a back photo). Text gate rejected 11 for free; Opus 5.5 showed 75 of 89 ($0.89); Jev agreed on 74 of 77 confident answers ($0.034); 3 disagreements (all Jev rejecting) go to Mohamed's blind review with 10 random agreements. Details in the batch-2 section.

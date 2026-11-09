@@ -41,6 +41,22 @@ export function passesModestBaseline(p: BaselineFields): boolean {
   );
 }
 
+/**
+ * Which baseline rules a product fails, named like Jev's rules (lib/vision/jev.ts)
+ * so the two can be compared rule by rule; "untagged" when it isn't tagged.
+ * Empty exactly when passesModestBaseline is true.
+ */
+export function baselineFailures(p: BaselineFields): string[] {
+  if (p.tagStatus !== "tagged") return ["untagged"];
+  const fails: string[] = [];
+  if (!has(LONG_SLEEVES, p.sleeveLength)) fails.push("sleeves");
+  if (p.backStyle !== "closed") fails.push("back");
+  if (p.cutouts !== "none") fails.push("cutouts");
+  if (!(has(ALLOWED_SLITS, p.slit) || (p.slit == null && p.categorySlug === "tops"))) fails.push("slit");
+  if (!((p.neckline != null && !has(EXCLUDED_NECKLINES, p.neckline)) || (p.neckline == null && p.categorySlug === "abayas"))) fails.push("neckline");
+  return fails;
+}
+
 /** The same rule as a Prisma filter. Keep in step with passesModestBaseline. */
 export const modestBaselineWhere: Prisma.ProductWhereInput = {
   tagStatus: "tagged",

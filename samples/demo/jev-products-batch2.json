@@ -1,8 +1,8 @@
 {
   "model": "jev-latest",
-  "ranAt": "2026-11-09T07:05:58.419Z",
+  "ranAt": "2026-11-09T09:30:21.613Z",
   "csv": "samples/demo/products-batch2.csv",
-  "costUsd": 0.00088,
+  "costUsd": 0.03377,
   "rows": [
     {
       "id": "mango-37049131",
@@ -22,10 +22,10 @@
       },
       "nouls": {
         "sleeves_reach_wrist": 0.94,
-        "back_closed": 0.88,
-        "has_cutout": 0.19,
-        "slit_to_knee": 0.13,
-        "off_shoulder": 0.03,
+        "back_closed": 0.83,
+        "has_cutout": 0.18,
+        "slit_to_knee": 0.14,
+        "off_shoulder": 0.02,
         "halter": 0.03
       },
       "choices": {
@@ -54,7 +54,7 @@
       "nouls": {
         "sleeves_reach_wrist": 0.93,
         "back_closed": 0.78,
-        "has_cutout": 0.11,
+        "has_cutout": 0.12,
         "off_shoulder": 0.03,
         "halter": 0.1
       },
@@ -62,6 +62,2668 @@
         "sleeveLength": "long",
         "backStyle": "closed",
         "neckline": "high_neck",
+        "slit": null
+      }
+    },
+    {
+      "id": "mango-37059131",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10582,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.92,
+        "has_cutout": 0.08,
+        "slit_to_knee": 0.1,
+        "off_shoulder": 0.03,
+        "halter": 0.06
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "mango-47071445",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10582,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.89,
+        "back_closed": 0.89,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.14,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "mango-47081351",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10582,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.9,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.07,
+        "off_shoulder": 0.04,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "mango-37066353",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10390,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.96,
+        "has_cutout": 0.06,
+        "off_shoulder": 0.02,
+        "halter": 0.02
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "mango-37019125",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10390,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.91,
+        "back_closed": 0.88,
+        "has_cutout": 0.11,
+        "off_shoulder": 0.05,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": null
+      }
+    },
+    {
+      "id": "mango-37039121",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10390,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "unsure",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.86,
+        "back_closed": 0.85,
+        "has_cutout": 0.56,
+        "off_shoulder": 0.03,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": null
+      }
+    },
+    {
+      "id": "dynamite-1001076928a4",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 5728,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.95,
+        "has_cutout": 0.05,
+        "slit_to_knee": 0.09,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "dynamite-10010723306v",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 5728,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "unsure",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.93,
+        "has_cutout": 0.21,
+        "slit_to_knee": 0.58,
+        "off_shoulder": 0.04,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "high"
+      }
+    },
+    {
+      "id": "dynamite-1000996008q9",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 5728,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.93,
+        "back_closed": 0.94,
+        "has_cutout": 0.11,
+        "slit_to_knee": 0.09,
+        "off_shoulder": 0.02,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "dynamite-10010602606v",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 5728,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.9,
+        "back_closed": 0.95,
+        "has_cutout": 0.09,
+        "slit_to_knee": 0.09,
+        "off_shoulder": 0.02,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "dynamite-10010439206v",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 5728,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.94,
+        "has_cutout": 0.09,
+        "slit_to_knee": 0.09,
+        "off_shoulder": 0.02,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "dynamite-1001066067gm",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 5534,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.96,
+        "has_cutout": 0.15,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": null
+      }
+    },
+    {
+      "id": "dynamite-1000987868a4",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 5536,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.96,
+        "has_cutout": 0.09,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": null
+      }
+    },
+    {
+      "id": "dynamite-1001071742fc",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 5534,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.97,
+        "has_cutout": 0.11,
+        "off_shoulder": 0.02,
+        "halter": 0.02
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": null
+      }
+    },
+    {
+      "id": "dynamite-1001067348f4",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 5536,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.96,
+        "has_cutout": 0.06,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": null
+      }
+    },
+    {
+      "id": "oldnavy-906372013",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10812,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.95,
+        "has_cutout": 0.05,
+        "slit_to_knee": 0.06,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "oldnavy-1195998003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10814,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.84,
+        "back_closed": 0.83,
+        "has_cutout": 0.23,
+        "slit_to_knee": 0.08,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "scoop",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "oldnavy-1185410013",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10814,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "unsure",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.82,
+        "has_cutout": 0.08,
+        "slit_to_knee": 0.43,
+        "off_shoulder": 0.03,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "oldnavy-1185459013",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10814,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.89,
+        "back_closed": 0.81,
+        "has_cutout": 0.07,
+        "slit_to_knee": 0.19,
+        "off_shoulder": 0.05,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "low"
+      }
+    },
+    {
+      "id": "oldnavy-1199534003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10814,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "fail",
+        "cutouts": "fail",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.76,
+        "back_closed": 0.04,
+        "has_cutout": 0.86,
+        "slit_to_knee": 0.21,
+        "off_shoulder": 0.09,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "square",
+        "slit": "low"
+      }
+    },
+    {
+      "id": "oldnavy-903450003",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10620,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.97,
+        "back_closed": 0.96,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.03,
+        "halter": 0.02
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": null
+      }
+    },
+    {
+      "id": "oldnavy-903449033",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10620,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.97,
+        "back_closed": 0.94,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": null
+      }
+    },
+    {
+      "id": "oldnavy-909482003",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10620,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.85,
+        "back_closed": 0.95,
+        "has_cutout": 0.04,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": null
+      }
+    },
+    {
+      "id": "oldnavy-909495023",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10620,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.88,
+        "back_closed": 0.96,
+        "has_cutout": 0.09,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": null
+      }
+    },
+    {
+      "id": "gap-1182627003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10808,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.96,
+        "has_cutout": 0.08,
+        "slit_to_knee": 0.06,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "gap-912593003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10806,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.86,
+        "back_closed": 0.97,
+        "has_cutout": 0.07,
+        "slit_to_knee": 0.08,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "gap-1184693013",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10808,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "unsure",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.94,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.46,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "mid"
+      }
+    },
+    {
+      "id": "gap-1185332013",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10808,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.87,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.16,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "gap-1184695003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10808,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.94,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.14,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "gap-1184696023",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10808,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.95,
+        "has_cutout": 0.04,
+        "slit_to_knee": 0.06,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "gap-1184323003",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10616,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.96,
+        "has_cutout": 0.07,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "gap-913914013",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10614,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.97,
+        "back_closed": 0.96,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "gap-1184321013",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10616,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.96,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "gap-1184843023",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10616,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.97,
+        "back_closed": 0.96,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "bananarepublic-1180141013",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10816,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.94,
+        "has_cutout": 0.08,
+        "slit_to_knee": 0.25,
+        "off_shoulder": 0.04,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "extra_long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "bananarepublic-1182116013",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10816,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.94,
+        "has_cutout": 0.07,
+        "slit_to_knee": 0.16,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "bananarepublic-859896043",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 11038,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "unsure",
+        "cutouts": "unsure",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.34,
+        "has_cutout": 0.31,
+        "slit_to_knee": 0.19,
+        "off_shoulder": 0.04,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "bananarepublic-1180130003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10816,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "fail",
+        "back": "fail",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.22,
+        "has_cutout": 0.16,
+        "slit_to_knee": 0.08,
+        "off_shoulder": 0.12,
+        "halter": 0.08
+      },
+      "choices": {
+        "sleeveLength": "sleeveless",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "bananarepublic-1180132003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10816,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.88,
+        "has_cutout": 0.1,
+        "slit_to_knee": 0.09,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "bananarepublic-1180120003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 11040,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "unsure",
+        "cutouts": "unsure",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.93,
+        "back_closed": 0.3,
+        "has_cutout": 0.3,
+        "slit_to_knee": 0.26,
+        "off_shoulder": 0.03,
+        "halter": 0.06
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "bananarepublic-709387003",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10622,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.97,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.02,
+        "halter": 0.02
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "bananarepublic-1188283003",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10624,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.89,
+        "back_closed": 0.97,
+        "has_cutout": 0.06,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "bananarepublic-709273013",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10622,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.89,
+        "has_cutout": 0.07,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "bananarepublic-836722003",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10622,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.97,
+        "back_closed": 0.96,
+        "has_cutout": 0.11,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "anthropologie-4130972460275",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9926,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "unsure",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.94,
+        "has_cutout": 0.45,
+        "slit_to_knee": 0.09,
+        "off_shoulder": 0.03,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "anthropologie-4130916210343",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9926,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.97,
+        "back_closed": 0.95,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.11,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "extra_long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "anthropologie-4130957990276",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9926,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "fail",
+        "cutouts": "unsure",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.89,
+        "back_closed": 0.03,
+        "has_cutout": 0.41,
+        "slit_to_knee": 0.1,
+        "off_shoulder": 0.13,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "low_back",
+        "neckline": "off_shoulder",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "anthropologie-104378609",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9918,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "fail",
+        "cutouts": "unsure",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.85,
+        "back_closed": 0.09,
+        "has_cutout": 0.32,
+        "slit_to_knee": 0.16,
+        "off_shoulder": 0.04,
+        "halter": 0.06
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "anthropologie-4110907290018",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9734,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.96,
+        "has_cutout": 0.07,
+        "off_shoulder": 0.03,
+        "halter": 0.02
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "anthropologie-4110089540181",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9734,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.95,
+        "has_cutout": 0.06,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "anthropologie-4110957990027",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9734,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.93,
+        "back_closed": 0.97,
+        "has_cutout": 0.19,
+        "off_shoulder": 0.02,
+        "halter": 0.02
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "anthropologie-4114326950374",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9734,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.96,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": null
+      }
+    },
+    {
+      "id": "hm-1360593004",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9914,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.93,
+        "back_closed": 0.88,
+        "has_cutout": 0.07,
+        "slit_to_knee": 0.06,
+        "off_shoulder": 0.04,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "hm-1385267001",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9914,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "fail",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.93,
+        "back_closed": 0.92,
+        "has_cutout": 0.72,
+        "slit_to_knee": 0.23,
+        "off_shoulder": 0.05,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "hm-1368058003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9914,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.93,
+        "has_cutout": 0.28,
+        "slit_to_knee": 0.2,
+        "off_shoulder": 0.05,
+        "halter": 0.11
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "hm-1370739001",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9914,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "unsure",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.49,
+        "has_cutout": 0.19,
+        "slit_to_knee": 0.21,
+        "off_shoulder": 0.07,
+        "halter": 0.07
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "hm-1369161003",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9914,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "fail",
+        "cutouts": "unsure",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.97,
+        "back_closed": 0.18,
+        "has_cutout": 0.4,
+        "slit_to_knee": 0.1,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "hm-1332648001",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9914,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "fail",
+        "cutouts": "fail",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.07,
+        "has_cutout": 0.75,
+        "slit_to_knee": 0.08,
+        "off_shoulder": 0.05,
+        "halter": 0.29
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "v_back",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "hm-1367724007",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9722,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.95,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": null
+      }
+    },
+    {
+      "id": "hm-1383780001",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9722,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "unsure",
+        "cutouts": "unsure",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.67,
+        "has_cutout": 0.47,
+        "off_shoulder": 0.19,
+        "halter": 0.08
+      },
+      "choices": {
+        "sleeveLength": "extra_long",
+        "backStyle": "closed",
+        "neckline": "off_shoulder",
+        "slit": null
+      }
+    },
+    {
+      "id": "hm-1365784001",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9722,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.93,
+        "back_closed": 0.93,
+        "has_cutout": 0.07,
+        "off_shoulder": 0.13,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": null
+      }
+    },
+    {
+      "id": "hm-1352174001",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9722,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.95,
+        "has_cutout": 0.12,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "zara-04764287",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9910,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "unsure",
+        "cutouts": "pass",
+        "slit": "fail",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.46,
+        "has_cutout": 0.25,
+        "slit_to_knee": 0.81,
+        "off_shoulder": 0.04,
+        "halter": 0.08
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "turtleneck",
+        "slit": "high"
+      }
+    },
+    {
+      "id": "zara-01758731",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9910,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "unsure",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.72,
+        "has_cutout": 0.15,
+        "slit_to_knee": 0.35,
+        "off_shoulder": 0.03,
+        "halter": 0.06
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "high"
+      }
+    },
+    {
+      "id": "zara-02587159",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9910,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "fail",
+        "cutouts": "fail",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.9,
+        "back_closed": 0.03,
+        "has_cutout": 0.76,
+        "slit_to_knee": 0.18,
+        "off_shoulder": 0.03,
+        "halter": 0.13
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "v_back",
+        "neckline": "turtleneck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "zara-04772226",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9910,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.88,
+        "back_closed": 0.92,
+        "has_cutout": 0.07,
+        "slit_to_knee": 0.11,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "zara-08372306",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 9910,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.96,
+        "back_closed": 0.95,
+        "has_cutout": 0.09,
+        "slit_to_knee": 0.08,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "simons-19659-230848",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2472,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "fail",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.1,
+        "back_closed": 0.89,
+        "has_cutout": 0.11,
+        "slit_to_knee": 0.09,
+        "off_shoulder": 0.04,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "high_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "simons-6867-232379",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2470,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.73,
+        "back_closed": 0.94,
+        "has_cutout": 0.07,
+        "slit_to_knee": 0.14,
+        "off_shoulder": 0.04,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "simons-10597-230174",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2472,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.93,
+        "has_cutout": 0.06,
+        "slit_to_knee": 0.06,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "simons-13410-232321",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2472,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.89,
+        "back_closed": 0.95,
+        "has_cutout": 0.05,
+        "slit_to_knee": 0.08,
+        "off_shoulder": 0.02,
+        "halter": 0.02
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "simons-11796-2984772",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2474,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "fail",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "fail",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.02,
+        "back_closed": 0.83,
+        "has_cutout": 0.17,
+        "slit_to_knee": 0.94,
+        "off_shoulder": 0.09,
+        "halter": 0.08
+      },
+      "choices": {
+        "sleeveLength": "cap",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": "high"
+      }
+    },
+    {
+      "id": "simons-11318-229469",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2472,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "unsure",
+        "slit": "fail",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.91,
+        "back_closed": 0.9,
+        "has_cutout": 0.4,
+        "slit_to_knee": 0.9,
+        "off_shoulder": 0.03,
+        "halter": 0.06
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "high"
+      }
+    },
+    {
+      "id": "simons-15258-217922",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2280,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.78,
+        "back_closed": 0.97,
+        "has_cutout": 0.06,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "simons-22478-229650",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2280,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.97,
+        "back_closed": 0.95,
+        "has_cutout": 0.07,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": null
+      }
+    },
+    {
+      "id": "simons-12709-229657",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2280,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.94,
+        "has_cutout": 0.07,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": null
+      }
+    },
+    {
+      "id": "simons-17455-232695",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 2280,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.97,
+        "has_cutout": 0.04,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "collar",
+        "slit": null
+      }
+    },
+    {
+      "id": "reitmans-499136",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10804,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "unsure",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.9,
+        "back_closed": 0.57,
+        "has_cutout": 0.15,
+        "slit_to_knee": 0.07,
+        "off_shoulder": 0.05,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "reitmans-497396",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10804,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "fail",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.82,
+        "back_closed": 0.91,
+        "has_cutout": 0.18,
+        "slit_to_knee": 0.86,
+        "off_shoulder": 0.02,
+        "halter": 0.04
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "high"
+      }
+    },
+    {
+      "id": "reitmans-499141",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10804,
+      "decision": "unsure",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "unsure",
+        "slit": "unsure",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.92,
+        "back_closed": 0.94,
+        "has_cutout": 0.43,
+        "slit_to_knee": 0.65,
+        "off_shoulder": 0.04,
+        "halter": 0.05
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "low"
+      }
+    },
+    {
+      "id": "reitmans-499124",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10804,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.88,
+        "back_closed": 0.75,
+        "has_cutout": 0.08,
+        "slit_to_knee": 0.07,
+        "off_shoulder": 0.07,
+        "halter": 0.07
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "off_shoulder",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "reitmans-499183",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10804,
+      "decision": "reject",
+      "rules": {
+        "sleeves": "pass",
+        "back": "fail",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.88,
+        "back_closed": 0.14,
+        "has_cutout": 0.26,
+        "slit_to_knee": 0.09,
+        "off_shoulder": 0.03,
+        "halter": 0.06
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "v_back",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "reitmans-499121",
+      "category": "dresses",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10804,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.94,
+        "back_closed": 0.88,
+        "has_cutout": 0.1,
+        "slit_to_knee": 0.07,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": "none"
+      }
+    },
+    {
+      "id": "reitmans-500020",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10612,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.96,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": null
+      }
+    },
+    {
+      "id": "reitmans-498958",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10612,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.95,
+        "back_closed": 0.96,
+        "has_cutout": 0.06,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "crew",
+        "slit": null
+      }
+    },
+    {
+      "id": "reitmans-499550",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10612,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.75,
+        "back_closed": 0.96,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.03,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "long",
+        "backStyle": "closed",
+        "neckline": "v_neck",
+        "slit": null
+      }
+    },
+    {
+      "id": "reitmans-498299",
+      "category": "tops",
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "inputTokens": 10612,
+      "decision": "pass",
+      "rules": {
+        "sleeves": "pass",
+        "back": "pass",
+        "cutouts": "pass",
+        "slit": "pass",
+        "neckline": "pass"
+      },
+      "nouls": {
+        "sleeves_reach_wrist": 0.98,
+        "back_closed": 0.96,
+        "has_cutout": 0.05,
+        "off_shoulder": 0.02,
+        "halter": 0.03
+      },
+      "choices": {
+        "sleeveLength": "extra_long",
+        "backStyle": "closed",
+        "neckline": "crew",
         "slit": null
       }
     }

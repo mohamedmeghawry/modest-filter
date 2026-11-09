@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { passesModestBaseline, modestBaselineWhere, type BaselineFields } from "./modest-baseline";
+import { passesModestBaseline, baselineFailures, modestBaselineWhere, type BaselineFields } from "./modest-baseline";
 import { parseCsv } from "./demo-csv";
 
 const ok: BaselineFields = {
@@ -94,5 +94,28 @@ describe("passesModestBaseline", () => {
       "uniqlo-488693",
       "zara-08605934",
     ]);
+  });
+});
+
+describe("baselineFailures", () => {
+  it("names each failing rule, like Jev's rule names", () => {
+    expect(baselineFailures(ok)).toEqual([]);
+    expect(baselineFailures({ ...ok, sleeveLength: "short", backStyle: "open_back" })).toEqual(["sleeves", "back"]);
+    expect(baselineFailures({ ...ok, cutouts: "present", slit: "high", neckline: "halter" })).toEqual(["cutouts", "slit", "neckline"]);
+    expect(baselineFailures({ ...ok, tagStatus: "needs_review" })).toEqual(["untagged"]);
+  });
+
+  it("keeps the tops-slit and abaya-neckline exceptions", () => {
+    expect(baselineFailures({ ...ok, categorySlug: "tops", slit: null })).toEqual([]);
+    expect(baselineFailures({ ...ok, categorySlug: "abayas", neckline: null })).toEqual([]);
+    expect(baselineFailures({ ...ok, neckline: null })).toEqual(["neckline"]);
+  });
+
+  it("is empty exactly when the product passes", () => {
+    const variants: Partial<BaselineFields>[] = [{}, { sleeveLength: null }, { backStyle: null }, { slit: "mid" }, { categorySlug: "tops", slit: null }, { neckline: "off_shoulder" }, { cutouts: null }];
+    for (const v of variants) {
+      const p = { ...ok, ...v };
+      expect(baselineFailures(p).length === 0).toBe(passesModestBaseline(p));
+    }
   });
 });

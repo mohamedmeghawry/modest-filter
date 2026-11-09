@@ -14,7 +14,7 @@ import { textGate } from "../lib/vision/text-gate";
 import { askJev, prescreen, ruleVerdicts, jevCostUsd, ATTRIBUTE_QUESTIONS, BASELINE_QUESTIONS, JEV_MODEL } from "../lib/vision/jev";
 import { prepareImage } from "./prepare-image";
 
-const BUDGET_USD = 0.06; // what is left of the $0.10 Jev approval (2026-11-09)
+const BUDGET_USD = 0.05; // under what is left of the $0.10 Jev approval (~$0.055 on 2026-11-10)
 const PICKS = "samples/demo/photo-picks.json";
 const IMAGES = "samples/demo/images";
 const CATEGORY: Record<string, string> = { dress: "dresses", top: "tops" };

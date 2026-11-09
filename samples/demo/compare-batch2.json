@@ -1,0 +1,1244 @@
+{
+  "generatedAt": "2026-11-09T09:36:23.468Z",
+  "summary": {
+    "products": 100,
+    "textGateRejected": 11,
+    "compared": 89,
+    "opus": {
+      "shown": 75,
+      "hidden": 14,
+      "costUsd": 0.893
+    },
+    "jev": {
+      "reject": 14,
+      "unsure": 12,
+      "pass": 63,
+      "costUsd": 0.03377
+    },
+    "agreement": {
+      "agree-hidden": 11,
+      "agree-shown": 63,
+      "jev-rejects-opus-shows": 3,
+      "jev-passes-opus-hides": 0,
+      "jev-unsure": 12
+    },
+    "shownByBrand": {
+      "Mango": "8/10",
+      "Dynamite": "9/10",
+      "Old Navy": "8/10",
+      "Gap": "10/10",
+      "Banana Republic": "9/10",
+      "Anthropologie": "6/10",
+      "H&M": "7/10",
+      "Zara": "3/10",
+      "Simons": "7/10",
+      "Reitmans": "8/10"
+    }
+  },
+  "reviewIds": [
+    "hm-1369161003",
+    "zara-04764287",
+    "reitmans-499183",
+    "gap-1185332013",
+    "mango-37019126",
+    "reitmans-497396",
+    "simons-6867-232379",
+    "zara-02587159",
+    "anthropologie-4110907290018",
+    "simons-15258-217922",
+    "dynamite-1000996008q9",
+    "hm-1360593004",
+    "simons-19659-230848"
+  ],
+  "textRejected": [
+    {
+      "id": "mango-37067785",
+      "brand": "Mango",
+      "reasons": "sleeves"
+    },
+    {
+      "id": "mango-37039132",
+      "brand": "Mango",
+      "reasons": "sleeves"
+    },
+    {
+      "id": "dynamite-10010802806v",
+      "brand": "Dynamite",
+      "reasons": "back"
+    },
+    {
+      "id": "oldnavy-1196187003",
+      "brand": "Old Navy",
+      "reasons": "back"
+    },
+    {
+      "id": "anthropologie-4130926280016",
+      "brand": "Anthropologie",
+      "reasons": "back"
+    },
+    {
+      "id": "anthropologie-4130086690014",
+      "brand": "Anthropologie",
+      "reasons": "sleeves"
+    },
+    {
+      "id": "zara-04764037",
+      "brand": "Zara",
+      "reasons": "sleeves"
+    },
+    {
+      "id": "zara-07836071",
+      "brand": "Zara",
+      "reasons": "sleeves|back"
+    },
+    {
+      "id": "zara-05755157",
+      "brand": "Zara",
+      "reasons": "sleeves"
+    },
+    {
+      "id": "zara-04764123",
+      "brand": "Zara",
+      "reasons": "sleeves"
+    },
+    {
+      "id": "zara-06050841",
+      "brand": "Zara",
+      "reasons": "cutouts"
+    }
+  ],
+  "items": [
+    {
+      "id": "mango-37049131",
+      "brand": "Mango",
+      "category": "dress",
+      "title": "Double-breasted blazer-style dress",
+      "link": "https://shop.mango.com/ca/en/p/women/dresses-and-jumpsuits/black/double-breasted-blazer-style-dress/37049131/99/00",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "mango-37019126",
+      "brand": "Mango",
+      "category": "top",
+      "title": "Floral lace blouse",
+      "link": "https://shop.mango.com/ca/en/p/women/shirts---blouses/blouses/floral-lace-blouse/37019126/52/00",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "mango-37059131",
+      "brand": "Mango",
+      "category": "dress",
+      "title": "Polka dot tulle dress",
+      "link": "https://shop.mango.com/ca/en/p/women/dresses-and-jumpsuits/black/polka-dot-tulle-dress/37059131/99/00",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "mango-47071445",
+      "brand": "Mango",
+      "category": "dress",
+      "title": "A-line dress with seam detail",
+      "link": "https://shop.mango.com/ca/en/p/women/dresses-and-jumpsuits/dresses/a-line-dress-with-seam-detail/47071445/78/00",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "mango-47081351",
+      "brand": "Mango",
+      "category": "dress",
+      "title": "Satin dress with lace trim",
+      "link": "https://shop.mango.com/ca/en/p/women/dresses-and-jumpsuits/dresses/satin-dress-with-lace-trim/47081351/56/00",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "mango-37066353",
+      "brand": "Mango",
+      "category": "top",
+      "title": "100% silk shirt",
+      "link": "https://shop.mango.com/ca/en/p/women/shirts---blouses/long-sleeve/100-silk-shirt/37066353/50/00",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "mango-37019125",
+      "brand": "Mango",
+      "category": "top",
+      "title": "Floral embroidered blouse with frog closures",
+      "link": "https://shop.mango.com/ca/en/p/women/shirts---blouses/blouses/floral-embroidered-blouse-with-frog-closures/37019125/99/00",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "mango-37039121",
+      "brand": "Mango",
+      "category": "top",
+      "title": "Floral lace blouse",
+      "link": "https://shop.mango.com/ca/en/p/women/shirts---blouses/blouses/floral-lace-blouse/37039121/05/00",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "dynamite-1001076928a4",
+      "brand": "Dynamite",
+      "category": "dress",
+      "title": "Mock Neck Mini Sweater Dress",
+      "link": "https://www.dynamiteclothing.com/ca/p/mock-neck-mini-sweater-dress/1001076928A4.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "dynamite-10010723306v",
+      "brand": "Dynamite",
+      "category": "dress",
+      "title": "Kiara Draped Sash Mini Dress",
+      "link": "https://www.dynamiteclothing.com/ca/p/kiara-draped-sash-mini-dress/10010723306V.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "dynamite-1000996008q9",
+      "brand": "Dynamite",
+      "category": "dress",
+      "title": "Katia Mesh Mini Dress",
+      "link": "https://www.dynamiteclothing.com/ca/p/katia-mesh-mini-dress/1000996008Q9.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "dynamite-10010602606v",
+      "brand": "Dynamite",
+      "category": "dress",
+      "title": "Burnout Mock Neck Mini Dress",
+      "link": "https://www.dynamiteclothing.com/ca/p/burnout-mock-neck-mini-dress/10010602606V.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "dynamite-10010439206v",
+      "brand": "Dynamite",
+      "category": "dress",
+      "title": "Katia Cotton Mini Dress",
+      "link": "https://www.dynamiteclothing.com/ca/p/katia-cotton-mini-dress/10010439206V.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "dynamite-1001066067gm",
+      "brand": "Dynamite",
+      "category": "top",
+      "title": "Sage Funnel Neck Zip Sweater",
+      "link": "https://www.dynamiteclothing.com/ca/p/sage-funnel-neck-zip-sweater/1001066067GM.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "dynamite-1000987868a4",
+      "brand": "Dynamite",
+      "category": "top",
+      "title": "Ellora Cropped Turtleneck Sweater",
+      "link": "https://www.dynamiteclothing.com/ca/p/ellora-cropped-turtleneck-sweater/1000987868A4.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "dynamite-1001071742fc",
+      "brand": "Dynamite",
+      "category": "top",
+      "title": "Diana Boxy Zip Cardigan",
+      "link": "https://www.dynamiteclothing.com/ca/p/diana-boxy-zip-cardigan/1001071742FC.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "dynamite-1001067348f4",
+      "brand": "Dynamite",
+      "category": "top",
+      "title": "Sheer Mock Neck Sweater",
+      "link": "https://www.dynamiteclothing.com/ca/p/sheer-mock-neck-sweater/1001067348F4.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "oldnavy-906372013",
+      "brand": "Old Navy",
+      "category": "dress",
+      "title": "SoSoft Long-Sleeve V-Neck Mini Sweater Dress",
+      "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=906372013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "oldnavy-1195998003",
+      "brand": "Old Navy",
+      "category": "dress",
+      "title": "Floral Burnout Velvet Fit & Flare Mini Dress",
+      "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=1195998003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "oldnavy-1185410013",
+      "brand": "Old Navy",
+      "category": "dress",
+      "title": "The Occasion by Old Navy Long-Sleeve Tie-Front Maxi Dress",
+      "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=1185410013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "oldnavy-1185459013",
+      "brand": "Old Navy",
+      "category": "dress",
+      "title": "Long-Sleeve Twist-Front Ruched Midi Dress",
+      "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=1185459013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "oldnavy-1199534003",
+      "brand": "Old Navy",
+      "category": "dress",
+      "title": "Long-Sleeve Crepe Swing Mini Dress",
+      "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=1199534003",
+      "opusShown": false,
+      "opusFails": [
+        "cutouts"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "back",
+        "cutouts"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "oldnavy-903450003",
+      "brand": "Old Navy",
+      "category": "top",
+      "title": "SoSoft V-Neck Sweater",
+      "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=903450003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "oldnavy-903449033",
+      "brand": "Old Navy",
+      "category": "top",
+      "title": "SoSoft Ribbed V-Neck Sweater",
+      "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=903449033",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "oldnavy-909482003",
+      "brand": "Old Navy",
+      "category": "top",
+      "title": "Hug Double-Layer Crew-Neck Long-Sleeve Top",
+      "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=909482003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "oldnavy-909495023",
+      "brand": "Old Navy",
+      "category": "top",
+      "title": "Snug Long-Sleeve Ribbed Henley T-Shirt",
+      "link": "https://oldnavy.gapcanada.ca/browse/product.do?pid=909495023",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "gap-1182627003",
+      "brand": "Gap",
+      "category": "dress",
+      "title": "CashSoft Oversized Polo Sweater Mini Dress",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=1182627003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "gap-912593003",
+      "brand": "Gap",
+      "category": "dress",
+      "title": "Denim Mini Shift Dress",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=912593003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "gap-1184693013",
+      "brand": "Gap",
+      "category": "dress",
+      "title": "Lightweight CashSoft Rib Sweater Maxi Dress",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=1184693013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "gap-1185332013",
+      "brand": "Gap",
+      "category": "dress",
+      "title": "Voile Plaid Empire-Waist Maxi Dress",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=1185332013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "gap-1184695003",
+      "brand": "Gap",
+      "category": "dress",
+      "title": "CashSoft Polo Sweater Mini Dress",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=1184695003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "gap-1184696023",
+      "brand": "Gap",
+      "category": "dress",
+      "title": "CashSoft Rib Turtleneck Sweater Mini Dress",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=1184696023",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "gap-1184323003",
+      "brand": "Gap",
+      "category": "top",
+      "title": "Plaid Shirt Jacket",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=1184323003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "gap-913914013",
+      "brand": "Gap",
+      "category": "top",
+      "title": "Organic Cotton Popin Peplum Shirt",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=913914013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "gap-1184321013",
+      "brand": "Gap",
+      "category": "top",
+      "title": "Plaid Tie-Neck Shirt",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=1184321013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "gap-1184843023",
+      "brand": "Gap",
+      "category": "top",
+      "title": "Organic Cotton Poplin Tie-Neck Big Shirt",
+      "link": "https://www.gapcanada.ca/browse/product.do?pid=1184843023",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "bananarepublic-1180141013",
+      "brand": "Banana Republic",
+      "category": "dress",
+      "title": "Merino-Cotton Maxi Sweater Dress",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=1180141013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "bananarepublic-1182116013",
+      "brand": "Banana Republic",
+      "category": "dress",
+      "title": "Paneled Jersey Turtleneck Maxi Dress",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=1182116013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "bananarepublic-859896043",
+      "brand": "Banana Republic",
+      "category": "dress",
+      "title": "Bias-Cut Chiffon Maxi Dress",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=859896043",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "bananarepublic-1180130003",
+      "brand": "Banana Republic",
+      "category": "dress",
+      "title": "Organza Tiered Maxi Dress",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=1180130003",
+      "opusShown": false,
+      "opusFails": [
+        "sleeves"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "sleeves",
+        "back"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "bananarepublic-1180132003",
+      "brand": "Banana Republic",
+      "category": "dress",
+      "title": "Jersey + Taffeta Turtleneck Maxi Dress",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=1180132003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "bananarepublic-1180120003",
+      "brand": "Banana Republic",
+      "category": "dress",
+      "title": "Mesh Long-Sleeve Maxi Dress",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=1180120003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "bananarepublic-709387003",
+      "brand": "Banana Republic",
+      "category": "top",
+      "title": "The Everyday Shirt in Cotton Poplin",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=709387003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "bananarepublic-1188283003",
+      "brand": "Banana Republic",
+      "category": "top",
+      "title": "Cotton Waffle-Knit Cardigan Sweater",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=1188283003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "bananarepublic-709273013",
+      "brand": "Banana Republic",
+      "category": "top",
+      "title": "The Oversized Shirt in Cotton Poplin",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=709273013",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "bananarepublic-836722003",
+      "brand": "Banana Republic",
+      "category": "top",
+      "title": "Riley Tailored Shirt",
+      "link": "https://bananarepublic.gapcanada.ca/browse/product.do?pid=836722003",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "anthropologie-4130972460275",
+      "brand": "Anthropologie",
+      "category": "dress",
+      "title": "Maeve Caroline Linen Blend Lace Trim Mini Dress",
+      "link": "https://www.anthropologie.com/en-ca/shop/maeve-caroline-linen-blend-lace-trim-mini-dress",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "anthropologie-4130916210343",
+      "brand": "Anthropologie",
+      "category": "dress",
+      "title": "Delphine Sweater Twofer Mini Dress",
+      "link": "https://www.anthropologie.com/en-ca/shop/delphine-sweater-twofer-mini-dress",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "anthropologie-4130957990276",
+      "brand": "Anthropologie",
+      "category": "dress",
+      "title": "Maeve Metallic Sequined Knit Mini Dress",
+      "link": "https://www.anthropologie.com/en-ca/shop/maeve-metallic-sequined-knit-mini-dress",
+      "opusShown": false,
+      "opusFails": [
+        "back"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "back"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "anthropologie-104378609",
+      "brand": "Anthropologie",
+      "category": "dress",
+      "title": "Hutch Feathered Kaftan",
+      "link": "https://www.anthropologie.com/en-ca/shop/hutch-feathered-kaftan",
+      "opusShown": false,
+      "opusFails": [
+        "cutouts"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "back"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "anthropologie-4110907290018",
+      "brand": "Anthropologie",
+      "category": "top",
+      "title": "By Anthropologie Sheer Satin Tuxedo Blouse",
+      "link": "https://www.anthropologie.com/en-ca/shop/by-anthropologie-sheer-satin-tuxedo-blouse",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "anthropologie-4110089540181",
+      "brand": "Anthropologie",
+      "category": "top",
+      "title": "Maeve Smocked Puff Sleeve Blouse",
+      "link": "https://www.anthropologie.com/en-ca/shop/maeve-smocked-puff-sleeve-blouse",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "anthropologie-4110957990027",
+      "brand": "Anthropologie",
+      "category": "top",
+      "title": "Pilcro Hadley Velvet Relaxed Buttondown Shirt",
+      "link": "https://www.anthropologie.com/en-ca/shop/pilcro-hadley-velvet-relaxed-buttondown-shirt",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "anthropologie-4114326950374",
+      "brand": "Anthropologie",
+      "category": "top",
+      "title": "Maeve Markie 100% Cashmere Turtleneck Top",
+      "link": "https://www.anthropologie.com/en-ca/shop/maeve-markie-100-cashmere-turtleneck-top",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "hm-1360593004",
+      "brand": "H&M",
+      "category": "dress",
+      "title": "Sequined Mini Dress",
+      "link": "https://www2.hm.com/en_ca/productpage.1360593004.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "hm-1385267001",
+      "brand": "H&M",
+      "category": "dress",
+      "title": "Flounced Lace Dress",
+      "link": "https://www2.hm.com/en_ca/productpage.1385267001.html",
+      "opusShown": false,
+      "opusFails": [
+        "slit"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "cutouts"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "hm-1368058003",
+      "brand": "H&M",
+      "category": "dress",
+      "title": "Scarf-Detail Satin Dress",
+      "link": "https://www2.hm.com/en_ca/productpage.1368058003.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "hm-1370739001",
+      "brand": "H&M",
+      "category": "dress",
+      "title": "Draped Satin Dress",
+      "link": "https://www2.hm.com/en_ca/productpage.1370739001.html",
+      "opusShown": false,
+      "opusFails": [
+        "back"
+      ],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "hm-1369161003",
+      "brand": "H&M",
+      "category": "dress",
+      "title": "Knit Mock Turtleneck Dress",
+      "link": "https://www2.hm.com/en_ca/productpage.1369161003.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "reject",
+      "jevFails": [
+        "back"
+      ],
+      "agreement": "jev-rejects-opus-shows"
+    },
+    {
+      "id": "hm-1332648001",
+      "brand": "H&M",
+      "category": "dress",
+      "title": "Motif-Detail Crochet-Look Dress",
+      "link": "https://www2.hm.com/en_ca/productpage.1332648001.html",
+      "opusShown": false,
+      "opusFails": [
+        "cutouts"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "back",
+        "cutouts"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "hm-1367724007",
+      "brand": "H&M",
+      "category": "top",
+      "title": "Raglan-Sleeved Cotton Top",
+      "link": "https://www2.hm.com/en_ca/productpage.1367724007.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "hm-1383780001",
+      "brand": "H&M",
+      "category": "top",
+      "title": "Glittery Puff-Sleeved Cape Top",
+      "link": "https://www2.hm.com/en_ca/productpage.1383780001.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "hm-1365784001",
+      "brand": "H&M",
+      "category": "top",
+      "title": "Ruched Velour Top",
+      "link": "https://www2.hm.com/en_ca/productpage.1365784001.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "hm-1352174001",
+      "brand": "H&M",
+      "category": "top",
+      "title": "Fine-Knit Polo Shirt",
+      "link": "https://www2.hm.com/en_ca/productpage.1352174001.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "zara-04764287",
+      "brand": "Zara",
+      "category": "dress",
+      "title": "VELVET MINI DRESS WITH SASH",
+      "link": "https://www.zara.com/ca/en/velvet-mini-dress-with-sash-p04764287.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "reject",
+      "jevFails": [
+        "slit"
+      ],
+      "agreement": "jev-rejects-opus-shows"
+    },
+    {
+      "id": "zara-01758731",
+      "brand": "Zara",
+      "category": "dress",
+      "title": "SHOULDER PAD GATHERED MAXI DRESS",
+      "link": "https://www.zara.com/ca/en/long-dress-with-shoulder-pads-and-gathers-p01758731.html",
+      "opusShown": false,
+      "opusFails": [
+        "slit"
+      ],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "zara-02587159",
+      "brand": "Zara",
+      "category": "dress",
+      "title": "PRINTED BOW DRESS",
+      "link": "https://www.zara.com/ca/en/bow-printed-dress-p02587159.html",
+      "opusShown": false,
+      "opusFails": [
+        "back",
+        "cutouts"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "back",
+        "cutouts"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "zara-04772226",
+      "brand": "Zara",
+      "category": "dress",
+      "title": "VOLUME SLEEVE MINI DRESS",
+      "link": "https://www.zara.com/ca/en/voluminous-sleeve-mini-dress-p04772226.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "zara-08372306",
+      "brand": "Zara",
+      "category": "dress",
+      "title": "SHOULDER PAD MINI DRESS",
+      "link": "https://www.zara.com/ca/en/short-dress-with-shoulder-pads-p08372306.html",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "simons-19659-230848",
+      "brand": "Simons",
+      "category": "dress",
+      "title": "Buttoned corduroy dress",
+      "link": "https://www.simons.ca/en/women-clothing/dresses/short/buttoned-corduroy-dress--19659-230848",
+      "opusShown": false,
+      "opusFails": [
+        "sleeves"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "sleeves"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "simons-6867-232379",
+      "brand": "Simons",
+      "category": "dress",
+      "title": "Lace detailing plush knit dress",
+      "link": "https://www.simons.ca/en/women-clothing/dresses/short/lace-detailing-plush-knit-dress--6867-232379",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "simons-10597-230174",
+      "brand": "Simons",
+      "category": "dress",
+      "title": "Cable-knit dress",
+      "link": "https://www.simons.ca/en/women-clothing/dresses/knit/cable-knit-dress--10597-230174",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "simons-13410-232321",
+      "brand": "Simons",
+      "category": "dress",
+      "title": "Supple denim shirtdress",
+      "link": "https://www.simons.ca/en/women-clothing/dresses/short/supple-denim-shirtdress--13410-232321",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "simons-11796-2984772",
+      "brand": "Simons",
+      "category": "dress",
+      "title": "Golden crossover V-neck maxi dress",
+      "link": "https://www.simons.ca/en/women-clothing/dresses/long/golden-crossover-v-neck-maxi-dress--11796-2984772",
+      "opusShown": false,
+      "opusFails": [
+        "sleeves",
+        "slit"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "sleeves",
+        "slit"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "simons-11318-229469",
+      "brand": "Simons",
+      "category": "dress",
+      "title": "Printed micromesh side slit maxi dress",
+      "link": "https://www.simons.ca/en/women-clothing/dresses/midi/printed-micromesh-side-slit-maxi-dress--11318-229469",
+      "opusShown": false,
+      "opusFails": [
+        "slit"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "slit"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "simons-15258-217922",
+      "brand": "Simons",
+      "category": "top",
+      "title": "Silky hidden placket shirt",
+      "link": "https://www.simons.ca/en/women-clothing/blouses-shirts/long-sleeves/silky-hidden-placket-shirt--15258-217922",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "simons-22478-229650",
+      "brand": "Simons",
+      "category": "top",
+      "title": "Point collar silky crepe blouse",
+      "link": "https://www.simons.ca/en/women-clothing/blouses-shirts/long-sleeves/point-collar-silky-crepe-blouse--22478-229650",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "simons-12709-229657",
+      "brand": "Simons",
+      "category": "top",
+      "title": "Notched collar satiny shirt",
+      "link": "https://www.simons.ca/en/women-clothing/blouses-shirts/long-sleeves/notched-collar-satiny-shirt--12709-229657",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "simons-17455-232695",
+      "brand": "Simons",
+      "category": "top",
+      "title": "Boxy checked lightweight shirt",
+      "link": "https://www.simons.ca/en/women-clothing/blouses-shirts/prints/boxy-checked-lightweight-shirt--17455-232695",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "reitmans-499136",
+      "brand": "Reitmans",
+      "category": "dress",
+      "title": "Long-Sleeve Lace Maxi Dress",
+      "link": "https://www.reitmans.com/products/long-sleeve-crew-neck-maxi-dress-lace-stretch-fabric-499136",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "reitmans-497396",
+      "brand": "Reitmans",
+      "category": "dress",
+      "title": "Long-Sleeve Bodycon Midi Dress with Wrap Skirt",
+      "link": "https://www.reitmans.com/products/long-sleeve-fitted-knit-dress-with-twist-detail-497396",
+      "opusShown": false,
+      "opusFails": [
+        "slit"
+      ],
+      "jev": "reject",
+      "jevFails": [
+        "slit"
+      ],
+      "agreement": "agree-hidden"
+    },
+    {
+      "id": "reitmans-499141",
+      "brand": "Reitmans",
+      "category": "dress",
+      "title": "Long-Sleeve Asymmetrical-Neck Draped Bodycon Dress",
+      "link": "https://www.reitmans.com/products/mini-dress-with-asymmetric-neck-draping-92-polyester-blend-499141",
+      "opusShown": false,
+      "opusFails": [
+        "slit",
+        "neckline"
+      ],
+      "jev": "unsure",
+      "jevFails": [],
+      "agreement": "jev-unsure"
+    },
+    {
+      "id": "reitmans-499124",
+      "brand": "Reitmans",
+      "category": "dress",
+      "title": "Long-Sleeve Bodycon Dress with Burnout Pattern",
+      "link": "https://www.reitmans.com/products/long-sleeve-bodycon-dress-nylon-elastane-blend-499124",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "reitmans-499183",
+      "brand": "Reitmans",
+      "category": "dress",
+      "title": "Long-Sleeve Fit-and-Flare Dress with Sheer Yoke",
+      "link": "https://www.reitmans.com/products/knit-dress-fit-flare-sheer-yoke-ladies-collection-499183",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "reject",
+      "jevFails": [
+        "back"
+      ],
+      "agreement": "jev-rejects-opus-shows"
+    },
+    {
+      "id": "reitmans-499121",
+      "brand": "Reitmans",
+      "category": "dress",
+      "title": "Long-Sleeve Fit-and-Flare Lace Mini Dress",
+      "link": "https://www.reitmans.com/products/long-sleeve-fit-flare-dress-100-polyester-499121",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "reitmans-500020",
+      "brand": "Reitmans",
+      "category": "top",
+      "title": "Long-Sleeve Crew-Neck Feather-Yarn Sweater",
+      "link": "https://www.reitmans.com/products/crew-neck-pullover-animal-pattern-mixed-fabric-500020",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "reitmans-498958",
+      "brand": "Reitmans",
+      "category": "top",
+      "title": "Long-Sleeve Crew-Neck Studded Mesh Top",
+      "link": "https://www.reitmans.com/products/long-sleeve-knit-mesh-top-stretch-fabric-498958",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "reitmans-499550",
+      "brand": "Reitmans",
+      "category": "top",
+      "title": "Long-Sleeve V-Neck Cardigan",
+      "link": "https://www.reitmans.com/products/cardigan-v-neck-animal-print-wool-blend-499550",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    },
+    {
+      "id": "reitmans-498299",
+      "brand": "Reitmans",
+      "category": "top",
+      "title": "Long-Sleeve Pullover with Fair-Isle Pattern - Hyba",
+      "link": "https://www.reitmans.com/products/fairisle-sweater-with-wool-blend-women-s-498299",
+      "opusShown": true,
+      "opusFails": [],
+      "jev": "pass",
+      "jevFails": [],
+      "agreement": "agree-shown"
+    }
+  ]
+}

@@ -12,6 +12,30 @@ Every entry follows the same shape. The **Challenges & how we solved them** sect
 
 ---
 
+### 2026-11-10 — Batch 2: 100 products from 10 brands, collected overnight
+
+**Goal:** Collect 10 products (6 dresses + 4 tops) from each of 10 brands, front and back photo on a model, from the brands' own long-sleeve listings in listing order, at human pace; tag them all with Opus 5.5 (Message Batches) and Jev, and set up Mohamed's blind review.
+
+**What shipped:** 100 products from Mango, Dynamite, Old Navy, Gap, Banana Republic, Anthropologie, H&M, Zara, Simons and Reitmans, all loaded into the demo DB and tagged (results below). New tools: `scripts/pick-photos.ts` (pick front/back from a full gallery on a contact sheet, or drop a product), `scripts/build-bundle.ts` (photos fetched from the image server at 2.5 s gaps, or taken from one browser download where scripts are refused), `scripts/compare-batch2.ts` (Jev vs Opus, plus a blind local review page).
+
+**Challenges & how we solved them:**
+
+- *Chrome allows one automatic download per site, and two "brands" were one site.* The first design shipped each brand's photos out of the browser as a download. Dynamite's photo order turned out to be wrong for half its products, and a second download was blocked; then Gap's download silently vanished because `oldnavy.gapcanada.ca` and `www.gapcanada.ca` count as one site. Only a person can lift that block, so we didn't try. The fix changed the shape of the pipeline: the browser now hands over only text (facts and image addresses), and a script fetches the photos from the brand's image server at the same human pace. One download per brand became zero for most brands.
+
+- *Picking the back photo in the browser was a guess you couldn't undo.* Photo order differs by brand and sometimes by product (Dynamite's second photo was a back view on only 5 of 10). We stopped picking in the browser: the whole gallery comes down, a numbered contact sheet goes up, and a person picks (here, Claude by eye, every pick checked on a second sheet). Only 5 of 11 brands follow a fixed order a rule could use.
+
+- *A whole brand had no back photos.* None of 12 Uniqlo galleries showed a back on a model. Under Mohamed's front + back rule, all 12 dropped, and the pre-agreed backup brand (Anthropologie) took its place, a cleaner result than 10 products the site would hide for "back unknown".
+
+- *A brand's own filter isn't evidence.* Banana Republic's long-sleeve dress filter listed a sleeveless organza dress; every top on Zara's long-sleeve tops page was short-sleeved by Zara's own description. Both were kept in listing order on purpose: the free text gate and vision are what decide, and they did.
+
+- *The text gate learned three phrasings from real descriptions.* "Spaghetti straps" on a sheer long-sleeve dress's inner slip, a "cami lining", and "long puff sleeves" / "short puff sleeves" (a style word between). Each fix has a test, and straps still reject when no long sleeve is stated.
+
+- *One image server refused scripts.* Simons' (behind Cloudflare) returned 403 to the script while serving the browser. That's a bot rule, so we didn't look for a client that gets through: the page fetched the 33 photos itself at the same pace and saved one download, which the script then read.
+
+**Results:** the free text gate rejected 11 for $0; Opus 5.5 showed 75 of the other 89 for $0.89 (batch price); Jev ($0.034) agreed on 74 of its 77 confident answers and never passed something Opus hid. Every immodest product spotted by eye during collection was hidden by both. The 3 disagreements (Jev rejecting a back or a slit Opus calls fine) now decide whether Jev earns the cheap "reject" role, and they lead Mohamed's blind review page, with 10 random agreements as a check on both.
+
+---
+
 ### 2026-09-29 — The affiliate wall, and the terms of service that redrew the plan
 
 **Goal:** Come back to the three network applications filed on 09-15, finish whatever was still open, and work out how to get a real catalogue into the site. The session turned into a strategy correction instead.

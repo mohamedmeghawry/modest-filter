@@ -1,0 +1,79 @@
+{
+  "batchId": "msgbatch_01PGPSnGjWkjZ4GJpVtPoX35",
+  "csv": "samples/demo/products-batch2.csv",
+  "model": "claude-opus-5-5",
+  "effort": "low",
+  "submittedAt": "2026-11-09T09:29:33.513Z",
+  "products": {
+    "reitmans-499136": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-497396": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-499141": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-499124": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-499183": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-499121": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-500020": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-498958": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-499550": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    },
+    "reitmans-498299": {
+      "photos": [
+        "front.jpg",
+        "back.jpg"
+      ],
+      "back": true
+    }
+  }
+}
