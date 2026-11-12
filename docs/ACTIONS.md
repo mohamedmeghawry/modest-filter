@@ -3,10 +3,8 @@
 One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to the bottom, then get deleted after a week.
 
 ## Now
-- [ ] **M** Blind review of batch 2: open `samples/demo/review-batch2.html` (double-click; photos load from `samples/demo/images/`), answer 5 yes/no for each of 13 products (the 3 Jev-vs-Opus disagreements + 10 random agreements), press Download, put `review-batch2-answers.json` in `samples/demo/`. This decides Jev's reject role (rules fixed 2026-11-09) and checks "0 immodest shown"
-- [ ] **M** Decide: H&M's terms (read 2026-09-29, devlog) forbid any agent copying content, browser agents included; batch 2 collected 10 H&M products under the 2026-11-10 "skip the terms check" decision. Keep, or drop H&M from the demo?
-- [ ] **M** Confirm the Uniqlo → Anthropologie swap (0 of 12 Uniqlo galleries had a back photo; Anthropologie was the agreed backup)
-- [ ] **C** After the review: score it (`compare-batch2.json` + answers), decide Jev's role, update `docs/attribute-sources.md`
+- [ ] **M** Decide: should a deep front neckline fail the baseline? (Your review note on gap-1185332013: "low cut in the top front neck line"; today only off-shoulder and halter fail.) Yes = a new neckline-depth rule (ADR-0015 amendment + re-check); no = leave it to a shopper filter
+- [ ] **M** Confirm the Uniqlo → Anthropologie swap (contact sheet sent 2026-11-11: 0 of 12 galleries show a back on a model)
 - [ ] **M** Look at the preview on your phone (signed in to Vercel): https://modest-filter-git-demo-images-mohamedmeghawrys-projects.vercel.app/products and say what looks wrong
 - [ ] **M** When the group should see it: create the one Hobby share link (Vercel → deployment → Share)
 - [ ] **M** Reset the `kashfedit-demo` DB password once more: it showed in a Claude screenshot (Risk Register INC-2026-04). Make it in Bitwarden, paste into Supabase reset, `.env.demo.local` and both Vercel Preview vars
@@ -23,6 +21,7 @@ One line per action. Owner: **M** = Mohamed, **C** = Claude. Done items move to 
 - Impact / Awin: declined 09-17 / 09-21
 
 ## Done
+- [x] **M+C** Blind review of batch 2 scored: Opus matched Mohamed on 13 of 13; Jev was wrong on all 3 disagreements (>2 allowed), so Jev doesn't get the reject role. H&M kept in the demo (Mohamed, 2026-11-11, aware its terms forbid agents) (2026-11-11)
 - [x] **C** Batch 2 collected and tagged overnight: 100 products (Mango, Dynamite, Old Navy, Gap, Banana Republic, Anthropologie, H&M, Zara, Simons, Reitmans; 6 dresses + 4 tops each), front + back on a model, all in the demo DB. Text gate rejected 11; Opus 5.5 shows 75 of 89 ($0.89); Jev agrees on 74 of 77 ($0.034). Spend so far: Opus ~$1.94 of $5.50, Jev ~$0.08 of $0.10 (2026-11-10)
 - [x] **C** Descriptions + details collected with batch 2 and run through `textGate` and the parsers; only parsed facts stored (2026-11-10)
 - [x] **C** Batch 1 re-tagged with Opus 5.5 low and the new rules: 19 tagged, $0.17 (2026-11-10)
